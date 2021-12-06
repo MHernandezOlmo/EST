@@ -1,0 +1,525 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8637789333414968115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8637789333414968125}
+  - component: {fileID: 8637789333414968114}
+  m_Layer: 0
+  m_Name: LeanLocalization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8637789333414968125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637789333414968115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8637789333959985037}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8637789333414968114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637789333414968115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultLanguage: 
+  DetectLanguage: 1
+  SaveLanguage: 1
+  languages:
+  - name: English
+    cultures:
+    - en
+    - en-GB
+    - en-US
+    - en-AU
+    - en-CA
+    - en-NZ
+    - en-IE
+    - en-ZA
+    - en-JM
+    - en-en029
+    - en-BZ
+    - en-BZ
+    - en-TT
+    - en-ZW
+    - en-PH
+  - name: Spanish
+    cultures:
+    - es
+    - es-ES
+    - es-MX
+    - es-GT
+    - es-CR
+    - es-PA
+    - es-DO
+    - es-VE
+    - es-CO
+    - es-PE
+    - es-AR
+    - es-EC
+    - es-CL
+    - es-UY
+    - es-PY
+    - es-BO
+    - es-SV
+    - es-SV
+    - es-HN
+    - es-NI
+    - es-PR
+  - name: Italian
+    cultures:
+    - it
+    - it-IT
+    - it-CH
+  prefabs: []
+--- !u!1 &8637789333959985026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8637789333959985037}
+  - component: {fileID: 8637789333959985036}
+  m_Layer: 0
+  m_Name: LeanMultilanguageCSV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8637789333959985037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637789333959985026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8637789333414968125}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8637789333959985036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637789333959985026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0a598327c4d2d4c96bac8dca97fdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 4900000, guid: 0160f36f981f42a4ebd64d4eaffec746, type: 3}
+  Languages:
+  - English
+  - Spanish
+  - Italian
+  ColumnSeparator: 44
+  Cache: 0
+  multilanguageEntries:
+  - Name: UI/GameTitle
+    Translations:
+    - EST Solar Mission
+    - "EST Misi\xF3n Solar"
+    - EST Missione Solare
+  - Name: UI/OptionsMenu
+    Translations:
+    - Options
+    - Opciones
+    - Opzioni
+  - Name: HelloWorld
+    Translations:
+    - HelloWorld!
+    - "\xA1Hola Mundo!"
+    - Ciao mondo!
+  - Name: GenericDialogueTest_00
+    Translations:
+    - Hello testing 1 2 3
+    - Hola probando 1 2 3
+    - Ciao provando 1 2 3
+  - Name: GenericDialogueTest_01
+    Translations:
+    - Hello testing 4 5 6
+    - Hola probando 4 5 6
+    - Ciao provando 4 5 6
+  - Name: UI/NewGameMenu
+    Translations:
+    - New Game
+    - Nueva Partida
+    - LA NUOVA PARTITICIONE
+  - Name: UI/ContinueMenu
+    Translations:
+    - Continue
+    - Continuar
+    - CONTINUATOO
+  - Name: UI/ExitMenu
+    Translations:
+    - Exit
+    - Salir
+    - SPAGUEEEETTIIIII
+  - Name: UI/MusicAndSoundOptionsMenu
+    Translations:
+    - Music and sound
+    - "M\xFAsica y sonido"
+    - Raviooooli
+  - Name: UI/MusicOptionsMenu
+    Translations:
+    - Music
+    - "M\xFAsica"
+    - Tagilatell
+  - Name: UI/SoundOptionsMenu
+    Translations:
+    - Sound
+    - Sonido
+    - Linguini
+  - Name: UI/LanguageOptionsMenu
+    Translations:
+    - Language
+    - Idioma
+    - Pizza
+  - Name: UI/SpanishOptionsMenu
+    Translations:
+    - Spanish
+    - "Espa\xF1ol"
+    - Fetuccini
+  - Name: UI/EnglishOptionsMenu
+    Translations:
+    - English
+    - "Ingl\xE9s"
+    - 
+  - Name: UI/BackOptionsMenu
+    Translations:
+    - Back
+    - Volver
+    - 
+  - Name: Lomnicky/Bienvenida_00
+    Translations:
+    - "UV& do you copy me? I see you are going to Lomnick\xFD \u0161t\xEDt Observatory"
+    - "UV& do you copy me? I see you are going to Lomnick\xFD \u0161t\xEDt Observatory"
+    - "UV& do you copy me? I see you are going to Lomnick\xFD \u0161t\xEDt Observatory"
+  - Name: Lomnicky/Bienvenida_01
+    Translations:
+    - Great! This observatory has been monitoring the behavior of the solar corona
+      for more than 60 years. It's just what we need right now!
+    - Great! This observatory has been monitoring the behavior of the solar corona
+      for more than 60 years. It's just what we need right now!
+    - Great! This observatory has been monitoring the behavior of the solar corona
+      for more than 60 years. It's just what we need right now!
+  - Name: Lomnicky/Bienvenida_02
+    Translations:
+    - The Sun is reaching the highest levels of activity ever recorded. We need you
+      to observe the corona to obtain more information about what is happening!
+    - The Sun is reaching the highest levels of activity ever recorded. We need you
+      to observe the corona to obtain more information about what is happening!
+    - The Sun is reaching the highest levels of activity ever recorded. We need you
+      to observe the corona to obtain more information about what is happening!
+  - Name: Lomnicky/Bienvenida_03
+    Translations:
+    - Above all& don't forget to test the new camera for EST. Thanks to it& we will
+      be able to study the Sun in different wavelengths with a resolution never achieved
+      before.
+    - Above all& don't forget to test the new camera for EST. Thanks to it& we will
+      be able to study the Sun in different wavelengths with a resolution never achieved
+      before.
+    - Above all& don't forget to test the new camera for EST. Thanks to it& we will
+      be able to study the Sun in different wavelengths with a resolution never achieved
+      before.
+  - Name: Lomnicky/Bienvenida_04
+    Translations:
+    - "But& be careful. Strange things... are happening\u2026"
+    - "But& be careful. Strange things... are happening\u2026"
+    - "But& be careful. Strange things... are happening\u2026"
+  - Name: Lomnicky/Bienvenida_05
+    Translations:
+    - Good luck! (You will need it)
+    - Good luck! (You will need it)
+    - Good luck! (You will need it)
+  - Name: Lomnicky/PickSkill_00
+    Translations:
+    - "Congratulations! Now you have the power of generating \u201Csolar magnetic
+      tornadoes\u201D!"
+    - "Congratulations! Now you have the power of generating \u201Csolar magnetic
+      tornadoes\u201D!"
+    - "Congratulations! Now you have the power of generating \u201Csolar magnetic
+      tornadoes\u201D!"
+  - Name: Lomnicky/PickSkill_01
+    Translations:
+    - Magnetic tornadoes are plasma structures rotating in the atmosphere of the
+      Sun. They can reach velocities of more than 10000 km/h.
+    - Magnetic tornadoes are plasma structures rotating in the atmosphere of the
+      Sun. They can reach velocities of more than 10000 km/h.
+    - Magnetic tornadoes are plasma structures rotating in the atmosphere of the
+      Sun. They can reach velocities of more than 10000 km/h.
+  - Name: Lomnicky/PickSkill_02
+    Translations:
+    - This ability will help you accomplish your mission!
+    - This ability will help you accomplish your mission!
+    - This ability will help you accomplish your mission!
+  - Name: Lomnicky/Teleferico_00
+    Translations:
+    - An aurora! What??!! They occur when particles launched from the Sun collide
+      with the Earth's magnetic field
+    - An aurora! What??!! They occur when particles launched from the Sun collide
+      with the Earth's magnetic field
+    - An aurora! What??!! They occur when particles launched from the Sun collide
+      with the Earth's magnetic field
+  - Name: Lomnicky/Teleferico_01
+    Translations:
+    - It's rare to see them at these low latitudes... and in daylight!
+    - It's rare to see them at these low latitudes... and in daylight!
+    - It's rare to see them at these low latitudes... and in daylight!
+  - Name: Lomnicky/Teleferico_02
+    Translations:
+    - Certainly& the solar activity must be very intense. So much as my hunger. I
+      better hurry up!
+    - Certainly& the solar activity must be very intense. So much as my hunger. I
+      better hurry up!
+    - Certainly& the solar activity must be very intense. So much as my hunger. I
+      better hurry up!
+  - Name: Lomnicky/Motor_00
+    Translations:
+    - Rats! The cable car engine doesn't work. The fuse is even more roasted than
+      my breakfast this morning!
+    - Rats! The cable car engine doesn't work. The fuse is even more roasted than
+      my breakfast this morning!
+    - Rats! The cable car engine doesn't work. The fuse is even more roasted than
+      my breakfast this morning!
+  - Name: Lomnicky/Motor_01
+    Translations:
+    - Intense solar storms may affect the normal working of electrical systems. I
+      wonder if my toaster is fine.
+    - Intense solar storms may affect the normal working of electrical systems. I
+      wonder if my toaster is fine.
+    - Intense solar storms may affect the normal working of electrical systems. I
+      wonder if my toaster is fine.
+  - Name: "Lomnicky/TC\xFApula abierta_00"
+    Translations:
+    - The best conditions for astronomical observations occur high in mountains.
+      But... it's snowing! And the telescope dome is open! How is it possible?
+    - The best conditions for astronomical observations occur high in mountains.
+      But... it's snowing! And the telescope dome is open! How is it possible?
+    - The best conditions for astronomical observations occur high in mountains.
+      But... it's snowing! And the telescope dome is open! How is it possible?
+  - Name: "Lomnicky/TC\xFApula abierta_01"
+    Translations:
+    - I have to CLOSE IT  before the snow damages the telescope and Spectro turns
+      me into sausage paste (or sauerkraut!).
+    - I have to CLOSE IT  before the snow damages the telescope and Spectro turns
+      me into sausage paste (or sauerkraut!).
+    - I have to CLOSE IT  before the snow damages the telescope and Spectro turns
+      me into sausage paste (or sauerkraut!).
+  - Name: Lomnicky/Bloqueo escaleras
+    Translations:
+    - Wait! What am I doing? It's not lunchtime yet! I have to close the dome before
+      the snow damages the telescope!
+    - Wait! What am I doing? It's not lunchtime yet! I have to close the dome before
+      the snow damages the telescope!
+    - Wait! What am I doing? It's not lunchtime yet! I have to close the dome before
+      the snow damages the telescope!
+  - Name: Lomnicky/Unlock code
+    Translations:
+    - "Oh no! I never remember the code to close the dome! Is it my cat\u2019s birthday
+      date...?  Where did I write it down?"
+    - "Oh no! I never remember the code to close the dome! Is it my cat\u2019s birthday
+      date...?  Where did I write it down?"
+    - "Oh no! I never remember the code to close the dome! Is it my cat\u2019s birthday
+      date...?  Where did I write it down?"
+  - Name: Lomnicky/AyudaObservacion
+    Translations:
+    - Thank goodness! But it is impossible to observe anything with this snowstorm.
+      I've got it! I'll ask Eclipse to use the Swedish Solar Telescope (SST).
+    - Thank goodness! But it is impossible to observe anything with this snowstorm.
+      I've got it! I'll ask Eclipse to use the Swedish Solar Telescope (SST).
+    - Thank goodness! But it is impossible to observe anything with this snowstorm.
+      I've got it! I'll ask Eclipse to use the Swedish Solar Telescope (SST).
+  - Name: Lomnicky/Bloqueo Azotea
+    Translations:
+    - "Primero deber\xEDa pedir ayuda a alg\xFAn compa\xF1ero."
+    - "Primero deber\xEDa pedir ayuda a alg\xFAn compa\xF1ero."
+    - "Primero deber\xEDa pedir ayuda a alg\xFAn compa\xF1ero."
+  - Name: Lomnicky/Ayudapc_ 00
+    Translations:
+    - Eclipse! Do you copy? I need your help! A blizzard is preventing me from using
+      the telescope. Can you make some observations at the SST?
+    - Eclipse! Do you copy? I need your help! A blizzard is preventing me from using
+      the telescope. Can you make some observations at the SST?
+    - Eclipse! Do you copy? I need your help! A blizzard is preventing me from using
+      the telescope. Can you make some observations at the SST?
+  - Name: Lomnicky/Ayudapc_ 01
+    Translations:
+    - Roger that! But you owe me a meal. Or better& two.
+    - Roger that! But you owe me a meal. Or better& two.
+    - Roger that! But you owe me a meal. Or better& two.
+  - Name: Lomnicky/EclipseRecogidaDatos 00
+    Translations:
+    - UV& I'm freaking out!
+    - UV& I'm freaking out!
+    - UV& I'm freaking out!
+  - Name: Lomnicky/EclipseRecogidaDatos 01
+    Translations:
+    - Certainly& the solar magnetic field is now even crazier than Spectro at the
+      Christmas party. The activity has become increasingly explosive.
+    - Certainly& the solar magnetic field is now even crazier than Spectro at the
+      Christmas party. The activity has become increasingly explosive.
+    - Certainly& the solar magnetic field is now even crazier than Spectro at the
+      Christmas party. The activity has become increasingly explosive.
+  - Name: Lomnicky/EclipseRecogidaDatos 02
+    Translations:
+    - "I've never seen anything like this! The consequences for the Earth are unpredictable\u2026"
+    - "I've never seen anything like this! The consequences for the Earth are unpredictable\u2026"
+    - "I've never seen anything like this! The consequences for the Earth are unpredictable\u2026"
+  - Name: Lomnicky/EclipseRecogidaDatos 03
+    Translations:
+    - So... when are you taking me out for lunch?
+    - So... when are you taking me out for lunch?
+    - So... when are you taking me out for lunch?
+  - Name: Lomnicky/EclipseRecogidaDatos 04
+    Translations:
+    - Before that& I must calibrate the camera and send it to the European Solar
+      Telescope as soon as possible. It's the only way to understand what's happening
+      in the Sun... Do you mind if I order some pizza& instead?
+    - Before that& I must calibrate the camera and send it to the European Solar
+      Telescope as soon as possible. It's the only way to understand what's happening
+      in the Sun... Do you mind if I order some pizza& instead?
+    - Before that& I must calibrate the camera and send it to the European Solar
+      Telescope as soon as possible. It's the only way to understand what's happening
+      in the Sun... Do you mind if I order some pizza& instead?
+  - Name: Lomnicky/SpectroCamara
+    Translations:
+    - UV& the snowstorm is over. We need you to test the camera and take it to EST
+      immediately!
+    - UV& the snowstorm is over. We need you to test the camera and take it to EST
+      immediately!
+    - UV& the snowstorm is over. We need you to test the camera and take it to EST
+      immediately!
+  - Name: Lomnicky/SpectroCamara2
+    Translations:
+    - I know! But first& I have to find all the pieces! Someone has spread them all
+      around the observatory as if they were breadcrumbs!
+    - I know! But first& I have to find all the pieces! Someone has spread them all
+      around the observatory as if they were breadcrumbs!
+    - I know! But first& I have to find all the pieces! Someone has spread them all
+      around the observatory as if they were breadcrumbs!
+  - Name: Lomnicky/SpectroCamara3
+    Translations:
+    - Well& stop thinking about food and hurry up!
+    - Well& stop thinking about food and hurry up!
+    - Well& stop thinking about food and hurry up!
+  - Name: Lomnicky/SpectroPiezasConseguidas
+    Translations:
+    - Finally& I've gathered all the pieces of the camera! I have to go back quickly
+      to the telescope room and test it. Spectro must be impatient& he could explode
+      like a coronal mass ejection at any moment
+    - Finally& I've gathered all the pieces of the camera! I have to go back quickly
+      to the telescope room and test it. Spectro must be impatient& he could explode
+      like a coronal mass ejection at any moment
+    - Finally& I've gathered all the pieces of the camera! I have to go back quickly
+      to the telescope room and test it. Spectro must be impatient& he could explode
+      like a coronal mass ejection at any moment
+  - Name: Lomnicky/SpectroTodoConsegudo 00
+    Translations:
+    - Hooray! The camera works perfectly! This deserves a great dinner!
+    - Hooray! The camera works perfectly! This deserves a great dinner!
+    - Hooray! The camera works perfectly! This deserves a great dinner!
+  - Name: Lomnicky/SpectroTodoConsegudo 01
+    Translations:
+    - "\xA1R\xE1pido! Coge el telef\xE9rico y vuelve con nosotros. \xA1Buen trabajo!"
+    - "\xA1R\xE1pido! Coge el telef\xE9rico y vuelve con nosotros. \xA1Buen trabajo!"
+    - "\xA1R\xE1pido! Coge el telef\xE9rico y vuelve con nosotros. \xA1Buen trabajo!"
+  - Name: Lomnicky/CanSee
+    Translations:
+    - Hello& tiny lamps! Hiding in that wavelength is useless now. With my camera&
+      I can perfectly see you. Are you ready? I'm going to turn you into meatballs!
+    - Hello& tiny lamps! Hiding in that wavelength is useless now. With my camera&
+      I can perfectly see you. Are you ready? I'm going to turn you into meatballs!
+    - Hello& tiny lamps! Hiding in that wavelength is useless now. With my camera&
+      I can perfectly see you. Are you ready? I'm going to turn you into meatballs!
+  - Name: PicDuMidi/Intro0
+    Translations:
+    - Congratulations UV! Now go quickly to the cable car and take the camera with
+      you to set it up on EST. There is no time to waste! And bring me some cookies!
+    - Congratulations UV! Now go quickly to the cable car and take the camera with
+      you to set it up on EST. There is no time to waste! And bring me some cookies!
+    - Congratulations UV! Now go quickly to the cable car and take the camera with
+      you to set it up on EST. There is no time to waste! And bring me some cookies!
+  - Name: PicDuMidi/Intro1
+    Translations:
+    - Necesitamos que encuentres los filtros UV que vamos a necesitar para EST.
+    - Necesitamos que encuentres los filtros UV que vamos a necesitar para EST.
+    - Necesitamos que encuentres los filtros UV que vamos a necesitar para EST.
+  - Name: PicDuMidi/Intro2
+    Translations:
+    - "Antes de traerlos aseg\xFArate de probarlos en una observaci\xF3n."
+    - "Antes de traerlos aseg\xFArate de probarlos en una observaci\xF3n."
+    - "Antes de traerlos aseg\xFArate de probarlos en una observaci\xF3n."
+  - Name: PicDuMidi/Intro3
+    Translations:
+    - Cuento contigo!
+    - Cuento contigo!
+    - Cuento contigo!
+  - Name: PicDuMidi/Reaccion
+    Translations:
+    - "Cuidado! El flare puede producir una CME necesitamos verificarlo en el cron\xF3grafo."
+    - "Cuidado! El flare puede producir una CME necesitamos verificarlo en el cron\xF3grafo."
+    - "Cuidado! El flare puede producir una CME necesitamos verificarlo en el cron\xF3grafo."
+  - Name: PicDuMidi/Ayuda
+    Translations:
+    - "Eso est\xE1 completamente inutilizable. Necesitar\xE9 que UV me ayude desde
+      SST"
+    - "Eso est\xE1 completamente inutilizable. Necesitar\xE9 que UV me ayude desde
+      SST"
+    - "Eso est\xE1 completamente inutilizable. Necesitar\xE9 que UV me ayude desde
+      SST"
+  - Name: PicDuMidi/Ayuda1
+    Translations:
+    - "Necesitar\xE9 que UV me ayude desde SST"
+    - "Necesitar\xE9 que UV me ayude desde SST"
+    - "Necesitar\xE9 que UV me ayude desde SST"
+  - Name: PicDuMidi/Ayuda2
+    Translations:
+    - "UV podr\xEDas ayudarme usando el cron\xF3grafo desde all\xED?"
+    - "UV podr\xEDas ayudarme usando el cron\xF3grafo desde all\xED?"
+    - "UV podr\xEDas ayudarme usando el cron\xF3grafo desde all\xED?"
+  - Name: PicDuMidi/Ayuda3
+    Translations:
+    - Sin problema yo me encargo!
+    - Sin problema yo me encargo!
+    - Sin problema yo me encargo!
+  - Name: PicDuMidi/BuscarFiltros
+    Translations:
+    - Todo parece estar correcto. Es hora de encontrar los filtros para el estudio.
+    - Todo parece estar correcto. Es hora de encontrar los filtros para el estudio.
+    - Todo parece estar correcto. Es hora de encontrar los filtros para el estudio.
+  - Name: PicDuMidi/Destapar telescopio
+    Translations:
+    - "Primero deber\xEDas destapar el telescopio"
+    - "Primero deber\xEDas destapar el telescopio"
+    - "Primero deber\xEDas destapar el telescopio"
