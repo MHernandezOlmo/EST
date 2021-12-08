@@ -74,10 +74,9 @@ public class SalaContiguaSceneController : MonoBehaviour
     {
 
         if (!GameProgressController.IsCeilingClosed())
-        {
-            
+        {   
             TimeSpan _span = System.DateTime.Now.Subtract(_startTime);
-            int remainingSeconds = 150 - _span.Seconds;
+            int remainingSeconds = 150 - (int)_span.TotalSeconds;
             if (remainingSeconds < 0)
             {
                 if (!_lost)
