@@ -68,18 +68,23 @@ public class MovementController : MonoBehaviour
 		DoAnim();
 		if (velocity != new Vector3(0f, -0.5f, 0f))
 		{
-			anim.SetFloat("Speed", CurrentSceneManager.GetWalkSpeed() * 0.7f);
-			Vector3 finalVelocity = velocity * CurrentSceneManager.GetWalkSpeed();
+
+			float walkSpeed = CurrentSceneManager.GetWalkSpeed();
+			float multiplier = 0.4f;
+            if (walkSpeed <= 1f)
+            {
+				multiplier = 0.9f;
+			}
+			anim.SetFloat("Speed", walkSpeed * multiplier);
+			Vector3 finalVelocity = velocity * walkSpeed;
 			motor.Move(finalVelocity * Time.deltaTime);
 		}
 	}
 
 	void DoInput()
 	{
-
         input.x = PlayerInput._Joystick.x;
         input.y = PlayerInput._Joystick.y;
-
         input = Vector2.ClampMagnitude(input, 1);
 	}
 

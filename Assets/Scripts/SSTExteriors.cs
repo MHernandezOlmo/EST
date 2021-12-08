@@ -18,7 +18,6 @@ public class SSTExteriors : MonoBehaviour
         _shownAlert = GameProgressController.GetMicrowaveAlert();
         _microWaves = FindObjectsOfType<EnemyMicroWave>();
         _playerController = FindObjectOfType<PlayerController>();
-        CurrentSceneManager.SetWalkSpeed(2f);
 
         if(!GameProgressController.GetHasAO() && GameProgressController.GetHasShield())
         {
