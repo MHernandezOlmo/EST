@@ -68,6 +68,7 @@ public class MovementController : MonoBehaviour
 		DoAnim();
 		if (velocity != new Vector3(0f, -0.5f, 0f))
 		{
+			anim.SetFloat("Speed", CurrentSceneManager.GetWalkSpeed() * 0.7f);
 			Vector3 finalVelocity = velocity * CurrentSceneManager.GetWalkSpeed();
 			motor.Move(finalVelocity * Time.deltaTime);
 		}
