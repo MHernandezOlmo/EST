@@ -71,7 +71,7 @@ public class EnemyController : MonoBehaviour
             }
             if (_currentHPBar != null)
             {
-                _currentHPBar.UpdateData((float)_currentHP / (float)_maxHP, _hpBarPosition.position);
+                _currentHPBar.UpdateData(_currentHP / _maxHP, _hpBarPosition.position);
             }
         }
         else

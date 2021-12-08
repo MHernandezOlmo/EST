@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private bool _superRotate;
     private int _currentHp;
-    private int _maxHP =100;
+    private int _maxHP =160;
     private bool _dead;
     public HPBar _currentHPBar;
 
@@ -92,7 +92,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
         if (_currentCharacter == Character.Goran)
         {
             if (_superRotate)
@@ -337,7 +336,7 @@ public class PlayerController : MonoBehaviour
         _spin.SetActive(false);
         _superRotate = false;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.25f); //Attack wait time
         CurrentSceneManager._canSpin = true;
     }
 }
