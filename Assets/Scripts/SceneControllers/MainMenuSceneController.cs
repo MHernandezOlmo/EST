@@ -14,29 +14,9 @@ public class MainMenuSceneController : MonoBehaviour
 
     [SerializeField]
     Button _continueGameButton;
-    [SerializeField]
-    ToggleController _OSTToggle;
-    [SerializeField]
-    ToggleController _SFXToggle;
     [SerializeField] Sprite _purpleButton;
     bool _changing;
-    public void EnableMusic()
-    {
-        GameEvents.ToggleOST.Invoke(true);
-    }
-    public void DisableMusic()
-    {
-        GameEvents.ToggleOST.Invoke(false);
-    }
-    public void EnableSFX()
-    {
-        GameEvents.ToggleSFX.Invoke(true);
-    }
 
-    public void DisableSFX()
-    {
-        GameEvents.ToggleSFX.Invoke(false);
-    }
     public void HideOptions()
     {
         if (!_changing)
@@ -76,11 +56,6 @@ public class MainMenuSceneController : MonoBehaviour
     }
     private void Start()
     {
-
-        _SFXToggle.SetState(SavedDataController.IsSFXEnabled());
-        _OSTToggle.SetState(SavedDataController.IsOSTEnabled());
-
-
         if (GameProgressController.GetCurrentScene()!="")
         {
             _continueGameButton.interactable = true;
@@ -106,15 +81,7 @@ public class MainMenuSceneController : MonoBehaviour
     {
         GameEvents.LoadScene.Invoke(GameProgressController.GetCurrentScene());
     }
-    public void ToggleMusic(bool toggleMusic)
-    {
-        
-    }
 
-    public void ToggleAudio(bool toggleAudio)
-    {
-        
-    }
     public void ExitGame()
     {
         Application.Quit();

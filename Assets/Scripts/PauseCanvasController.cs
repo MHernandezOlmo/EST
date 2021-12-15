@@ -6,6 +6,7 @@ public class PauseCanvasController : MonoBehaviour
 {
     [SerializeField] GameObject _pauseCanvas;
     [SerializeField] GameObject _solarPediaCanvas;
+    [SerializeField] GameObject _settings;
     private void Start()
     {
         Time.timeScale = 1f;
@@ -38,6 +39,17 @@ public class PauseCanvasController : MonoBehaviour
     public void CloseSolarpedia()
     {
         _solarPediaCanvas.SetActive(false);
+        _pauseCanvas.SetActive(true);
+    }
+
+    public void OpenSettings()
+    {
+        _settings.SetActive(true);
+        _pauseCanvas.SetActive(false);
+    }
+    public void CloseSettings()
+    {
+        _settings.SetActive(false);
         _pauseCanvas.SetActive(true);
     }
     public void LoadMainMenu()
