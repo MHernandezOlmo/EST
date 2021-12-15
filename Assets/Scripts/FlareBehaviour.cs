@@ -15,9 +15,13 @@ public class FlareBehaviour : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = new Color(1, 1, 1, 0);
     }
-
+    private void OnEnable()
+    {
+        
+    }
     public void Play()
     {
+        GetComponent<Animator>().SetTrigger("PlayAnimation");
         _hunted = false;
         StartCoroutine(CrPlay());
     }

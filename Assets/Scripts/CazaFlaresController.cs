@@ -143,18 +143,14 @@ public class CazaFlaresController : MonoBehaviour
             rt.localScale = Vector3.one*i*4;
             yield return null;
         }
-
         yield return new WaitForSeconds(0.25f);
-
         rt.localScale = Vector3.zero;
-
     }
 
 
     public void NotifyHunt()
     {
         StartCoroutine(FeedbackAnimate("FLARE"));
-
         _correctCounter++;
         _text.text = $"Captured Flares\n {_correctCounter}/20";
         if (_correctCounter >= 20)
