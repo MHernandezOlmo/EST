@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     GameObject _startingPositions;
     [SerializeField] GameObject _realGoran;
     [SerializeField] GameObject _shield;
+    [SerializeField] private CameraShake _cameraShake;
     public enum Character {Goran, MsProminence, Flare, Eclipse, None};
     public Character _currentCharacter;
     [SerializeField] GameObject _solarCanonBall;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             _currentHPBar.Show();
             _currentHp -= newValue;
+            _cameraShake.ShakeCamera(0.1f, 0.25f);
             if (_currentHp <=0)
             {
                 _currentHp = 0;

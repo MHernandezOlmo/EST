@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     bool _dead;
     
     [SerializeField] private EnemyType _enemyType;
-
+    [SerializeField] private GameObject _deathParticles;
     [SerializeField] private  Transform _player;
     public enum EnemyType { Robola, Lamp, TV}
     [SerializeField] private Animator _animator;
@@ -91,8 +91,8 @@ public class EnemyController : MonoBehaviour
     
     IEnumerator CrDie()
     {
-        _currentHPBar.Stop();
-        
+        Instantiate(_deathParticles, transform.position, Quaternion.identity);
+        _currentHPBar.Stop();    
         _animator.SetTrigger("Dead");
         for (float i = 0; i < 0.15f; i += Time.deltaTime)
         {

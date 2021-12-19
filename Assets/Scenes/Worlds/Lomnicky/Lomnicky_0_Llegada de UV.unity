@@ -5787,6 +5787,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1597381681, guid: e3c40dcaa8db8714aa091190f82701d7, type: 3}
+      propertyPath: _cameraShake
+      value: 
+      objectReference: {fileID: 1795931512}
     - target: {fileID: 6414289392573455537, guid: e3c40dcaa8db8714aa091190f82701d7,
         type: 3}
       propertyPath: m_Name
@@ -6105,6 +6109,7 @@ GameObject:
   - component: {fileID: 1795931507}
   - component: {fileID: 1795931510}
   - component: {fileID: 1795931511}
+  - component: {fileID: 1795931512}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6241,6 +6246,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1795931512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795931506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e438b31bb8ab4b4488c579f96ea83bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1831544209
 GameObject:
   m_ObjectHideFlags: 0
