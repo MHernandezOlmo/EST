@@ -91,7 +91,11 @@ public class EnemyController : MonoBehaviour
     
     IEnumerator CrDie()
     {
-        Instantiate(_deathParticles, transform.position, Quaternion.identity);
+        if(_deathParticles != null)
+        {
+            Instantiate(_deathParticles, transform.position, Quaternion.identity);
+        }
+
         _currentHPBar.Stop();    
         _animator.SetTrigger("Dead");
         for (float i = 0; i < 0.15f; i += Time.deltaTime)
