@@ -39,30 +39,31 @@ public class CombatTrigger : MonoBehaviour
                 _combatController.StartCombat(this);
                 previousSong = FindObjectOfType<OSTController>()?.GetComponent<AudioSource>().clip.name;
                 FindObjectOfType<OSTController>()?.ChangeSong("am_ab_al_combat_v1_mp3");
-                StartCoroutine(AddBoundaries());
+                AddBoundaries();
             }    
         }
         
     }
 
-    public IEnumerator AddBoundaries()
+    public void AddBoundaries()
     {
-        yield return new WaitForSeconds(2f);
         BoxCollider myBC = GetComponent<BoxCollider>();
          _boundaries= new GameObject();
         _boundaries.transform.position = transform.position;
         BoxCollider _bc = _boundaries.AddComponent<BoxCollider>();
-        _bc.center = new Vector3(0, 0, (myBC.size.z/2f)+1);
-        _bc.size = new Vector3(myBC.size.x,myBC.size.y,2);
+        float offset = 1f;
+        float zPosOffset = 3f;
+        _bc.center = new Vector3(0, 0, (myBC.size.z/2f)+ offset + zPosOffset);
+        _bc.size = new Vector3(myBC.size.x + (offset * 2f), myBC.size.y,2);
         _bc = _boundaries.AddComponent<BoxCollider>();
-        _bc.center = new Vector3(0, 0,(- myBC.size.z / 2f)+1);
-        _bc.size = new Vector3(myBC.size.x, myBC.size.y, 2);
+        _bc.center = new Vector3(0, 0,(- myBC.size.z / 2f) - offset + myBC.center.z -2);
+        _bc.size = new Vector3(myBC.size.x + (offset * 2f), myBC.size.y, 2);
         _bc = _boundaries.AddComponent<BoxCollider>();
-        _bc.center = new Vector3((myBC.size.x / 2f)+1, 0, 0);
-        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z);
+        _bc.center = new Vector3((myBC.size.x / 2f), 0, zPosOffset);
+        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z + (offset * 2f));
         _bc = _boundaries.AddComponent<BoxCollider>();
-        _bc.center = new Vector3((-myBC.size.x / 2f)+1, 0, 0);
-        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z);
+        _bc.center = new Vector3((-myBC.size.x / 2f), 0, zPosOffset);
+        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z + (offset * 2f));
     }
 
     public void RemoveBoundaries()

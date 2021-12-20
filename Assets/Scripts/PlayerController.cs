@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject _realGoran;
     [SerializeField] GameObject _shield;
     [SerializeField] private CameraShake _cameraShake;
+    private VignettingController _vignettingController;
     public enum Character {Goran, MsProminence, Flare, Eclipse, None};
     public Character _currentCharacter;
     [SerializeField] GameObject _solarCanonBall;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
             _currentHPBar.Show();
             _currentHp -= newValue;
             _cameraShake.ShakeCamera(0.1f, 0.25f);
+            _vignettingController.ReceiveHit();
             if (_currentHp <=0)
             {
                 _currentHp = 0;
@@ -63,7 +65,7 @@ public class PlayerController : MonoBehaviour
         _currentHp = _maxHP;
         _animator = transform.GetChild(0).GetComponent<Animator>();
         _shootTime = 1f;
-        
+        _vignettingController = FindObjectOfType<VignettingController>();
         Physics.gravity = Vector3.zero; 
         GameProgressController.SetCurrentScene(SceneManager.GetActiveScene().name);
         StartCoroutine(CrPosition());

@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class PreCombatCollider : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
