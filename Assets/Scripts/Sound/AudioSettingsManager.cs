@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour
+public class AudioSettingsManager : MonoBehaviour
 {
-    public static AudioManager audioManager;
+    public static AudioSettingsManager audioManager;
     private bool _fxActive = true, _musicActive = true;
     [SerializeField] private AudioMixer _audioMixer;
     private float _defSFXDb = 0f, _defMusicDb = -10f;

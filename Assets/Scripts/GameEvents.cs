@@ -63,7 +63,6 @@ public static class GameEvents
     public static IntEvent ShowDialog = new IntEvent();
     public static StringEvent ShowScreenText = new StringEvent();
     public static GameStateChange ChangeGameState = new GameStateChange();
-    public static StringEvent PlaySFX = new StringEvent();
     public static BoolEvent ToggleSFX = new BoolEvent();
     public static BoolEvent ToggleOST = new BoolEvent();
     public static BoolEvent CanInteract = new BoolEvent();
