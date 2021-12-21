@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     GameObject _startingPositions;
     [SerializeField] GameObject _realGoran;
     [SerializeField] GameObject _shield;
-    [SerializeField] private CameraShake _cameraShake;
+    private CameraShake _cameraShake;
     private VignettingController _vignettingController;
     public enum Character {Goran, MsProminence, Flare, Eclipse, None};
     public Character _currentCharacter;
@@ -40,11 +40,20 @@ public class PlayerController : MonoBehaviour
 
     public void ReceiveDamage(int newValue)
     {
+        if (FindObjectOfType<CameraShake>() == null)
+        {
+            Camera.main.gameObject.AddComponent<CameraShake>();
+            _cameraShake = FindObjectOfType<CameraShake>();
+        }
+        else
+        {
+            _cameraShake = FindObjectOfType<CameraShake>();
+        }
         if (!_dead)
         {
             _currentHPBar.Show();
             _currentHp -= newValue;
-            _cameraShake.ShakeCamera(0.1f, 0.25f);
+            _cameraShake.ShakeCamera(0.08f, 0.1f);
             _vignettingController.ReceiveHit();
             if (_currentHp <=0)
             {

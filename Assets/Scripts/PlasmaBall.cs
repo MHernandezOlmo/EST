@@ -17,12 +17,14 @@ public class PlasmaBall : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (!collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(20);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(20);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
-
     }
     
     private void OnTriggerEnter(Collider other)
