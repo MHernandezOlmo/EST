@@ -56,6 +56,7 @@ public class MainMenuSceneController : MonoBehaviour
     }
     private void Start()
     {
+        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Menu);
         if (GameProgressController.GetCurrentScene()!="")
         {
             _continueGameButton.interactable = true;
@@ -74,6 +75,8 @@ public class MainMenuSceneController : MonoBehaviour
         PlayerPrefs.SetInt("CinematicToPlay", 0);
         PlayerPrefs.SetString("SceneAfterCinematic", "Lomnicky_0_Llegada de UV");
         GameProgressController.Reset();
+        //MUTEAR
+        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.FinalCinematic);
         GameEvents.LoadScene.Invoke("Cinematic");
     }
 

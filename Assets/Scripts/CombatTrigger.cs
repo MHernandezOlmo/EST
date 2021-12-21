@@ -19,7 +19,8 @@ public class CombatTrigger : MonoBehaviour
     GameObject _boundaries;
     [SerializeField] EnemyHPPool _enemyHPPool;
     bool _done;
-    private string previousSong;
+    private int _previousMode;
+
     void Start()
     {
         _combatController = FindObjectOfType<CombatController>();
@@ -37,8 +38,8 @@ public class CombatTrigger : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 _combatController.StartCombat(this);
-                previousSong = FindObjectOfType<OSTController>()?.GetComponent<AudioSource>().clip.name;
-                FindObjectOfType<OSTController>()?.ChangeSong("am_ab_al_combat_v1_mp3");
+                _previousMode = MusicManager.currentClipIndex;
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Combat);
                 AddBoundaries();
             }    
         }
@@ -69,7 +70,7 @@ public class CombatTrigger : MonoBehaviour
     public void RemoveBoundaries()
     {
         Destroy(_boundaries);
-        FindObjectOfType<OSTController>().ChangeSong(previousSong);
+        AudioEvents.playMusicTransitionWithMusicCode.Invoke((MusicManager.MusicCode)_previousMode);
         //Destroy(gameObject);
     }
 

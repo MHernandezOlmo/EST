@@ -4,48 +4,26 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource _music, _intro;
+    public enum MusicCode {Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein };
+    [SerializeField] private AudioSource _music;
     [SerializeField] private List<AudioClip> _musicClips;
     private bool _musicTransition;
-    private float _pitchAmount = 0.7f, _globalPitch;
     private Coroutine _transitionCr;
+    public static int currentClipIndex;
 
     private void Start()
     {
-        _globalPitch = 1f;
-        AudioEvents.playMusicLoopWithIndex.AddListener(PlayMusicLoop);
-        AudioEvents.playMusicTransitionWithIndex.AddListener(PlayMusicTransition);
+        AudioEvents.playMusicTransitionWithMusicCode.AddListener(PlayMusicTransition);
     }
 
-    public void PlayMusicTransition(int musicIndex)
+    public void PlayMusicTransition(MusicCode code)
     {
+        currentClipIndex = (int)code;
         if (_transitionCr != null)
         {
             StopCoroutine(_transitionCr);
         }
-        _transitionCr = StartCoroutine(MusicTransition(musicIndex));
-    }
-    public void PlayMusicLoop(int musicIndex)
-    {
-        StartCoroutine(CoWaitForLoop(musicIndex));
-    }
-
-    IEnumerator CoWaitForLoop(int musicIndex)
-    {
-        while (_musicTransition)
-        {
-            yield return null;
-        }
-        yield return null;
-
-        _music.loop = false;
-        while (_music.isPlaying)
-        {
-            yield return null;
-        }
-        _music.clip = _musicClips[musicIndex];
-        _music.loop = true;
-        _music.Play();
+        _transitionCr = StartCoroutine(MusicTransition((int)code));
     }
 
     public IEnumerator MusicTransition(int musicIndex)
@@ -55,28 +33,18 @@ public class MusicManager : MonoBehaviour
         for (float i = 0; i < dur; i += Time.deltaTime)
         {
             _music.volume = 1 - i / dur;
-            _music.pitch = Mathf.Clamp(1 + _pitchAmount - i / dur, _pitchAmount, 1f) * _globalPitch;
             yield return null;
         }
         _music.volume = 0;
-        _music.pitch = _pitchAmount * _globalPitch;
         _music.clip = _musicClips[musicIndex];
         _music.Play();
         for (float i = 0; i < dur; i += Time.deltaTime)
         {
             _music.volume = i / dur;
-            _music.pitch = Mathf.Clamp(_pitchAmount + i / dur, _pitchAmount, 1f) * _globalPitch;
             yield return null;
         }
         _music.volume = 1;
-        _music.pitch = 1 * _globalPitch;
         _musicTransition = false;
         _transitionCr = null;
-    }
-
-    public void SetGlobalPitch(float target)
-    {
-        _globalPitch = target;
-        _music.pitch = _globalPitch;
     }
 }

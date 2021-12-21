@@ -9,10 +9,10 @@ public static class AudioEvents
     public static AudioCodeFloatEvent playSoundWithNameAndPitch = new AudioCodeFloatEvent();
     public static AudioCodeFloatEvent playSoundWithNameAndVolume = new AudioCodeFloatEvent();
     public static AudioCodeTwoFloatsEvent playSoundWithNameVolumeAndPitch = new AudioCodeTwoFloatsEvent();
-    public static AudioEvent playMusicTransitionWithIndex = new AudioEvent();
-    public static AudioEvent playMusicLoopWithIndex = new AudioEvent();
+    public static MusicCodeEvent playMusicTransitionWithMusicCode = new MusicCodeEvent();
 
     public class AudioCodeEvent : UnityEvent<SFXManager.AudioCode> { };
+    public class MusicCodeEvent : UnityEvent<MusicManager.MusicCode> { };
     public class AudioCodeFloatEvent : UnityEvent<SFXManager.AudioCode, float> { };
     public class AudioCodeTwoFloatsEvent : UnityEvent<SFXManager.AudioCode, float, float> { };
     public class AudioEvent : UnityEvent<int> { };

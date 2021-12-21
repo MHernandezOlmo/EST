@@ -15,7 +15,7 @@ public class AudioController : MonoBehaviour
     }
     void Start()
     {
-        _master = Resources.Load<AudioMixer>("Audio/Mixers/GameAudioMixer");
+        _master = Resources.Load<AudioMixer>("Mixers/GameAudioMixer");
         ToggleOST(SavedDataController.IsOSTEnabled());
         ToggleSFX(SavedDataController.IsSFXEnabled());
     }

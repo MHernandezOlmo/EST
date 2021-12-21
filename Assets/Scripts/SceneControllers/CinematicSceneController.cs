@@ -28,18 +28,25 @@ public class CinematicSceneController : MonoBehaviour
     {
         if (!isLoading)
         {
-            GameEvents.LoadScene.Invoke("WorldSelector");
-            isLoading = true;
+            LoadWorld();
         }
     }
     public void Skip()
     {
         if (!isLoading)
         {
-            GameEvents.LoadScene.Invoke("WorldSelector");
-            isLoading = true;
+            LoadWorld();
         }
     }
+
+    public void LoadWorld()
+    {
+        //DESMUTEAR
+        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Menu);
+        GameEvents.LoadScene.Invoke("WorldSelector");
+        isLoading = true;
+    }
+
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(5);
@@ -59,10 +66,5 @@ public class CinematicSceneController : MonoBehaviour
         skipImage.color = Color.white;
         skipText.color = Color.white;
         canLoad = true;
-    }
-
-    private void Update()
-    {
-
     }
 }
