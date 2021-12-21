@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
                 _currentHp = 0;
                 _dead = true;
                 _animator.SetTrigger("Die");
-                GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+                StartCoroutine(CrWaitForDie());
             }   
         }
     }
@@ -78,6 +78,12 @@ public class PlayerController : MonoBehaviour
         Physics.gravity = Vector3.zero; 
         GameProgressController.SetCurrentScene(SceneManager.GetActiveScene().name);
         StartCoroutine(CrPosition());
+    }
+
+    IEnumerator CrWaitForDie()
+    {
+        yield return new WaitForSeconds(1f);
+        GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator CrPosition()
