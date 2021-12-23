@@ -10,10 +10,13 @@ public static class AudioEvents
     public static AudioCodeFloatEvent playSoundWithNameAndVolume = new AudioCodeFloatEvent();
     public static AudioCodeTwoFloatsEvent playSoundWithNameVolumeAndPitch = new AudioCodeTwoFloatsEvent();
     public static MusicCodeEvent playMusicTransitionWithMusicCode = new MusicCodeEvent();
+    public static MusicEvent muteMusic = new MusicEvent();
+    public static MusicEvent unmuteMusic = new MusicEvent();
 
     public class AudioCodeEvent : UnityEvent<SFXManager.AudioCode> { };
     public class MusicCodeEvent : UnityEvent<MusicManager.MusicCode> { };
     public class AudioCodeFloatEvent : UnityEvent<SFXManager.AudioCode, float> { };
     public class AudioCodeTwoFloatsEvent : UnityEvent<SFXManager.AudioCode, float, float> { };
     public class AudioEvent : UnityEvent<int> { };
+    public class MusicEvent : UnityEvent { };
 }

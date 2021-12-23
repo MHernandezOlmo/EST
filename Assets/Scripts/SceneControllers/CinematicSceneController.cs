@@ -42,6 +42,7 @@ public class CinematicSceneController : MonoBehaviour
     public void LoadWorld()
     {
         //DESMUTEAR
+        AudioEvents.unmuteMusic.Invoke();
         AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Menu);
         GameEvents.LoadScene.Invoke("WorldSelector");
         isLoading = true;

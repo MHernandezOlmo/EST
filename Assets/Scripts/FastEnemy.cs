@@ -29,7 +29,6 @@ public class FastEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (battling)
         {
             _meshPivot.transform.LookAt(new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z));
@@ -55,6 +54,7 @@ public class FastEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(_shootAnimationTime);
         Instantiate(_shootPrefab, _shootPosition.position, Quaternion.identity);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SoftShoot);
         yield return new WaitForSeconds(2f);
         StartCoroutine(CrMove());
     }
@@ -70,8 +70,7 @@ public class FastEnemy : MonoBehaviour
         }
         _randomRotating = true;
         for (float i = 0; i < 0.5; i += Time.deltaTime)
-        {
-            
+        {    
             transform.position = Vector3.Lerp(startPosition, targetPosition, i / 0.5f);
             yield return 0;
         }

@@ -21,6 +21,7 @@ public class MainMenuSceneController : MonoBehaviour
     {
         if (!_changing)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Back);
             StartCoroutine(CrHideOptions());
         }
     }
@@ -28,6 +29,7 @@ public class MainMenuSceneController : MonoBehaviour
     {
         if (!_changing)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
             StartCoroutine(CrShowOptions());
         }
     }
@@ -45,6 +47,7 @@ public class MainMenuSceneController : MonoBehaviour
     {
         if (!_changing)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
             StartCoroutine(CrShowMenu());
         }
     }
@@ -72,16 +75,17 @@ public class MainMenuSceneController : MonoBehaviour
 
     public void StartNewGame()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         PlayerPrefs.SetInt("CinematicToPlay", 0);
         PlayerPrefs.SetString("SceneAfterCinematic", "Lomnicky_0_Llegada de UV");
         GameProgressController.Reset();
-        //MUTEAR
-        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.FinalCinematic);
+        AudioEvents.muteMusic.Invoke();
         GameEvents.LoadScene.Invoke("Cinematic");
     }
 
     public void ContinueGame()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         GameEvents.LoadScene.Invoke(GameProgressController.GetCurrentScene());
     }
 

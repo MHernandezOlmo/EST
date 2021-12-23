@@ -8,7 +8,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioSource[] _fxASources;
     [SerializeField] private List<AudioClip> _clips;
     private int _currentSoundIndex;
-    public enum AudioCode {Select, Jump, Slide, Slide2, TimeTravel, Portal, Death, SawLauch, SawHit, Ripple, Back, Jump2, ButtonDown, ButtonUp};
+    public enum AudioCode {SmoothSelect, InfoPanel, Back, Earned, Interact, Next, BlueEDeath, SoftShoot};
 
     private void Start()
     {

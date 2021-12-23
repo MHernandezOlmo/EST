@@ -28,6 +28,27 @@ public class WorldSelectorSceneController : MonoBehaviour
     public void LoadWorld(int world)
     {
         GameProgressController.SetCurrentStartPoint(0);
+        switch (world)
+        {
+            case 0:
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Lomnicky);
+                break;
+            case 1:
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.TorreEinstein);
+                break;
+            case 2:
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Gregor);
+                break;
+            case 3:
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.PicDuMidi);
+                break;
+            case 4:
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.SST);
+                break;
+            case 5:
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.EST);
+                break;
+        }
         GameEvents.LoadScene.Invoke(_worldNames[world]);
     }
 
