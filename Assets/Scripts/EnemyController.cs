@@ -94,6 +94,7 @@ public class EnemyController : MonoBehaviour
         if(_deathParticles != null)
         {
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.BlueEDeath);
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.EchoPops);
             Instantiate(_deathParticles, transform.position, Quaternion.identity);
         }
 
