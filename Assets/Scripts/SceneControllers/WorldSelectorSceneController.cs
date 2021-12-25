@@ -49,6 +49,7 @@ public class WorldSelectorSceneController : MonoBehaviour
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.EST);
                 break;
         }
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         GameEvents.LoadScene.Invoke(_worldNames[world]);
     }
 

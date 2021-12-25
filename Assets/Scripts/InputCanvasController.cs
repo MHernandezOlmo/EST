@@ -68,16 +68,19 @@ public class InputCanvasController : MonoBehaviour
     public void Pause()
     {
         //rrentSceneManager.SetGameState(GameStates.Pause);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Back);
         Time.timeScale = 0f;
         FindObjectOfType<PauseCanvasController>().Show(false);
     }
     public void ShowSolarPedia()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         Time.timeScale = 0f;
         FindObjectOfType<PauseCanvasController>().Show(true);
     }
     public void UnPause()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         Time.timeScale = 1f;
         _SolarPedia.SetActive(false);
     }

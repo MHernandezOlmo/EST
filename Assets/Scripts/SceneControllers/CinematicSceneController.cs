@@ -35,6 +35,7 @@ public class CinematicSceneController : MonoBehaviour
     {
         if (!isLoading)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
             LoadWorld();
         }
     }

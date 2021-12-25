@@ -25,6 +25,7 @@ public class SolarPediaController : MonoBehaviour
     }
     public void Back()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Back);
         if (showing)
         {
             showing = false;
@@ -36,7 +37,6 @@ public class SolarPediaController : MonoBehaviour
             gameObject.SetActive(false);
             FindObjectOfType<PauseCanvasController>().Continue();
         }
-        
     }
     public void ShowContent()
     {

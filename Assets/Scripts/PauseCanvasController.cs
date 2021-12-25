@@ -14,6 +14,7 @@ public class PauseCanvasController : MonoBehaviour
     }
     public void Show(bool openSolarPedia)
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         if (openSolarPedia)
         {
             _solarPediaCanvas.SetActive(true);
@@ -28,32 +29,38 @@ public class PauseCanvasController : MonoBehaviour
 
     public void Continue()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         Time.timeScale = 1;
         Hide();
     }
     public void OpenSolarpedia()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         _solarPediaCanvas.SetActive(true);
         _pauseCanvas.SetActive(false);
     }
     public void CloseSolarpedia()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         _solarPediaCanvas.SetActive(false);
         _pauseCanvas.SetActive(true);
     }
 
     public void OpenSettings()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         _settings.SetActive(true);
         _pauseCanvas.SetActive(false);
     }
     public void CloseSettings()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
         _settings.SetActive(false);
         _pauseCanvas.SetActive(true);
     }
     public void LoadMainMenu()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Back);
         Time.timeScale = 1;
         GameEvents.LoadScene.Invoke("MainMenu");
     }

@@ -26,6 +26,7 @@ public class DialogController : MonoBehaviour
 
     public void Next()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
         _counter++;
         if (_counter<_currentDialogue.speakerFaces.Length)
         {
@@ -84,10 +85,5 @@ public class DialogController : MonoBehaviour
 
         _mainText.gameObject.SetActive(true);
         Refresh();
-    }
-
-    void Update()
-    {
-        
     }
 }
