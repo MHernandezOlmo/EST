@@ -55,8 +55,10 @@ public class FastEnemy : MonoBehaviour
         yield return new WaitForSeconds(_shootAnimationTime);
         Instantiate(_shootPrefab, _shootPosition.position, Quaternion.identity);
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SoftShoot);
-        yield return new WaitForSeconds(2f);
-        StartCoroutine(CrMove());
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(CrMove());
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(CrMove());
     }
 
     IEnumerator CrMove()
