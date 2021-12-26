@@ -7,6 +7,12 @@ public class ConfigurationSceneControllers : MonoBehaviour
 
     [SerializeField] GameObject _logosHolder1;
     [SerializeField] GameObject _logosHolder2;
+
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 30;
+    }
     void Start()
     {
         StartCoroutine(CrLoadMainMenu());    
