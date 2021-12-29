@@ -40,7 +40,6 @@ public class LamparaBot : MonoBehaviour
 
     public IEnumerator CrMove()
     {
-        
         _animator.SetTrigger("Move");
         int targetPoint = Random.Range(0, _movePositions.Length);
         Vector3 startPosition = transform.position;
@@ -49,7 +48,7 @@ public class LamparaBot : MonoBehaviour
         {
             targetPosition = _originPosition;
         }
-        
+
         for(float i = 0; i< 2; i+=Time.deltaTime)
         {
             transform.position = Vector3.Lerp(startPosition, targetPosition, i / 2f);
@@ -57,27 +56,27 @@ public class LamparaBot : MonoBehaviour
         }
         transform.position = targetPosition;
         _animator.SetTrigger("Idle");
-        yield return new WaitForSeconds(Random.Range(1f,3f));
+        yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
         _animator.SetTrigger("Alert");
         float distance = (_playerController.transform.position - transform.position).magnitude;
         
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         if (distance < 10)
         {
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         if (distance < 10)
         {
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         if (distance < 10)
         {
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
         _animator.SetTrigger("Idle");
-        yield return new WaitForSeconds(Random.Range(3f,5f));
+        yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
         _goingBack = !_goingBack;
         StartCoroutine(CrMove());
     }
