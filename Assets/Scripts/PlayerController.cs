@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             _currentHPBar.Show();
             _currentHp -= newValue;
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Hit);
             _cameraShake.ShakeCamera(0.08f, 0.1f);
             _vignettingController.ReceiveHit();
             if (_currentHp <=0)
@@ -333,6 +334,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetTrigger("Attack");
         _spin.SetActive(true);
         _superRotate = true;
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Tornado);
         for(float i =0; i< 1f; i += Time.deltaTime)
         {
             yield return null;
