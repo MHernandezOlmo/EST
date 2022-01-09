@@ -56,7 +56,7 @@ public class ScreenMessagesController : MonoBehaviour
 
     public void Next()
     {
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UINext);
         _counter++;
         StartCoroutine(CrShowText());
     }

@@ -11,7 +11,7 @@ public class MotorTeleferico : Interactable
     [SerializeField]
     GameObject _fusible;
     [SerializeField] DialogueTrigger _dialogue;
-    
+
     bool _canInteract;
     bool _isInstantiated;
     public override void Interact()
@@ -35,7 +35,7 @@ public class MotorTeleferico : Interactable
                 {
                     _shake.enabled = true;
                     GameEvents.ShowScreenText.Invoke("Perfecto! Hemos arreglado el motor!");
-                    
+                    GetComponent<AudioSource>().Play();
                     GameProgressController.SetMotorFixed(true);
                 }
             }
@@ -51,6 +51,7 @@ public class MotorTeleferico : Interactable
         base.Start();
         if (GameProgressController.IsMotorFixed())
         {
+            GetComponent<AudioSource>().Play();
             _shake.enabled = true;
         }
     }

@@ -8,11 +8,13 @@ public class Teleferico : Interactable
     {
         if (GameProgressController.IsMotorFixed())
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LMetalDoor);
             PlayerPrefs.SetInt("CinematicOpenCupula", 1);
             GameEvents.LoadScene.Invoke("Lomnicky_10_Azotea");
         }
         else
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LRedLight);
             GameEvents.ShowScreenText.Invoke("You must repair the cable car engine to go up!");
         }
     }

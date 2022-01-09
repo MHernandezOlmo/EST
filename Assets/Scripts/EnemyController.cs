@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     float _currentHP;
     HPBar _currentHPBar;
     [SerializeField] Transform _hpBarPosition;
-    bool _dead;
+    bool _dead, _hitSFXCD;
     
     [SerializeField] private EnemyType _enemyType;
     [SerializeField] private GameObject _deathParticles;
@@ -31,7 +31,12 @@ public class EnemyController : MonoBehaviour
     {
         if (!_dead)
         {
-            
+            if (!_hitSFXCD)
+            {
+                AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotHit);
+                _hitSFXCD = true;
+                StartCoroutine(SoundCD());
+            }
             _currentHP -= value;
             if (_currentHP <= 0)
             {
@@ -108,5 +113,11 @@ public class EnemyController : MonoBehaviour
         transform.localScale = Vector3.zero;
         _combatTrigger.AddKill();
         Destroy(gameObject);
+    }
+
+    IEnumerator SoundCD()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _hitSFXCD = false;
     }
 }

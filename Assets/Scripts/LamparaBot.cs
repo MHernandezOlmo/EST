@@ -63,16 +63,19 @@ public class LamparaBot : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         if (distance < 10)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
         yield return new WaitForSeconds(0.3f);
         if (distance < 10)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
         yield return new WaitForSeconds(0.3f);
         if (distance < 10)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
         _animator.SetTrigger("Idle");

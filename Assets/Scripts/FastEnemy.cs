@@ -23,7 +23,6 @@ public class FastEnemy : MonoBehaviour
         _startPosition = transform.position;
         _shootTime = 3f;
         _player = FindObjectOfType<PlayerController>().transform;
-
     }
 
     // Update is called once per frame
@@ -54,7 +53,7 @@ public class FastEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(_shootAnimationTime);
         Instantiate(_shootPrefab, _shootPosition.position, Quaternion.identity);
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SoftShoot);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(CrMove());
         yield return new WaitForSeconds(1f);

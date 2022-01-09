@@ -19,6 +19,7 @@ public class PlayerInput : MonoBehaviour
 	// Bind button's EventTrigger OnPointerDown to this method
 	public void NotifyButtonClicked()
 	{
+		AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
 		_OnContextButtonPressed?.Invoke();
 		_ContextButtonDown = true;
 		_ContextButtonPressed = true;

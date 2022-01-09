@@ -26,7 +26,7 @@ public class DialogController : MonoBehaviour
 
     public void Next()
     {
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UINext);
         _counter++;
         if (_counter<_currentDialogue.speakerFaces.Length)
         {
@@ -48,6 +48,7 @@ public class DialogController : MonoBehaviour
     public IEnumerator CrExitDialogue()
     {
         yield return new WaitForSeconds(0.2f);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIPanelDisappear);
         GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
     }
 

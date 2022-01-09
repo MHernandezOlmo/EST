@@ -334,7 +334,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetTrigger("Attack");
         _spin.SetActive(true);
         _superRotate = true;
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Tornado);
+        AudioEvents.playSoundWithNameAndPitch.Invoke(SFXManager.AudioCode.Tornado, 1.5f);
         for(float i =0; i< 1f; i += Time.deltaTime)
         {
             yield return null;

@@ -75,7 +75,7 @@ public class MainMenuSceneController : MonoBehaviour
 
     public void StartNewGame()
     {
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UISelectMenu);
         PlayerPrefs.SetInt("CinematicToPlay", 0);
         PlayerPrefs.SetString("SceneAfterCinematic", "Lomnicky_0_Llegada de UV");
         GameProgressController.Reset();
@@ -85,7 +85,7 @@ public class MainMenuSceneController : MonoBehaviour
 
     public void ContinueGame()
     {
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SmoothSelect);
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UISelectMenu);
         GameEvents.LoadScene.Invoke(GameProgressController.GetCurrentScene());
     }
 
