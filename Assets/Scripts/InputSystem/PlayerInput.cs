@@ -19,7 +19,7 @@ public class PlayerInput : MonoBehaviour
 	// Bind button's EventTrigger OnPointerDown to this method
 	public void NotifyButtonClicked()
 	{
-		AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
+		AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIInstant);
 		_OnContextButtonPressed?.Invoke();
 		_ContextButtonDown = true;
 		_ContextButtonPressed = true;
@@ -63,6 +63,7 @@ public class PlayerInput : MonoBehaviour
 
 		if (Input.GetButtonDown("Action") || Input.GetKeyDown(KeyCode.Space))
 		{
+			AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIInstant);
 			var pointer = new PointerEventData(EventSystem.current);
 			ExecuteEvents.Execute(contextButton.gameObject, pointer, ExecuteEvents.pointerEnterHandler);
 			ExecuteEvents.Execute(contextButton.gameObject, pointer, ExecuteEvents.pointerDownHandler);

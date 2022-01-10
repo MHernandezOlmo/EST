@@ -11,25 +11,27 @@ public class PCContiguaInteractable : Interactable
     TMPro.TextMeshProUGUI _answerText;
     public override void Interact()
     {
-
-
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
         GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
         StartCoroutine(CrShowTablon());
     }
     public void Hide()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIPanelDisappear);
         StartCoroutine(CrHideTablon());
     }
     public void Comprobar()
     {
         if(_answerText.text == "#6428771")
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LGreenLight);
             StartCoroutine(CrHideTablon());
             PlayerPrefs.SetInt("CinematicCloseCupula", 1);
             GameEvents.LoadScene.Invoke("Lomnicky_10_Azotea");
         }
         else
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LRedLight);
             Clear();
         }
     }
@@ -37,12 +39,14 @@ public class PCContiguaInteractable : Interactable
     {
         if (_answerText.text.Length <=7)
         {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIInstant);
             _answerText.text += number;
         }
         
     }
     public void Clear()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIInstant);
         _answerText.text = "#";
     }
     IEnumerator CrHideTablon()

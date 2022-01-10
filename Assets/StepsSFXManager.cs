@@ -44,4 +44,12 @@ public class StepsSFXManager : MonoBehaviour
             _currentIndex %= _aSources.Length;
         }
     }
+
+    public void SetStepClip(AudioClip nClip)
+    {
+        foreach (AudioSource aS in _aSources)
+        {
+            aS.clip = nClip;
+        }
+    }
 }

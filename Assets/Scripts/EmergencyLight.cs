@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class EmergencyLight : MonoBehaviour
 {
-    [SerializeField]
-    Material _emergencyLightMaterial;
+    [SerializeField] Material _emergencyLightMaterial;
     float _elapsedTime;
     float _intermitentLightTime =1f;
     bool rojo;
     bool _setted;
     [SerializeField] Light _light;
-    void Start()
-    {
-                
-    }
+    [SerializeField] AudioSource _aSource;
 
     void Update()
     {
@@ -31,6 +27,7 @@ public class EmergencyLight : MonoBehaviour
                 }
                 else
                 {
+                    _aSource.Play();
                     _light.gameObject.SetActive(true);
                     _emergencyLightMaterial.color = Color.red;
                 }

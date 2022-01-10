@@ -9,9 +9,9 @@ public class TablonInteractable : Interactable
     Image _tablon;
     public override void Interact()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UINext);
         GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
-        StartCoroutine(CrShowTablon());
-        
+        StartCoroutine(CrShowTablon());   
     }
     public void Hide()
     {
@@ -26,6 +26,7 @@ public class TablonInteractable : Interactable
             _tablon.rectTransform.localScale = Vector3.Lerp( Vector3.one, Vector3.zero, i / 0.25f);
             yield return null;
         }
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIPanelDisappear);
         _tablon.rectTransform.localScale = Vector3.zero;
         GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
     }
@@ -45,11 +46,5 @@ public class TablonInteractable : Interactable
     void Start()
     {
         base.Start();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
