@@ -115,6 +115,7 @@ public class MovementController : MonoBehaviour
 			Vector3 targetPos_xz = autopilot.Value.xz();
 			Vector3 direction_xz = (targetPos_xz - myPos_xz).normalized;
 			facing = direction_xz;
+			Debug.Log("Holi");
 			if (Vector3.Distance(targetPos_xz, myPos_xz) < 0.1f)
 			{
 				autopilot = null;
