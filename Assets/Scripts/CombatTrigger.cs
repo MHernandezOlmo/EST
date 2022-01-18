@@ -20,11 +20,10 @@ public class CombatTrigger : MonoBehaviour
     [SerializeField] EnemyHPPool _enemyHPPool;
     bool _done;
     private int _previousMode;
-
+    [SerializeField] private int _startingPoint;
     void Start()
     {
         _combatController = FindObjectOfType<CombatController>();
-        
     }
     public int GetKills()
     {
@@ -41,9 +40,10 @@ public class CombatTrigger : MonoBehaviour
                 _previousMode = MusicManager.currentClipIndex;
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Combat);
                 AddBoundaries();
-            }    
+                GameProgressController.SetCurrentStartPoint(_startingPoint);
+
+            }
         }
-        
     }
 
     public void AddBoundaries()

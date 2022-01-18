@@ -14,10 +14,19 @@ public class LlegadaDeUVSceneController : MonoBehaviour
     bool endedDialog;
     void Start()
     {
-        _player = FindObjectOfType<MovementController>();
-        //_player.autopilot = new Vector3(2.7f, 0.7f, -1.67f);
-        GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
-        StartCoroutine(CrStart());
+        if (GameProgressController.GetStartPoint() == 0)
+        {
+            _player = FindObjectOfType<MovementController>();
+            //_player.autopilot = new Vector3(2.7f, 0.7f, -1.67f);
+            GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
+            StartCoroutine(CrStart());
+        }
+        else
+        {
+            _startingCamera.m_Priority = 0;
+
+        }
+
     }
     IEnumerator CrStart()
     {
