@@ -16,7 +16,6 @@ public class CombatController : MonoBehaviour
     {
         if (CurrentSceneManager._state != GameStates.Combat)
         {
-            print("Intento entrar");
             _currentCombatTrigger = newCombatTrigger;
             StartCoroutine(CrStartCombat());    
         }
