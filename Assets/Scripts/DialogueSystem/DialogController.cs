@@ -26,7 +26,6 @@ public class DialogController : MonoBehaviour
 
     public void Next()
     {
-        Debug.Log("??");
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UINext);
         _counter++;
         if (_counter<_currentDialogue.speakerFaces.Length)

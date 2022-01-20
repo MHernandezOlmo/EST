@@ -24,10 +24,10 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private bool _superRotate;
     private int _currentHp;
-    private int _maxHP =160;
+    private int _maxHP =300;
     private bool _dead;
     public HPBar _currentHPBar;
-
+    float _restoreHP = 0f;
     public int GetMaxHP()
     {
         return _maxHP;
@@ -112,6 +112,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        _restoreHP += Time.deltaTime*10;
+        if (_restoreHP >= 1)
+        {
+            _currentHp++;
+            _restoreHP = 0;
+        }
+        if (_currentHp > _maxHP)
+        {
+            _currentHp = _maxHP;
+        }
         if (_currentCharacter == Character.Goran)
         {
             if (_superRotate)
@@ -177,8 +187,10 @@ public class PlayerController : MonoBehaviour
             {
                 if (_currentCharacter == Character.Flare)
                 {
+                    
                     if (CurrentSceneManager._skillEnabled)
                     {
+                        
                         if (_currentCharacter == Character.Flare)
                         {
                             if(_elapsedShootTime > _shootTime)
@@ -229,7 +241,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
         if (enemyIndex >= 0)
         {
             ball.transform.LookAt(_shootPosition.transform.position + (_enemies[enemyIndex].transform.position - _shootPosition.transform.position).normalized* 2);
@@ -238,8 +249,6 @@ public class PlayerController : MonoBehaviour
         {
             ball.transform.LookAt(_shootPosition.transform.position + transform.forward * 2);
         }
-        
-        
         
         yield return new WaitForSeconds(0.45f);
         GetComponent<MovementController>().enabled = true;

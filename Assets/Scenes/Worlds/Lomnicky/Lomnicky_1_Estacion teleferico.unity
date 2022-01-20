@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7134,80 +7134,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c40dcaa8db8714aa091190f82701d7, type: 3}
---- !u!1 &1586246617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6414289392573455537, guid: e3c40dcaa8db8714aa091190f82701d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1586246616}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1586246618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3282401605180857816, guid: e3c40dcaa8db8714aa091190f82701d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1586246616}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1586246619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2399300465144114002, guid: e3c40dcaa8db8714aa091190f82701d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1586246616}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1586246620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586246617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d696a7799601a3f42a121ecff1cdde20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1586246621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586246617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ee5b02dd16c50408a2a38095bd7737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spin: {fileID: 1586246619}
-  _realGoran: {fileID: 1586246618}
-  _shield: {fileID: 0}
-  _currentCharacter: 0
-  _solarCanonBall: {fileID: 0}
-  _animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _currentHPBar: {fileID: 0}
-  _shootPosition: {fileID: 0}
-  electricBall1: {fileID: 0}
 --- !u!4 &1586246626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6414289392573455540, guid: e3c40dcaa8db8714aa091190f82701d7,

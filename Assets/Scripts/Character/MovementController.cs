@@ -11,7 +11,7 @@ public class MovementController : MonoBehaviour
 	const float GRAVITY = 10;
 	const float GROUND_RAY_LENGTH = 0.3f;
 	const float MAX_VERTICAL_SPEED = 20.0f;
-	const float MAX_MOVEMENT_SPEED = 4f;
+	[SerializeField] private float MAX_MOVEMENT_SPEED = 4f;
 	const float TURN_SPEED = 15f;
 	const float ACCEL = 11f;
 
@@ -111,6 +111,7 @@ public class MovementController : MonoBehaviour
 		Vector3 facing;
         if (autopilot.HasValue)
 		{
+			anim.SetFloat("MovementBlend", 0.5f);
 			Vector3 myPos_xz = transform.position.xz();
 			Vector3 targetPos_xz = autopilot.Value.xz();
 			Vector3 direction_xz = (targetPos_xz - myPos_xz).normalized;

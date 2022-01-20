@@ -10,9 +10,9 @@ public class SolarCanonSkillEnable : MonoBehaviour
     {
         if (GameProgressController.GetHasSolarCanon())
         {
-            CurrentSceneManager._skillEnabled = true;
             if (other.CompareTag("Player"))
             {
+                CurrentSceneManager._skillEnabled = true;
                 _actionButton.SetActive(true);
             }
         }
@@ -20,11 +20,12 @@ public class SolarCanonSkillEnable : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+
         if (GameProgressController.GetHasSolarCanon())
         {
-            CurrentSceneManager._skillEnabled = false;
             if (other.CompareTag("Player"))
             {
+                CurrentSceneManager._skillEnabled = false;
                 _actionButton.SetActive(false);
             }
         }
