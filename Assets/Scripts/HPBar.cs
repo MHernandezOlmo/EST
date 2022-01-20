@@ -21,7 +21,7 @@ public class HPBar : MonoBehaviour
         newEnemyController.SetHPBar(this);
     }
 
-    private void Start()
+    private void Awake()
     {
         if (_isPlayer)
         {
