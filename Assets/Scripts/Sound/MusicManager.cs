@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour
         AudioEvents.playMusicTransitionWithMusicCode.AddListener(PlayMusicTransition);
         AudioEvents.muteMusic.AddListener(MuteMusic);
         AudioEvents.unmuteMusic.AddListener(UnmuteMusic);
+        AudioEvents.playDefMusic.AddListener(PlayDefMusic);
     }
 
     public void PlayMusicTransition(MusicCode code)
@@ -89,5 +90,31 @@ public class MusicManager : MonoBehaviour
         _music.volume = targetVol;
         _usingMuteCr = false;
         _muteCr = null;
+    }
+
+    public void PlayDefMusic()
+    {
+        char firstChar = GameProgressController.GetCurrentScene()[0];
+        switch (firstChar)
+        {
+            case 'L':
+                PlayMusicTransition(MusicCode.Lomnicky);
+                break;
+            case 'E':
+                PlayMusicTransition(MusicCode.TorreEinstein);
+                break;
+            case 'G':
+                PlayMusicTransition(MusicCode.Gregor);
+                break;
+            case 'P':
+                PlayMusicTransition(MusicCode.PicDuMidi);
+                break;
+            case 'S':
+                PlayMusicTransition(MusicCode.SST);
+                break;
+            default:
+                PlayMusicTransition(MusicCode.EST);
+                break;
+        }
     }
 }

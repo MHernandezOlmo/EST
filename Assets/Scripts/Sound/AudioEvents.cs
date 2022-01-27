@@ -12,6 +12,7 @@ public static class AudioEvents
     public static MusicCodeEvent playMusicTransitionWithMusicCode = new MusicCodeEvent();
     public static MusicEvent muteMusic = new MusicEvent();
     public static MusicEvent unmuteMusic = new MusicEvent();
+    public static MusicEvent playDefMusic = new MusicEvent();
 
     public class AudioCodeEvent : UnityEvent<SFXManager.AudioCode> { };
     public class MusicCodeEvent : UnityEvent<MusicManager.MusicCode> { };

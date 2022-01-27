@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator CrWaitForDie()
     {
         yield return new WaitForSeconds(1f);
+        AudioEvents.playDefMusic.Invoke();
         GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
     }
 
