@@ -19,8 +19,6 @@ public class LeanLocalizationController : MonoBehaviour
     }
     public void SetLanguage(string newLanguage)
     {
-        
-        
         _leanLocalization.SetCurrentLanguage(newLanguage);
         SavedDataController.SetLanguage(newLanguage);
         if (LeanLocalization.CurrentLanguage == "English")

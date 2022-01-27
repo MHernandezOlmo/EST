@@ -96,7 +96,6 @@ public class SavedDataController : MonoBehaviour
     static void SaveUserData()
     {
         File.WriteAllText(Application.persistentDataPath + "/" + _userDataFileName, JsonUtility.ToJson(_userData));
-
     }
 
 }

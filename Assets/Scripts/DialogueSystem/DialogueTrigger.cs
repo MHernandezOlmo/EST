@@ -9,6 +9,8 @@ public class DialogueTrigger : MonoBehaviour
 	[SerializeField] UnityEvent _finishEvent;
 	MovementController player;
     [SerializeField] bool _playOnce;
+	[SerializeField] CameraPriorizer _cPrio;
+
     void Start()
 	{
 		//GetComponent<Dialogue>().onDialogueFinished.AddListener(HandleDialogueFinished);
@@ -26,6 +28,10 @@ public class DialogueTrigger : MonoBehaviour
             if (_playOnce)
             {
                 GetComponent<BoxCollider>().enabled = false;
+				if(_cPrio != null)
+                {
+					_cPrio.PriorizeCamera();
+                }
             }
             triggerDialogueEvent(true);
         }
@@ -44,6 +50,10 @@ public class DialogueTrigger : MonoBehaviour
 
 	public void HandleDialogueFinished()
 	{
+		if (_cPrio != null)
+		{
+			_cPrio.StopToPriorize();
+		}
 		_finishEvent.Invoke();
 	}
 
