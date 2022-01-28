@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class LeverDomeAxis2 : Interactable
 {
+    public void Awake()
+    {
+        if (GameProgressController.GetOpenEinsteinBasementDoor())
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(transform.parent.gameObject);
+        }
+    }
     public override void Interact()
     {
         FindObjectOfType<EinsteinDomeSceneController>().MoveAxis1();

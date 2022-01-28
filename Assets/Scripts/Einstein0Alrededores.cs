@@ -49,7 +49,7 @@ public class Einstein0Alrededores : MonoBehaviour
         {
             yield return null;
         }
-        GameEvents.ShowScreenText.Invoke("Consigue el espectropolarímetro");
+        GameEvents.ShowScreenText.Invoke("Get the spectropolarimeter");
 
     }
     void Update()

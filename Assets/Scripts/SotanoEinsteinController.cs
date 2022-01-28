@@ -175,6 +175,8 @@ public class SotanoEinsteinController : MonoBehaviour
     {
         _openBasementDoor = true;
         GameProgressController.SetOpenEinsteinBasementDoor(true);
+        FindObjectOfType<BasementLeverAxis0>().RemoveInteractable();
+        FindObjectOfType<BasementLeverAxis1>().RemoveInteractable();
         Vector3 startPosition = Vector3.zero;
         Vector3 targetPosition = Vector3.up*3;
         for(float i =0; i< 1f; i += Time.deltaTime)

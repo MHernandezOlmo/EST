@@ -12,7 +12,7 @@ public class PiezaFiltro : Interactable
     {
         GameProgressController.SetFiltro(_pieza, true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtenido: Filtro");
+        GameEvents.ShowScreenText.Invoke("Obtained: Filter");
         Destroy(transform.root.gameObject);
     }
     private void Start()

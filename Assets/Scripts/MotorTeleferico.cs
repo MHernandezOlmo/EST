@@ -22,7 +22,7 @@ public class MotorTeleferico : Interactable
             {
                 if (!GameProgressController.HasFuse())
                 {
-                    GameEvents.ShowScreenText.Invoke("The solar storm has burned the fuse. Find a new one.");
+                    
                     _dialogue.triggerDialogueEvent(true);
                     if (!_isInstantiated)
                     {
@@ -34,18 +34,21 @@ public class MotorTeleferico : Interactable
                 else
                 {
                     _shake.enabled = true;
-                    GameEvents.ShowScreenText.Invoke("Perfecto! Hemos arreglado el motor!");
+                    GameEvents.ShowScreenText.Invoke("Motor is working again!");
                     GetComponent<AudioSource>().Play();
                     GameProgressController.SetMotorFixed(true);
                 }
             }
             else
             {
-                GameEvents.ShowScreenText.Invoke("Ya se puede utilizar el funicular");
+                GameEvents.ShowScreenText.Invoke("I can now use the funicular");
             }
         }
     }
-
+    public void ShowText()
+    {
+        GameEvents.ShowScreenText.Invoke("The solar storm has burned the fuse. Find a new one.");
+    }
     private void Start()
     {
         base.Start();

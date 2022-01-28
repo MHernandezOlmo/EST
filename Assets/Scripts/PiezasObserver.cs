@@ -40,7 +40,7 @@ public class PiezasObserver : MonoBehaviour
                     piezasObtenidas++;
                 }
             }
-            _text.text = "Pieces obtained: " + piezasObtenidas + "/6";
+            _text.text = "Camera Parts: " + piezasObtenidas + "/6";
         }
 
     }

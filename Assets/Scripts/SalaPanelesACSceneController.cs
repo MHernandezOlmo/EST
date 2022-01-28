@@ -43,6 +43,6 @@ public class SalaPanelesACSceneController : MonoBehaviour
         {
             yield return null;
         }
-        GameEvents.ShowScreenText.Invoke("Encuentra el camino hasta el telescopio");
+        GameEvents.ShowScreenText.Invoke("Find your way to the telescope");
     }
 }

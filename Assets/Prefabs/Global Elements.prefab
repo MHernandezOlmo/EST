@@ -332,6 +332,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defColor: {r: 0, g: 0, b: 0, a: 0.47058824}
   _hitColor: {r: 0.4716981, g: 0.051174805, b: 0.051174805, a: 0.47058824}
+--- !u!114 &4865292401160421559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535957682503222545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a2850f59564a44aa7440f3a02b1cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textMeshPro: {fileID: 0}
 --- !u!1 &5408769276841496872
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +828,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -743.3571
       objectReference: {fileID: 0}
+    - target: {fileID: 4622689133185497314, guid: 399d434300a72cf47807aa37d0ee54f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4865292401160421559}
+    - target: {fileID: 4622689133185497314, guid: 399d434300a72cf47807aa37d0ee54f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetLanguage
+      objectReference: {fileID: 0}
     - target: {fileID: 4665331920173169273, guid: 399d434300a72cf47807aa37d0ee54f3,
         type: 3}
       propertyPath: m_IsActive
@@ -1004,6 +1027,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096372704871467008, guid: 399d434300a72cf47807aa37d0ee54f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4865292401160421559}
+    - target: {fileID: 6096372704871467008, guid: 399d434300a72cf47807aa37d0ee54f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetLanguage
       objectReference: {fileID: 0}
     - target: {fileID: 6330320787950731243, guid: 399d434300a72cf47807aa37d0ee54f3,
         type: 3}
@@ -3325,6 +3358,12 @@ PrefabInstance:
 --- !u!4 &4535957682503222559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8637789333414968125, guid: d2267105c40e2ae4cbdbe4ba89172b97,
+    type: 3}
+  m_PrefabInstance: {fileID: 5272979422651383330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4535957682503222545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8637789333414968115, guid: d2267105c40e2ae4cbdbe4ba89172b97,
     type: 3}
   m_PrefabInstance: {fileID: 5272979422651383330}
   m_PrefabAsset: {fileID: 0}

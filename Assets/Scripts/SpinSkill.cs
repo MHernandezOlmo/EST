@@ -9,7 +9,7 @@ public class SpinSkill : Interactable
     {
         GameProgressController.SetHasDash(true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtenido: Habilidad Spin");
+        GameEvents.ShowScreenText.Invoke("Obtained: Spin Skill");
         GameProgressController.SetHasTornadoSkill(true);
         _skillText.triggerDialogueEvent(true);
         Destroy(gameObject.transform.parent.gameObject);

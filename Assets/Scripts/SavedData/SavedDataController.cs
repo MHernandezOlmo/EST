@@ -54,7 +54,9 @@ public class SavedDataController : MonoBehaviour
     public static void Initialize()
     {
         _userData = new UserData();
-        _preferencesData = new PreferencesData(FindObjectOfType<LeanLocalizationController>().GetCurrentLanguage());
+        LeanLocalizationController _localizationController = FindObjectOfType<LeanLocalizationController>();
+        Debug.Log(_localizationController);
+        _preferencesData = new PreferencesData(_localizationController.GetCurrentLanguage());
         SaveAll();
     }
     public static void CheckInitialized()

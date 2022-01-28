@@ -8,7 +8,7 @@ public class Fusible : Interactable
     {
         GameProgressController.SetHasFuse(true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtenido: Fusible");
+        GameEvents.ShowScreenText.Invoke("Obtained: Fuse");
 
         Destroy(gameObject);
     }

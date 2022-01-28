@@ -23,11 +23,17 @@ public class LeanLocalizationController : MonoBehaviour
         SavedDataController.SetLanguage(newLanguage);
         if (LeanLocalization.CurrentLanguage == "English")
         {
-            _textMeshPro.text = $"Language: English";
+            if (_textMeshPro != null)
+            {
+                _textMeshPro.text = $"Language: English";
+            }
         }
         else
         {
-            _textMeshPro.text = $"Idioma: Español";
+            if (_textMeshPro != null)
+            {
+                _textMeshPro.text = $"Idioma: Español";
+            }
         }
     }
 }

@@ -382,7 +382,7 @@ namespace Lean.Localization
 			{
 				fallback = LeanTranslation.FormatText(fallback);
 			}
-
+			
 			return fallback;
 		}
 

@@ -29,7 +29,7 @@ public class SalaArchivoSceneController : MonoBehaviour
                 }
                 
                 //CAMBIAR
-                GameEvents.ShowScreenText.Invoke("Find the 6 camera pieces");
+                GameEvents.ShowScreenText.Invoke("Find the 6 camera parts");
                 GameProgressController.SetRecopiledDataAdvice(true);
             }
         }

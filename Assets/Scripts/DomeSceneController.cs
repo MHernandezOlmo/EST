@@ -13,7 +13,7 @@ public class DomeSceneController : MonoBehaviour
         if (GameProgressController.IsChoosePhenomenomSolved())
         {
             _dialogueTrigger.triggerDialogueEvent(true);
-            GameEvents.ShowScreenText.Invoke("Regresa al teleférico");
+            GameEvents.ShowScreenText.Invoke("Go back to the cableway");
         }
     }
 

@@ -353,7 +353,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (g.transform.root.GetComponent<EnemyController>() != null)
                 {
-                    g.transform.root.GetComponent<EnemyController>().ReceiveDamage(2);
+                    g.transform.root.GetComponent<EnemyController>().ReceiveDamage(Mathf.CeilToInt(100*Time.deltaTime));
                 }
                 else
                 {

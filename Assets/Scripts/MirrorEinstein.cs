@@ -34,6 +34,6 @@ public class MirrorEinstein : Interactable
         _dialog.triggerDialogueEvent();
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         Destroy(gameObject.transform.parent.gameObject);
-        GameEvents.ShowScreenText.Invoke("Obtenido: Espejo");
+        GameEvents.ShowScreenText.Invoke("Obtained: Mirror");
     }
 }

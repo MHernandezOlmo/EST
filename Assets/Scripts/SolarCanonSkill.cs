@@ -8,7 +8,7 @@ public class SolarCanonSkill : Interactable
     public override void Interact()
     {
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtenido: Habilidad Cañón Solar");
+        GameEvents.ShowScreenText.Invoke("Obtained: Solar Canon Skill");
         _skillText.triggerDialogueEvent(true);
         GameProgressController.SetHasSolarCanon(true);
         Destroy(gameObject.transform.parent.gameObject);

@@ -13,7 +13,7 @@ public class PiezaCámara : Interactable
         print(transform.root.gameObject.name);
         GameProgressController.SetPiezaCamara(_pieza, true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtenido: Pieza de cámara");
+        GameEvents.ShowScreenText.Invoke("Obtained: Camera part");
         Destroy(transform.root.gameObject);
     }
     private void Start()

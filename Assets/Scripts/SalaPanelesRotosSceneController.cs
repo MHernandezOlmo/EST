@@ -31,7 +31,7 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
                 {
                     yield return null;
                 }
-                GameEvents.ShowScreenText.Invoke("Encuentra los filtros");
+                GameEvents.ShowScreenText.Invoke("Find the filters");
                 GameProgressController.SetArrivedToPicDuMidi(true);
             }
         }
