@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696a7799601a3f42a121ecff1cdde20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MAX_MOVEMENT_SPEED: 4
 --- !u!114 &383601105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3599,6 +3600,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1098994144, guid: 745574c7454fbee4e9bcd00225bd932e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5531415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098994144, guid: 745574c7454fbee4e9bcd00225bd932e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.22342926
+      objectReference: {fileID: 0}
     - target: {fileID: 1188779946, guid: 745574c7454fbee4e9bcd00225bd932e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3857,7 +3866,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.7396
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8829380511928798488, guid: 745574c7454fbee4e9bcd00225bd932e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7612731020249873345, guid: 745574c7454fbee4e9bcd00225bd932e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 745574c7454fbee4e9bcd00225bd932e, type: 3}
 --- !u!1 &2033621731
 GameObject:
