@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5010830397787746625}
   - component: {fileID: 5010830397783658369}
   - component: {fileID: 6640712221278583035}
+  - component: {fileID: 7921784224384833930}
   m_Layer: 0
   m_Name: tele_polarizada_05
   m_TagString: Untagged
@@ -47,6 +48,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -61,6 +63,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -123,3 +126,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5486794, y: 3.2292428, z: 3.1465683}
   m_Center: {x: -0.12057686, y: 1.6006532, z: -0.0719614}
+--- !u!114 &7921784224384833930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010830397774150721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f145b01b9fe05b94d8e078729640c283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
