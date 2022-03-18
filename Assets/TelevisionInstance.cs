@@ -6,20 +6,31 @@ public class TelevisionInstance : MonoBehaviour
 {
     List<Vector3> _movePoints;
     List<Transform> _shootoints;
-    [SerializeField] bool isMain;
+    [SerializeField] Material[] _unlockedMats;
+    bool isMain;
     [SerializeField] float _speed, _minDist, _maxDist, _shootAmount, _ratio;
     [SerializeField] GameObject _shootPrefab;
     private float _moveDist, _currentWaitTime, _waitTime;
     private int _currentPoint, _nextPoint;
     private Coroutine _moveCr;
     private Animator _animator;
-
+    private SkinnedMeshRenderer _sMRenderer;
     void Start()
     {
         if(transform.parent == null)
         {
             isMain = true;
+            if (GameProgressController.GetHasAO())
+            {
+                _sMRenderer = GetComponent<SkinnedMeshRenderer>();
+                _sMRenderer.materials = _unlockedMats;
+            }
         }
+        else if (GameProgressController.GetHasAO())
+        {
+            gameObject.SetActive(false);
+        }
+
 
         if (isMain)
         {
@@ -74,7 +85,7 @@ public class TelevisionInstance : MonoBehaviour
         if (isMain)
         {
             StopCoroutine(_moveCr);
-            _waitTime = Random.Range(2f, 5f);
+            _waitTime = Random.Range(4f, 8f);
             _animator.SetTrigger("Attack");
             transform.GetChild(0).GetComponent<Animator>().SetTrigger("Attack");
         }
