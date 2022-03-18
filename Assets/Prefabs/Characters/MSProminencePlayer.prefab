@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spin: {fileID: 0}
   _realGoran: {fileID: 0}
+  _shield: {fileID: 0}
+  _currentCharacter: 1
+  _solarCanonBall: {fileID: 0}
+  _animationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _currentHPBar: {fileID: 0}
+  _shootPosition: {fileID: 0}
+  electricBall1: {fileID: 0}
 --- !u!114 &1356704392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,6 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696a7799601a3f42a121ecff1cdde20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MAX_MOVEMENT_SPEED: 6
 --- !u!1001 &2152354903361165253
 PrefabInstance:
   m_ObjectHideFlags: 0

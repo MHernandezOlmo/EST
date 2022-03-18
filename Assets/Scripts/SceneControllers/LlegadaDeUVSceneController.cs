@@ -22,7 +22,7 @@ public class LlegadaDeUVSceneController : MonoBehaviour
             StartCoroutine(CrStart());
         }
         else
-        {
+        {    
             _startingCamera.m_Priority = 0;
 
         }
@@ -40,10 +40,7 @@ public class LlegadaDeUVSceneController : MonoBehaviour
         {
             yield return null;
         }
-
-        
-        GameEvents.ShowScreenText.Invoke("Go to the cableway.");
-        //GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("UI/ExitMenu"));
+        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FindCableway"));
 
     }
     void Update()

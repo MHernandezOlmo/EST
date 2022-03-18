@@ -6,6 +6,7 @@ public class PortalPoint : MonoBehaviour
 {
     [SerializeField]
     int _point;
+
     void Start()
     {
         

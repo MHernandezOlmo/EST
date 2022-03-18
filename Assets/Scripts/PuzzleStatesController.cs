@@ -13,47 +13,25 @@ public class PuzzleStatesController : MonoBehaviour
     [SerializeField] Image _failImage;
     [SerializeField] Color _failColor, _failColorTransparent, _correctColor, _correctColorTransparent;
     [SerializeField] AnimationCurve _failAnimationCurve;
-    [SerializeField] private string _scene;
-    bool ended;
     public void StartPuzzle()
     {
         StartCoroutine(CrStartPuzzle());
     }
     public void GameOver()
     {
-        if (!ended)
-        {
-            ended = true;
-            StartCoroutine(ShowGameOverCanvas());
-        }
+        StartCoroutine(ShowGameOverCanvas());
     }
     public void Win()
     {
-        
-        if (!ended)
-        {
-            ended = true;
-            StartCoroutine(ShowWinCanvas());
-        }
+        StartCoroutine(ShowWinCanvas());
     }
     public void Back()
     {
-        switch (_scene)
-        {
-            case "Cazaflares":
-                GameProgressController.SetCurrentStartPoint(1);
-                GameEvents.LoadScene.Invoke("SST_4_sala_observacion Lomnicky");
-                break;
-            case "Mancha":
-                GameProgressController.SetCurrentStartPoint(1);
-                GameEvents.LoadScene.Invoke("Lomnicky_11_Sala Cupula");
-                break;
-        }
-        
+        GameFlowEvents.LoadScene.Invoke("Menu");
     }
     public void Restart()
     {
-        GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+        GameFlowEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
     }
     IEnumerator ShowWinCanvas()
     {
@@ -110,5 +88,9 @@ public class PuzzleStatesController : MonoBehaviour
             yield return null;
         }
         _failImage.color = _failColorTransparent;
+    }
+    void Update()
+    {
+
     }
 }

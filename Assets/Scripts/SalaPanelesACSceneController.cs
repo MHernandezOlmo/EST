@@ -7,9 +7,9 @@ public class SalaPanelesACSceneController : MonoBehaviour
     MovementController player;
     [SerializeField]
     Cinemachine.CinemachineVirtualCamera _startingCamera;
-
     [SerializeField]
     Transform _autoPilotTarget0;
+    [SerializeField] private DialogueTrigger _welcomeDialog;
     private void Awake()
     {
         if (!GameProgressController.getArrivedToPicDuMudi())
@@ -36,13 +36,14 @@ public class SalaPanelesACSceneController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         _startingCamera.m_Priority = 0;
         yield return new WaitForSeconds(2.5f);
-        CurrentSceneManager._canMove = true;
-        player.autopilot = _autoPilotTarget0.position;
-        yield return new WaitForSeconds(3f);
-        while (CurrentSceneManager._state != GameStates.Exploration)
-        {
-            yield return null;
-        }
+        
+        
+        _welcomeDialog.triggerDialogueEvent(true);
+        
+    }
+    public void EndWelcome()
+    {
         GameEvents.ShowScreenText.Invoke("Find your way to the telescope");
+        CurrentSceneManager._canMove = true;
     }
 }

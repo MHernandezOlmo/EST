@@ -156,7 +156,6 @@ public class PlayerController : MonoBehaviour
                 }
                 if (_currentCharacter == Character.MsProminence)
                 {
-                
                     if (CurrentSceneManager.CanDash)
                     {
                         CurrentSceneManager.CanDash = false;
@@ -191,7 +190,7 @@ public class PlayerController : MonoBehaviour
                     
                     if (CurrentSceneManager._skillEnabled)
                     {
-                        
+
                         if (_currentCharacter == Character.Flare)
                         {
                             if(_elapsedShootTime > _shootTime)
@@ -202,7 +201,17 @@ public class PlayerController : MonoBehaviour
                         }
                     }
                 }
-                if(CurrentSceneManager._state == GameStates.Exploration)
+                if (_currentCharacter == Character.MsProminence)
+                {
+                    print("1");
+                    if (CurrentSceneManager.CanDash)
+                    {
+                        print("2");
+                        CurrentSceneManager.CanDash = false;
+                        StartCoroutine(CrDash());
+                    }
+                }
+                if (CurrentSceneManager._state == GameStates.Exploration)
                 {
                     FindObjectOfType<InteractablesController>().Interact();
                 }
@@ -287,11 +296,39 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator CrDash()
     {
+
+        EnemyController[] _enemies = FindObjectsOfType<EnemyController>();
+
+        List<float> angles = new List<float>();
+        for (int i = 0; i < _enemies.Length; i++)
+        {
+            float ang = Vector3.Angle(transform.forward, _enemies[i].transform.position - transform.position);
+
+            angles.Add(ang);
+        }
+
+        int enemyIndex = -1;
+        float minAngle = 1000;
+        for (int i = 0; i < angles.Count; i++)
+        {
+            if (angles[i] < 45)
+            {
+                if (angles[i] < minAngle)
+                {
+                    enemyIndex = i;
+                    minAngle = angles[i];
+                }
+            }
+        }
+        if (enemyIndex >= 0)
+        {
+            transform.LookAt(_enemies[enemyIndex].transform.position);
+        }
         GetComponent<MovementController>().enabled = false;
         _animator.SetTrigger("Attack");
         Vector3 startingPosition = transform.position;
         Vector3 targetPosition = transform.position + transform.forward * 5f;
-        _spin.SetActive(true);
+        //_spin.SetActive(true);
         electricBall1.Play();
         yield return new WaitForSeconds(0.2f);
         for (float i = 0; i < 0.1f; i += Time.deltaTime)
@@ -308,7 +345,11 @@ public class PlayerController : MonoBehaviour
         
         Vector3 currentPosition = transform.position;
         Vector3 raycastStart = currentPosition+Vector3.up*0.5f;
+        Vector3 raycastStartLeft = currentPosition+Vector3.up*0.5f +transform.right * -0.5f;
+        Vector3 raycastStartRight = currentPosition+Vector3.up*0.5f + transform.right*0.5f;
         Vector3 raycastEnd = targetPosition;
+        Vector3 raycastEndLeft = targetPosition + transform.right * -0.5f;
+        Vector3 raycastEndRight = targetPosition + transform.right * 0.5f;
         for (float i = 0; i < 0.1f; i += Time.deltaTime)
         {
             transform.position = Vector3.Lerp(currentPosition, targetPosition, i / 0.1f);
@@ -317,27 +358,36 @@ public class PlayerController : MonoBehaviour
         transform.position = targetPosition;
         RaycastHit hitInfo;
         var hits = Physics.RaycastAll(raycastStart, transform.forward, 5);
+        var hits2 = Physics.RaycastAll(raycastStartLeft, transform.forward, 5);
+        var hits3 = Physics.RaycastAll(raycastStartRight, transform.forward, 5);
+        List<GameObject> hitEnemies = new List<GameObject>(); ;
         foreach(var hit in hits)
         {
-            print(hit.collider.gameObject.name);
             if(hit.collider.gameObject.GetComponent<EnemyController>()!=null)
             {
-                hit.collider.gameObject.GetComponent<EnemyController>().ReceiveDamage(50);
+                if (!hitEnemies.Contains(hit.collider.gameObject))
+                {
+                    hitEnemies.Add(hit.collider.gameObject);
+                }
                 break;
             }
         }
-        for(float i = 0; i< 0.25f; i += Time.deltaTime)
+        foreach(GameObject g in hitEnemies)
         {
-            _realGoran.transform.localScale = Vector3.Lerp( Vector3.zero,Vector3.one, i/0.25f);
+            g.GetComponent<EnemyController>().ReceiveDamage(50);
+        }
+        for(float i = 0; i< 0.1f; i += Time.deltaTime)
+        {
+            _realGoran.transform.localScale = Vector3.Lerp( Vector3.zero,Vector3.one, i/0.1f);
             yield return null;
-            _realGoran.transform.localPosition= Vector3.Lerp( Vector3.up*2,Vector3.zero, i/0.25f); 
+            _realGoran.transform.localPosition= Vector3.Lerp( Vector3.up*2,Vector3.zero, i/0.1f); 
 
             //transform.position = Vector3.Lerp(startingPosition, targetPosition, i/0.25f);
         }
         _realGoran.transform.localPosition= Vector3.zero;
         _realGoran.transform.localScale = Vector3.one;
         GetComponent<MovementController>().enabled = true;
-        _spin.SetActive(false);
+        //_spin.SetActive(false);
     }
     IEnumerator CrSpin()
     {
