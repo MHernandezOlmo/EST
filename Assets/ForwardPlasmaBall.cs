@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class ForwardPlasmaBall : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         transform.Translate(transform.forward * 5 * Time.deltaTime, Space.World);
