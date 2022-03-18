@@ -57,11 +57,7 @@ public class SalaContiguaSceneController : MonoBehaviour
             }
             
         }
-        if (_firstTime ==1)
-        {
-            PlayerPrefs.SetInt("IsContiguaFirstTime", 0);
-            StartCoroutine(WaitDialog());
-        }
+
     }
 
     IEnumerator WaitDialog()

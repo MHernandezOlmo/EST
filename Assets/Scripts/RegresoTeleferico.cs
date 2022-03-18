@@ -11,4 +11,12 @@ public class RegresoTeleferico : Interactable
             GameEvents.LoadScene.Invoke("MainMenu");
         }
     }
+    private void Start()
+    {
+        if (!GameProgressController.IsChoosePhenomenomSolved())
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(transform.root.gameObject);
+        }
+    }
 }

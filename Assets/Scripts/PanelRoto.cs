@@ -46,7 +46,7 @@ public class PanelRoto : Interactable
             yield return null;
         }
         PlayerPrefs.SetInt("ComingFromPDMD", 1);
-        GameEvents.LoadScene.Invoke("CoronografoInProgress");
+        GameEvents.LoadScene.Invoke("Coronografo");
     }
 
 }

@@ -388,6 +388,8 @@ public class PlayerController : MonoBehaviour
         _realGoran.transform.localScale = Vector3.one;
         GetComponent<MovementController>().enabled = true;
         //_spin.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        CurrentSceneManager.CanDash = true;
     }
     IEnumerator CrSpin()
     {

@@ -12,10 +12,18 @@ public class EstacionTelefericoSceneController : MonoBehaviour
     [SerializeField] GameObject _combatCanvas;
     [SerializeField] GameObject _dialog;
     [SerializeField] GameObject _end;
+    [SerializeField] private DialogueTrigger _auroraDialog;
+    [SerializeField] private DialogueTrigger _lampDialog;
+    LamparaBot[] _enemies;
     void Start()
     {
+        _enemies = FindObjectsOfType<LamparaBot>();
         _player = FindObjectOfType<MovementController>();
-
+        foreach(LamparaBot en in _enemies)
+        {
+            en.enabled = false;
+            en.GetComponent<Animator>().enabled = false;
+        }
         if (!GameProgressController.IsCazadoresDeFlaresSolved())
         {
             GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
@@ -38,17 +46,28 @@ public class EstacionTelefericoSceneController : MonoBehaviour
     {
         CurrentSceneManager._canMove = true;
         yield return new WaitForSeconds(2);
-        _player.autopilot = _autoPilotTarget0.position;
-        yield return new WaitForSeconds(2);
-
+        _auroraDialog.triggerDialogueEvent(true);
     }
 
     public void ChangeCameraPriority()
     {
-        
         _firstCamera.Priority = 0;
+        StartCoroutine(CrLampDialog());
+    }
 
-        
+    IEnumerator CrLampDialog()
+    {
+        yield return new WaitForSeconds(3);
+        _lampDialog.triggerDialogueEvent();
+    }
+
+    public void RestoreEnemies()
+    {
+        foreach (LamparaBot en in _enemies)
+        {
+            en.enabled = true;
+            en.GetComponent<Animator>().enabled = true;
+        }
     }
 
 }

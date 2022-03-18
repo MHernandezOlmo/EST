@@ -9,6 +9,8 @@ public class PCContiguaInteractable : Interactable
     Image _pc;
     [SerializeField]
     TMPro.TextMeshProUGUI _answerText;
+    [SerializeField] private DialogueTrigger _dialogue;
+    bool _hasShownDialog;
     public override void Interact()
     {
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Next);
@@ -72,9 +74,24 @@ public class PCContiguaInteractable : Interactable
             yield return null;
         }
         _pc.rectTransform.localScale = Vector3.one;
+        if (!_hasShownDialog)
+        {
+            _hasShownDialog = true;
+            _dialogue.triggerDialogueEvent(true);
+            PlayerPrefs.SetInt("DialoguePC", 1);
+
+        }
     }
     private void Awake()
     {
+        if (PlayerPrefs.GetInt("DialoguePC") == 0)
+        {
+            _hasShownDialog = false;
+        }
+        else
+        {
+            _hasShownDialog = true;
+        }
         if (GameProgressController.IsCeilingClosed())
         {
             gameObject.SetActive(false);
