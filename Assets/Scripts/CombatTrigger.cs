@@ -60,11 +60,11 @@ public class CombatTrigger : MonoBehaviour
         _bc.center = new Vector3(0, 0,(- myBC.size.z / 2f) - offset + myBC.center.z -2);
         _bc.size = new Vector3(myBC.size.x + (offset * 2f), myBC.size.y, 2);
         _bc = _boundaries.AddComponent<BoxCollider>();
-        _bc.center = new Vector3((myBC.size.x / 2f), 0, zPosOffset);
-        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z + (offset * 2f));
+        _bc.center = new Vector3((myBC.size.x / 2f), 0, 0);
+        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z + (offset * 7f));
         _bc = _boundaries.AddComponent<BoxCollider>();
-        _bc.center = new Vector3((-myBC.size.x / 2f), 0, zPosOffset);
-        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z + (offset * 2f));
+        _bc.center = new Vector3((-myBC.size.x / 2f), 0, 0);
+        _bc.size = new Vector3(2, myBC.size.y, myBC.size.z + (offset * 7f));
     }
 
     public void RemoveBoundaries()

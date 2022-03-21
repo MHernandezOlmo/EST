@@ -11,6 +11,7 @@ public class EnemyTV : MonoBehaviour
     [SerializeField] GameObject[] _shootPositions;
     Vector3 _direction;
     [SerializeField] bool _mmoving;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -38,8 +39,7 @@ public class EnemyTV : MonoBehaviour
         _fighting = false;
     }
     void Update()
-    {
-        
+    {   
         if (!_fighting)
         {
             if (_mmoving)

@@ -7,7 +7,7 @@ public class TelevisionInstance : MonoBehaviour
     List<Vector3> _movePoints;
     List<Transform> _shootoints;
     [SerializeField] Material[] _unlockedMats;
-    bool isMain;
+    bool isMain, _attackZone;
     [SerializeField] float _speed, _minDist, _maxDist, _shootAmount, _ratio;
     [SerializeField] GameObject _shootPrefab;
     private float _moveDist, _currentWaitTime, _waitTime;
@@ -34,6 +34,10 @@ public class TelevisionInstance : MonoBehaviour
 
         if (isMain)
         {
+            if (GameProgressController.GetHasAO())
+            {
+                GetComponent<EnemyController>().enabled = true;
+            }
             int pointsAmount = Random.Range(4, 7);
             _animator = GetComponent<Animator>();
             _movePoints = new List<Vector3>();
@@ -82,7 +86,7 @@ public class TelevisionInstance : MonoBehaviour
 
     public void Attack()
     {
-        if (isMain)
+        if (isMain && _attackZone)
         {
             StopCoroutine(_moveCr);
             _waitTime = Random.Range(4f, 8f);
@@ -113,6 +117,11 @@ public class TelevisionInstance : MonoBehaviour
         }
     }
 
+
+    public void SetAttackZone(bool state) 
+    {
+        _attackZone = state;
+    }
 
     IEnumerator CrMove()
     {

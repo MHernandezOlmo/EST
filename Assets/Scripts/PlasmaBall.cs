@@ -46,7 +46,7 @@ public class PlasmaBall : MonoBehaviour
     {
         transform.LookAt(transform.position+_dir);
         elapsedTime += Time.deltaTime;
-        transform.position += _dir * Time.deltaTime * 10;
+        transform.position += _dir * Time.deltaTime * 15;
         if (elapsedTime > 5)
         {
             Destroy(gameObject);

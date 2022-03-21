@@ -48,6 +48,13 @@ public class EnemyController : MonoBehaviour
     }
     private void Start()
     {
+        if(_enemyType == EnemyType.TV)
+        {
+            GameObject g = new GameObject();
+            g.transform.position = transform.position + Vector3.up * 3;
+            g.transform.SetParent(transform);
+            _hpBarPosition = g.transform;
+        }
         _player = FindObjectOfType<PlayerController>().transform;
         _currentHP = 100;
         _maxHP = 100;

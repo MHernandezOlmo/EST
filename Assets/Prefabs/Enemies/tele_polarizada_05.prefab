@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5010830397783658369}
   - component: {fileID: 6640712221278583035}
   - component: {fileID: 7921784224384833930}
+  - component: {fileID: 8796736126286994268}
   m_Layer: 0
   m_Name: tele_polarizada_05
   m_TagString: Untagged
@@ -150,3 +151,22 @@ MonoBehaviour:
   _ratio: 2
   _shootPrefab: {fileID: 962290391670741044, guid: c0115e3e89760de44a79fa49eeea479c,
     type: 3}
+--- !u!114 &8796736126286994268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010830397774150721}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ea8c7448d41bf4fabc4e2e95108a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _originalScale: {x: 0, y: 0, z: 0}
+  _hpBarPosition: {fileID: 0}
+  _enemyType: 2
+  _deathParticles: {fileID: 3147197855463432073, guid: c594904cadc97c043b564991724fcdce,
+    type: 3}
+  _player: {fileID: 0}
+  _animator: {fileID: 5010830397783658369}

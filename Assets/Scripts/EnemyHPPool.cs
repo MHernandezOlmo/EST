@@ -20,8 +20,7 @@ public class EnemyHPPool : MonoBehaviour
     }
 
     public void AddBar(EnemyController _enemyController)
-    {
-        
+    {        
         for(int i = 0; i< _hpBarRTs.Length; i++)
         {
             if (!_hpBarRTs[i].gameObject.activeSelf)
@@ -31,9 +30,5 @@ public class EnemyHPPool : MonoBehaviour
                 break;
             }
         }
-    }
-    void Update()
-    {
-        
     }
 }
