@@ -118,7 +118,10 @@ public class EnemyController : MonoBehaviour
             yield return null;
         }
         transform.localScale = Vector3.zero;
-        _combatTrigger.AddKill();
+        if(_combatTrigger != null)
+        {
+            _combatTrigger.AddKill();
+        }
         Destroy(gameObject);
     }
 

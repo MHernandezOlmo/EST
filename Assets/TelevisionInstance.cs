@@ -7,7 +7,7 @@ public class TelevisionInstance : MonoBehaviour
     List<Vector3> _movePoints;
     List<Transform> _shootoints;
     [SerializeField] Material[] _unlockedMats;
-    bool isMain, _attackZone;
+    bool isMain, _attackZone, _loaded;
     [SerializeField] float _speed, _minDist, _maxDist, _shootAmount, _ratio;
     [SerializeField] GameObject _shootPrefab;
     private float _moveDist, _currentWaitTime, _waitTime;
@@ -121,6 +121,14 @@ public class TelevisionInstance : MonoBehaviour
     public void SetAttackZone(bool state) 
     {
         _attackZone = state;
+        if (isMain)
+        {
+            if (state && !_loaded)
+            {
+                _loaded = true;
+                FindObjectOfType<EnemyHPPool>().AddBar(GetComponent<EnemyController>());
+            }
+        }
     }
 
     IEnumerator CrMove()
