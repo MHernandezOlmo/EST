@@ -133,4 +133,9 @@ public class CombatTrigger : MonoBehaviour
         _enemyHPPool.AddBar(enemy);
 
     }
+
+    public bool IsDone()
+    {
+        return _done;
+    }
 }
