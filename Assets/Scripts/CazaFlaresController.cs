@@ -116,6 +116,27 @@ public class CazaFlaresController : MonoBehaviour
         _loops[6].Play();
         yield return new WaitForSeconds(1f);
         _flares[7].Play();
+
+        //extra
+
+        yield return new WaitForSeconds(1f);
+        _flares[1].Play();
+        yield return new WaitForSeconds(1f);
+        _loops[9].Play();
+        yield return new WaitForSeconds(1f);
+        _flares[8].Play();
+        yield return new WaitForSeconds(1f);
+        _flares[16].Play();
+        yield return new WaitForSeconds(1f);
+        _filaments[9].Play();
+        yield return new WaitForSeconds(1f);
+        _flares[9].Play();
+        yield return new WaitForSeconds(1f);
+        _flares[12].Play();
+        yield return new WaitForSeconds(1f);
+        _filaments[10].Play();
+        yield return new WaitForSeconds(1f);
+        _filaments[1].Play();
     }
     public void NotifyLoop()
     {
@@ -152,12 +173,8 @@ public class CazaFlaresController : MonoBehaviour
     {
         StartCoroutine(FeedbackAnimate("FLARE"));
         _correctCounter++;
-        _text.text = $"Captured Flares\n {_correctCounter}/20";
-        if (_correctCounter >= 20)
-        {
-            GameProgressController.SetCazadoresDeFlaresSolved(true);
-            FindObjectOfType<PuzzleStatesController>().Win();
-        }
+        _text.text = $"Captured Flares\n {_correctCounter}/25";
+
     }
     void Update()
     {
@@ -167,9 +184,18 @@ public class CazaFlaresController : MonoBehaviour
             _timeBarImage.fillAmount = _gameTime / _totalGameTime;
             if (_gameTime < 0)
             {
+                if (_correctCounter >= 20)
+                {
+                    GameProgressController.SetCazadoresDeFlaresSolved(true);
+                    FindObjectOfType<PuzzleStatesController>().Win();
+                }
+                else
+                {
+                    FindObjectOfType<PuzzleStatesController>().GameOver();
+                }
                 _gameStarted = false;
                 
-                FindObjectOfType<PuzzleStatesController>().GameOver();
+                
             }
         }
     }

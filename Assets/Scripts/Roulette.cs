@@ -59,17 +59,18 @@ public class Roulette : MonoBehaviour
     void Start()
     {
         _imageLibrary = new List<Sprite[]>();
-        _imageLibrary.Add(_filamentsPhotosphereImages);
-        _imageLibrary.Add(_proninencesPhotosphereImages);
-        _imageLibrary.Add(_sunspotsPhotosphereImages);
-        
+
         _imageLibrary.Add(_filamentsCoronaImages);
         _imageLibrary.Add(_prominencesCoronaImages);
         _imageLibrary.Add(_sunspotsCoronaImages);
-        
+
         _imageLibrary.Add(_filamentsChromosphereImages);
         _imageLibrary.Add(_prominenceChromosphereImages);
         _imageLibrary.Add(_sunspotsChromosphereImages);
+
+        _imageLibrary.Add(_filamentsPhotosphereImages);
+        _imageLibrary.Add(_proninencesPhotosphereImages);
+        _imageLibrary.Add(_sunspotsPhotosphereImages);
         
         _cards = new NewCardBehaviour[itemAmount];
         _sockets = new bool[9];
