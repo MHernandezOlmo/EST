@@ -58,8 +58,7 @@ public class DialogController : MonoBehaviour
         Sprite faceSprite = Resources.Load<Sprite>(name);
 
         _name.text = _currentDialogue.speakerFaces[_counter].ToString();
-
-        _mainText.text = _currentDialogue.GetTranslatedText(_counter);
+        
         _faceImage.sprite = faceSprite;
         _faceImage.overrideSprite = faceSprite;
         _nextButton.SetActive(false);
@@ -67,8 +66,9 @@ public class DialogController : MonoBehaviour
     }
     IEnumerator CrRefresh()
     {
+
         string translatedText = _currentDialogue.GetTranslatedText(_counter);
-        _mainText.text = translatedText;
+        _mainText.text = translatedText.Replace('%', '\n');
         yield return new WaitForSeconds(0.5f);
         _nextButton.SetActive(true);
     }

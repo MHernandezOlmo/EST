@@ -17,7 +17,6 @@ public class EinsteinArchivoSceneController : MonoBehaviour
 
     public void LoadLomnicky()
     {
-        
         GameEvents.LoadScene.Invoke("Lomnicky_12_Sala Secreta 1");
     }
 }
