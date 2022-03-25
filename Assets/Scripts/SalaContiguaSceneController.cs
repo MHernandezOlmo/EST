@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using Lean.Localization;
+
 public class SalaContiguaSceneController : MonoBehaviour
 {
     [SerializeField]
@@ -22,7 +24,7 @@ public class SalaContiguaSceneController : MonoBehaviour
     int _firstTime;
     [SerializeField] DialogueTrigger _codeDialog;
 
-    void Start()
+    IEnumerator Start()
     {
         _player = FindObjectOfType<MovementController>();
         _firstTime = PlayerPrefs.GetInt("IsContiguaFirstTime",1);
@@ -52,8 +54,8 @@ public class SalaContiguaSceneController : MonoBehaviour
                 _blockStairsDialog.SetActive(false);
                 _stairsPortal.SetActive(true);
                 _dialogueTrigger.gameObject.SetActive(true);
-                
-                GameEvents.ShowScreenText.Invoke("Go to the Archive and ask for help");
+                yield return null;
+                GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/HelpArchive"));
             }
             
         }
