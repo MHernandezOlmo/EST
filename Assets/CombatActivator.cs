@@ -2,27 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TVCombatActivator : MonoBehaviour
+public class CombatActivator : MonoBehaviour
 {
     [SerializeField] GameObject _combatButton;
     CombatCanvasController _combatCanvas;
-    [SerializeField] bool _isEinstein;
-    bool _firstCombat, fightable;
+    [SerializeField] bool _isEinstein, _isLomnicky; //En realidad es solo para la escena llegada torre...
+    bool _firstCombat;
     TelevisionInstance[] _tvs;
-    private int _alivesTv;
-
+    LamparaBot[] _lamps;
+    private int _aliveEnemies;
+    private int _sameTimeColliders;
 
     private void Awake()
     {
         _combatCanvas = FindObjectOfType<CombatCanvasController>();
-        _tvs = FindObjectsOfType<TelevisionInstance>();
-        _alivesTv = _tvs.Length/2;
+        if (_isLomnicky)
+        {
+            _lamps = FindObjectsOfType<LamparaBot>();
+            _aliveEnemies = _lamps.Length;
+        }
+        else
+        {
+            _tvs = FindObjectsOfType<TelevisionInstance>();
+            _aliveEnemies = _tvs.Length / 2;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            _sameTimeColliders++;
             if (_isEinstein)
             {
                 if (_firstCombat)
@@ -39,7 +49,7 @@ public class TVCombatActivator : MonoBehaviour
 
     public void EnableCombat()
     {
-        if(_alivesTv > 0)
+        if(_aliveEnemies > 0)
         {
             CurrentSceneManager._skillEnabled = true;
             _combatCanvas.Show();
@@ -71,6 +81,7 @@ public class TVCombatActivator : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            _sameTimeColliders--;
             if (_isEinstein)
             {
                 if (_firstCombat)
@@ -78,17 +89,17 @@ public class TVCombatActivator : MonoBehaviour
                     DisableCombat();
                 }
             }
-            else
+            else if(_sameTimeColliders <= 0)
             {
                 DisableCombat();
             }
         }
     }
 
-    public void KillTv()
+    public void KillEnemy()
     {
-        _alivesTv--;
-        if(_alivesTv <= 0)
+        _aliveEnemies--;
+        if(_aliveEnemies <= 0)
         {
             DisableCombat();
         }

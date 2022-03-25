@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 public class CombatTrigger : MonoBehaviour
 {
+    [SerializeField] GameObject _customCollider;
     [SerializeField] string _combatName;
     [SerializeField]
     List<EnemySpawner> enemies;
@@ -28,6 +29,7 @@ public class CombatTrigger : MonoBehaviour
         {
             if (PlayerPrefs.GetInt(_combatName, 0) == 1)
             {
+                _done = true;
                 gameObject.SetActive(false);
             }
         }
@@ -47,9 +49,15 @@ public class CombatTrigger : MonoBehaviour
                 _combatController.StartCombat(this);
                 _previousMode = MusicManager.currentClipIndex;
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Combat);
-                AddBoundaries();
+                if(_customCollider == null)
+                {
+                    AddBoundaries();
+                }
+                else
+                {
+                    _customCollider.SetActive(true);
+                }
                 GameProgressController.SetCurrentStartPoint(_startingPoint);
-
             }
         }
     }
@@ -89,7 +97,14 @@ public class CombatTrigger : MonoBehaviour
         {
             PlayerPrefs.SetInt(_combatName, 1);
             _combatController.EndCombat();
-            RemoveBoundaries();
+            if(_customCollider == null)
+            {
+                RemoveBoundaries();
+            }
+            else
+            {
+                _customCollider.SetActive(false);
+            }
         }
     }
     public CinemachineVirtualCamera GetCombatCamera()

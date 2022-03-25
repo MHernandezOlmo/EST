@@ -7,6 +7,9 @@ public class CombatController : MonoBehaviour
     CombatTrigger _currentCombatTrigger;
     TransitionsController _transitionsController;
     CinemachineVirtualCamera _mainSceneCamera;
+    [SerializeField] private bool _isFreeZone;
+    private bool _started;
+
     private void Awake()
     {
         _transitionsController = FindObjectOfType<TransitionsController>();
@@ -17,7 +20,13 @@ public class CombatController : MonoBehaviour
         if (CurrentSceneManager._state != GameStates.Combat)
         {
             _currentCombatTrigger = newCombatTrigger;
-            StartCoroutine(CrStartCombat());    
+            StartCoroutine(CrStartCombat());
+            _started = true;
+        }
+        else if(_isFreeZone && !_started)
+        {
+            _currentCombatTrigger = newCombatTrigger;
+            StartCoroutine(CrStartCombat());
         }
     }
     IEnumerator CrStartCombat()
@@ -32,20 +41,10 @@ public class CombatController : MonoBehaviour
     public void EndCombat()
     {
         GameEvents.CombatEvent.Invoke(false);
-        if(FindObjectOfType<TVCombatActivator>() == null)
+        if(FindObjectOfType<CombatActivator>() == null)
         {
             GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
         }
         _currentCombatTrigger.GetCombatCamera().Priority = 5;
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

@@ -114,7 +114,7 @@ public class EnemyController : MonoBehaviour
         }
         else if(_enemyType == EnemyType.TV)
         {
-            FindObjectOfType<TVCombatActivator>().KillTv();
+            FindObjectOfType<CombatActivator>().KillEnemy();
         }
 
         _currentHPBar.Stop();    

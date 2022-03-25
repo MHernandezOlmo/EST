@@ -117,7 +117,10 @@ public class LamparaBot : MonoBehaviour
             transform.localScale = Vector3.Lerp(localScale, Vector3.zero, i / 0.25f);
             yield return null;
         }
+        if(FindObjectOfType<CombatActivator>() != null)
+        {
+            FindObjectOfType<CombatActivator>().KillEnemy();
+        }
         Destroy(gameObject);
-
     }
 }
