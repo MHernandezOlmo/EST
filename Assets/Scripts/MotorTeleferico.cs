@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Localization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,20 +35,21 @@ public class MotorTeleferico : Interactable
                 else
                 {
                     _shake.enabled = true;
-                    GameEvents.ShowScreenText.Invoke("Motor is working again!");
+                    GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FixEngine"));
                     GetComponent<AudioSource>().Play();
                     GameProgressController.SetMotorFixed(true);
                 }
             }
             else
             {
-                GameEvents.ShowScreenText.Invoke("I can now use the funicular");
+                GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FixedEngineInteract"));
             }
         }
     }
     public void ShowText()
     {
-        GameEvents.ShowScreenText.Invoke("The solar storm has burned the fuse. Find a new one.");
+        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FindFuse"));
+
     }
     private void Start()
     {

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Localization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +16,9 @@ public class Teleferico : Interactable
         else
         {
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LRedLight);
-            GameEvents.ShowScreenText.Invoke("You must repair the cable car engine to go up!");
+            GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/RepairEngine"));
+
+            
         }
     }
 }
