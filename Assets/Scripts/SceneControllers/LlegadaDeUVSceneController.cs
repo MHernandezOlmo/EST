@@ -40,7 +40,7 @@ public class LlegadaDeUVSceneController : MonoBehaviour
         {
             yield return null;
         }
-        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FindCableway"));
+        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FindCableCar"));
 
     }
     void Update()

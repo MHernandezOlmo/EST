@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Localization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class SpinSkill : Interactable
     {
         GameProgressController.SetHasDash(true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtained: Spin Skill");
+        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FindCableCar"));
         GameProgressController.SetHasTornadoSkill(true);
         _skillText.triggerDialogueEvent(true);
         Destroy(gameObject.transform.parent.gameObject);
