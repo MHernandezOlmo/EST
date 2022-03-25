@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BeamSplitter : Interactable
 {
-    [SerializeField] DialogueTrigger _dialogTrigger;
     public override void Interact()
     {
+        FindObjectOfType<SecretRoomController>().LoadDialog();
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        _dialogTrigger.triggerDialogueEvent();
         Destroy(transform.parent.gameObject);
     }
 }
