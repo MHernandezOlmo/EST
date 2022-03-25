@@ -56,17 +56,18 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_BakeResolution: 8
+    m_AtlasSize: 2048
     m_AO: 1
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 111300000, guid: 181e4157014456c4e8f3199296f5412c,
+      type: 2}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
@@ -75,9 +76,9 @@ LightmapSettings:
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 512
+    m_PVRSampleCount: 50
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentSampleCount: 50
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 1
     m_PVRDenoiserTypeDirect: 1
@@ -129,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1597381681, guid: e3c40dcaa8db8714aa091190f82701d7, type: 3}
+      propertyPath: _currentHPBar
+      value: 
+      objectReference: {fileID: 525450894}
     - target: {fileID: 145036815718785381, guid: e3c40dcaa8db8714aa091190f82701d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1213,6 +1218,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37964e51bf309dd41af01535a06120f7, type: 3}
+--- !u!114 &525450894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3902393367255268414, guid: 62faca9ef05f8164fa6493a0814bd806,
+    type: 3}
+  m_PrefabInstance: {fileID: 710306231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698bf115bf8ae7c4fa26ff7acd8702cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &525567702 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 736539165476357205, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4696,6 +4713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0743aad7af8d70748a80530d74fec034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _combatName: 
   enemies:
   - {fileID: 1575488462}
   - {fileID: 1863069318}
