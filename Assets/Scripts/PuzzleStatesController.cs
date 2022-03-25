@@ -27,11 +27,17 @@ public class PuzzleStatesController : MonoBehaviour
     }
     public void Back()
     {
-        GameFlowEvents.LoadScene.Invoke("Menu");
+        string backScene = PlayerPrefs.GetString("PuzzleSceneBack");
+        GameEvents.LoadScene.Invoke(backScene);
     }
     public void Restart()
     {
-        GameFlowEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+        GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+    }
+    public void RestartNoInstructions()
+    {
+        PlayerPrefs.SetInt("NoInstructions", 1);
+        GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
     }
     IEnumerator ShowWinCanvas()
     {
@@ -92,5 +98,17 @@ public class PuzzleStatesController : MonoBehaviour
     void Update()
     {
 
+    }
+    public void Start()
+    {
+        if(PlayerPrefs.GetInt("NoInstructions")==1)
+        {
+            PlayerPrefs.SetInt("NoInstructions", 0);
+            _holder.anchoredPosition = new Vector3(0, 1100, 0);
+            if (FindObjectOfType<CazaFlaresController>() != null)
+            {
+                FindObjectOfType<CazaFlaresController>().StartGame();
+            }
+        }
     }
 }
