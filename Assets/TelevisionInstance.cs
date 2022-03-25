@@ -8,6 +8,7 @@ public class TelevisionInstance : MonoBehaviour
     List<Transform> _shootoints;
     [SerializeField] Material[] _unlockedMats;
     bool isMain, _attackZone, _loaded;
+    [SerializeField] private bool _autoAttack;
     [SerializeField] float _speed, _minDist, _maxDist, _shootAmount, _ratio;
     [SerializeField] GameObject _shootPrefab;
     private float _moveDist, _currentWaitTime, _waitTime;
@@ -17,6 +18,15 @@ public class TelevisionInstance : MonoBehaviour
     private SkinnedMeshRenderer _sMRenderer;
     void Start()
     {
+        if (GameProgressController.GetHasAO())
+        {
+            gameObject.layer = 0;
+        }
+        else
+        {
+            gameObject.layer = 12;
+        }
+
         if(transform.parent == null)
         {
             isMain = true;
@@ -62,6 +72,11 @@ public class TelevisionInstance : MonoBehaviour
             {
                 _movePoints.Add(new Vector3(transform.position.x - Random.Range(-_moveDist, _moveDist), transform.position.y, transform.position.z - Random.Range(-_moveDist, _moveDist)));
             }
+
+            //Quaternion targetRot = Quaternion.LookRotation(transform.position - _movePoints[_currentPoint]);
+            //targetRot = Quaternion.Euler(targetRot.eulerAngles.x, targetRot.eulerAngles.y - 90, targetRot.eulerAngles.z);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, 1);
+
             _moveCr = StartCoroutine(CrMove());
         }
     }
@@ -79,18 +94,25 @@ public class TelevisionInstance : MonoBehaviour
             if (_currentWaitTime > _waitTime)
             {
                 _currentWaitTime = 0;
-                Attack();
+                if (_autoAttack)
+                {
+                    Attack();
+                }
+                else if (isMain && _attackZone)
+                {
+                    Attack();
+                }
             }
         }
     }
 
     public void Attack()
     {
-        if (isMain && _attackZone)
+        StopCoroutine(_moveCr);
+        _waitTime = Random.Range(4f, 8f);
+        _animator.SetTrigger("Attack");
+        if(transform.GetChild(0).GetComponent<Animator>() != null)
         {
-            StopCoroutine(_moveCr);
-            _waitTime = Random.Range(4f, 8f);
-            _animator.SetTrigger("Attack");
             transform.GetChild(0).GetComponent<Animator>().SetTrigger("Attack");
         }
     }

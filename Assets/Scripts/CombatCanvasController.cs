@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CombatCanvasController : MonoBehaviour
 {
-    [SerializeField]
-    GameObject _combatCanvas;
+    [SerializeField] GameObject _combatCanvas;
     private void Start()
     {
         Hide();

@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 public class CombatTrigger : MonoBehaviour
 {
+    [SerializeField] string _combatName;
     [SerializeField]
     List<EnemySpawner> enemies;
     float _elapsedTime;
@@ -23,6 +24,13 @@ public class CombatTrigger : MonoBehaviour
     [SerializeField] private int _startingPoint;
     void Start()
     {
+        if(_combatName != "")
+        {
+            if (PlayerPrefs.GetInt(_combatName, 0) == 1)
+            {
+                gameObject.SetActive(false);
+            }
+        }
         _combatController = FindObjectOfType<CombatController>();
     }
     public int GetKills()
@@ -79,6 +87,7 @@ public class CombatTrigger : MonoBehaviour
         _kills++;
         if (_kills >= _requiredKills)
         {
+            PlayerPrefs.SetInt(_combatName, 1);
             _combatController.EndCombat();
             RemoveBoundaries();
         }
