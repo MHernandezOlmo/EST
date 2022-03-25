@@ -288,6 +288,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 744946710897084872, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.79
+      objectReference: {fileID: 0}
     - target: {fileID: 744946710979353085, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -307,6 +312,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 744946710994698554, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 744946711155522830, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 744946711407603143, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -357,6 +372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744946711861199465, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 1857689487287958786, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -2934,9 +2954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68044c763443fdf42a0fe8fa4d4102ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionButton: {fileID: 129187155}
-  _combatCanvas: {fileID: 0}
-  _isEinsteinTower: 0
+  _combatButton: {fileID: 129187155}
 --- !u!1 &312264486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9703,12 +9721,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1035882102}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1047097098 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 744946712227751005, guid: 62faca9ef05f8164fa6493a0814bd806,
-    type: 3}
-  m_PrefabInstance: {fileID: 28587101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1081202973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5054263768155194035, guid: 204eeed6b24eab9499d5d814c30a561d,
@@ -9989,8 +10001,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1223990072}
   - component: {fileID: 1223990071}
-  - component: {fileID: 1223990070}
   - component: {fileID: 1223990069}
+  - component: {fileID: 1223990073}
   m_Layer: 0
   m_Name: ToEscaleras (3)
   m_TagString: Untagged
@@ -10011,21 +10023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newCamera: {fileID: 419370832}
---- !u!114 &1223990070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223990068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68044c763443fdf42a0fe8fa4d4102ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _actionButton: {fileID: 129187155}
-  _combatCanvas: {fileID: 1047097098}
-  _isEinsteinTower: 1
 --- !u!65 &1223990071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10053,6 +10050,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 84.131004, z: 0}
+--- !u!114 &1223990073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223990068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7f7339efb06394587fe8ce210dd740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _combatButton: {fileID: 129187155}
+  _isEinstein: 1
 --- !u!1001 &1234451484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11547,7 +11558,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1223990070}
+      objectReference: {fileID: 1223990073}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState

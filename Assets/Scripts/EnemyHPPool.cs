@@ -11,7 +11,7 @@ public class EnemyHPPool : MonoBehaviour
     [SerializeField] RectTransform _playerHPBarRT;
     [SerializeField] HPBar _playerHPBar;
     
-    void Start()
+    void Awake()
     {
         foreach(RectTransform rt in _hpBarRTs)
         {
@@ -20,7 +20,7 @@ public class EnemyHPPool : MonoBehaviour
     }
 
     public void AddBar(EnemyController _enemyController)
-    {        
+    {
         for(int i = 0; i< _hpBarRTs.Length; i++)
         {
             if (!_hpBarRTs[i].gameObject.activeSelf)

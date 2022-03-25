@@ -32,7 +32,10 @@ public class CombatController : MonoBehaviour
     public void EndCombat()
     {
         GameEvents.CombatEvent.Invoke(false);
-        GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
+        if(FindObjectOfType<TVCombatActivator>() == null)
+        {
+            GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
+        }
         _currentCombatTrigger.GetCombatCamera().Priority = 5;
     }
     void Start()

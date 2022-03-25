@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6640712221278583035}
   - component: {fileID: 7921784224384833930}
   - component: {fileID: 8796736126286994268}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: tele_polarizada_05
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -144,6 +144,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 49dbcdce45c745f4992efadd59df079a, type: 2}
   - {fileID: 2100000, guid: ddcad2d3c533a1345999cdaf7917fd39, type: 2}
   - {fileID: 2100000, guid: bf59eabb74a2e5c4a8a64943a77c1247, type: 2}
+  _autoAttack: 0
   _speed: 1.5
   _minDist: 3
   _maxDist: 5
@@ -164,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _originalScale: {x: 0, y: 0, z: 0}
+  _currentHPBar: {fileID: 0}
   _hpBarPosition: {fileID: 0}
   _enemyType: 2
   _deathParticles: {fileID: 3147197855463432073, guid: c594904cadc97c043b564991724fcdce,

@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     
     float _maxHP;
     float _currentHP;
-    HPBar _currentHPBar;
+    [SerializeField]HPBar _currentHPBar;
     [SerializeField] Transform _hpBarPosition;
     bool _dead, _hitSFXCD;
     
@@ -103,11 +103,18 @@ public class EnemyController : MonoBehaviour
     
     IEnumerator CrDie()
     {
-        if(_deathParticles != null)
+        if(_enemyType == EnemyType.Robola)
         {
-            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.BlueEDeath);
-            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.EchoPops);
-            Instantiate(_deathParticles, transform.position, Quaternion.identity);
+            if (_deathParticles != null)
+            {
+                AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.BlueEDeath);
+                AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.EchoPops);
+                Instantiate(_deathParticles, transform.position, Quaternion.identity);
+            }
+        }
+        else if(_enemyType == EnemyType.TV)
+        {
+            FindObjectOfType<TVCombatActivator>().KillTv();
         }
 
         _currentHPBar.Stop();    

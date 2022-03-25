@@ -45,7 +45,6 @@ public class HPBar : MonoBehaviour
 
     public void Show()
     {
-        
         if ((CurrentSceneManager._state != GameStates.Combat))
         {
             _showingHP = true;
