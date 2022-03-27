@@ -109,6 +109,10 @@ public class PuzzleStatesController : MonoBehaviour
             {
                 FindObjectOfType<CazaFlaresController>().StartGame();
             }
+            if (FindObjectOfType<Roulette>() != null)
+            {
+                FindObjectOfType<Roulette>().StartGame();
+            }
         }
     }
 }
