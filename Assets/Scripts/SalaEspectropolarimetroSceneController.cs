@@ -14,8 +14,39 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     [SerializeField] GameObject _mesa;
     [SerializeField] Animator _animator;
     [SerializeField] DialogueTrigger _hasEspectroPolarimetro;
+    private bool _rayBlocked;
+    public bool RayBlocked
+    {
+        get
+        {
+            return _rayBlocked;
+        }
+        set
+        {
+            _rayBlocked = value;
+            if (_rayBlocked)
+            {
+                _ray2.SetActive(false);
+            }
+            else
+            {
+                _ray2.SetActive(true);
+                if (GameProgressController.GetUsedPrismEinstein())
+                {
+                    SaveEspectropolarimetro();
+                }
+                else
+                {
+                    _beamSplitter.SetActive(false);
+                    _rayoBifurcadoL.SetActive(false);
+                    _rayoBifurcadoR.SetActive(false);
+                }
+            }
+        }
+    }
     void Start()
     {
+        CurrentSceneManager._skillEnabled = false;
         if (!GameProgressController.GetShownPrismDialog())
         {
             _prismAdvice.gameObject.SetActive(true);
@@ -88,6 +119,4 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
         _rayoBifurcadoL.SetActive(true);
         _rayoBifurcadoR.SetActive(true);
     }
-
-
 }

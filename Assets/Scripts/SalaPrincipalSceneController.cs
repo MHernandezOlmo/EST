@@ -28,7 +28,7 @@ public class SalaPrincipalSceneController : MonoBehaviour
     }
     public void ChangeCamera(int camera)
     {
-        print(camera);
+        
         if(CurrentSceneManager._elapsedSceneTime > 0.5f)
         {
             if (camera != _currentCamera)
@@ -57,7 +57,6 @@ public class SalaPrincipalSceneController : MonoBehaviour
                     break;
 
                 case 2:
-
                     _c2.Priority = 100;
                     break;
                 case 3:
@@ -65,7 +64,16 @@ public class SalaPrincipalSceneController : MonoBehaviour
                     _c3.Priority = 100;
                     break;
             }
+            if (camera == 2)
+            {
+                _player.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                _player.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            }
         }
+
         _currentCamera = camera;
 
     }
@@ -75,6 +83,14 @@ public class SalaPrincipalSceneController : MonoBehaviour
         TransitionsController transitionController = FindObjectOfType<TransitionsController>();
         transitionController.FadeToBlack(0.5f);
         yield return new WaitForSeconds(0.5f);
+        if(targetCamera == 2)
+        {
+            _player.transform.localScale = new Vector3(1,1,1);
+        }
+        else
+        {
+            _player.transform.localScale = new Vector3(1.2f,1.2f,1.2f);
+        }
 
         _c0.Priority = 0;
         _c1.Priority = 0;

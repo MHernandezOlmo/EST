@@ -20,10 +20,7 @@ public class SotanoEinsteinController : MonoBehaviour
     [SerializeField] private GameObject mirrorPoint;
     void Start()
     {
-        if(GameProgressController.GetUsedPrismEinstein())
-        {
-            SceneManager.LoadScene("FinalCinematic");
-        }
+
 
         if (GameProgressController.GetIsFullRayWorking())
         {

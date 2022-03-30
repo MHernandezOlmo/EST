@@ -8,7 +8,8 @@ public class RegresoTeleferico : Interactable
     {
         if (GameProgressController.IsChoosePhenomenomSolved())
         {
-            GameEvents.LoadScene.Invoke("MainMenu");
+            GameProgressController.SetCurrentStartPoint(1);
+            GameEvents.LoadScene.Invoke("Lomnicky_1_Estacion teleferico");
         }
     }
     private void Start()
@@ -17,6 +18,11 @@ public class RegresoTeleferico : Interactable
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.root.gameObject);
+        }
+        else
+        {
+            FindObjectOfType<InteractablesController>().AddInteractable(this);
+
         }
     }
 }

@@ -42,6 +42,7 @@ public class PcCupula : Interactable
             if (!_havePieces)
             {
                 FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+                GetComponent<SpriteRenderer>().enabled = false;
             }  
         }
         
@@ -64,6 +65,8 @@ public class PcCupula : Interactable
             {
                 _havePieces = true;
                 FindObjectOfType<InteractablesController>().AddInteractable(this);
+                GetComponent<SpriteRenderer>().enabled = true;
+
             }
         }
     }

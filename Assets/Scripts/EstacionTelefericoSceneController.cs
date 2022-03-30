@@ -14,6 +14,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
     [SerializeField] GameObject _end;
     [SerializeField] private DialogueTrigger _auroraDialog;
     [SerializeField] private DialogueTrigger _lampDialog;
+    [SerializeField] private DialogueTrigger _lampDialogFinal;
     LamparaBot[] _enemies;
     void Start()
     {
@@ -38,6 +39,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
             {
                 _dialog.SetActive(false);
                 _end.SetActive(true);
+                StartCoroutine(CrFinalDialog());
             }
         }
     }
@@ -48,6 +50,12 @@ public class EstacionTelefericoSceneController : MonoBehaviour
         yield return new WaitForSeconds(2);
         _auroraDialog.triggerDialogueEvent(true);
     }
+    IEnumerator CrFinalDialog()
+    {
+        yield return new WaitForSeconds(1);
+        _lampDialogFinal.triggerDialogueEvent(true);
+    }
+
 
     public void ChangeCameraPriority()
     {

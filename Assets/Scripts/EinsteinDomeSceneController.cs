@@ -35,6 +35,7 @@ public class EinsteinDomeSceneController : MonoBehaviour
     [SerializeField] private GameObject _skyRay;
     IEnumerator Start()
     {
+        CurrentSceneManager._skillEnabled = false;
         _isDomeOpen = GameProgressController.GetHasOpenDomeEinstein();
         if (GameProgressController.GetUsedMirrorEinstein())
         {

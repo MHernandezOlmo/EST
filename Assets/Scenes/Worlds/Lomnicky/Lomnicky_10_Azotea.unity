@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 8
-    m_AtlasSize: 2048
+    m_AtlasSize: 1024
     m_AO: 1
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -74,10 +74,10 @@ LightmapSettings:
     m_MixedBakeMode: 1
     m_BakeBackend: 2
     m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 50
+    m_PVRDirectSampleCount: 8
+    m_PVRSampleCount: 30
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 50
+    m_PVREnvironmentSampleCount: 30
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 1
     m_PVRDenoiserTypeDirect: 1
@@ -395,13 +395,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103646897}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.33, y: 91.74, z: 2.4070005}
+  m_LocalRotation: {x: -0, y: -0.59152395, z: -0, w: 0.8062874}
+  m_LocalPosition: {x: -15.43, y: 91.74, z: 2.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1744442313}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -72.53001, z: 0}
 --- !u!1 &107123828
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +453,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1597381681, guid: e3c40dcaa8db8714aa091190f82701d7, type: 3}
+      propertyPath: _currentHPBar
+      value: 
+      objectReference: {fileID: 1926114426}
     - target: {fileID: 145036815718785381, guid: e3c40dcaa8db8714aa091190f82701d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1053,7 +1057,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.21226418, g: 0.7667299, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.52799034, g: 0.90910745, b: 0.990566, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1149,7 +1153,7 @@ MonoBehaviour:
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
   m_DefaultBlend:
-    m_Style: 0
+    m_Style: 1
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -2061,32 +2065,32 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: speakerFaces.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: speakerFaces.Array.data[0]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: speakerFaces.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: translationName.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: speakerFaces.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: translationName.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: translationName.Array.data[0]
-      value: Lomnicky/SpectroPiezasConseguidas
+      value: Lomnicky/SpectroPiezasConseguidas_00
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.data[1]
-      value: UI/OptionsMenu
+      value: Lomnicky/SpectroPiezasConseguidas_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
@@ -8023,12 +8027,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678663719}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.4
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8065,7 +8069,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 15159
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -16725,17 +16729,17 @@ PrefabInstance:
     - target: {fileID: 1538272348761159079, guid: 57aaa18d78958a14493b8a9fccdc4b7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.48
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 1538272348761159079, guid: 57aaa18d78958a14493b8a9fccdc4b7d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 89.94
+      value: 91.54
       objectReference: {fileID: 0}
     - target: {fileID: 1538272348761159079, guid: 57aaa18d78958a14493b8a9fccdc4b7d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.09
+      value: 60.24
       objectReference: {fileID: 0}
     - target: {fileID: 1538272348761159079, guid: 57aaa18d78958a14493b8a9fccdc4b7d,
         type: 3}
@@ -17217,7 +17221,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646762025}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -17261,7 +17265,7 @@ Light:
     serializedVersion: 2
     m_Bits: 1024
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18408,7 +18412,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.size
-      value: 162
+      value: 163
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -19117,6 +19121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[162].Name
+      value: Alert/HelpArchive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -19702,6 +19711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[162].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[0].Translations.Array.data[0]
       value: Solar Mission EST
       objectReference: {fileID: 0}
@@ -20053,19 +20067,20 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[33].Translations.Array.data[0]
-      value: Intense solar storms may affect the normal working of electrical systems.&I
+      value: Intense solar storms may affect the normal working of electrical systems.%I
         wonder if my toaster is ok.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[33].Translations.Array.data[1]
-      value: Intense solar storms may affect the normal working of electrical systems.&I
+      value: Intense solar storms may affect the normal working of electrical systems.%I
         wonder if my toaster is ok.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[33].Translations.Array.data[2]
-      value: 
+      value: Intense solar storms may affect the normal working of electrical systems.%I
+        wonder if my toaster is ok.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -20444,21 +20459,20 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[57].Translations.Array.data[0]
-      value: 'Finally& I''ve gathered all the pieces of the camera!&I have to go
+      value: 'Finally& I''ve gathered all the pieces of the camera!%I have to go
         quickly to the telescope room and test it. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[57].Translations.Array.data[1]
-      value: 'Finally& I''ve gathered all the pieces of the camera!&I have to go
+      value: 'Finally& I''ve gathered all the pieces of the camera!%I have to go
         quickly to the telescope room and test it. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[57].Translations.Array.data[2]
-      value: Finally& I've gathered all the pieces of the camera! I have to go back
-        quickly to the telescope room and test it. Spectro must be impatient& he
-        could explode like a coronal mass ejection at any moment
+      value: 'Finally& I''ve gathered all the pieces of the camera!%I have to go
+        quickly to the telescope room and test it. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -20480,17 +20494,17 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[59].Translations.Array.data[0]
-      value: Hooray!&The camera works perfectly! This deserves a great dinner!
+      value: Hooray!%The camera works perfectly!%This deserves a great dinner!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[59].Translations.Array.data[1]
-      value: Hooray!&The camera works perfectly! This deserves a great dinner!
+      value: Hooray!%The camera works perfectly!%This deserves a great dinner!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[59].Translations.Array.data[2]
-      value: Hooray! The camera works perfectly! This deserves a great dinner!
+      value: Hooray!%The camera works perfectly!%This deserves a great dinner!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -20524,13 +20538,13 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[62].Translations.Array.data[0]
-      value: 'Hello& tiny lamps!%Hiding in that wavelength is useless now.&With my
+      value: 'Hello& tiny lamps!%Hiding in that wavelength is useless now.%With my
         camera& I can perfectly see you. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[62].Translations.Array.data[1]
-      value: 'Hello& tiny lamps!%Hiding in that wavelength is useless now.&With my
+      value: 'Hello& tiny lamps!%Hiding in that wavelength is useless now.%With my
         camera& I can perfectly see you. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -20543,12 +20557,12 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[63].Translations.Array.data[0]
-      value: 'Are you ready?&I''m going to turn you into meatballs! '
+      value: 'Are you ready?%I''m going to turn you into meatballs! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[63].Translations.Array.data[1]
-      value: 'Are you ready?&I''m going to turn you into meatballs! '
+      value: 'Are you ready?%I''m going to turn you into meatballs! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -22194,6 +22208,21 @@ PrefabInstance:
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[2]
       value: I can now use the cable car
       objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[0]
+      value: Go to the Archive and ask for help
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[1]
+      value: Go to the Archive and ask for help
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[2]
+      value: Go to the Archive and ask for help
+      objectReference: {fileID: 0}
     - target: {fileID: 5117504478396084345, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: m_text
@@ -23578,6 +23607,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5452e70af4aa7242b16ffc03b79e7d9, type: 3}
+--- !u!114 &1926114426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3902393367255268414, guid: 62faca9ef05f8164fa6493a0814bd806,
+    type: 3}
+  m_PrefabInstance: {fileID: 1744442312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698bf115bf8ae7c4fa26ff7acd8702cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933266266
 GameObject:
   m_ObjectHideFlags: 0

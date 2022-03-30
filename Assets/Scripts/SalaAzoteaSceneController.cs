@@ -131,7 +131,7 @@ public class SalaAzoteaSceneController : MonoBehaviour
             {
                 _currentCamera = camera;
 
-                StartCoroutine(CoChangeCamera(camera));
+                //StartCoroutine(CoChangeCamera(camera));
             }
         }
         else
@@ -156,31 +156,31 @@ public class SalaAzoteaSceneController : MonoBehaviour
         }
     }
 
-    IEnumerator CoChangeCamera(int targetCamera)
-    {
-        TransitionsController transitionController = FindObjectOfType<TransitionsController>();
-        transitionController.FadeToBlack(0.5f);
-        yield return new WaitForSeconds(0.5f);
+    //IEnumerator CoChangeCamera(int targetCamera)
+    //{
+    //    TransitionsController transitionController = FindObjectOfType<TransitionsController>();
+    //    transitionController.FadeToBlack(0.5f);
+    //    yield return new WaitForSeconds(0.5f);
 
-        _c0.Priority = 0;
-        _c1.Priority = 0;
+    //    _c0.Priority = 0;
+    //    _c1.Priority = 0;
 
-        switch (targetCamera)
-        {
-            case 0:
-                _c0.Priority = 100;
+    //    switch (targetCamera)
+    //    {
+    //        case 0:
+    //            _c0.Priority = 100;
 
-                break;
+    //            break;
 
-            case 1:
-                _c1.Priority = 100;
+    //        case 1:
+    //            _c1.Priority = 100;
 
-                break;
+    //            break;
 
-        }
+    //    }
 
-        transitionController.FadeFromBlack(0.5f);
-        yield return new WaitForSeconds(0.5f);
-    }
+    //    transitionController.FadeFromBlack(0.5f);
+    //    yield return new WaitForSeconds(0.5f);
+    //}
 
 }

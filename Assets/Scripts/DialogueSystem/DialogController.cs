@@ -68,7 +68,7 @@ public class DialogController : MonoBehaviour
     {
 
         string translatedText = _currentDialogue.GetTranslatedText(_counter);
-        _mainText.text = translatedText.Replace('%', '\n');
+        _mainText.text = translatedText.Replace('%', '\n').Replace('$', '"');
         yield return new WaitForSeconds(0.5f);
         _nextButton.SetActive(true);
     }

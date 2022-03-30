@@ -16,15 +16,7 @@ public class PrismaController : MonoBehaviour
 
     private void Start()
     {
-        _openBarrier = GameProgressController.GetHasOpenBarrierEinstein();
-        if (_openBarrier)
-        {
-            _barrier.transform.localRotation = Quaternion.Euler(0,75f,0);
-        }
-        else
-        {
-            _barrier.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
+
     }
 
     public void OnTriggerEnter(Collider other)

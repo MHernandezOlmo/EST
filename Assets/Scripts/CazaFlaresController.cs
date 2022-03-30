@@ -173,8 +173,13 @@ public class CazaFlaresController : MonoBehaviour
     {
         StartCoroutine(FeedbackAnimate("FLARE"));
         _correctCounter++;
-        _text.text = $"Captured Flares\n {_correctCounter}/25";
-
+        _text.text = $"Captured Flares\n {_correctCounter}/20";
+        if (_correctCounter >= 20)
+        {
+            GameProgressController.SetCazadoresDeFlaresSolved(true);
+            PlayerPrefs.SetString("PuzzleSceneBack", "SST_4_sala_observacion Lomnicky");
+            FindObjectOfType<PuzzleStatesController>().Win();
+        }
     }
     void Update()
     {
@@ -184,19 +189,8 @@ public class CazaFlaresController : MonoBehaviour
             _timeBarImage.fillAmount = _gameTime / _totalGameTime;
             if (_gameTime < 0)
             {
-                if (_correctCounter >= 20)
-                {
-                    GameProgressController.SetCazadoresDeFlaresSolved(true);
-                    PlayerPrefs.SetString("PuzzleSceneBack", "Lomnicky_6_Sala Observacion SST");
-                    FindObjectOfType<PuzzleStatesController>().Win();
-                }
-                else
-                {
-                    FindObjectOfType<PuzzleStatesController>().GameOver();
-                }
+                FindObjectOfType<PuzzleStatesController>().GameOver();
                 _gameStarted = false;
-                
-                
             }
         }
 

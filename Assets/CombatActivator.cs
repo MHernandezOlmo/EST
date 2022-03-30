@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CombatActivator : MonoBehaviour
 {
@@ -12,10 +13,11 @@ public class CombatActivator : MonoBehaviour
     LamparaBot[] _lamps;
     private int _aliveEnemies;
     private int _sameTimeColliders;
-
+    [SerializeField] private GameObject _finalCollider;
     private void Awake()
     {
         _combatCanvas = FindObjectOfType<CombatCanvasController>();
+
         if (_isLomnicky)
         {
             _lamps = FindObjectsOfType<LamparaBot>();
@@ -24,7 +26,7 @@ public class CombatActivator : MonoBehaviour
         else
         {
             _tvs = FindObjectsOfType<TelevisionInstance>();
-            _aliveEnemies = _tvs.Length / 2;
+            _aliveEnemies = _tvs.Length ;
         }
     }
 
@@ -35,13 +37,14 @@ public class CombatActivator : MonoBehaviour
             _sameTimeColliders++;
             if (_isEinstein)
             {
-                if (_firstCombat)
+                if (GameProgressController.GetUsedPrismEinstein())
                 {
                     EnableCombat();
                 }
             }
             else
             {
+
                 EnableCombat();
             }
         }
@@ -74,6 +77,15 @@ public class CombatActivator : MonoBehaviour
             t.SetAttackZone(false);
         }
         CurrentSceneManager.SetGameState(GameStates.Exploration);
+        if (GameProgressController.GetUsedPrismEinstein() && SceneManager.GetActiveScene().name == "Einstein_0_alrededores_torre")
+        {
+            if (_finalCollider != null)
+            {
+                _finalCollider.gameObject.SetActive(true);
+                FindObjectOfType<Einstein0Alrededores>().DisableCombatCollider();
+            }
+        }
+
     }
 
 

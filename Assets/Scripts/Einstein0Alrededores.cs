@@ -11,11 +11,28 @@ public class Einstein0Alrededores : MonoBehaviour
     [SerializeField]
     Transform _autoPilotTarget0;
     [SerializeField]  DialogueTrigger _trigger;
+    [SerializeField]  DialogueTrigger _secondTrigger;
     [SerializeField] GameObject[] _fakeTv;
     [SerializeField] GameObject[] _realTV;
     [SerializeField] GameObject _outsideCollider;
+    [SerializeField] private Cinemachine.CinemachineVirtualCamera vCam;
+    [SerializeField] private GameObject _skillLockCollider;
+    public void DisableCombatCollider()
+    {
+        _outsideCollider.gameObject.SetActive(false);
+    }
+    public void DisableCollider()
+    {
+        _skillLockCollider.gameObject.SetActive(false);
+    }
+    public void ShowSkillAdvice()
+    {
+        GameEvents.ShowScreenText.Invoke("Obtained: Solar Canon Skill");
+    }
+
     void Start()
     {
+
         if (!GameProgressController.GetUsedPrismEinstein())
         {
             _player = FindObjectOfType<MovementController>();
@@ -25,6 +42,8 @@ public class Einstein0Alrededores : MonoBehaviour
         }
         else
         {
+            vCam.Priority = 0;
+            _secondTrigger.gameObject.SetActive( false);
             foreach(GameObject g in _fakeTv)
             {
                 g.SetActive(false);

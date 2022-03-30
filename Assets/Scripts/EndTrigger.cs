@@ -6,6 +6,6 @@ public class EndTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameEvents.LoadScene.Invoke("MainMenu");
+        GameEvents.LoadScene.Invoke("camerasecured");
     }
 }

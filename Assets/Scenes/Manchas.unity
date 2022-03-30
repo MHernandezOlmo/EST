@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3038,7 +3038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -65}
+  m_AnchoredPosition: {x: 0, y: -57.4}
   m_SizeDelta: {x: 1617.6213, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267624522
@@ -3060,16 +3060,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The same solar phenomenon can be seen in different layers of the solar
-    atmosphere just by changing the wavelength. Or it can even be invisible at some
-    wavelengths!
-
-    We can do that with our camera and appropriate filters! In
-    this puzzle, we are going to image the Sun at different wavelengths. If everything
-    works fine, you should be able to identify each phenomenon in the various layers
-    of the solar atmosphere.
-
-    Good luck!'
+  m_text: "\xB7 The same solar phenomenon can be seen in different layers of the
+    solar atmosphere just by changing the wavelength. Or it can be invisible at some
+    wavelengths, like those killer lamps!\n\xB7 We can do that with our camera and
+    appropriate filters! \r\n\xB7 In this puzzle, we will image the Sun at different
+    wavelengths. DRAG EACH PHENOMENON TO THE APPROPRIATE LAYER OF THE SOLAR ATMOSPHERE.\nGood
+    luck!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47315bd6f9b4a434bb6773dcc105fd0d, type: 2}
   m_sharedMaterial: {fileID: -7097640782908820028, guid: 47315bd6f9b4a434bb6773dcc105fd0d,
@@ -3097,14 +3093,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.25
+  m_fontSize: 36.75
   m_fontSizeBase: 106.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

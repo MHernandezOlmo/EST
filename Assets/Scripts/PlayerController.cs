@@ -190,7 +190,6 @@ public class PlayerController : MonoBehaviour
                     
                     if (CurrentSceneManager._skillEnabled)
                     {
-
                         if (_currentCharacter == Character.Flare)
                         {
                             if(_elapsedShootTime > _shootTime)
@@ -203,7 +202,6 @@ public class PlayerController : MonoBehaviour
                 }
                 if (_currentCharacter == Character.MsProminence)
                 {
-                    print("1");
                     if (CurrentSceneManager.CanDash)
                     {
                         print("2");
@@ -225,6 +223,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         electricBall1.transform.position = _shootPosition.transform.position;
         electricBall1.Play();
+        Vector3 myShootPosition = _shootPosition.transform.position;
+        myShootPosition.y = transform.position.y;
         GameObject ball = Instantiate(_solarCanonBall, _shootPosition.transform.position, Quaternion.identity);
 
         EnemyController[] _enemies = FindObjectsOfType<EnemyController>();
@@ -232,7 +232,9 @@ public class PlayerController : MonoBehaviour
         List<float> angles = new List<float>();
         for(int i  =0;i< _enemies.Length; i++)
         {
-            float ang = Vector3.Angle(transform.forward, _enemies[i].transform.position - transform.position);
+            Vector3 neutralYEnemyPosition = _enemies[i].transform.position;
+            neutralYEnemyPosition.y = ball.transform.position.y;
+            float ang = Vector3.Angle(transform.forward, neutralYEnemyPosition - transform.position);
             
             angles.Add(ang);
         }
@@ -253,13 +255,14 @@ public class PlayerController : MonoBehaviour
 
         if (enemyIndex >= 0)
         {
-            ball.transform.LookAt(_shootPosition.transform.position + (_enemies[enemyIndex].transform.position - _shootPosition.transform.position).normalized* 2);
+            Vector3 neutralYEnemyPosition = _enemies[enemyIndex].transform.position;
+            neutralYEnemyPosition.y = ball.transform.position.y;
+            ball.transform.LookAt(_shootPosition.transform.position + (neutralYEnemyPosition - _shootPosition.transform.position).normalized* 2);
         }
         else
         {
             ball.transform.LookAt(_shootPosition.transform.position + transform.forward * 2);
         }
-        
         yield return new WaitForSeconds(0.45f);
         GetComponent<MovementController>().enabled = true;
     }

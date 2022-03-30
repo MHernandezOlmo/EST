@@ -22,7 +22,7 @@ public class SolarCanonBall : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyController>().ReceiveDamage(40);
+            other.GetComponent<EnemyController>().ReceiveDamage(100);
             Destroy(gameObject);
         }
     }
