@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private EnemyType _enemyType;
     [SerializeField] private GameObject _deathParticles;
     [SerializeField] private  Transform _player;
-    public enum EnemyType { Robola, Lamp, TV}
+    public enum EnemyType { Robola, Lamp, TV, Toast}
     [SerializeField] private Animator _animator;
     
     public void SetHPBar(HPBar _hp)
