@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class DashRoomSceneController : MonoBehaviour
 {
-    [SerializeField]
-    GameObject _dashInteractable;
-    void Start()
+
+    public void ShowSkillText()
     {
-        if (GameProgressController.HasDash())
-        {
-            _dashInteractable.SetActive(false);
-        }
+        GameEvents.ShowScreenText.Invoke("Obtained: Dash Skill");
     }
 
 }

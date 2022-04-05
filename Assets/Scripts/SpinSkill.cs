@@ -8,8 +8,7 @@ public class SpinSkill : Interactable
     [SerializeField] DialogueTrigger _skillText;
     public override void Interact()
     {
-        GameProgressController.SetHasDash(true);
-        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+
         
         GameProgressController.SetHasTornadoSkill(true);
         _skillText.triggerDialogueEvent(true);
