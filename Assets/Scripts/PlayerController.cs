@@ -218,6 +218,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator CrShoot()
     {
+        AudioEvents.playSoundWithNameAndPitch.Invoke(SFXManager.AudioCode.LaserShoot, 0.8f);
         GetComponent<MovementController>().enabled = false;
         _animator.SetTrigger("Attack");
         yield return new WaitForSeconds(0.4f);

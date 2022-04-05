@@ -4,29 +4,53 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    public enum MusicCode {Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein };
+    public static MusicManager musicManager;
+    public enum MusicCode {None, Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein};
+    [SerializeField] MusicCode musicCode;
     [SerializeField] private AudioSource _music;
     [SerializeField] private List<AudioClip> _musicClips;
     private bool _musicTransition, _usingMuteCr;
     private Coroutine _transitionCr, _muteCr;
     public static int currentClipIndex;
-
+    
     private void Start()
     {
+        transform.SetParent(null);
+        DontDestroyOnLoad(this);
+
+        if (musicManager == null)
+        {
+            musicManager = this;
+        }
+        else if(musicManager != this)
+        {
+            Destroy(gameObject);
+        }
+
         AudioEvents.playMusicTransitionWithMusicCode.AddListener(PlayMusicTransition);
         AudioEvents.muteMusic.AddListener(MuteMusic);
         AudioEvents.unmuteMusic.AddListener(UnmuteMusic);
         AudioEvents.playDefMusic.AddListener(PlayDefMusic);
+       
+        if(musicCode != MusicCode.None)
+        {
+            PlayMusicTransition(musicCode);
+        }
+        else if (currentClipIndex != (int)GetDefMusicCode() - 1)
+        {
+            PlayMusicTransition(GetDefMusicCode());
+        }
     }
+
 
     public void PlayMusicTransition(MusicCode code)
     {
-        currentClipIndex = (int)code;
+        currentClipIndex = (int)code -1;
         if (_transitionCr != null)
         {
             StopCoroutine(_transitionCr);
         }
-        _transitionCr = StartCoroutine(MusicTransition((int)code));
+        _transitionCr = StartCoroutine(MusicTransition((int)code - 1));
     }
 
     public IEnumerator MusicTransition(int musicIndex)
@@ -94,27 +118,31 @@ public class MusicManager : MonoBehaviour
 
     public void PlayDefMusic()
     {
+        PlayMusicTransition(GetDefMusicCode());
+    }
+
+    public MusicCode GetDefMusicCode()
+    {
+        MusicCode defCode = MusicCode.EST;
         char firstChar = GameProgressController.GetCurrentScene()[0];
         switch (firstChar)
         {
             case 'L':
-                PlayMusicTransition(MusicCode.Lomnicky);
+                defCode = MusicCode.Lomnicky;
                 break;
             case 'E':
-                PlayMusicTransition(MusicCode.TorreEinstein);
+                defCode = MusicCode.TorreEinstein;
                 break;
             case 'G':
-                PlayMusicTransition(MusicCode.Gregor);
+                defCode = MusicCode.Gregor;
                 break;
             case 'P':
-                PlayMusicTransition(MusicCode.PicDuMidi);
+                defCode = MusicCode.PicDuMidi;
                 break;
             case 'S':
-                PlayMusicTransition(MusicCode.SST);
-                break;
-            default:
-                PlayMusicTransition(MusicCode.EST);
+                defCode = MusicCode.SST;
                 break;
         }
+        return defCode;
     }
 }
