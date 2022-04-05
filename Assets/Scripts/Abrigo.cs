@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Abrigo : Interactable
 {
-    public void Start()
+    public void Awake()
     {
         if (GameProgressController.GetHasAbrigo())
         {

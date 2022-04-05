@@ -124,6 +124,7 @@ public class MusicManager : MonoBehaviour
     public MusicCode GetDefMusicCode()
     {
         MusicCode defCode = MusicCode.EST;
+
         char firstChar = GameProgressController.GetCurrentScene()[0];
         switch (firstChar)
         {

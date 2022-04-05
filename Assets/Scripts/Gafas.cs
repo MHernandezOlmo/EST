@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gafas : Interactable
 {
-    public void Start()
+    public void Awake()
     {
         if (GameProgressController.GetHasGlasses())
         {
