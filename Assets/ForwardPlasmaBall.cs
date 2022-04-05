@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class ForwardPlasmaBall : MonoBehaviour
 {
+    [SerializeField] private bool _isToast;
+    [SerializeField] private float _speed;
+
+    private void Start()
+    {
+        if(_speed == 0)
+        {
+            _speed = 5f;
+        }
+    }
+
     void Update()
     {
-        transform.Translate(transform.forward * 5 * Time.deltaTime, Space.World);
+        if (_isToast)
+        {
+            transform.Translate(transform.up * _speed * Time.deltaTime, Space.World);
+        }
+        else
+        {
+            transform.Translate(transform.forward * _speed * Time.deltaTime, Space.World);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
