@@ -8,11 +8,24 @@ public class ProjectorInteractable : Interactable
     [SerializeField] Sprite[] _filtros;
     [SerializeField] SpriteRenderer _filtroSR;
     [SerializeField] GameObject _projectorCanvas;
+    [SerializeField] DialogueTrigger _dialog;
+
+    private void Awake()
+    {
+    }
+
     public override void Interact()
     {
-        _projectorCamera.SetActive(true);
-        _projectorCanvas.SetActive(true);
-        CurrentSceneManager._canMove = false;
+        if (GameProgressController.HasAllFilters())
+        {
+            _projectorCamera.SetActive(true);
+            _projectorCanvas.SetActive(true);
+            CurrentSceneManager._canMove = false;
+        }
+        else
+        {
+            _dialog.triggerDialogueEvent(true);
+        }
     }
 
     public void Back()

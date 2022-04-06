@@ -7,14 +7,12 @@ public class PCObservacionInteractable : Interactable
     public bool picDuMidi;
     public override void Interact()
     {
-        print("Si");
         if (picDuMidi)
         {
             GameEvents.LoadScene.Invoke("CoronografoInProgress");
         }
         else
         {
-            print("Sehh");
             GameEvents.LoadScene.Invoke("CazaFlares");
 
         }

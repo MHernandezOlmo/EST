@@ -5,31 +5,27 @@ using UnityEngine;
 public class EscalerasCoronografoInteractable :Interactable
 {
     [SerializeField] DialogueTrigger _trigger;
+    [SerializeField] DialogueTrigger _triggerStart;
     bool canInteract;
     bool restoring;
     public override void Interact()
     {
-        if (canInteract)
+        print("a");
+        canInteract = false;
+        if (GameProgressController.HasAllFilters())
         {
-            canInteract = false;
-            if (GameProgressController.HasAllFilters())
-            {
-                GameEvents.LoadScene.Invoke("AsociacionElementosInProgress");
-            }
-            else
-            {
-                _trigger.triggerDialogueEvent();
+            _triggerStart.triggerDialogueEvent(true);
 
-            }
         }
-        if (CurrentSceneManager._state== GameStates.Exploration)
+        else
         {
-            if (!restoring)
-            {
-                restoring = true;
-                StartCoroutine(RestoreInteract());
-            }
+            _trigger.triggerDialogueEvent(true);
         }
+
+    }
+    public void LoadOtherScene()
+    {
+        GameEvents.LoadScene.Invoke("Parejas");
     }
     IEnumerator RestoreInteract()
     {

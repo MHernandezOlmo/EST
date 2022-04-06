@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EscalerasCoronografo : MonoBehaviour
 {
+    [SerializeField] private DialogueTrigger _trigger;
     public void DownStairs()
     {
         StartCoroutine(CrDownStairs());
@@ -17,5 +18,19 @@ public class EscalerasCoronografo : MonoBehaviour
             yield return null;
         }
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+    }
+
+    private void Awake()
+    {
+        if (GameProgressController.GetAsociacionElementos())
+        {
+            StartCoroutine(CrAdvice());
+        }
+    }
+
+    IEnumerator CrAdvice()
+    {
+        yield return new WaitForSeconds(1f);
+        _trigger.triggerDialogueEvent(true);
     }
 }

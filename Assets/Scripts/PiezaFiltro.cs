@@ -11,13 +11,26 @@ public class PiezaFiltro : Interactable
     public override void Interact()
     {
         GameProgressController.SetFiltro(_pieza, true);
+        int filterAmount=0;
+
+        for (int i = 0;i< 6; i++)
+        {
+            if (GameProgressController.GetFiltro(i))
+            {
+                filterAmount++;
+            }
+        }
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtained: Filter");
+        GameEvents.ShowScreenText.Invoke("Obtained: Filter\n"+filterAmount+"/6");
         Destroy(transform.root.gameObject);
     }
     private void Start()
     {
         base.Start();
+        //for (int i = 0; i < 6; i++)
+        //{
+        //    GameProgressController.SetFiltro(i, false);
+        //}
     }
     private void Update()
     {

@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
         }
         if (PlayerInput._ContextButtonDown)
         {
+            print("QEWR");
             if (CurrentSceneManager._state == GameStates.Combat )
             {
                 if (_currentCharacter == Character.Eclipse)

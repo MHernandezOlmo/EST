@@ -17,6 +17,29 @@ public class PuzzleStatesController : MonoBehaviour
     {
         StartCoroutine(CrStartPuzzle());
     }
+    public void Start()
+    {
+        if (PlayerPrefs.GetInt("NoInstructions") == 1)
+        {
+            PlayerPrefs.SetInt("NoInstructions", 0);
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Manchas":
+                    FindObjectOfType<Roulette>().StartGame();
+                    break;
+                case "Parejas":
+                    FindObjectOfType<OpticaAdaptativaController>().StartPlaying();
+                    break;
+                case "CazaFlares":
+                    FindObjectOfType<CazaFlaresController>().StartGame();
+                    break;
+                case "Coronografo":
+                    FindObjectOfType<CoronografoController>().StartGame();
+                    break;
+            }
+            StartCoroutine(CrStartPuzzle());
+        }
+    }
     public void GameOver()
     {
         StartCoroutine(ShowGameOverCanvas());
@@ -27,8 +50,21 @@ public class PuzzleStatesController : MonoBehaviour
     }
     public void Back()
     {
-        string backScene = PlayerPrefs.GetString("PuzzleSceneBack");
-        GameEvents.LoadScene.Invoke(backScene);
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Manchas":
+                GameEvents.LoadScene.Invoke("Lomnicky_11_Sala Cupula");
+                break;
+            case "CazaFlares":
+                GameEvents.LoadScene.Invoke("SST_4_sala_observacion Lomnicky");
+                break;
+            case "Parejas":
+                GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
+                break;
+            case "Coronografo":
+                GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d");
+                break;
+        }
     }
     public void Restart()
     {
@@ -97,22 +133,13 @@ public class PuzzleStatesController : MonoBehaviour
     }
     void Update()
     {
-
-    }
-    public void Start()
-    {
-        if(PlayerPrefs.GetInt("NoInstructions")==1)
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            PlayerPrefs.SetInt("NoInstructions", 0);
-            _holder.anchoredPosition = new Vector3(0, 1100, 0);
-            if (FindObjectOfType<CazaFlaresController>() != null)
-            {
-                FindObjectOfType<CazaFlaresController>().StartGame();
-            }
-            if (FindObjectOfType<Roulette>() != null)
-            {
-                FindObjectOfType<Roulette>().StartGame();
-            }
+            Win();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GameOver();
         }
     }
 }
