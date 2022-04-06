@@ -10,9 +10,16 @@ public class ToastieInstance : MonoBehaviour
     Transform bullet;
     private Animator _animator, _shootAnim;
     private int _currentMoves;
-
+    [SerializeField] private Material _fresnel;
+    [SerializeField] private SkinnedMeshRenderer _meshRenderer;
     void Start()
     {
+        if (!GameProgressController.HasAllFilters())
+        {
+            Material[] mats = _meshRenderer.materials;
+            mats[1]= _fresnel;
+            _meshRenderer.materials = mats;
+        }
         _player = FindObjectOfType<PlayerController>().transform;
         _animator = GetComponent<Animator>();
         _shootAnim = _shootPoint.GetComponent<Animator>();

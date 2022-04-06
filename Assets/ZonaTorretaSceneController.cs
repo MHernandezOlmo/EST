@@ -9,7 +9,6 @@ public class ZonaTorretaSceneController : MonoBehaviour
 
     void Start()
     {
-        GameProgressController.ToastersAdvice = false;
         if (GameProgressController.ToastersAdvice)
         {
             _dialog.gameObject.SetActive(false);
