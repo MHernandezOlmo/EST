@@ -105,4 +105,9 @@ public class ToastieInstance : MonoBehaviour
     {
         StartCoroutine(CrMove());
     }
+
+    public void EnableCombat()
+    {
+        FindObjectOfType<EnemyHPPool>().AddBar(GetComponent<EnemyController>());
+    }
 }

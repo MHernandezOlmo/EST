@@ -7,10 +7,11 @@ public class CombatActivator : MonoBehaviour
 {
     [SerializeField] GameObject _combatButton;
     CombatCanvasController _combatCanvas;
-    [SerializeField] bool _isEinstein, _isLomnicky; //En realidad es solo para la escena llegada torre...
+    [SerializeField] bool _isEinsteinTower, _isLomnicky, _isToastie;
     bool _firstCombat;
     TelevisionInstance[] _tvs;
     LamparaBot[] _lamps;
+    ToastieInstance[] _toasties;
     private int _aliveEnemies;
     private int _sameTimeColliders;
     [SerializeField] private GameObject _finalCollider;
@@ -23,10 +24,15 @@ public class CombatActivator : MonoBehaviour
             _lamps = FindObjectsOfType<LamparaBot>();
             _aliveEnemies = _lamps.Length;
         }
+        else if(_isToastie)
+        {
+            _toasties = FindObjectsOfType<ToastieInstance>();
+            _aliveEnemies = _toasties.Length;
+        }
         else
         {
             _tvs = FindObjectsOfType<TelevisionInstance>();
-            _aliveEnemies = _tvs.Length ;
+            _aliveEnemies = _tvs.Length;
         }
     }
 
@@ -35,7 +41,7 @@ public class CombatActivator : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _sameTimeColliders++;
-            if (_isEinstein)
+            if (_isEinsteinTower)
             {
                 if (GameProgressController.GetUsedPrismEinstein())
                 {
@@ -44,7 +50,6 @@ public class CombatActivator : MonoBehaviour
             }
             else
             {
-
                 EnableCombat();
             }
         }
@@ -58,10 +63,24 @@ public class CombatActivator : MonoBehaviour
             _combatCanvas.Show();
             _combatButton.transform.localScale = Vector3.one;
             _combatButton.SetActive(true);
-            _tvs = FindObjectsOfType<TelevisionInstance>();
-            foreach (TelevisionInstance t in _tvs)
+            if (!_isLomnicky)
             {
-                t.SetAttackZone(true);
+                if (_isToastie)
+                {
+                    _toasties = FindObjectsOfType<ToastieInstance>();
+                    foreach (ToastieInstance t in _toasties)
+                    {
+                        t.EnableCombat();
+                    }
+                }
+                else
+                {
+                    _tvs = FindObjectsOfType<TelevisionInstance>();
+                    foreach (TelevisionInstance t in _tvs)
+                    {
+                        t.SetAttackZone(true);
+                    }
+                }
             }
             CurrentSceneManager.SetGameState(GameStates.Combat);
         }
@@ -72,9 +91,15 @@ public class CombatActivator : MonoBehaviour
         CurrentSceneManager._skillEnabled = false;
         _combatCanvas.Hide();
         _combatButton.SetActive(false);
-        foreach (TelevisionInstance t in _tvs)
+        if (!_isLomnicky)
         {
-            t.SetAttackZone(false);
+            if (!_isToastie)
+            {
+                foreach (TelevisionInstance t in _tvs)
+                {
+                    t.SetAttackZone(false);
+                }
+            }
         }
         CurrentSceneManager.SetGameState(GameStates.Exploration);
         if (GameProgressController.GetUsedPrismEinstein() && SceneManager.GetActiveScene().name == "Einstein_0_alrededores_torre")
@@ -85,7 +110,6 @@ public class CombatActivator : MonoBehaviour
                 FindObjectOfType<Einstein0Alrededores>().DisableCombatCollider();
             }
         }
-
     }
 
 
@@ -94,7 +118,7 @@ public class CombatActivator : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _sameTimeColliders--;
-            if (_isEinstein)
+            if (_isEinsteinTower)
             {
                 if (_firstCombat)
                 {

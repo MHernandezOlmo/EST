@@ -490,7 +490,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161290790}
-  m_LocalRotation: {x: 0.091545336, y: 0.89656824, z: -0.21975894, w: 0.37348485}
+  m_LocalRotation: {x: 0.09154533, y: 0.89656824, z: -0.21975894, w: 0.37348485}
   m_LocalPosition: {x: -21.936558, y: 17.1, z: -12.989934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -620,7 +620,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228309418}
-  m_LocalRotation: {x: 0.091545336, y: 0.89656824, z: -0.21975894, w: 0.37348485}
+  m_LocalRotation: {x: 0.09154533, y: 0.89656824, z: -0.21975894, w: 0.37348485}
   m_LocalPosition: {x: -21.936558, y: 17.1, z: -12.989934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1027,6 +1027,56 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 348d8c564f90914499df31c12081aa0d, type: 3}
+--- !u!1 &368490778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 744946711079974445, guid: 62faca9ef05f8164fa6493a0814bd806,
+    type: 3}
+  m_PrefabInstance: {fileID: 1744442312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &402287012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402287014}
+  - component: {fileID: 402287013}
+  m_Layer: 0
+  m_Name: MuroCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &402287013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402287012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.06668, y: 7.3758087, z: 2.590701}
+  m_Center: {x: -5.3201447, y: -1.8892841, z: -0.79536}
+--- !u!4 &402287014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402287012}
+  m_LocalRotation: {x: -0, y: -0.035081595, z: -0, w: 0.99938446}
+  m_LocalPosition: {x: -20.06, y: 0.37, z: -4.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: -4.0210004, z: 0}
 --- !u!1 &403469599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1542,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &904003690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904003693}
+  - component: {fileID: 904003692}
+  - component: {fileID: 904003691}
+  m_Layer: 0
+  m_Name: CombatActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &904003691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904003690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7f7339efb06394587fe8ce210dd740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _combatButton: {fileID: 368490778}
+  _isEinsteinTower: 0
+  _isLomnicky: 0
+  _isToastie: 1
+  _finalCollider: {fileID: 0}
+--- !u!65 &904003692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904003690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7182503, y: 1, z: 1}
+  m_Center: {x: -0.08513864, y: 0, z: -2.7037851e-12}
+--- !u!4 &904003693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904003690}
+  m_LocalRotation: {x: -0, y: 0.7096297, z: -0, w: 0.7045748}
+  m_LocalPosition: {x: -56.08, y: 0, z: 4.08}
+  m_LocalScale: {x: 17.78417, y: 18.431776, z: 41.596127}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 90.41, z: 0}
 --- !u!1001 &1078223839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9809,6 +9921,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1744442312}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1800109384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800109386}
+  - component: {fileID: 1800109385}
+  m_Layer: 0
+  m_Name: MuroCollider (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1800109385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800109384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.06668, y: 7.0820694, z: 3.178185}
+  m_Center: {x: -5.3201437, y: -1.986845, z: -1.0891001}
+--- !u!4 &1800109386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800109384}
+  m_LocalRotation: {x: -0, y: 0.0034532116, z: -0, w: 0.99999404}
+  m_LocalPosition: {x: -52.21, y: 0.37, z: -5.87}
+  m_LocalScale: {x: 2.2285, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0.39600003, z: 0}
 --- !u!1 &1892441901 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3628085436338554021, guid: f721e67da94a8164db02515d7813368d,
