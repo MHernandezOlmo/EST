@@ -31,6 +31,10 @@ public class EnemyController : MonoBehaviour
     {
         if (!_dead)
         {
+            if(_enemyType == EnemyType.Toast && !GameProgressController.HasAllFilters())
+            {
+                return;
+            }
             if (!_hitSFXCD)
             {
                 AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotHit);

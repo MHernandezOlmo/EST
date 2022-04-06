@@ -4,7 +4,7 @@ using UnityEngine;
 using Cinemachine;
 public class CombatTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject _customCollider;
+    [SerializeField] GameObject _customCollider, _combatActivator;
     [SerializeField] string _combatName;
     [SerializeField]
     List<EnemySpawner> enemies;
@@ -97,6 +97,12 @@ public class CombatTrigger : MonoBehaviour
         {
             PlayerPrefs.SetInt(_combatName, 1);
             _combatController.EndCombat();
+
+            if(_combatActivator != null)
+            {
+                StartCoroutine(CrWaitForReloadCombatMode());
+            }
+
             if(_customCollider == null)
             {
                 RemoveBoundaries();
@@ -107,6 +113,15 @@ public class CombatTrigger : MonoBehaviour
             }
         }
     }
+
+    IEnumerator CrWaitForReloadCombatMode()
+    {
+        _combatActivator.SetActive(false);
+        yield return null;
+        _combatActivator.SetActive(true);
+    }
+
+
     public CinemachineVirtualCamera GetCombatCamera()
     {
         return _combatCamera;
