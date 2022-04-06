@@ -10,12 +10,30 @@ public class SalaPanelesACSceneController : MonoBehaviour
     [SerializeField]
     Transform _autoPilotTarget0;
     [SerializeField] private DialogueTrigger _welcomeDialog;
+    [SerializeField] private DialogueTrigger _endTrigger;
     private void Awake()
     {
         if (!GameProgressController.getArrivedToPicDuMudi())
         {
             GameProgressController.SetCurrentStartPoint(0);
         }
+        StartCoroutine(CrEnd());
+        
+    }
+
+    IEnumerator CrEnd()
+    {
+        yield return new WaitForSeconds(1f);
+        if (GameProgressController.Parejas)
+        {
+            _endTrigger.triggerDialogueEvent(true);
+        }
+    
+    }
+
+    public void LoadMenu()
+    {
+        GameEvents.LoadScene.Invoke("WorldSelector");
     }
     void Start()
     {

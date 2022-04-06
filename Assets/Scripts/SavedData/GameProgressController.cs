@@ -58,7 +58,20 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
+    public static bool Parejas
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._parejas;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._parejas = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool FindFiltersAdvice
     {
         get

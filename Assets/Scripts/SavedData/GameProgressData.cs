@@ -59,7 +59,7 @@ public class GameProgressData
     public bool _hasPrismEinstein;
     public bool _usedPrismEinstein;
     public bool _einsteinTowerFirstAdvice;
-
+    public bool _parejas;
     public bool _microwaveAlert;
     public bool _firstSSTEntry;
     public bool _isVacuumSolved;

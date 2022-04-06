@@ -22,7 +22,7 @@ public class EscalerasCoronografo : MonoBehaviour
 
     private void Awake()
     {
-        if (GameProgressController.GetAsociacionElementos())
+        if (GameProgressController.Parejas)
         {
             StartCoroutine(CrAdvice());
         }

@@ -10,7 +10,6 @@ public class EscalerasCoronografoInteractable :Interactable
     bool restoring;
     public override void Interact()
     {
-        print("a");
         canInteract = false;
         if (GameProgressController.HasAllFilters())
         {
@@ -33,5 +32,12 @@ public class EscalerasCoronografoInteractable :Interactable
         canInteract = true;
         restoring = false;
     }
-    
+    private void Awake()
+    {
+        if (GameProgressController.Parejas)
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(gameObject);
+        }
+    }
 }

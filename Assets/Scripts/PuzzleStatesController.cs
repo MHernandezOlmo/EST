@@ -59,6 +59,8 @@ public class PuzzleStatesController : MonoBehaviour
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion Lomnicky");
                 break;
             case "Parejas":
+                GameProgressController.SetCurrentStartPoint(1);
+                GameProgressController.Parejas = true;
                 GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
                 break;
             case "Coronografo":
