@@ -19,34 +19,24 @@ public class PanelRoto : Interactable
             if (!_hasInteracted)
             {
                 _hasInteracted = true;
-                StartCoroutine(DialogAndLoad());
+                _dialogue.triggerDialogueEvent(true);
             }
         }
     }
     private void Start()
     {
         base.Start();
-        if (PlayerPrefs.GetInt("ComingFromPDMD") == 1)
-        {
-            PlayerPrefs.SetInt("ComingFromPDMD", 0);
-            StartCoroutine(WaitForDialog());
-        }
+        //if (PlayerPrefs.GetInt("ComingFromPDMD") == 1)
+        //{
+        //    PlayerPrefs.SetInt("ComingFromPDMD", 0);
+        //    StartCoroutine(WaitForDialog());
+        //}
     }
     IEnumerator WaitForDialog()
     {
         yield return new WaitForSeconds(1f);
         _filterQuest.triggerDialogueEvent();
     }
-    IEnumerator DialogAndLoad()
-    {
-        _dialogue.triggerDialogueEvent(true);
-        yield return new WaitForSeconds(0.2f);
-        while (CurrentSceneManager._state != GameStates.Exploration)
-        {
-            yield return null;
-        }
-        PlayerPrefs.SetInt("ComingFromPDMD", 1);
-        GameEvents.LoadScene.Invoke("Coronografo");
-    }
+
 
 }

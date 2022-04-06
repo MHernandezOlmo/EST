@@ -30,6 +30,6 @@ public class Entrada2 : Interactable
     private void Start()
     {
         base.Start();
-        canUse = GameProgressController.GetUncovered();
+        canUse = GameProgressController.GetUncovered() && GameProgressController.TelescopeReady && GameProgressController.IsPanelFixed();
     }
 }

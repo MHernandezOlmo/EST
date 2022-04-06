@@ -30,6 +30,64 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
+    public static bool CoronalAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._coronalEjectionAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._coronalEjectionAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool NeedContactUV
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._needContactUV;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._needContactUV = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool FindFiltersAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._findFiltersAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._findFiltersAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool TelescopeReady
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._telescopeReady;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._telescopeReady = value;
+            SaveGameProgressData();
+        }
+    }
+
     public static void SetIsLomickySolved(bool newValue)
     {
         CheckInitialized();

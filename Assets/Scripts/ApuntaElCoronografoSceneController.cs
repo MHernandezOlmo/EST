@@ -8,6 +8,6 @@ public class ApuntaElCoronografoSceneController : MonoBehaviour
     {
         GameProgressController.SetIsPanelFixed(true);
         GameProgressController.SetCurrentStartPoint(3);
-        GameEvents.LoadScene.Invoke("PicDuMidi_5_patio 2");
+        GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d");
     }
 }

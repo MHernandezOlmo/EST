@@ -43,7 +43,6 @@ public class SalaPanelesACSceneController : MonoBehaviour
     }
     public void EndWelcome()
     {
-        GameEvents.ShowScreenText.Invoke("Find your way to the telescope");
         CurrentSceneManager._canMove = true;
     }
 }

@@ -43,6 +43,7 @@ public class GameProgressData
     public bool _correctPositionAxis1;
     public bool _correctPositionAxis2;
     public bool _toastersAdvice;
+    public bool _coronalEjectionAdvice;
 
     public bool _correctPositionSotanoAxis0;
     public bool _correctPositionSotanoAxis1;
@@ -50,6 +51,9 @@ public class GameProgressData
     public bool _openEinsteinBasementDoor;
 
     public bool _shownPrismDialog;
+    public bool _needContactUV;
+    public bool _findFiltersAdvice;
+    public bool _telescopeReady;
 
     public bool _needPrismEinstein;
     public bool _hasPrismEinstein;
