@@ -15,6 +15,21 @@ public class GameProgressController : MonoBehaviour
         return _gameProgressData._isLomnickySolved;
     }
 
+    public static bool ToastersAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._toastersAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._toastersAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
     public static void SetIsLomickySolved(bool newValue)
     {
         CheckInitialized();

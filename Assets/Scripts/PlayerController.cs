@@ -204,7 +204,6 @@ public class PlayerController : MonoBehaviour
                 {
                     if (CurrentSceneManager.CanDash)
                     {
-                        print("2");
                         CurrentSceneManager.CanDash = false;
                         StartCoroutine(CrDash());
                     }
@@ -354,6 +353,14 @@ public class PlayerController : MonoBehaviour
         Vector3 raycastEnd = targetPosition;
         Vector3 raycastEndLeft = targetPosition + transform.right * -0.5f;
         Vector3 raycastEndRight = targetPosition + transform.right * 0.5f;
+        var hits = Physics.RaycastAll(raycastStart, transform.forward, 5);
+        foreach (var hit in hits)
+        {
+            if (!(hit.collider.gameObject.GetComponent<EnemyController>() != null))
+            {
+                targetPosition = hit.point;
+            }
+        }
         for (float i = 0; i < 0.1f; i += Time.deltaTime)
         {
             transform.position = Vector3.Lerp(currentPosition, targetPosition, i / 0.1f);
@@ -361,7 +368,7 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = targetPosition;
         RaycastHit hitInfo;
-        var hits = Physics.RaycastAll(raycastStart, transform.forward, 5);
+        hits = Physics.RaycastAll(raycastStart, transform.forward, 5);
         var hits2 = Physics.RaycastAll(raycastStartLeft, transform.forward, 5);
         var hits3 = Physics.RaycastAll(raycastStartRight, transform.forward, 5);
         List<GameObject> hitEnemies = new List<GameObject>(); ;
@@ -373,7 +380,6 @@ public class PlayerController : MonoBehaviour
                 {
                     hitEnemies.Add(hit.collider.gameObject);
                 }
-                break;
             }
         }
         foreach(GameObject g in hitEnemies)

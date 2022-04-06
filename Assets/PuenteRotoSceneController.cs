@@ -14,9 +14,9 @@ public class PuenteRotoSceneController : MonoBehaviour
     
     void Update()
     {
-        if (_player.transform.position.y < -3f)
+        if (_player.transform.position.y < -2f)
         {
-            GameFlowEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+            GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
         }
     }
 }

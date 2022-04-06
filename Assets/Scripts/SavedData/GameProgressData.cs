@@ -42,6 +42,7 @@ public class GameProgressData
     public bool _correctPositionAxis0;
     public bool _correctPositionAxis1;
     public bool _correctPositionAxis2;
+    public bool _toastersAdvice;
 
     public bool _correctPositionSotanoAxis0;
     public bool _correctPositionSotanoAxis1;
