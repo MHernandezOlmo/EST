@@ -5,6 +5,7 @@ using UnityEngine;
 public class Entrada2 : Interactable
 {
     [SerializeField] DialogueTrigger _lock;
+    [SerializeField] DialogueTrigger _fight;
 
     bool _already;
     bool canUse;
@@ -31,5 +32,18 @@ public class Entrada2 : Interactable
     {
         base.Start();
         canUse = GameProgressController.GetUncovered() && GameProgressController.TelescopeReady && GameProgressController.IsPanelFixed();
+        
+        if (GameProgressController.Parejas)
+        {
+            GameProgressController.SetHasDash(true);
+            StartCoroutine(CrFight());
+        }
     }
+
+    IEnumerator CrFight()
+    {
+        yield return new WaitForSeconds(1f);
+        _fight.triggerDialogueEvent(true);
+    }
+
 }

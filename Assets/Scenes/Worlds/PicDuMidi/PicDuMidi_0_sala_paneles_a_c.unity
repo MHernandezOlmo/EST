@@ -455,7 +455,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndWelcome
+      value: LoadMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -520,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: speakerFaces.Array.size
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -560,12 +560,12 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.size
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.data[0]
-      value: PicDuMidi/Intro0
+      value: PicDuMidi/MisionAccomplished
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -600,6 +600,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5162093702787244517, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
+--- !u!114 &107509537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+    type: 3}
+  m_PrefabInstance: {fileID: 107509536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &114685720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8451862082370718117, guid: 6606738dc7d6d9b4eba3b4d1578d8c2b,
@@ -999,7 +1011,7 @@ MonoBehaviour:
   _startingCamera: {fileID: 707279342}
   _autoPilotTarget0: {fileID: 1232218999}
   _welcomeDialog: {fileID: 1299501083}
-  _endTrigger: {fileID: 0}
+  _endTrigger: {fileID: 107509537}
 --- !u!4 &237311969
 Transform:
   m_ObjectHideFlags: 0
