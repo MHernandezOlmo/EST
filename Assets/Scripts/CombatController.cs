@@ -9,7 +9,7 @@ public class CombatController : MonoBehaviour
     CinemachineVirtualCamera _mainSceneCamera;
     [SerializeField] private bool _isFreeZone;
     private bool _started;
-
+    
     private void Awake()
     {
         _transitionsController = FindObjectOfType<TransitionsController>();

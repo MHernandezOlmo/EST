@@ -11,7 +11,7 @@ public class ForwardPlasmaBall : MonoBehaviour
     {
         if(_speed == 0)
         {
-            _speed = 5f;
+            _speed = 9f;
         }
     }
 
