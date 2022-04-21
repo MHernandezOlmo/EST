@@ -130,4 +130,8 @@ public class EnemyMicroWave : MonoBehaviour
     {
         StartCoroutine(CrMove());
     }
+    public void EnableCombat()
+    {
+        FindObjectOfType<EnemyHPPool>().AddBar(GetComponent<EnemyController>());
+    }
 }

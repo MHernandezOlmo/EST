@@ -21,7 +21,24 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private  Transform _player;
     public enum EnemyType { Robola, Lamp, TV, Toast, Microwave}
     [SerializeField] private Animator _animator;
-    
+
+    private void Start()
+    {
+        if (_enemyType == EnemyType.TV)
+        {
+            GameObject g = new GameObject();
+            g.transform.position = transform.position + Vector3.up * 3;
+            g.transform.SetParent(transform);
+            _hpBarPosition = g.transform;
+        }
+        _player = FindObjectOfType<PlayerController>().transform;
+        _currentHP = 100;
+        _maxHP = 100;
+        _originalScale = transform.localScale;
+        transform.localScale = Vector3.zero;
+        StartCoroutine(Appear());
+    }
+
     public void SetHPBar(HPBar _hp)
     {
         _currentHPBar = _hp;
@@ -50,22 +67,7 @@ public class EnemyController : MonoBehaviour
             }
         }
     }
-    private void Start()
-    {
-        if(_enemyType == EnemyType.TV)
-        {
-            GameObject g = new GameObject();
-            g.transform.position = transform.position + Vector3.up * 3;
-            g.transform.SetParent(transform);
-            _hpBarPosition = g.transform;
-        }
-        _player = FindObjectOfType<PlayerController>().transform;
-        _currentHP = 100;
-        _maxHP = 100;
-        _originalScale = transform.localScale;
-        transform.localScale = Vector3.zero;
-        StartCoroutine(Appear());
-    }
+
 
     public IEnumerator Appear()
     {

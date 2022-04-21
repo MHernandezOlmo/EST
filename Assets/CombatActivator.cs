@@ -7,11 +7,12 @@ public class CombatActivator : MonoBehaviour
 {
     [SerializeField] GameObject _combatButton;
     CombatCanvasController _combatCanvas;
-    [SerializeField] bool _isEinsteinTower, _isLomnicky, _isToastie;
+    [SerializeField] bool _isEinsteinTower, _isLomnicky, _isToastie, _isMicrowave;
     bool _firstCombat;
     TelevisionInstance[] _tvs;
     LamparaBot[] _lamps;
     ToastieInstance[] _toasties;
+    EnemyMicroWave[] _microwaves;
     private int _aliveEnemies;
     private int _sameTimeColliders;
     [SerializeField] private GameObject _finalCollider;
@@ -29,10 +30,15 @@ public class CombatActivator : MonoBehaviour
             _toasties = FindObjectsOfType<ToastieInstance>();
             _aliveEnemies = _toasties.Length;
         }
-        else
+        else if(!_isMicrowave)
         {
             _tvs = FindObjectsOfType<TelevisionInstance>();
             _aliveEnemies = _tvs.Length;
+        }
+        else
+        {
+            _microwaves = FindObjectsOfType<EnemyMicroWave>();
+            _aliveEnemies = _microwaves.Length;
         }
     }
 
@@ -73,12 +79,20 @@ public class CombatActivator : MonoBehaviour
                         t.EnableCombat();
                     }
                 }
-                else
+                else if(!_isMicrowave)
                 {
                     _tvs = FindObjectsOfType<TelevisionInstance>();
                     foreach (TelevisionInstance t in _tvs)
                     {
                         t.SetAttackZone(true);
+                    }
+                }
+                else
+                {
+                    _microwaves = FindObjectsOfType<EnemyMicroWave>();
+                    foreach (EnemyMicroWave m in _microwaves)
+                    {
+                        m.EnableCombat();
                     }
                 }
             }
