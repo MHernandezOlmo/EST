@@ -27,9 +27,9 @@ public class EnemyMicroWave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!canBeSeen)
-        {
-            transform.position = _startPosition + Vector3.one * Random.Range(-0.5f, 0.5f);
-        }
+        //if (!canBeSeen)
+        //{
+        //    transform.position = _startPosition + Vector3.one * Random.Range(-0.5f, 0.5f);
+        //}
     }
 }

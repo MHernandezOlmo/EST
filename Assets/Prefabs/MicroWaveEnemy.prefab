@@ -62,7 +62,7 @@ Transform:
   - {fileID: 5742345254645939112}
   m_Father: {fileID: 963989707369690765}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000015681915, y: 2.1441082e-12, z: 0.0000068301906}
 --- !u!1 &2500063990591408711
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ Transform:
   - {fileID: 5291297902035494668}
   m_Father: {fileID: 8550354280313189166}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98021, y: 0, z: 0}
 --- !u!1 &3897542536465976090
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ Transform:
   - {fileID: 5008748197094056751}
   m_Father: {fileID: 7938330500559788665}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.98021, y: 0, z: 0}
 --- !u!1 &3942898675363476948
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ Transform:
   - {fileID: 8620840698582849561}
   m_Father: {fileID: 5008748197094056751}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.000022838229, z: -90.00001}
 --- !u!1 &6236237748123569627
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ Transform:
   - {fileID: 1231654189389085423}
   m_Father: {fileID: 8620840698582849561}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.2721927e-14, y: -0.000013660376, z: -8.1422163e-13}
 --- !u!1 &8152162489079569905
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +461,7 @@ Transform:
   - {fileID: 963989707369690765}
   m_Father: {fileID: 5291297902035494668}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000022995047, y: 3.2568878e-12, z: 90.00001}
 --- !u!1 &9071135057426426260
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ee81d048812b14ea065dd4d2d19d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _blueFresnel: {fileID: 0}
 --- !u!114 &8152162491002229976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,10 +542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ea8c7448d41bf4fabc4e2e95108a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 8152162491002229979}
-  _shootPrefab: {fileID: 962290391670741044, guid: 0d2bdc1e02d7c58449c6ba5d9f440a6a,
-    type: 3}
-  _shootPosition: {fileID: 8152162489376267557}
   _originalScale: {x: 0, y: 0, z: 0}
-  _meshPivot: {fileID: 9071135057426426260}
+  _currentHPBar: {fileID: 0}
   _hpBarPosition: {fileID: 8152162489376267557}
+  _enemyType: 0
+  _deathParticles: {fileID: 0}
+  _player: {fileID: 0}
+  _animator: {fileID: 8152162491002229979}

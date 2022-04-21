@@ -5,6 +5,8 @@ using UnityEngine;
 public class CombatCanvasController : MonoBehaviour
 {
     [SerializeField] GameObject _combatCanvas;
+    [SerializeField] GameObject[] _hpBars;
+
     private void Start()
     {
         Hide();
@@ -17,5 +19,9 @@ public class CombatCanvasController : MonoBehaviour
     public void Hide()
     {
         _combatCanvas.SetActive(false);
+        foreach(GameObject g in _hpBars)
+        {
+            g.SetActive(false);
+        }
     }
 }
