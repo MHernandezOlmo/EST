@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_BakeResolution: 10
+    m_AtlasSize: 2048
     m_AO: 1
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -66,7 +66,7 @@ LightmapSettings:
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
@@ -75,9 +75,9 @@ LightmapSettings:
     m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 512
+    m_PVRSampleCount: 50
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentSampleCount: 50
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 1
     m_PVRDenoiserTypeDirect: 1
@@ -536,6 +536,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4.3333
       objectReference: {fileID: 0}
+    - target: {fileID: 1049695822396170078, guid: ec789d3f8d40f4e4e8c838ddd8d28b4f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d05c7ad34b896a546aee07cc42256802, type: 2}
     - target: {fileID: 1053003643614294807, guid: ec789d3f8d40f4e4e8c838ddd8d28b4f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2182,7 +2187,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84906831}
-  m_LocalRotation: {x: -0.12219861, y: -0.10568766, z: 0.013089031, w: -0.9867757}
+  m_LocalRotation: {x: -0.122198604, y: -0.10568766, z: 0.01308903, w: -0.9867757}
   m_LocalPosition: {x: -2.147, y: 4.18, z: -9.908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2298,7 +2303,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161290790}
-  m_LocalRotation: {x: -0.12219861, y: -0.10568766, z: 0.013089031, w: -0.9867757}
+  m_LocalRotation: {x: -0.122198604, y: -0.10568766, z: 0.01308903, w: -0.9867757}
   m_LocalPosition: {x: -2.147, y: 4.18, z: -9.908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2398,7 +2403,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.3
+  m_Intensity: 1.8
   m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2724,8 +2729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene:
-    sceneAsset: {fileID: 102900000, guid: 83efdc41859539d49835ab2a62977e0d, type: 3}
-    scenePath: Assets/Scenes/Worlds/SST/SST_4_sala_observacion_bis.unity
+    sceneAsset: {fileID: 102900000, guid: 8f588fdf0cea8184a82d2c8307bf54ac, type: 3}
+    scenePath: Assets/Scenes/Worlds/SST/SST_4_sala_escudo.unity
   canComeBack: 1
   arrivingAutopilotOffset: {x: 0, y: 0, z: -1}
   leavingAutopilotOffset: {x: 0, y: 0, z: 1}
@@ -2844,7 +2849,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.3
+  m_Intensity: 1.8
   m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3669,7 +3674,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.3
+  m_Intensity: 1.8
   m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3761,8 +3766,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.3
-  m_Range: 100
+  m_Intensity: 1.8
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4235,7 +4240,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.8
   m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7450,7 +7455,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.8
   m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7619,7 +7624,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.3
+  m_Intensity: 1.8
   m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
