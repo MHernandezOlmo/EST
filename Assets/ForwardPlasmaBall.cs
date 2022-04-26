@@ -6,13 +6,18 @@ public class ForwardPlasmaBall : MonoBehaviour
 {
     [SerializeField] private bool _isToast;
     [SerializeField] private float _speed;
+    Vector3 _dir;
+    PlayerController _player;
+    bool _ally;
 
     private void Start()
     {
-        if(_speed == 0)
+        _player = FindObjectOfType<PlayerController>();
+        if (_speed == 0)
         {
             _speed = 9f;
         }
+        _dir = ((_player.transform.position + Vector3.up) - transform.position).normalized;
     }
 
     void Update()
@@ -30,7 +35,7 @@ public class ForwardPlasmaBall : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.CompareTag("Player") && !_ally)
             {
                 collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(20);
             }
@@ -38,4 +43,25 @@ public class ForwardPlasmaBall : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (!collision.CompareTag("Enemy"))
+        {
+            if (collision.CompareTag("Player"))
+            {
+                collision.GetComponent<PlayerController>().ReceiveDamage(20);
+                Destroy(gameObject);
+            }
+        }
+        else if (collision.CompareTag("Shield"))
+        {
+            _dir *= -1;
+            _ally = true;
+        }
+        if (collision.gameObject.CompareTag("Enemy") && _ally)
+        {
+            collision.gameObject.GetComponent<EnemyController>().ReceiveDamage(20);
+            Destroy(gameObject);
+        }
+    }
 }

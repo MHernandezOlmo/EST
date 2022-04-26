@@ -274,7 +274,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         _shield.SetActive(true);
 
-        electricBall1.Play();
+        if(electricBall1 != null)
+        {
+            electricBall1.Play();
+        }
+
         for(float i = 0; i<0.2f; i += Time.deltaTime)
         {
             _shield.transform.localScale = Vector3.one * _animationCurve.Evaluate((i / 0.2f)); ;

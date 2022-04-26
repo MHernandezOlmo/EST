@@ -87,20 +87,13 @@ public class ToastieInstance : MonoBehaviour
 
     public void ShootCallBack()
     {
-        StartCoroutine(CrToast());
-    }
-
-    IEnumerator CrToast()
-    {
         bullet.SetParent(null);
         bullet.rotation = Quaternion.Euler(90, bullet.rotation.eulerAngles.y, bullet.rotation.eulerAngles.z);
         bullet.position += bullet.forward * 0.1f;
         bullet.position += bullet.up * 0.1f;
         bullet.GetComponent<ForwardPlasmaBall>().enabled = true;
-        yield return new WaitForSeconds(0.25f);
         bullet.GetComponent<BoxCollider>().enabled = true;
     }
-
     public void AttackCallBack()
     {
         StartCoroutine(CrMove());

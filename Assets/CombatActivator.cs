@@ -7,10 +7,11 @@ public class CombatActivator : MonoBehaviour
 {
     [SerializeField] GameObject _combatButton;
     CombatCanvasController _combatCanvas;
-    [SerializeField] bool _isEinsteinTower, _isLomnicky, _isToastie, _isMicrowave;
-    bool _firstCombat;
+    [SerializeField] bool _isEinsteinTower, _isLomnicky, _isToastie, _isMicrowave, _sst;
+    bool _firstCombat, _canFight;
     TelevisionInstance[] _tvs;
     LamparaBot[] _lamps;
+    FastEnemy[] _fastEnemies;
     ToastieInstance[] _toasties;
     EnemyMicroWave[] _microwaves;
     private int _aliveEnemies;
@@ -19,7 +20,7 @@ public class CombatActivator : MonoBehaviour
     private void Awake()
     {
         _combatCanvas = FindObjectOfType<CombatCanvasController>();
-
+        _canFight = true;
         if (_isLomnicky)
         {
             _lamps = FindObjectsOfType<LamparaBot>();
@@ -29,6 +30,10 @@ public class CombatActivator : MonoBehaviour
         {
             _toasties = FindObjectsOfType<ToastieInstance>();
             _aliveEnemies = _toasties.Length;
+            if (!GameProgressController.HasAllFilters())
+            {
+                _canFight = false;
+            }
         }
         else if(!_isMicrowave)
         {
@@ -39,7 +44,17 @@ public class CombatActivator : MonoBehaviour
         {
             _microwaves = FindObjectsOfType<EnemyMicroWave>();
             _aliveEnemies = _microwaves.Length;
+            if (!GameProgressController.GetHasAO())
+            {
+                _canFight = false;
+            }
+            if (_sst)
+            {
+                _fastEnemies = FindObjectsOfType<FastEnemy>();
+                _aliveEnemies += _fastEnemies.Length;
+            }
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -67,8 +82,11 @@ public class CombatActivator : MonoBehaviour
         {
             CurrentSceneManager._skillEnabled = true;
             _combatCanvas.Show();
-            _combatButton.transform.localScale = Vector3.one;
-            _combatButton.SetActive(true);
+            if (_canFight)
+            {
+                _combatButton.transform.localScale = Vector3.one;
+                _combatButton.SetActive(true);
+            }
             if (!_isLomnicky)
             {
                 if (_isToastie)
@@ -93,6 +111,10 @@ public class CombatActivator : MonoBehaviour
                     foreach (EnemyMicroWave m in _microwaves)
                     {
                         m.EnableCombat();
+                    }
+                    foreach (FastEnemy l in _fastEnemies)
+                    {
+                        l.EnableCombat();
                     }
                 }
             }

@@ -51,7 +51,7 @@ public class SSTExteriors : MonoBehaviour
             if (minDistance < 15f)
             {
                 _shownAlert = true;
-                _dialogTrigger.triggerDialogueEvent();
+                //_dialogTrigger.triggerDialogueEvent();
                 GameProgressController.SetMicrowaveAlert(true);
             }
         }

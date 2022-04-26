@@ -81,4 +81,8 @@ public class FastEnemy : MonoBehaviour
         _animator.SetBool("Walk", false);
         _goingBack = !_goingBack;
     }
+    public void EnableCombat()
+    {
+        FindObjectOfType<EnemyHPPool>().AddBar(GetComponent<EnemyController>());
+    }
 }

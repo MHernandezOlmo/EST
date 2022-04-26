@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7262453235215094926}
   m_Layer: 8
   m_Name: cadena2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8620840698582849561}
   m_Layer: 8
   m_Name: cadena2.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1231654189389085423}
   m_Layer: 8
   m_Name: cadena3.001_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6467186030786036436}
   m_Layer: 8
   m_Name: microondas
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 7938330500559788665}
   m_Layer: 8
   m_Name: Armature_Microondas
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 5291297902035494668}
   m_Layer: 8
   m_Name: cadena1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 963989707369690765}
   m_Layer: 8
   m_Name: cadena1.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 4352967561365605866}
   m_Layer: 8
   m_Name: cadena3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 1026200429747488778}
   m_Layer: 8
   m_Name: cadena3_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 5742345254645939112}
   m_Layer: 8
   m_Name: cadena3.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 8152162489079569904}
   m_Layer: 8
   m_Name: ShootPoint
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8152162489079569905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.031, y: 0.172, z: 0.156}
+  m_LocalPosition: {x: 0.031, y: 0.172, z: 0.236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8550354280313189166}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 8152162489376267557}
   m_Layer: 8
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 5008748197094056751}
   m_Layer: 8
   m_Name: puerta
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +461,7 @@ Transform:
   - {fileID: 963989707369690765}
   m_Father: {fileID: 5291297902035494668}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -0.000006830189, y: 78.643265, z: 90.00002}
+  m_LocalEulerAnglesHint: {x: 0.000022995047, y: 3.2568878e-12, z: 90.00001}
 --- !u!1 &9071135057426426260
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,9 +475,10 @@ GameObject:
   - component: {fileID: 8152162491002229983}
   - component: {fileID: 8152162491002229976}
   - component: {fileID: 6267021169309216548}
+  - component: {fileID: 7272859059909014356}
   m_Layer: 8
   m_Name: MicroWaveEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,6 +534,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 962290391670741044, guid: c0115e3e89760de44a79fa49eeea479c,
     type: 3}
   _shootPoint: {fileID: 8152162489079569904}
+  _meshRenderer: {fileID: 6467186030786036436}
   _blueFresnel: {fileID: 2100000, guid: 2629e96c50834724cb5986932304ce7c, type: 2}
 --- !u!114 &8152162491002229976
 MonoBehaviour:
@@ -564,5 +566,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60722375, y: 0.38700843, z: 0.46280646}
-  m_Center: {x: -0.0011595488, y: 0.2126106, z: 0.012033264}
+  m_Size: {x: 0.60722375, y: 0.38700843, z: 0.3484242}
+  m_Center: {x: -0.0011595488, y: 0.2126106, z: -0.045157872}
+--- !u!65 &7272859059909014356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071135057426426260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.60722375, y: 0.38700843, z: 0.3484242}
+  m_Center: {x: -0.0011595488, y: 0.2126106, z: -0.045157872}

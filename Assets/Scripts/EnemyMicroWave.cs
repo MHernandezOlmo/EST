@@ -6,34 +6,54 @@ public class EnemyMicroWave : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _shootPoint;
+    [SerializeField] private SkinnedMeshRenderer _meshRenderer;
     Transform _player;
-    Vector3 _startPosition;
+    Vector3 _startSize;
     private float _startDegrees;
     bool canBeSeen;
     private int _currentMove;
-    private int _steps, _maxSteps = 2;
+    Quaternion _startRot;
+    [SerializeField] private int _maxSteps =2;
+    private int _steps;
     private Animator _animator;
     [SerializeField] Material _blueFresnel;
+
+    private void Awake()
+    {
+        _startRot = transform.rotation;
+        _startSize = transform.localScale;
+    }
+
     void Start()
     {
         _startDegrees = transform.rotation.eulerAngles.y;
         _player = FindObjectOfType<PlayerController>().transform;
         _animator = GetComponent<Animator>();
+
         if (GameProgressController.GetHasAO())
         {
             canBeSeen = true;
         }
         if (!canBeSeen)
         {
-            SkinnedMeshRenderer sk = GetComponentInChildren<SkinnedMeshRenderer>();
-            for(int i =0; i<sk.materials.Length; i++)
+            Material[] mats = new Material[_meshRenderer.materials.Length];
+            for (int i = 0; i < mats.Length; i++)
             {
-                sk.materials[i] = _blueFresnel;
+                mats[i] = _blueFresnel;
             }
+            _meshRenderer.materials = mats;
         }
-        _startPosition = transform.position;
         StartCoroutine(CrMove());
     }
+
+    public void Update()
+    {
+        if (!canBeSeen)
+        {
+            transform.localScale = _startSize * Random.Range(0.9f, 1.1f);
+        }
+    }
+
 
     IEnumerator CrMove()
     {
@@ -69,8 +89,7 @@ public class EnemyMicroWave : MonoBehaviour
         }
 
         Quaternion startRot = transform.rotation;
-        Quaternion targetRot = Quaternion.Euler(0, _startDegrees + 180 * _currentMove, 0);
-
+        Quaternion targetRot = Quaternion.Euler(transform.rotation.eulerAngles.x, _startDegrees + 180 * _currentMove, transform.rotation.eulerAngles.z);
 
         for (float i = 0; i < rotDur; i += Time.deltaTime)
         {
@@ -119,11 +138,11 @@ public class EnemyMicroWave : MonoBehaviour
 
     public void ShootCallBack()
     {
-        Quaternion diffA = Quaternion.Euler(_shootPoint.rotation.eulerAngles.x, _shootPoint.rotation.eulerAngles.y + 5, _shootPoint.rotation.eulerAngles.z);
-        Quaternion diffB = Quaternion.Euler(_shootPoint.rotation.eulerAngles.x, _shootPoint.rotation.eulerAngles.y - 5, _shootPoint.rotation.eulerAngles.z);
+        Vector3 diffA = _shootPoint.right * 0.5f;
+        Vector3 diffB = _shootPoint.right * -0.5f;
+        Instantiate(_bulletPrefab, _shootPoint.position + diffA, _shootPoint.rotation);
+        Instantiate(_bulletPrefab, _shootPoint.position + diffB, _shootPoint.rotation);
         Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
-        Instantiate(_bulletPrefab, _shootPoint.position, diffA);
-        Instantiate(_bulletPrefab, _shootPoint.position, diffB);
     }
 
     public void AttackCallBack()

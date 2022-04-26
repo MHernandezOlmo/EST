@@ -39,6 +39,7 @@ public class PlasmaBall : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<EnemyController>().ReceiveDamage(20);
+            Destroy(gameObject);
         }
 
     }

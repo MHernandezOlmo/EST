@@ -52,6 +52,10 @@ public class EnemyController : MonoBehaviour
             {
                 return;
             }
+            if (_enemyType == EnemyType.Microwave && !GameProgressController.GetHasAO())
+            {
+                return;
+            }
             if (!_hitSFXCD)
             {
                 AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotHit);
