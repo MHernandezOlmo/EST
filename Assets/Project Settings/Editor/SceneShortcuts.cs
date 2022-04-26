@@ -281,7 +281,7 @@ public class SceneShortcuts : MonoBehaviour
     [MenuItem("Scenes/Worlds/SST/6-->Laboratorio Pic du Midi")]
     public static void OpenSSTLaboratorioPicDuMidi()
     {
-        LoadScene("Worlds/SST/SST_6_laboratorio_pic_du_midi");
+        LoadScene("Worlds/SST/SST_PicDuMidi_13_laboratory");
     }
     //GREGOR
     [MenuItem("Scenes/Worlds/Gregor/0-->Exterior")]
