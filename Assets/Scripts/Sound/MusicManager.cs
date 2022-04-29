@@ -31,14 +31,21 @@ public class MusicManager : MonoBehaviour
         AudioEvents.muteMusic.AddListener(MuteMusic);
         AudioEvents.unmuteMusic.AddListener(UnmuteMusic);
         AudioEvents.playDefMusic.AddListener(PlayDefMusic);
-       
-        if(musicCode != MusicCode.None)
+
+        if (FindObjectOfType<CurrentSceneManager>().IsExterior)
         {
-            PlayMusicTransition(musicCode);
+            if (musicCode != MusicCode.None)
+            {
+                PlayMusicTransition(musicCode);
+            }
+            else if (currentClipIndex != (int)GetDefMusicCode() - 1)
+            {
+                PlayMusicTransition(GetDefMusicCode());
+            }
         }
-        else if (currentClipIndex != (int)GetDefMusicCode() - 1)
+        else
         {
-            PlayMusicTransition(GetDefMusicCode());
+            PlayMusicTransition(Random.Range(0,_insideClips.Count));
         }
     }
 
@@ -50,15 +57,24 @@ public class MusicManager : MonoBehaviour
         {
             StopCoroutine(_transitionCr);
         }
-        _transitionCr = StartCoroutine(MusicTransition((int)code - 1));
+        _transitionCr = StartCoroutine(MusicTransition(_musicClips[(int)code - 1]));
+    }
+    public void PlayMusicTransition(int codeIndex)
+    {
+        currentClipIndex = -1;
+        if (_transitionCr != null)
+        {
+            StopCoroutine(_transitionCr);
+        }
+        _transitionCr = StartCoroutine(MusicTransition(_insideClips[codeIndex]));
     }
 
-    public IEnumerator MusicTransition(int musicIndex)
+    public IEnumerator MusicTransition(AudioClip clip)
     {
         if (_usingMuteCr)
         {
             yield return null;
-            _music.clip = _musicClips[musicIndex];
+            _music.clip = clip;
             _music.Play();
         }
         else
@@ -70,7 +86,7 @@ public class MusicManager : MonoBehaviour
                 yield return null;
             }
             _music.volume = 0;
-            _music.clip = _musicClips[musicIndex];
+            _music.clip = clip;
             _music.Play();
             for (float i = 0; i < dur; i += Time.deltaTime)
             {
