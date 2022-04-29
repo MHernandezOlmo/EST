@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] private bool _dropsPiece;
+    [SerializeField] private bool _lastone;
+    [SerializeField] private GameObject _piece;
+
     CombatTrigger _combatTrigger;
     
     [SerializeField]
@@ -24,6 +28,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
+
         if (_enemyType == EnemyType.TV)
         {
             GameObject g = new GameObject();
@@ -52,7 +57,7 @@ public class EnemyController : MonoBehaviour
             {
                 return;
             }
-            if (_enemyType == EnemyType.Microwave && !GameProgressController.GetHasAO())
+            if (_enemyType == EnemyType.Microwave && !GameProgressController.Tetris)
             {
                 return;
             }
@@ -113,6 +118,37 @@ public class EnemyController : MonoBehaviour
     
     IEnumerator CrDie()
     {
+        if (_dropsPiece)
+        {
+
+            if (_lastone)
+            {
+                if (!GameProgressController.TopPiecePicked)
+                {
+                    GameProgressController.TopPiecePicked = true;
+                    Instantiate(_piece, transform.position + Vector3.up * 1, transform.rotation);
+                }
+            }
+            else
+            {
+                int totalPieces = GameProgressController.GetPiezasAO() + FindObjectsOfType<PiezaAO>().Length;
+                if (GameProgressController.TopPiecePicked)
+                {
+                    if (totalPieces < 10)
+                    {
+                        Instantiate(_piece, transform.position + Vector3.up * 1, transform.rotation);
+                    }
+                }
+                else
+                {
+                    if (totalPieces < 9)
+                    {
+                        Instantiate(_piece, transform.position + Vector3.up * 1, transform.rotation);
+                    }
+                }
+            }
+        }
+
         if(_enemyType == EnemyType.Robola)
         {
             if (_deathParticles != null)

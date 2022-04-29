@@ -36,6 +36,12 @@ public class PuzzleStatesController : MonoBehaviour
                 case "Coronografo":
                     FindObjectOfType<CoronografoController>().StartGame();
                     break;
+                case "Bomba":
+                    FindObjectOfType<BombaVacioController>().StartGame();
+                    break;
+                case "Tetris":
+                    FindObjectOfType<TetrisDeOndaController>().StartPlaying();
+                    break;
             }
             StartCoroutine(CrStartPuzzle());
         }
@@ -61,10 +67,18 @@ public class PuzzleStatesController : MonoBehaviour
             case "Parejas":
                 GameProgressController.SetCurrentStartPoint(1);
                 GameProgressController.Parejas = true;
-                GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
+                GameEvents.LoadScene.Invoke("SST_PicDuMidi_13_laboratory");
                 break;
             case "Coronografo":
                 GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d");
+                break;
+            case "Bomba":
+                GameEvents.LoadScene.Invoke("SST_3_sala_maquinas");
+                break;
+            case "Tetris":
+                GameProgressController.Tetris = true;
+                GameProgressController.SetHasAO(true);
+                GameEvents.LoadScene.Invoke("SST_4_sala_observacion");
                 break;
         }
     }

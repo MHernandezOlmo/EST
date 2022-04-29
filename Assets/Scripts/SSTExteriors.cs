@@ -12,31 +12,48 @@ public class SSTExteriors : MonoBehaviour
     int _piecesAO;
     [SerializeField] DialogueTrigger GetAOTriggerDialog;
     [SerializeField] TextMeshProUGUI _aoPiecesText;
+    bool _ended;
     void Start()
     {
         
         _shownAlert = GameProgressController.GetMicrowaveAlert();
         _microWaves = FindObjectsOfType<EnemyMicroWave>();
         _playerController = FindObjectOfType<PlayerController>();
-
-        if(!GameProgressController.GetHasAO() && GameProgressController.GetHasShield())
+        
+        if (!GameProgressController.GetHasAO() && GameProgressController.GetHasShield())
         {
             AOPiecesCanvas.SetActive(true);
-            _piecesAO = 0;
+            _piecesAO = GameProgressController.GetPiezasAO();
         }
     }
     public void GetPiece()
     {
         _piecesAO++;
+        GameProgressController.AddPiezaAO();
         if(_piecesAO == 10)
         {
             GetAOTriggerDialog.triggerDialogueEvent();
-            GameProgressController.SetHasAO(true);
         }
     }
     void Update()
     {
-        _aoPiecesText.text = "Piezas conseguidas " + _piecesAO + "/10";
+        bool allDead = true;
+        for(int i = 0; i< _microWaves.Length; i++)
+        {
+            if (_microWaves[i] != null)
+            {
+                allDead = false;
+            }
+        }
+        if (allDead)
+        {
+            if (!_ended)
+            {
+                _ended = true;
+                GameEvents.LoadScene.Invoke("WorldSelector");
+            }
+        }
+        _aoPiecesText.text = "AO pieces: " + _piecesAO + "/10";
         if (!_shownAlert)
         {
             float minDistance = 999f;
@@ -51,7 +68,7 @@ public class SSTExteriors : MonoBehaviour
             if (minDistance < 15f)
             {
                 _shownAlert = true;
-                //_dialogTrigger.triggerDialogueEvent();
+                _dialogTrigger.triggerDialogueEvent();
                 GameProgressController.SetMicrowaveAlert(true);
             }
         }

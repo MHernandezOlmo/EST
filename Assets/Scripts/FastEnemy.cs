@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FastEnemy : MonoBehaviour
 {
+
     [SerializeField] private Animator _animator;
     bool battling;
     public float _shootTime= 5;

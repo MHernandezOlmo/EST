@@ -44,7 +44,7 @@ public class CombatActivator : MonoBehaviour
         {
             _microwaves = FindObjectsOfType<EnemyMicroWave>();
             _aliveEnemies = _microwaves.Length;
-            if (!GameProgressController.GetHasAO())
+            if (!GameProgressController.GetHasShield())
             {
                 _canFight = false;
             }
@@ -131,10 +131,14 @@ public class CombatActivator : MonoBehaviour
         {
             if (!_isToastie)
             {
-                foreach (TelevisionInstance t in _tvs)
+                if (_tvs!= null)
                 {
-                    t.SetAttackZone(false);
+                    foreach (TelevisionInstance t in _tvs)
+                    {
+                        t.SetAttackZone(false);
+                    }
                 }
+                    
             }
         }
         CurrentSceneManager.SetGameState(GameStates.Exploration);

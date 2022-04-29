@@ -14,7 +14,20 @@ public class GameProgressController : MonoBehaviour
         CheckInitialized();
         return _gameProgressData._isLomnickySolved;
     }
-
+    public static bool TopPiecePicked
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._topPiecePicked;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._topPiecePicked = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool ToastersAdvice
     {
         get
@@ -72,6 +85,21 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+    public static bool Tetris
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._tetris;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._tetris = value;
+            SaveGameProgressData();
+        }
+    }
+
     public static bool FindFiltersAdvice
     {
         get
@@ -101,6 +129,8 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
+
+
     public static void SetIsLomickySolved(bool newValue)
     {
         CheckInitialized();
@@ -126,8 +156,14 @@ public class GameProgressController : MonoBehaviour
         CheckInitialized();
         return _gameProgressData._piezasAO;
     }
+    public static void SetPiezasAO(int piezes)
+    {
+        CheckInitialized();
+        _gameProgressData._piezasAO = piezes;
+        SaveGameProgressData();
 
-    public static void AddPiezaAO(int piezas)
+    }
+    public static void AddPiezaAO()
     {
         CheckInitialized();
         _gameProgressData._piezasAO++;

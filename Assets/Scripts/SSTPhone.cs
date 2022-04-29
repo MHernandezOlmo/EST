@@ -8,7 +8,7 @@ public class SSTPhone : Interactable
     private void Start()
     {
         base.Start();
-        if (!GameProgressController.GetSSTCollaborativeAlertShown()|| GameProgressController.GetSSTCollaborativeSceneSolved())
+        if (GameProgressController.Parejas)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.parent.gameObject);
@@ -21,6 +21,6 @@ public class SSTPhone : Interactable
 
     public void LoadNextScene()
     {
-        GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d From SST");
+        GameEvents.LoadScene.Invoke("SST_PicDuMidi_13_laboratory");
     }
 }

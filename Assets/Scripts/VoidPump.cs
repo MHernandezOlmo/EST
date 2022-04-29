@@ -15,6 +15,6 @@ public class VoidPump : Interactable
     }
     public override void Interact()
     {
-        GameEvents.LoadScene.Invoke("Puzzle Vacio In Progress");
+        GameEvents.LoadScene.Invoke("Bomba");
     }
 }

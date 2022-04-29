@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     GameObject _startingPositions;
     [SerializeField] GameObject _realGoran;
     [SerializeField] GameObject _shield;
+    [SerializeField] GameObject _shieldObject;
     private CameraShake _cameraShake;
     private VignettingController _vignettingController;
     public enum Character {Goran, MsProminence, Flare, Eclipse, None};
@@ -269,36 +270,38 @@ public class PlayerController : MonoBehaviour
     IEnumerator CrUseShield()
     {
         
-        _animator.SetTrigger("Attack");
+        _animator.SetBool("IsShieldUp", true);
         GetComponent<MovementController>().enabled = false;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.1f);
         _shield.SetActive(true);
-
-        if(electricBall1 != null)
+        _shieldObject.SetActive(true);
+        if (electricBall1 != null)
         {
             electricBall1.Play();
         }
 
-        for(float i = 0; i<0.2f; i += Time.deltaTime)
+        for(float i = 0; i<0.1f; i += Time.deltaTime)
         {
-            _shield.transform.localScale = Vector3.one * _animationCurve.Evaluate((i / 0.2f)); ;
+            _shield.transform.localScale = Vector3.one * _animationCurve.Evaluate((i / 0.1f)); ;
             yield return null;
         }
         _shield.transform.localScale = Vector3.one;
         isShielding = true;
-        yield return new WaitForSeconds(0.2f);
-        for (float i = 0; i < 0.5f; i += Time.deltaTime)
+        yield return new WaitForSeconds(0.8f);
+        for (float i = 0; i < 0.1f; i += Time.deltaTime)
         {
-            _shield.transform.localScale = Vector3.one- Vector3.one * _animationCurve.Evaluate((i / 0.5f));
+            _shield.transform.localScale = Vector3.one- Vector3.one * _animationCurve.Evaluate((i / 0.1f));
             yield return null;
         }
         _shield.transform.localScale = Vector3.zero;
+        _animator.SetBool("IsShieldUp", false);
 
         _shield.SetActive(false);
+        _shieldObject.SetActive(false);
         _shield.transform.localScale = Vector3.one;
         isShielding = false;
         GetComponent<MovementController>().enabled = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         CurrentSceneManager._canShield = true;
     }
     IEnumerator CrDash()

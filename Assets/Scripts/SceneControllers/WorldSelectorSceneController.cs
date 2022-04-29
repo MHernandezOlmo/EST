@@ -43,6 +43,7 @@ public class WorldSelectorSceneController : MonoBehaviour
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.PicDuMidi);
                 break;
             case 4:
+                GameProgressController.Parejas = false;
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.SST);
                 break;
             case 5:

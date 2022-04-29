@@ -44,7 +44,7 @@ public class GameProgressData
     public bool _correctPositionAxis2;
     public bool _toastersAdvice;
     public bool _coronalEjectionAdvice;
-
+    public bool _topPiecePicked;
     public bool _correctPositionSotanoAxis0;
     public bool _correctPositionSotanoAxis1;
 
@@ -60,6 +60,7 @@ public class GameProgressData
     public bool _usedPrismEinstein;
     public bool _einsteinTowerFirstAdvice;
     public bool _parejas;
+    public bool _tetris;
     public bool _microwaveAlert;
     public bool _firstSSTEntry;
     public bool _isVacuumSolved;

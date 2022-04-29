@@ -7,6 +7,7 @@ public class ColdSystem : Interactable
     private void Start()
     {
         base.Start();
+        print(GameProgressController.GetIsSSTColdSystemFixed());
         if (GameProgressController.GetIsSSTColdSystemFixed())
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
@@ -15,6 +16,6 @@ public class ColdSystem : Interactable
     }
     public override void Interact()
     {
-        GameEvents.LoadScene.Invoke("Puzzle Vacio torre  In Progress");
+        GameEvents.LoadScene.Invoke("Heat");
     }
 }

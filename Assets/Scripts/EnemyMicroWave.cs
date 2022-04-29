@@ -29,8 +29,7 @@ public class EnemyMicroWave : MonoBehaviour
         _startDegrees = transform.rotation.eulerAngles.y;
         _player = FindObjectOfType<PlayerController>().transform;
         _animator = GetComponent<Animator>();
-
-        if (GameProgressController.GetHasAO())
+        if (GameProgressController.Tetris)
         {
             canBeSeen = true;
         }
@@ -102,7 +101,10 @@ public class EnemyMicroWave : MonoBehaviour
         _animator.SetTrigger("Jump");
         yield return new WaitForSeconds(0.1f);
         Vector3 startPos = transform.position;
-        Vector3 targetPos = transform.position + transform.forward * 2f;
+        RaycastHit hit;
+        Physics.Raycast(transform.position + transform.forward*2f + Vector3.up*2, Vector3.down,out hit,10,1<<14);
+
+        Vector3 targetPos = hit.point;
 
         for (float i = 0; i < movDur; i += Time.deltaTime)
         {
