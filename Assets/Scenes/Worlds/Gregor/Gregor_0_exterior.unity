@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21011707, g: 0.42507547, b: 0.90070647, a: 1}
+  m_IndirectSpecularColor: {r: 0.21221235, g: 0.4277829, b: 0.9128493, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -497,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696a7799601a3f42a121ecff1cdde20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MAX_MOVEMENT_SPEED: 4
 --- !u!1 &447110476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5672025225169322691, guid: 04d18fd640445fe4c9b580c678ae3bef,
@@ -1240,6 +1241,7 @@ MonoBehaviour:
   _spin: {fileID: 0}
   _realGoran: {fileID: 0}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -1248,6 +1250,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _currentHPBar: {fileID: 0}
+  _shootPosition: {fileID: 0}
+  electricBall1: {fileID: 0}
 --- !u!1 &1174079956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,6 +2178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1766948373, guid: 62faca9ef05f8164fa6493a0814bd806, type: 3}
+      propertyPath: _isExterior
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 75653308125339170, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: m_AnchorMax.y

@@ -15,6 +15,8 @@ public class CurrentSceneManager : MonoBehaviour
     public static float _walkSpeed;
     public static bool _skillEnabled;
     [SerializeField] private float _speed;
+    [SerializeField] private bool _isExterior;
+
     private void Awake()
     {
         _elapsedSceneTime = 0;
@@ -71,6 +73,14 @@ public class CurrentSceneManager : MonoBehaviour
                 Time.timeScale = 0;
                 FindObjectOfType<PauseCanvasController>().Show(false);
                 break;
+        }
+    }
+
+    public bool IsExterior
+    {
+        get
+        {
+            return _isExterior;
         }
     }
 

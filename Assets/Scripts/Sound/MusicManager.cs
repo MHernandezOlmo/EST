@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
     public enum MusicCode {None, Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein};
     [SerializeField] MusicCode musicCode;
     [SerializeField] private AudioSource _music;
-    [SerializeField] private List<AudioClip> _musicClips;
+    [SerializeField] private List<AudioClip> _musicClips, _insideClips;
     private bool _musicTransition, _usingMuteCr;
     private Coroutine _transitionCr, _muteCr;
     public static int currentClipIndex;

@@ -1013,6 +1013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1766948373, guid: 62faca9ef05f8164fa6493a0814bd806, type: 3}
+      propertyPath: _isExterior
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 75653308125339170, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2092,6 +2096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696a7799601a3f42a121ecff1cdde20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MAX_MOVEMENT_SPEED: 4
 --- !u!114 &1337073376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,6 +2112,7 @@ MonoBehaviour:
   _spin: {fileID: 0}
   _realGoran: {fileID: 0}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -2115,6 +2121,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _currentHPBar: {fileID: 0}
+  _shootPosition: {fileID: 0}
+  electricBall1: {fileID: 0}
 --- !u!143 &1337073377
 CharacterController:
   m_ObjectHideFlags: 0
