@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private EnemyType _enemyType;
     [SerializeField] private GameObject _deathParticles;
     [SerializeField] private  Transform _player;
-    public enum EnemyType { Robola, Lamp, TV, Toast, Microwave}
+    public enum EnemyType { Robola, Lamp, TV, Toast, Microwave, Oven}
     [SerializeField] private Animator _animator;
 
     private void Start()
@@ -58,6 +58,10 @@ public class EnemyController : MonoBehaviour
                 return;
             }
             if (_enemyType == EnemyType.Microwave && !GameProgressController.Tetris)
+            {
+                return;
+            }
+            if (_enemyType == EnemyType.Oven && !GameProgressController.Tetris) //TO DO REVISAR 2ª CONDICIÓN
             {
                 return;
             }
