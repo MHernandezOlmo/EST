@@ -6,7 +6,7 @@ public class OvenInstance : MonoBehaviour
 {
     [SerializeField] private float _detectionDist, _attackDist;
     [SerializeField] private Transform _shootPoint;
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private GameObject _bulletPrefab, _particles;
     private Animator _animator;
     private Transform _player;
     private bool _alerted;
@@ -59,6 +59,8 @@ public class OvenInstance : MonoBehaviour
         transform.rotation = targetRot;
 
         _animator.SetTrigger("Run");
+        _particles.SetActive(false);
+        _particles.SetActive(true);
         for (float i = 0; i < dur; i += Time.deltaTime)
         {
             transform.position = Vector3.Lerp(startPos, targetPos, i / dur);

@@ -76,7 +76,6 @@ public class HPBar : MonoBehaviour
     }
     private void Update()
     {
-
         if (_isPlayer)
         {
             if (CurrentSceneManager._state == GameStates.Combat)

@@ -18,6 +18,10 @@ public class CombatCanvasController : MonoBehaviour
 
     public void Hide()
     {
+        if(_hpBars.Length == 0)
+        {
+            Debug.LogWarning("Cuidaico que lo mismo no hay barras en el array");
+        }
         _combatCanvas.SetActive(false);
         foreach(GameObject g in _hpBars)
         {
