@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class PaintPuzzleController : MonoBehaviour
 {
-    private int _currentLevel;
+    private int _currentLevel, _currentPoints;
     private bool _underCd;
     private Coroutine _timeCr;
+    private List<int> _selectedIndexes, _currentIndexes;
     [SerializeField] private GameObject _startCanvas, _gameOverCanvas;
     [SerializeField] private Image _timeBar;
     [SerializeField] private GridLayoutGroup _layout;
     [SerializeField] private Button[] _buttons;
     [SerializeField] private int[] _buttonsAmount, _columnsAmount;
+    [SerializeField] private int[] _whiteBlocksAmount;
     [SerializeField] private float[] _times;
 
     private void Start()
@@ -33,7 +35,7 @@ public class PaintPuzzleController : MonoBehaviour
     public void PlayLevel()
     {
         _currentLevel++;
-        if (_currentLevel >= 3)
+        if (_currentLevel >= _buttonsAmount.Length)
         {
             if (_timeCr != null)
             {
@@ -55,13 +57,11 @@ public class PaintPuzzleController : MonoBehaviour
                 {
                     _buttons[i].gameObject.SetActive(false);
                 }
+                _buttons[i].GetComponent<Image>().enabled = true;
             }
-            if (_timeCr != null)
-            {
-                StopCoroutine(_timeCr);
-            }
-            _timeCr = StartCoroutine(CrRestTime(_times[_currentLevel]));
         }
+        _currentPoints = 0;
+        StartCoroutine(CrRandomPuzzle());
     }
 
     IEnumerator CrRestTime(float levelTime)
@@ -72,6 +72,7 @@ public class PaintPuzzleController : MonoBehaviour
             yield return null;
         }
         //Pierde
+        _gameOverCanvas.SetActive(true);
         _timeBar.fillAmount = 0;
     }
 
@@ -79,16 +80,59 @@ public class PaintPuzzleController : MonoBehaviour
     {
         if (!_underCd)
         {
-            print(buttonIndex);
-            PlayLevel();
-            StartCoroutine(CrCooldown());
+            if (_selectedIndexes.Contains(buttonIndex))
+            {
+                _currentPoints ++;
+                _buttons[buttonIndex].GetComponent<Image>().enabled = false;
+                if(_currentPoints >= _whiteBlocksAmount[_currentLevel])
+                {
+                    PlayLevel();
+                }
+            }
+            else
+            {
+                StopCoroutine(_timeCr);
+                _gameOverCanvas.SetActive(true);
+            }
         }
     }
 
-    IEnumerator CrCooldown()
+    IEnumerator CrRandomPuzzle()
     {
+        for (int i = 0; i < _buttons.Length; i++)
+        {
+            _buttons[i].GetComponent<Image>().color = Color.gray;
+        }
         _underCd = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         _underCd = false;
+        _selectedIndexes = new List<int>();
+        _currentIndexes = new List<int>();
+        for (int i = 0; i < _buttonsAmount[_currentLevel]; i++)
+        {
+            _currentIndexes.Add(i);
+        }
+
+        for (int i = 0; i < _whiteBlocksAmount[_currentLevel]; i++)
+        {
+            int selected = Random.Range(0, _currentIndexes.Count);
+            _selectedIndexes.Add(_currentIndexes[selected]);
+            _currentIndexes.RemoveAt(selected);
+        }
+
+        for (int i = 0; i < _buttons.Length; i++)
+        {
+            _buttons[i].GetComponent<Image>().color = Color.black;
+        }
+        for (int i = 0; i < _selectedIndexes.Count; i++)
+        {
+            _buttons[_selectedIndexes[i]].GetComponent<Image>().color = Color.white;
+        }
+
+        if (_timeCr != null)
+        {
+            StopCoroutine(_timeCr);
+        }
+        _timeCr = StartCoroutine(CrRestTime(_times[_currentLevel]));
     }
 }
