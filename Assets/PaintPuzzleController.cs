@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PaintPuzzleController : MonoBehaviour
 {
     private int _currentLevel, _currentPoints;
-    private bool _underCd;
+    private bool _underCd, _miniCD;
     private Coroutine _timeCr;
     private List<int> _selectedIndexes, _currentIndexes;
-    [SerializeField] private GameObject _startCanvas, _gameOverCanvas;
+    [SerializeField] private GameObject _loadingPanel;
+    [SerializeField] private TextMeshProUGUI _countDownTx;
+    [SerializeField] private PuzzleStatesController _puzzleStatesController;
     [SerializeField] private Image _timeBar;
     [SerializeField] private GridLayoutGroup _layout;
     [SerializeField] private Button[] _buttons;
@@ -21,27 +24,34 @@ public class PaintPuzzleController : MonoBehaviour
     {
         for (int i = 0; i < _buttons.Length; i++)
         {
-            _buttons[i].onClick.AddListener(() => UseButton(i));
+            int aux = i;
+            _buttons[aux].onClick.AddListener(() => UseButton(aux));
         }
     }
 
-    public void RestartGame()
+    public void StartGame()
     {
-        _startCanvas.SetActive(false);
-        _currentLevel = -1;
-        PlayLevel();
+        StartCoroutine(CrFirstDelay());
+        IEnumerator CrFirstDelay()
+        {
+            _loadingPanel.SetActive(true);
+            _countDownTx.text = "";
+            yield return new WaitForSeconds(1f);
+            _currentLevel = -1;
+            PlayLevel();
+        }
     }
 
     public void PlayLevel()
     {
         _currentLevel++;
+        if (_timeCr != null)
+        {
+            StopCoroutine(_timeCr);
+        }
         if (_currentLevel >= _buttonsAmount.Length)
         {
-            if (_timeCr != null)
-            {
-                StopCoroutine(_timeCr);
-            }
-            print("Winwin");
+            _puzzleStatesController.Win();
         }
         else
         {
@@ -59,9 +69,9 @@ public class PaintPuzzleController : MonoBehaviour
                 }
                 _buttons[i].GetComponent<Image>().enabled = true;
             }
+            _currentPoints = 0;
+            StartCoroutine(CrRandomPuzzle());
         }
-        _currentPoints = 0;
-        StartCoroutine(CrRandomPuzzle());
     }
 
     IEnumerator CrRestTime(float levelTime)
@@ -71,15 +81,15 @@ public class PaintPuzzleController : MonoBehaviour
             _timeBar.fillAmount = i / levelTime;
             yield return null;
         }
-        //Pierde
-        _gameOverCanvas.SetActive(true);
+        _puzzleStatesController.GameOver();
         _timeBar.fillAmount = 0;
     }
 
     public void UseButton(int buttonIndex)
     {
-        if (!_underCd)
+        if (!_underCd && !_miniCD)
         {
+            StartCoroutine(CrMiniCD());
             if (_selectedIndexes.Contains(buttonIndex))
             {
                 _currentPoints ++;
@@ -92,9 +102,16 @@ public class PaintPuzzleController : MonoBehaviour
             else
             {
                 StopCoroutine(_timeCr);
-                _gameOverCanvas.SetActive(true);
+                _puzzleStatesController.GameOver();
             }
         }
+    }
+
+    IEnumerator CrMiniCD()
+    {
+        _miniCD = true;
+        yield return null;
+        _miniCD = false;
     }
 
     IEnumerator CrRandomPuzzle()
@@ -104,7 +121,14 @@ public class PaintPuzzleController : MonoBehaviour
             _buttons[i].GetComponent<Image>().color = Color.gray;
         }
         _underCd = true;
+        _loadingPanel.SetActive(true);
+        _countDownTx.text = "3";
         yield return new WaitForSeconds(1f);
+        _countDownTx.text = "2";
+        yield return new WaitForSeconds(1f);
+        _countDownTx.text = "1";
+        yield return new WaitForSeconds(1f);
+        _loadingPanel.SetActive(false);
         _underCd = false;
         _selectedIndexes = new List<int>();
         _currentIndexes = new List<int>();
@@ -124,8 +148,10 @@ public class PaintPuzzleController : MonoBehaviour
         {
             _buttons[i].GetComponent<Image>().color = Color.black;
         }
+        string res = "";
         for (int i = 0; i < _selectedIndexes.Count; i++)
         {
+            res += _selectedIndexes[i].ToString() + " | ";
             _buttons[_selectedIndexes[i]].GetComponent<Image>().color = Color.white;
         }
 

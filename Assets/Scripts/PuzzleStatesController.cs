@@ -42,6 +42,9 @@ public class PuzzleStatesController : MonoBehaviour
                 case "Tetris":
                     FindObjectOfType<TetrisDeOndaController>().StartPlaying();
                     break;
+                case "PintaTorre":
+                    FindObjectOfType<PaintPuzzleController>().StartGame();
+                    break;
             }
             StartCoroutine(CrStartPuzzle());
         }
@@ -79,6 +82,10 @@ public class PuzzleStatesController : MonoBehaviour
                 GameProgressController.Tetris = true;
                 GameProgressController.SetHasAO(true);
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion");
+                break;
+            case "PintaTorre":
+                //TO DO Qué escena es a la que vuelve el puzzle???
+                //GameEvents.LoadScene.Invoke("Lomnicky_11_Sala Cupula");
                 break;
         }
     }
