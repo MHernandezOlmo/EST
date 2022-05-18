@@ -10,6 +10,7 @@ public class PaintPuzzleController : MonoBehaviour
     private bool _underCd, _miniCD;
     private Coroutine _timeCr;
     private List<int> _selectedIndexes, _currentIndexes;
+    [SerializeField] private Color _blackColor;
     [SerializeField] private GameObject _loadingPanel;
     [SerializeField] private TextMeshProUGUI _countDownTx;
     [SerializeField] private PuzzleStatesController _puzzleStatesController;
@@ -122,7 +123,7 @@ public class PaintPuzzleController : MonoBehaviour
     {
         for (int i = 0; i < _buttons.Length; i++)
         {
-            _buttons[i].GetComponent<Image>().color = Color.gray;
+            _buttons[i].GetComponent<Image>().color = _blackColor;
         }
         _underCd = true;
         _loadingPanel.SetActive(true);
@@ -150,7 +151,7 @@ public class PaintPuzzleController : MonoBehaviour
 
         for (int i = 0; i < _buttons.Length; i++)
         {
-            _buttons[i].GetComponent<Image>().color = Color.black;
+            _buttons[i].GetComponent<Image>().color = _blackColor;
         }
         string res = "";
         for (int i = 0; i < _selectedIndexes.Count; i++)
