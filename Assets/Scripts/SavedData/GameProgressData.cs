@@ -54,6 +54,7 @@ public class GameProgressData
     public bool _needContactUV;
     public bool _findFiltersAdvice;
     public bool _telescopeReady;
+    public bool _jetpack;
 
     public bool _needPrismEinstein;
     public bool _hasPrismEinstein;
@@ -61,6 +62,7 @@ public class GameProgressData
     public bool _einsteinTowerFirstAdvice;
     public bool _parejas;
     public bool _tetris;
+    public bool _paintTower;
     public bool _microwaveAlert;
     public bool _firstSSTEntry;
     public bool _isVacuumSolved;

@@ -16,13 +16,15 @@ public class CurrentSceneManager : MonoBehaviour
     public static bool _skillEnabled;
     [SerializeField] private float _speed;
     [SerializeField] private bool _isExterior;
-
+    public static bool _canJetpack;
+    public static bool _isJetpacking;
     private void Awake()
     {
         _elapsedSceneTime = 0;
         _canMove = false;
         _canShield = true;
         _canSpin = true;
+        _canJetpack = true;
         GameEvents.ChangeGameState.AddListener(SetGameState);
         if (_speed == 0)
         {

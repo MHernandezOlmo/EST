@@ -84,8 +84,8 @@ public class PuzzleStatesController : MonoBehaviour
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion");
                 break;
             case "PintaTorre":
-                //TO DO Qué escena es a la que vuelve el puzzle???
-                //GameEvents.LoadScene.Invoke("Lomnicky_11_Sala Cupula");
+                GameProgressController.PaintTower = true;
+                GameEvents.LoadScene.Invoke("Gregor_0_exteriorBis");
                 break;
         }
     }

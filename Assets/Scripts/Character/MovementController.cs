@@ -77,6 +77,12 @@ public class MovementController : MonoBehaviour
 			}
 			anim.SetFloat("Speed", walkSpeed * multiplier);
 			Vector3 finalVelocity = velocity * walkSpeed;
+
+			if (CurrentSceneManager._isJetpacking)
+			{
+				finalVelocity *= 2f;
+			}
+
 			motor.Move(finalVelocity * Time.deltaTime);
 		}
 	}
@@ -135,7 +141,7 @@ public class MovementController : MonoBehaviour
 
 		Vector3 velocity_xz = velocity.xz();
         velocity_xz = Vector3.Lerp(velocity_xz, MAX_MOVEMENT_SPEED * transform.forward * facing.magnitude, ACCEL * Time.deltaTime);
-
+		
         if (movementEnabled)
         {
             velocity = new Vector3(velocity_xz.x, velocity.y, velocity_xz.z);
