@@ -10,18 +10,21 @@ public class PaintPuzzleController : MonoBehaviour
     private bool _underCd, _miniCD;
     private Coroutine _timeCr;
     private List<int> _selectedIndexes, _currentIndexes;
+    [SerializeField] private Color _blackColor;
     [SerializeField] private GameObject _loadingPanel;
     [SerializeField] private TextMeshProUGUI _countDownTx;
     [SerializeField] private PuzzleStatesController _puzzleStatesController;
-    [SerializeField] private Image _timeBar;
+    [SerializeField] private Image _timeBar, _fillTower;
     [SerializeField] private GridLayoutGroup _layout;
     [SerializeField] private Button[] _buttons;
     [SerializeField] private int[] _buttonsAmount, _columnsAmount;
     [SerializeField] private int[] _whiteBlocksAmount;
     [SerializeField] private float[] _times;
+    private float levelPercent;
 
     private void Start()
     {
+        levelPercent = 1f / _buttonsAmount.Length;
         for (int i = 0; i < _buttons.Length; i++)
         {
             int aux = i;
@@ -45,6 +48,7 @@ public class PaintPuzzleController : MonoBehaviour
     public void PlayLevel()
     {
         _currentLevel++;
+        _fillTower.fillAmount = levelPercent * _currentLevel;
         if (_timeCr != null)
         {
             StopCoroutine(_timeCr);
@@ -93,6 +97,7 @@ public class PaintPuzzleController : MonoBehaviour
             if (_selectedIndexes.Contains(buttonIndex))
             {
                 _currentPoints ++;
+                _fillTower.fillAmount = levelPercent * _currentLevel + (levelPercent * ((float)_currentPoints/ _whiteBlocksAmount[_currentLevel]));
                 _buttons[buttonIndex].GetComponent<Image>().enabled = false;
                 if(_currentPoints >= _whiteBlocksAmount[_currentLevel])
                 {
@@ -118,7 +123,7 @@ public class PaintPuzzleController : MonoBehaviour
     {
         for (int i = 0; i < _buttons.Length; i++)
         {
-            _buttons[i].GetComponent<Image>().color = Color.gray;
+            _buttons[i].GetComponent<Image>().color = _blackColor;
         }
         _underCd = true;
         _loadingPanel.SetActive(true);
@@ -146,7 +151,7 @@ public class PaintPuzzleController : MonoBehaviour
 
         for (int i = 0; i < _buttons.Length; i++)
         {
-            _buttons[i].GetComponent<Image>().color = Color.black;
+            _buttons[i].GetComponent<Image>().color = _blackColor;
         }
         string res = "";
         for (int i = 0; i < _selectedIndexes.Count; i++)

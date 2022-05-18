@@ -15,12 +15,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject _shieldObject;
     private CameraShake _cameraShake;
     private VignettingController _vignettingController;
-    public enum Character {Goran, MsProminence, Flare, Eclipse, None};
+    public enum Character {Goran, MsProminence, Flare, Eclipse, None, Spot};
     public Character _currentCharacter;
     [SerializeField] GameObject _solarCanonBall;
     float _shootTime;
     float _elapsedShootTime;
     bool isShielding;
+    bool isJetpacking;
     [SerializeField] AnimationCurve _animationCurve;
     private Animator _animator;
     private bool _superRotate;
@@ -37,6 +38,16 @@ public class PlayerController : MonoBehaviour
     public int GetHP()
     {
         return _currentHp;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<EnemyController>() != null)
+        {
+            if (isJetpacking)
+            {
+                other.GetComponent<EnemyController>().ReceiveDamage(1000);
+            }
+        }
     }
 
     public void ReceiveDamage(int newValue)
@@ -61,7 +72,8 @@ public class PlayerController : MonoBehaviour
             {
                 _currentHp = 0;
                 _dead = true;
-                _animator.SetTrigger("Die");
+                _animator.SetTrigger("Death");
+                GetComponent<MovementController>().enabled = false;
                 StartCoroutine(CrWaitForDie());
             }   
         }
@@ -114,6 +126,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.up * -1, out hit, 10))
+        {
+            if(hit.collider.gameObject.layer == 4)
+            {
+                if (!isJetpacking) ReceiveDamage(9999);
+            }
+        }
         _restoreHP += Time.deltaTime*10;
         if (_restoreHP >= 1)
         {
@@ -152,7 +172,18 @@ public class PlayerController : MonoBehaviour
                         if (!isShielding)
                         {
                             StartCoroutine(CrUseShield());
-                        }    
+                        }
+                    }
+                }
+                if (_currentCharacter == Character.Spot)
+                {
+                    if (CurrentSceneManager._canJetpack)
+                    {
+                        CurrentSceneManager._canJetpack = false;
+                        if (!isJetpacking)
+                        {
+                            StartCoroutine(CrUseJetpack());
+                        }
                     }
                 }
                 if (_currentCharacter == Character.MsProminence)
@@ -198,6 +229,17 @@ public class PlayerController : MonoBehaviour
                                 _elapsedShootTime = 0;
                                 StartCoroutine(CrShoot());
                             }
+                        }
+                    }
+                }
+                if (_currentCharacter == Character.Spot)
+                {
+                    if (CurrentSceneManager._canJetpack)
+                    {
+                        CurrentSceneManager._canJetpack = false;
+                        if (!isJetpacking)
+                        {
+                            StartCoroutine(CrUseJetpack());
                         }
                     }
                 }
@@ -303,6 +345,24 @@ public class PlayerController : MonoBehaviour
         GetComponent<MovementController>().enabled = true;
         yield return new WaitForSeconds(0.3f);
         CurrentSceneManager._canShield = true;
+    }
+    IEnumerator CrUseJetpack()
+    {
+        _animator.SetBool("IsJetpacking", true);
+        yield return new WaitForSeconds(0.1f);
+        _shield.SetActive(true);
+
+        CurrentSceneManager._isJetpacking = true;
+        isJetpacking= true;
+        yield return new WaitForSeconds(2f);
+        _animator.SetBool("IsJetpacking", false);
+        isJetpacking = false;
+        CurrentSceneManager._isJetpacking = false;
+        _shield.SetActive(false);
+
+
+        yield return new WaitForSeconds(0.3f);
+        CurrentSceneManager._canJetpack = true;
     }
     IEnumerator CrDash()
     {

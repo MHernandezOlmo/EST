@@ -99,6 +99,34 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+    public static bool PaintTower
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._paintTower;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._paintTower = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool Jetpack
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._jetpack;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._jetpack = value;
+            SaveGameProgressData();
+        }
+    }
 
     public static bool FindFiltersAdvice
     {
