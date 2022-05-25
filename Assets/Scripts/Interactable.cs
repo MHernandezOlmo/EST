@@ -14,7 +14,15 @@ public abstract class Interactable : MonoBehaviour
     public void RemoveInteractable()
     {
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        Destroy(transform.parent.gameObject);
+        if (transform.parent != null)
+        {
+            Destroy(transform.parent.gameObject);
+
+        }
+        else
+        {
+            Destroy(transform.gameObject);
+        }
     }
     public Transform GetInteractableMarker()
     {

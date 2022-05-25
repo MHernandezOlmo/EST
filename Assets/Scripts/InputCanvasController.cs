@@ -19,8 +19,18 @@ public class InputCanvasController : MonoBehaviour
     Coroutine _hidingInteractButton;
     bool _isShowing;
     InteractableUIPoolController _interactableUIPoolController;
+
+    public GameObject CombatButton
+    {
+        get { return _combatButton; }
+    }
+    public GameObject InteractButton
+    {
+        get { return _interactButton; }
+    }
     private void Awake()
     {
+        
         _combatButton.SetActive(false);
         _interactButton.SetActive(false);
         GameEvents.CombatEvent.AddListener(ShowCombatButton);

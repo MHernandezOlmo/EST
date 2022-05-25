@@ -14,4 +14,14 @@ public class JetPackSkill : Interactable
         Destroy(gameObject.transform.parent.gameObject);
     }
 
+    private void Start()
+    {
+        base.Start();
+        if (GameProgressController.Jetpack)
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(gameObject.transform.parent.gameObject);
+        }
+    }
+
 }

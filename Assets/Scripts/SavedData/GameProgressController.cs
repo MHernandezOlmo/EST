@@ -28,6 +28,64 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+
+    public static bool GregorDome
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorDome;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorDome = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool PlaceHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._heatRejecterPlaced;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._heatRejecterPlaced = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool AdviceHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._adviceHR;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._adviceHR = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool TestedHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._testedHR;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._testedHR = value;
+            SaveGameProgressData();
+        }
+    }
+
     public static bool ToastersAdvice
     {
         get
@@ -42,7 +100,20 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
+    public static bool HeatRejecter
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._heatRejecter;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._heatRejecter = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool CoronalAdvice
     {
         get
@@ -622,6 +693,19 @@ public class GameProgressController : MonoBehaviour
         CheckInitialized();
         return _gameProgressData._piezasCamara[pieza];
     }
+
+    public static bool GetPiezaHR(int pieza)
+    {
+        CheckInitialized();
+        return _gameProgressData._piezasHeatRejecter[pieza];
+    }
+    public static void SetPiezaHR(int pieza, bool value)
+    {
+        CheckInitialized();
+        _gameProgressData._piezasHeatRejecter[pieza] = value;
+        SaveGameProgressData();
+    }
+
     public static bool GetFiltro(int filtro)
     {
         CheckInitialized();

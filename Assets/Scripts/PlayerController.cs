@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     private bool _dead;
     public HPBar _currentHPBar;
     float _restoreHP = 0f;
+    [SerializeField] GameObject _interactButton;
+    [SerializeField] GameObject _combatButton;
+
     public int GetMaxHP()
     {
         return _maxHP;
@@ -43,12 +46,15 @@ public class PlayerController : MonoBehaviour
     {
         if (other.GetComponent<EnemyController>() != null)
         {
+
             if (isJetpacking)
             {
+
                 other.GetComponent<EnemyController>().ReceiveDamage(1000);
             }
         }
     }
+
 
     public void ReceiveDamage(int newValue)
     {
@@ -85,6 +91,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem electricBall1;
     void Start()
     {
+        _interactButton = FindObjectOfType<InputCanvasController>().InteractButton;
+        _combatButton= FindObjectOfType<InputCanvasController>().CombatButton;
         _currentHp = _maxHP;
         _animator = transform.GetChild(0).GetComponent<Animator>();
         _shootTime = 1f;
@@ -162,7 +170,17 @@ public class PlayerController : MonoBehaviour
         }
         if (PlayerInput._ContextButtonDown)
         {
-            if (CurrentSceneManager._state == GameStates.Combat )
+
+            if(!_combatButton.activeSelf && _interactButton.activeSelf)
+            {
+                FindObjectOfType<InteractablesController>().Interact();
+            }
+
+            if (_combatButton.activeSelf && _interactButton.activeSelf)
+            {
+                FindObjectOfType<InteractablesController>().Interact();
+            }
+            if (_combatButton.activeSelf && !_interactButton.activeSelf)
             {
                 if (_currentCharacter == Character.Eclipse)
                 {
@@ -177,26 +195,31 @@ public class PlayerController : MonoBehaviour
                 }
                 if (_currentCharacter == Character.Spot)
                 {
-                    if (CurrentSceneManager._canJetpack)
+                    if (GameProgressController.Jetpack)
                     {
-                        CurrentSceneManager._canJetpack = false;
-                        if (!isJetpacking)
+                        if (CurrentSceneManager._canJetpack)
                         {
-                            StartCoroutine(CrUseJetpack());
+                            CurrentSceneManager._canJetpack = false;
+                            if (!isJetpacking)
+                            {
+                                StartCoroutine(CrUseJetpack());
+                            }
                         }
                     }
+
                 }
+
                 if (_currentCharacter == Character.MsProminence)
                 {
                     if (CurrentSceneManager.CanDash)
                     {
                         CurrentSceneManager.CanDash = false;
-                        StartCoroutine(CrDash());    
+                        StartCoroutine(CrDash());
                     }
                 }
                 if (_currentCharacter == Character.Flare)
                 {
-                    if(_elapsedShootTime > _shootTime)
+                    if (_elapsedShootTime > _shootTime)
                     {
                         _elapsedShootTime = 0;
                         StartCoroutine(CrShoot());
@@ -207,54 +230,10 @@ public class PlayerController : MonoBehaviour
                     if (CurrentSceneManager._canSpin)
                     {
                         CurrentSceneManager._canSpin = false;
-                        StartCoroutine(CrSpin());  
+                        StartCoroutine(CrSpin());
                     }
                 }
-                if (_currentCharacter == Character.MsProminence)
-                {
-                    StartCoroutine(CrDash());    
-                }
-            }
-            else
-            {
-                if (_currentCharacter == Character.Flare)
-                {
-                    
-                    if (CurrentSceneManager._skillEnabled)
-                    {
-                        if (_currentCharacter == Character.Flare)
-                        {
-                            if(_elapsedShootTime > _shootTime)
-                            {
-                                _elapsedShootTime = 0;
-                                StartCoroutine(CrShoot());
-                            }
-                        }
-                    }
-                }
-                if (_currentCharacter == Character.Spot)
-                {
-                    if (CurrentSceneManager._canJetpack)
-                    {
-                        CurrentSceneManager._canJetpack = false;
-                        if (!isJetpacking)
-                        {
-                            StartCoroutine(CrUseJetpack());
-                        }
-                    }
-                }
-                if (_currentCharacter == Character.MsProminence)
-                {
-                    if (CurrentSceneManager.CanDash)
-                    {
-                        CurrentSceneManager.CanDash = false;
-                        StartCoroutine(CrDash());
-                    }
-                }
-                if (CurrentSceneManager._state == GameStates.Exploration)
-                {
-                    FindObjectOfType<InteractablesController>().Interact();
-                }
+
             }
         }
     }

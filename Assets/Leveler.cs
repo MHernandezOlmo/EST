@@ -16,23 +16,39 @@ public class Leveler : MonoBehaviour
     [SerializeField] Color _color;
     [SerializeField] float _targetValue;
     float _height;
+    bool isOnGregor;
     void Start()
     {
         _height = GetComponent<RectTransform>().sizeDelta.y;
+        if (FindObjectOfType<TestHRController>()!=null)
+        {
+            isOnGregor = true;
+        }
     }
     public void Check()
     {
         if (_active)
         {
-            float value = Mathf.Abs(((_circle.anchoredPosition.y + (_height/2f)) / _height) - _targetValue);
+            float value = Mathf.Abs(((_circle.anchoredPosition.y + (_height / 2f)) / _height) - _targetValue);
             if (value < 0.09f)
             {
                 _active = false;
                 _back.color = Color.green;
-                FindObjectOfType<CoronografoController>().Next();
+                if (isOnGregor)
+                {
+                    FindObjectOfType<TestHRController>().Next();
+                }
+                else
+                {
+                    FindObjectOfType<CoronografoController>().Next();
+                }
             }
             else
             {
+                if (isOnGregor)
+                {
+                    FindObjectOfType<TestHRController>().Fail();
+                }
                 _active = false;
                 StartCoroutine(ReActivate());
             }
@@ -40,7 +56,11 @@ public class Leveler : MonoBehaviour
     }
     IEnumerator ReActivate()
     {
-        FindObjectOfType<CoronografoController>().LoseLife();
+        if (!isOnGregor)
+        {
+            FindObjectOfType<CoronografoController>().LoseLife();
+        }
+
         _back.color = Color.red;
         yield return new WaitForSeconds(1f);
         _back.color = _color;

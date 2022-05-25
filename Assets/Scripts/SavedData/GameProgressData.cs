@@ -18,8 +18,13 @@ public class GameProgressData
     public bool _cazadorDeFlaresSolved;
     public bool _choosePhenomenomSolved;
     public bool[] _piezasCamara;
+    public bool[] _piezasHeatRejecter;
+    public bool _heatRejecter;
+    public bool _heatRejecterPlaced;
     public bool[] _filtros;
     public bool _salaCombateCombate;
+    public bool _gregorDome;
+
     public string _currentScene;
     public int _currentStartPoint;
     public bool _recopiledDataAdvice;
@@ -82,6 +87,9 @@ public class GameProgressData
     public bool _hasAO;
 
     public bool _solvedPuzzleAO;
+    public bool _adviceHR;
+    public bool _testedHR;
+
     public GameProgressData()
     {
         _hasArrivedToPicDuMidi = false;
@@ -93,6 +101,7 @@ public class GameProgressData
         _closedCeiling = false;
         _cazadorDeFlaresSolved = false;
         _piezasCamara = new bool[6];
+        _piezasHeatRejecter= new bool[6];
         _filtros = new bool[6];
         _currentScene = "";
         _currentStartPoint = 0;

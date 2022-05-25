@@ -45,6 +45,9 @@ public class PuzzleStatesController : MonoBehaviour
                 case "PintaTorre":
                     FindObjectOfType<PaintPuzzleController>().StartGame();
                     break;
+                case "TestHR":
+                    FindObjectOfType<TestHRController>().StartGame();
+                    break;
             }
             StartCoroutine(CrStartPuzzle());
         }
@@ -85,7 +88,11 @@ public class PuzzleStatesController : MonoBehaviour
                 break;
             case "PintaTorre":
                 GameProgressController.PaintTower = true;
-                GameEvents.LoadScene.Invoke("Gregor_0_exteriorBis");
+                GameEvents.LoadScene.Invoke("Gregor_0_dome");
+                break;
+            case "TestHR":
+                GameProgressController.TestedHR = true;
+                GameEvents.LoadScene.Invoke("Gregor_11_almacen");
                 break;
         }
     }

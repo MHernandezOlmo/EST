@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -61,10 +62,10 @@ public class EnemyController : MonoBehaviour
             {
                 return;
             }
-            if (_enemyType == EnemyType.Oven && !GameProgressController.Tetris) //TO DO REVISAR 2ª CONDICIÓN
-            {
-                return;
-            }
+            //if (_enemyType == EnemyType.Oven && !GameProgressController.Tetris) //TO DO REVISAR 2ª CONDICIÓN
+            //{
+            //    return;
+            //}
             if (!_hitSFXCD)
             {
                 AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotHit);
@@ -166,20 +167,32 @@ public class EnemyController : MonoBehaviour
         {
             FindObjectOfType<CombatActivator>().KillEnemy();
         }
+        if(_currentHPBar!=null)_currentHPBar.Stop();
+        if (_animator != null)_animator.SetTrigger("Dead");
+        if (_enemyType == EnemyType.Oven && SceneManager.GetActiveScene().name == "Gregor_0_exteriorBis")
+        {
+            if (GameProgressController.PlaceHR)
+            {
+                FindObjectOfType<ExterioresGregorBisSceneController>().Kill();
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            for (float i = 0; i < 0.15f; i += Time.deltaTime)
+            {
+                transform.localScale = Vector3.Lerp(_originalScale, Vector3.zero, i / 0.15f);
+                yield return null;
+            }
+            transform.localScale = Vector3.zero;
+            if (_combatTrigger != null)
+            {
+                _combatTrigger.AddKill();
+            }
 
-        _currentHPBar.Stop();    
-        _animator.SetTrigger("Dead");
-        for (float i = 0; i < 0.15f; i += Time.deltaTime)
-        {
-            transform.localScale = Vector3.Lerp(_originalScale, Vector3.zero,  i / 0.15f);
-            yield return null;
+            Destroy(gameObject);
         }
-        transform.localScale = Vector3.zero;
-        if(_combatTrigger != null)
-        {
-            _combatTrigger.AddKill();
-        }
-        Destroy(gameObject);
+        
     }
 
     IEnumerator SoundCD()
