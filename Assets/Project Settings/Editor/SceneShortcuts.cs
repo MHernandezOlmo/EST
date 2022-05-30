@@ -307,6 +307,31 @@ public class SceneShortcuts : MonoBehaviour
     {
         LoadScene("Worlds/Einstein/Gregor_3_acuaticas");
     }
+    //EST
+    [MenuItem("Scenes/Worlds/EST/0-->Hall")]
+    public static void OpenESTHall()
+    {
+        LoadScene("Worlds/EST/EST_hall");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/1-->Galería")]
+    public static void OpenESTSotano()
+    {
+        LoadScene("Worlds/EST/EST_1_sotano");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/2-->Laseres")]
+    public static void OpenESTBase()
+    {
+        LoadScene("Worlds/EST/EST_2_laseres");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/3-->Acuaticas 1")]
+    public static void OpenESTAcuaticas1()
+    {
+        LoadScene("Worlds/Einstein/EST_3_acuaticas");
+    }
+
 
     public static void LoadScene(string name)
     {
