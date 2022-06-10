@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraSecuredSceneController : MonoBehaviour
 {
     [SerializeField] private DialogueTrigger _trigger;
+    [SerializeField] private  bool _spectropolarimeter;
     IEnumerator Start()
     {
         yield return new WaitForSeconds(1f);
@@ -12,6 +13,11 @@ public class CameraSecuredSceneController : MonoBehaviour
     }
     public void End()
     {
+        if (_spectropolarimeter)
+        {
+            GameProgressController.EinsteinFinished = true;
+        }
+
         GameEvents.LoadScene.Invoke("WorldSelector");
     }
     void Update()

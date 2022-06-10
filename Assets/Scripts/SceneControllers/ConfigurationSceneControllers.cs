@@ -27,6 +27,6 @@ public class ConfigurationSceneControllers : MonoBehaviour
         _logosHolder2.SetActive(true);
         yield return FindObjectOfType<TransitionsController>().coFadeFromBlack(2f);
         yield return new WaitForSeconds(3f);
-        GameEvents.LoadScene.Invoke("PreLevelSelector");
+        GameEvents.LoadScene.Invoke("MainMenu");
     }
 }

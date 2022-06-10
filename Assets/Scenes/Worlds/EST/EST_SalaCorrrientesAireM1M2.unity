@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -197,12 +197,12 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: speakerFaces.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: speakerFaces.Array.data[0]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -222,17 +222,17 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.data[0]
-      value: SST/BetterFix
+      value: EST/Fourth_00
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.data[1]
-      value: PicDuMidi/Intro1
+      value: EST/Fourth_01
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -247,6 +247,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5162093702787244517, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
+--- !u!114 &115454980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+    type: 3}
+  m_PrefabInstance: {fileID: 115454979}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &161290790
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,50 +408,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &180080349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 180080351}
-  - component: {fileID: 180080350}
-  m_Layer: 0
-  m_Name: HallSceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &180080350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180080349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4db2b1f493240c43b5c9f3d3ae3f7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _firstSSTEntryDialog: {fileID: 1104981809}
---- !u!4 &180080351
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180080349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.868457, y: 1.1106682, z: -4.412929}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &180160250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -455,7 +423,7 @@ PrefabInstance:
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
@@ -692,6 +660,49 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1764108151572239722, guid: 7cdaefbd97591634c9ed8ab11c9b8137, type: 3}
+--- !u!1 &287718908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287718910}
+  - component: {fileID: 287718909}
+  m_Layer: 0
+  m_Name: ESTSalaCorrrientesAireM1M2SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &287718909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287718908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489e6919de91cd54c80a543ac63ac7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &287718910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287718908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 495.6493, y: 109.794716, z: 456.01898}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &358981338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -707,7 +718,7 @@ PrefabInstance:
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
@@ -798,87 +809,8 @@ Transform:
   - {fileID: 1473058459}
   - {fileID: 1779710608}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &492888656
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.402
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.018
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.032999612
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9994554
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 176.218
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627097, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_Name
-      value: SceneChangeInteractable (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: _sceneName
-      value: SST_1_exterior
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: _startingPoint
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f, type: 3}
 --- !u!1001 &572897961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1055,7 +987,7 @@ PrefabInstance:
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
@@ -1346,7 +1278,7 @@ PrefabInstance:
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
@@ -1650,18 +1582,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb566ebd1ae38d74f82183b3936ffda1, type: 3}
---- !u!114 &847290923 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-    type: 3}
-  m_PrefabInstance: {fileID: 115454979}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &951865340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,86 +1674,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &957070435
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.887
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.936
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.757
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.032999612
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9994554
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 176.218
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627097, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_Name
-      value: SceneChangeInteractable (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: _sceneName
-      value: SST_5_cupula
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: _startingPoint
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f, type: 3}
 --- !u!1 &1041691375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4126580616226327812, guid: 6c9be62294edc2c4c9d9c7ea4bfaef2d,
         type: 3}
@@ -2087,18 +1927,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &1104981809 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-    type: 3}
-  m_PrefabInstance: {fileID: 1915849144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1144480868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2109,7 +1937,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244513, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: m_Name
-      value: DialogTrigger (1)
+      value: DialogTrigger Opened M1M2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -2119,7 +1947,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -2299,36 +2127,8 @@ Transform:
   m_LocalScale: {x: 5.850001, y: 2.85304, z: 8.178136}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 144.354, z: 0}
---- !u!1 &1148301105 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4003932723123627097, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-    type: 3}
-  m_PrefabInstance: {fileID: 957070435}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1148301106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148301105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8b86a4ec5e56084585c4aee2cbf08a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableMarker: {fileID: 1148301109}
-  _sceneName: SST_5_cupula
-  _startingPoint: 0
-  _dialog: {fileID: 847290923}
---- !u!4 &1148301109 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-    type: 3}
-  m_PrefabInstance: {fileID: 957070435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1251456692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3013,7 +2813,7 @@ PrefabInstance:
     - target: {fileID: 5440878512744775059, guid: 2d818a2fe2ac8cf42b3e023aa2ae4dec,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5440878512744775059, guid: 2d818a2fe2ac8cf42b3e023aa2ae4dec,
         type: 3}
@@ -4067,7 +3867,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1422514470}
+  m_LookAt: {fileID: 1552254553}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 55
@@ -4097,237 +3897,8 @@ Transform:
   m_Children:
   - {fileID: 251246700}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 20.831001, y: -181.14099, z: 0}
---- !u!1001 &1422514469
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 157644199578236, guid: b0d40478816105c41974cbf0ca5ba28a, type: 3}
-      propertyPath: _currentCharacter
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1371636963634223916, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: MAX_MOVEMENT_SPEED
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471633, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Name
-      value: Eclipse Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471633, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471633, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250984, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250988, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250990, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250992, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250994, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250996, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465250998, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251000, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251002, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251004, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251006, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251008, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251010, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251012, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251014, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251016, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251018, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251020, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251022, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251024, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251026, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251028, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251030, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251032, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251034, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251036, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527402946465251038, guid: b0d40478816105c41974cbf0ca5ba28a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b0d40478816105c41974cbf0ca5ba28a, type: 3}
---- !u!4 &1422514470 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3023887095948471636, guid: b0d40478816105c41974cbf0ca5ba28a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1422514469}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473058458
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,6 +3991,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &1552254553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1632383248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1600304333
 GameObject:
   m_ObjectHideFlags: 0
@@ -4444,7 +4021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600304333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.18, y: 0.28, z: -0.22}
+  m_LocalPosition: {x: -1.64, y: -0.0150001645, z: -11.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1974751666}
@@ -4539,6 +4116,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 590535d49c959df4fa5a21f3a0026924, type: 3}
+--- !u!1001 &1632383248
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6414289392573455537, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_Name
+      value: NewSpectro Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.12758367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99182785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 194.65999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414289392573455540, guid: 11d5850550e8f3445bc1f8cf34b81edf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11d5850550e8f3445bc1f8cf34b81edf, type: 3}
 --- !u!1 &1638211390
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,85 +4369,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &1727724152
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.66200006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.032999612
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9994554
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 176.218
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627097, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: m_Name
-      value: SceneChangeInteractable (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: _sceneName
-      value: SST_3_sala_maquinas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-        type: 3}
-      propertyPath: _startingPoint
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f, type: 3}
 --- !u!1001 &1744442312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5121,7 +4688,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.size
-      value: 203
+      value: 259
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -6035,6 +5602,286 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Name
+      value: Gregor/Mission_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Name
+      value: Gregor/Mission_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Name
+      value: Gregor/Mission_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Name
+      value: Gregor/Mission_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Name
+      value: Gregor/Mission_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Name
+      value: Gregor/HotAdvice_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Name
+      value: Gregor/OvenAdvice_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Name
+      value: Gregor/OvenAdvice_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Name
+      value: Gregor/OvenAdvice_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Name
+      value: Gregor/OvenAdvice_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Name
+      value: Gregor/OvenAdvice_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Name
+      value: Gregor/CleanGarden_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Name
+      value: Gregor/CleanGarden_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Name
+      value: Gregor/CleanGarden_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Name
+      value: Gregor/CleanGarden_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Name
+      value: Gregor/PaintSolved
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Name
+      value: Gregor/BlockDoor_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Name
+      value: Gregor/BlockDoor_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Name
+      value: Gregor/FindHRParts_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Name
+      value: Gregor/FindHRParts_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Name
+      value: Gregor/GetSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Name
+      value: Gregor/FoundAllParts_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Name
+      value: Gregor/FoundAllParts_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Name
+      value: Gregor/FoundAllParts_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Name
+      value: Gregor/FlareCall_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Name
+      value: Gregor/FlareCall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Name
+      value: Gregor/TestHR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Name
+      value: Gregor/FixedHR_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Name
+      value: Gregor/FixedHR_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Name
+      value: Gregor/FixedHR_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Name
+      value: Gregor/FixedHR_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Name
+      value: Gregor/PlacedHR_Success
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Name
+      value: Gregor/PlacedHR_01_Fail
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Name
+      value: Gregor/Got_HR_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Name
+      value: Gregor/Got_HR_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Name
+      value: EST/Intro_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Name
+      value: EST/Intro_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Name
+      value: EST/Intro_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Name
+      value: EST/Ops_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Name
+      value: EST/Ops_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Name
+      value: EST/First
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Name
+      value: EST/Second_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Name
+      value: EST/Second_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Name
+      value: EST/Second_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Name
+      value: EST/Third_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Name
+      value: EST/Third_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Name
+      value: EST/Fourth_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Name
+      value: EST/Fourth_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Name
+      value: EST/Fifth_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Name
+      value: EST/Fifth_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Name
+      value: EST/Sixth_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Name
+      value: EST/Sixth_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Name
+      value: EST/Seventh_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Name
+      value: EST/Seventh_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Name
+      value: EST/PolishedMirror_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Name
+      value: EST/PolishedMirror_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[60].Translations.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -6750,6 +6597,286 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[0].Translations.Array.data[0]
       value: Solar Mission EST
       objectReference: {fileID: 0}
@@ -7023,20 +7150,20 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.data[0]
-      value: "Congratulations!%You now have the power of generating \u201Csolar magnetic
-        tornadoes\u201D!"
+      value: Congratulations!%You now have the power of generating $solar magnetic
+        tornadoes$!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.data[1]
-      value: "Congratulations!%You now have the power of generating \u201Csolar magnetic
-        tornadoes\u201D!"
+      value: Congratulations!%You now have the power of generating $solar magnetic
+        tornadoes$!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.data[2]
-      value: "Congratulations!%You now have the power of generating \u201Csolar magnetic
-        tornadoes\u201D!"
+      value: Congratulations!%You now have the power of generating $solar magnetic
+        tornadoes$!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -7839,20 +7966,20 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[72].Translations.Array.data[0]
-      value: "Out there is freezing.%I should equip myself with my own \u201Cfilters\u201D:
-        coat and sunglasses to protect me from the solar radiation."
+      value: 'Out there is freezing.%I should equip myself with my own $filters$:
+        coat and sunglasses to protect me from the solar radiation.'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[72].Translations.Array.data[1]
-      value: "Out there is freezing.%I should equip myself with my own \u201Cfilters\u201D:
-        coat and sunglasses to protect me from the solar radiation."
+      value: 'Out there is freezing.%I should equip myself with my own $filters$:
+        coat and sunglasses to protect me from the solar radiation.'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[72].Translations.Array.data[2]
-      value: "Out there is freezing.%I should equip myself with my own \u201Cfilters\u201D:
-        coat and sunglasses to protect me from the solar radiation."
+      value: 'Out there is freezing.%I should equip myself with my own $filters$:
+        coat and sunglasses to protect me from the solar radiation.'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -9503,39 +9630,36 @@ PrefabInstance:
       propertyPath: multilanguageEntries.Array.data[171].Translations.Array.data[0]
       value: Yes! A lot of fun. Maybe too much... I don't remember how adaptive optics
         work.... %I'm sure you have accurate documentation in the Pic du Midi Observatory
-        archives.%Can you help me?
+        archives.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[171].Translations.Array.data[1]
       value: Yes! A lot of fun. Maybe too much... I don't remember how adaptive optics
         work.... %I'm sure you have accurate documentation in the Pic du Midi Observatory
-        archives.%Can you help me?
+        archives.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[171].Translations.Array.data[2]
       value: Yes! A lot of fun. Maybe too much... I don't remember how adaptive optics
         work.... %I'm sure you have accurate documentation in the Pic du Midi Observatory
-        archives.%Can you help me?
+        archives.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[172].Translations.Array.data[0]
-      value: Could you help me? Next Saturday night there is a... conference& and
-        I don't want Spectro to forbid me to go.
+      value: Could you help me?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[172].Translations.Array.data[1]
-      value: Could you help me? Next Saturday night there is a... conference& and
-        I don't want Spectro to forbid me to go.
+      value: Could you help me?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[172].Translations.Array.data[2]
-      value: Could you help me? Next Saturday night there is a... conference& and
-        I don't want Spectro to forbid me to go.
+      value: Could you help me?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -10017,6 +10141,966 @@ PrefabInstance:
       propertyPath: multilanguageEntries.Array.data[202].Translations.Array.data[2]
       value: 'Obtained: Glasses'
       objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.data[0]
+      value: What a hot day! Definitely& a solar astronomer's job is quite hard.%This
+        doesn't happen to a $night$ astronomer...%I can't even see up close! The
+        air is burning...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.data[1]
+      value: What a hot day! Definitely& a solar astronomer's job is quite hard.%This
+        doesn't happen to a $night$ astronomer...%I can't even see up close! The
+        air is burning...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.data[2]
+      value: What a hot day! Definitely& a solar astronomer's job is quite hard.%This
+        doesn't happen to a $night$ astronomer...%I can't even see up close! The
+        air is burning...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[0]
+      value: Stop complaining& Spot! Show what a solar astronomer is made of!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[1]
+      value: Stop complaining& Spot! Show what a solar astronomer is made of!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[2]
+      value: Stop complaining& Spot! Show what a solar astronomer is made of!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.data[0]
+      value: 'But yes& the excess of heating blurs the images and makes it impossible
+        to observe what is happening on the Sun. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.data[1]
+      value: 'But yes& the excess of heating blurs the images and makes it impossible
+        to observe what is happening on the Sun. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.data[2]
+      value: 'But yes& the excess of heating blurs the images and makes it impossible
+        to observe what is happening on the Sun. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.data[0]
+      value: We need you to go to the GREGOR telescope and recover the HEAT REJECTER
+        for EST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.data[1]
+      value: We need you to go to the GREGOR telescope and recover the HEAT REJECTER
+        for EST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.data[2]
+      value: We need you to go to the GREGOR telescope and recover the HEAT REJECTER
+        for EST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.data[0]
+      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.data[1]
+      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.data[2]
+      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.data[0]
+      value: "These ovens are too hot!%That\u2019s a big problem for a solar astronomer!
+        Until we find a way to cool them down& we can\u2019t fight them. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.data[1]
+      value: "These ovens are too hot!%That\u2019s a big problem for a solar astronomer!
+        Until we find a way to cool them down& we can\u2019t fight them. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.data[2]
+      value: "These ovens are too hot!%That\u2019s a big problem for a solar astronomer!
+        Until we find a way to cool them down& we can\u2019t fight them. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.data[0]
+      value: "Oh no! I\u2019m burned out by those machines!&We can't operate GREGOR
+        in such conditions!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.data[1]
+      value: "Oh no! I\u2019m burned out by those machines!&We can't operate GREGOR
+        in such conditions!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.data[2]
+      value: "Oh no! I\u2019m burned out by those machines!&We can't operate GREGOR
+        in such conditions!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.data[0]
+      value: Spot& we need you to do some maintenance work.%The bushes surrounding
+        the tower absorb part of the heating and help to reduce the temperature of
+        the telescope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.data[1]
+      value: Spot& we need you to do some maintenance work.%The bushes surrounding
+        the tower absorb part of the heating and help to reduce the temperature of
+        the telescope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.data[2]
+      value: Spot& we need you to do some maintenance work.%The bushes surrounding
+        the tower absorb part of the heating and help to reduce the temperature of
+        the telescope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.data[0]
+      value: 'But the robots have broken all of them...%You have to restore them! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.data[1]
+      value: 'But the robots have broken all of them...%You have to restore them! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.data[2]
+      value: 'But the robots have broken all of them...%You have to restore them! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.data[0]
+      value: Did I tell you to bring the scissors...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.data[1]
+      value: Did I tell you to bring the scissors...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.data[2]
+      value: Did I tell you to bring the scissors...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.data[0]
+      value: 'Copy that& Spectro!%(Galaxies... why didn''t I study galaxies...?)  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.data[1]
+      value: 'Copy that& Spectro!%(Galaxies... why didn''t I study galaxies...?)  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.data[2]
+      value: 'Copy that& Spectro!%(Galaxies... why didn''t I study galaxies...?)  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.data[0]
+      value: Good job& Spot! I'll hire you to clean my garden.%Now& look at the tower!
+        What a disaster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.data[1]
+      value: Good job& Spot! I'll hire you to clean my garden.%Now& look at the tower!
+        What a disaster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.data[2]
+      value: Good job& Spot! I'll hire you to clean my garden.%Now& look at the tower!
+        What a disaster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.data[0]
+      value: Solar telescopes are white because that color reflects the light.%The
+        machines have painted GREGOR in black so the temperature is increasing! You
+        have to turn it into white again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.data[1]
+      value: Solar telescopes are white because that color reflects the light.%The
+        machines have painted GREGOR in black so the temperature is increasing! You
+        have to turn it into white again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.data[2]
+      value: Solar telescopes are white because that color reflects the light.%The
+        machines have painted GREGOR in black so the temperature is increasing! You
+        have to turn it into white again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.data[0]
+      value: Did I tell you to bring the paintbrush...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.data[1]
+      value: Did I tell you to bring the paintbrush...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.data[2]
+      value: Did I tell you to bring the paintbrush...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.data[0]
+      value: 'Sure& Spectro.%(Black holes... black holes were also interesting objects...) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.data[1]
+      value: 'Sure& Spectro.%(Black holes... black holes were also interesting objects...) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.data[2]
+      value: 'Sure& Spectro.%(Black holes... black holes were also interesting objects...) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.data[0]
+      value: Well done!%Now enter GREGOR and bring the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.data[1]
+      value: Well done!%Now enter GREGOR and bring the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.data[2]
+      value: Well done!%Now enter GREGOR and bring the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.data[0]
+      value: "Oh no!!! It\u2019s blocked!!!%Seriously??? What else???"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.data[1]
+      value: "Oh no!!! It\u2019s blocked!!!%Seriously??? What else???"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.data[2]
+      value: "Oh no!!! It\u2019s blocked!!!%Seriously??? What else???"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.data[0]
+      value: Calm down& Spot.%The neighbouring telescope& the Vacuum Tower Telescope&
+        is connected with GREGOR by underground tunnels.%You can sneak into the telescope
+        and get the piece that we need!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.data[1]
+      value: Calm down& Spot.%The neighbouring telescope& the Vacuum Tower Telescope&
+        is connected with GREGOR by underground tunnels.%You can sneak into the telescope
+        and get the piece that we need!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.data[2]
+      value: Calm down& Spot.%The neighbouring telescope& the Vacuum Tower Telescope&
+        is connected with GREGOR by underground tunnels.%You can sneak into the telescope
+        and get the piece that we need!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.data[0]
+      value: Our cameras have detected that the heat rejecter has been taken apart.%You
+        have to find all the parts and assemble them again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.data[1]
+      value: Our cameras have detected that the heat rejecter has been taken apart.%You
+        have to find all the parts and assemble them again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.data[2]
+      value: Our cameras have detected that the heat rejecter has been taken apart.%You
+        have to find all the parts and assemble them again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.data[0]
+      value: Did I tell you to bring the toolbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.data[1]
+      value: Did I tell you to bring the toolbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.data[2]
+      value: Did I tell you to bring the toolbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.data[0]
+      value: Congratulations& Spot! This jetpack can generate small Solar Spicules.%As
+        it happens on the Sun& these jets of gas will propel you far and high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.data[1]
+      value: Congratulations& Spot! This jetpack can generate small Solar Spicules.%As
+        it happens on the Sun& these jets of gas will propel you far and high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.data[2]
+      value: Congratulations& Spot! This jetpack can generate small Solar Spicules.%As
+        it happens on the Sun& these jets of gas will propel you far and high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.data[0]
+      value: Great! You already have the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.data[1]
+      value: Great! You already have the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.data[2]
+      value: Great! You already have the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.data[0]
+      value: Now& make sure the system works fine& or we could fry our instruments
+        during an observation!%If you need assistance& Flare could help you to calibrate
+        the heat rejecter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.data[1]
+      value: Now& make sure the system works fine& or we could fry our instruments
+        during an observation!%If you need assistance& Flare could help you to calibrate
+        the heat rejecter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.data[2]
+      value: Now& make sure the system works fine& or we could fry our instruments
+        during an observation!%If you need assistance& Flare could help you to calibrate
+        the heat rejecter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.data[0]
+      value: "Thank you& Spectro! I\u2019ll call her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.data[1]
+      value: "Thank you& Spectro! I\u2019ll call her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.data[2]
+      value: "Thank you& Spectro! I\u2019ll call her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.data[0]
+      value: Hello Flare! I had to assemble my heat rejecter again& but I need to
+        calibrate it before using it.%Can you help me to find the right values?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.data[1]
+      value: Hello Flare! I had to assemble my heat rejecter again& but I need to
+        calibrate it before using it.%Can you help me to find the right values?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.data[2]
+      value: Hello Flare! I had to assemble my heat rejecter again& but I need to
+        calibrate it before using it.%Can you help me to find the right values?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.data[0]
+      value: Of course& Spot! Let me do some tests in the lab!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.data[1]
+      value: Of course& Spot! Let me do some tests in the lab!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.data[2]
+      value: Of course& Spot! Let me do some tests in the lab!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.data[0]
+      value: I can test the heat rejecter using the computer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.data[1]
+      value: I can test the heat rejecter using the computer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.data[2]
+      value: I can test the heat rejecter using the computer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.data[0]
+      value: Test completed& Spot!%The values needed to configure your heat rejecter
+        are fine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.data[1]
+      value: Test completed& Spot!%The values needed to configure your heat rejecter
+        are fine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.data[2]
+      value: Test completed& Spot!%The values needed to configure your heat rejecter
+        are fine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.data[0]
+      value: Thank you& Flare! You are the coolest!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.data[1]
+      value: Thank you& Flare! You are the coolest!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.data[2]
+      value: Thank you& Flare! You are the coolest!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.data[0]
+      value: "No time for compliments& guys! It is insane& but the dome of GREGOR
+        is opening!%Without a heat rejecter& the whole telescope could be ruined
+        by the heating. Hurry up and install it before it\u2019s too late!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.data[1]
+      value: "No time for compliments& guys! It is insane& but the dome of GREGOR
+        is opening!%Without a heat rejecter& the whole telescope could be ruined
+        by the heating. Hurry up and install it before it\u2019s too late!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.data[2]
+      value: "No time for compliments& guys! It is insane& but the dome of GREGOR
+        is opening!%Without a heat rejecter& the whole telescope could be ruined
+        by the heating. Hurry up and install it before it\u2019s too late!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.data[0]
+      value: 'Did I tell you to bring a heat rejecter? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.data[1]
+      value: 'Did I tell you to bring a heat rejecter? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.data[2]
+      value: 'Did I tell you to bring a heat rejecter? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.data[0]
+      value: 'Great! You saved GREGOR! Your heat rejecter is ready for EST. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.data[1]
+      value: 'Great! You saved GREGOR! Your heat rejecter is ready for EST. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.data[2]
+      value: 'Great! You saved GREGOR! Your heat rejecter is ready for EST. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.data[0]
+      value: Boom! Your equipment has melt. You have to return your funding. Try
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.data[1]
+      value: Boom! Your equipment has melt. You have to return your funding. Try
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.data[2]
+      value: Boom! Your equipment has melt. You have to return your funding. Try
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.data[0]
+      value: "Awesome! Now bring immediately the heat rejecter to EST.%With it& the
+        excess of heating won\u2019t blur the images and we will have clear views
+        of what is happening on the Sun."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.data[1]
+      value: "Awesome! Now bring immediately the heat rejecter to EST.%With it& the
+        excess of heating won\u2019t blur the images and we will have clear views
+        of what is happening on the Sun."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.data[2]
+      value: "Awesome! Now bring immediately the heat rejecter to EST.%With it& the
+        excess of heating won\u2019t blur the images and we will have clear views
+        of what is happening on the Sun."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.data[0]
+      value: And remember& if you find those strange ovens in your way& you can use
+        it to cool and deactivate them! Go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.data[1]
+      value: And remember& if you find those strange ovens in your way& you can use
+        it to cool and deactivate them! Go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.data[2]
+      value: And remember& if you find those strange ovens in your way& you can use
+        it to cool and deactivate them! Go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.data[0]
+      value: Don't worry my friends&I'll free you in a minute!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.data[1]
+      value: Don't worry my friends&I'll free you in a minute!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.data[2]
+      value: Don't worry my friends&I'll free you in a minute!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.data[0]
+      value: There is no time& Spectro. We need to turn EST on immediately.%We will
+        be here and ready to observe.%But you are on your own!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.data[1]
+      value: There is no time& Spectro. We need to turn EST on immediately.%We will
+        be here and ready to observe.%But you are on your own!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.data[2]
+      value: There is no time& Spectro. We need to turn EST on immediately.%We will
+        be here and ready to observe.%But you are on your own!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.data[0]
+      value: Ok!%How bad can be a bunch of lamps and toasters...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.data[1]
+      value: Ok!%How bad can be a bunch of lamps and toasters...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.data[2]
+      value: Ok!%How bad can be a bunch of lamps and toasters...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.data[0]
+      value: Ops...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.data[1]
+      value: Ops...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.data[2]
+      value: Ops...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.data[0]
+      value: I better hurry up and watch my steps...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.data[1]
+      value: I better hurry up and watch my steps...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.data[2]
+      value: I better hurry up and watch my steps...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.data[0]
+      value: First of all& you have to turn the generator on!%To avoid that the vibrations
+        affect the observing conditions& it is located in the building annexed to
+        the tower& far from the telescope. Hurry up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.data[1]
+      value: First of all& you have to turn the generator on!%To avoid that the vibrations
+        affect the observing conditions& it is located in the building annexed to
+        the tower& far from the telescope. Hurry up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.data[2]
+      value: First of all& you have to turn the generator on!%To avoid that the vibrations
+        affect the observing conditions& it is located in the building annexed to
+        the tower& far from the telescope. Hurry up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.data[0]
+      value: The generator is working!%What's next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.data[1]
+      value: The generator is working!%What's next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.data[2]
+      value: The generator is working!%What's next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.data[0]
+      value: 'We have to control the seeing conditions to obtain sharp images of
+        the Sun.%Heating is one of our biggest problems!%Walk up the tower and open
+        the dome. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.data[1]
+      value: 'We have to control the seeing conditions to obtain sharp images of
+        the Sun.%Heating is one of our biggest problems!%Walk up the tower and open
+        the dome. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.data[2]
+      value: 'We have to control the seeing conditions to obtain sharp images of
+        the Sun.%Heating is one of our biggest problems!%Walk up the tower and open
+        the dome. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.data[0]
+      value: The air will cool the telescope& avoiding image distortions!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.data[1]
+      value: The air will cool the telescope& avoiding image distortions!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.data[2]
+      value: The air will cool the telescope& avoiding image distortions!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.data[0]
+      value: Well done& Spectro. Now& switch on the air streams that cool the primary
+        and the secondary mirrors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.data[1]
+      value: Well done& Spectro. Now& switch on the air streams that cool the primary
+        and the secondary mirrors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.data[2]
+      value: Well done& Spectro. Now& switch on the air streams that cool the primary
+        and the secondary mirrors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.data[0]
+      value: On my way!%(Too many stairs... I think that I won't renew my gym subscription
+        this month)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.data[1]
+      value: On my way!%(Too many stairs... I think that I won't renew my gym subscription
+        this month)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.data[2]
+      value: On my way!%(Too many stairs... I think that I won't renew my gym subscription
+        this month)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.data[0]
+      value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
+        of the M3-M6 mirrors system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.data[1]
+      value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
+        of the M3-M6 mirrors system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.data[2]
+      value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
+        of the M3-M6 mirrors system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.data[0]
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.data[1]
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.data[2]
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.data[0]
+      value: We are almost done!%But heating is not the only problem. Please& calibrate
+        the Adaptive Optics system to correct the distorsions caused by Earth's atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.data[1]
+      value: We are almost done!%But heating is not the only problem. Please& calibrate
+        the Adaptive Optics system to correct the distorsions caused by Earth's atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.data[2]
+      value: We are almost done!%But heating is not the only problem. Please& calibrate
+        the Adaptive Optics system to correct the distorsions caused by Earth's atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.data[0]
+      value: It sounds easy if you don't have a giant robot chasing you& right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.data[1]
+      value: It sounds easy if you don't have a giant robot chasing you& right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.data[2]
+      value: It sounds easy if you don't have a giant robot chasing you& right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.data[0]
+      value: And last& but not least& activate the Heat Rejecter to avoid heating
+        accumulation coming from the sunlight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.data[1]
+      value: And last& but not least& activate the Heat Rejecter to avoid heating
+        accumulation coming from the sunlight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.data[2]
+      value: And last& but not least& activate the Heat Rejecter to avoid heating
+        accumulation coming from the sunlight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.data[0]
+      value: Do I have to go upstairs again???%We'll have a serious conversation
+        later about the workflow...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.data[1]
+      value: Do I have to go upstairs again???%We'll have a serious conversation
+        later about the workflow...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.data[2]
+      value: Do I have to go upstairs again???%We'll have a serious conversation
+        later about the workflow...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.data[0]
+      value: Amazing& Spectro!%The seeing is under control!%Steady to observe the
+        Sun as never before?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.data[1]
+      value: Amazing& Spectro!%The seeing is under control!%Steady to observe the
+        Sun as never before?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.data[2]
+      value: Amazing& Spectro!%The seeing is under control!%Steady to observe the
+        Sun as never before?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.data[0]
+      value: Not so fast!%I'm detecting that the primary mirror has been corrupted!%I
+        need to polish it or all this work would be in vain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.data[1]
+      value: Not so fast!%I'm detecting that the primary mirror has been corrupted!%I
+        need to polish it or all this work would be in vain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.data[2]
+      value: Not so fast!%I'm detecting that the primary mirror has been corrupted!%I
+        need to polish it or all this work would be in vain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.data[0]
+      value: "All the systems working& Spectro!%We are ready at the control room.%We
+        only need to point EST to the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.data[1]
+      value: "All the systems working& Spectro!%We are ready at the control room.%We
+        only need to point EST to the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.data[2]
+      value: "All the systems working& Spectro!%We are ready at the control room.%We
+        only need to point EST to the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.data[0]
+      value: "Roger that!%Finally& after decades of research& we are going to understand
+        what happens in the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.data[1]
+      value: "Roger that!%Finally& after decades of research& we are going to understand
+        what happens in the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.data[2]
+      value: "Roger that!%Finally& after decades of research& we are going to understand
+        what happens in the Sun\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 4549598938540040034, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -10409,6 +11493,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62faca9ef05f8164fa6493a0814bd806, type: 3}
+--- !u!1001 &1767666704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4939726542400488226, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: autoplay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488227, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_Name
+      value: SmallBadassAtack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939726542400488237, guid: d2c0c323155e1c246a79bc4fbfafac1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2c0c323155e1c246a79bc4fbfafac1a, type: 3}
 --- !u!1 &1779710607
 GameObject:
   m_ObjectHideFlags: 0
@@ -10694,135 +11852,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2dd1d19714cf86a4bbff09876974676c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cdaefbd97591634c9ed8ab11c9b8137, type: 3}
---- !u!1001 &1915849144
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5162093702787244512, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244513, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogTrigger SST Entry
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.36738
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.36738
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.36738
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -12.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.628183
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69066745
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72317255
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.634
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: speakerFaces.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: speakerFaces.Array.data[0]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: speakerFaces.Array.data[1]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: speakerFaces.Array.data[2]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: translationName.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: translationName.Array.data[0]
-      value: SST/InsideSST0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: translationName.Array.data[1]
-      value: SST/InsideSST1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-        type: 3}
-      propertyPath: translationName.Array.data[2]
-      value: UI/OptionsMenu
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
 --- !u!1001 &1919977391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10892,72 +11921,121 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1ec95c482e42a44b3f72b78803720d, type: 3}
+--- !u!1 &1938057107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938057111}
+  - component: {fileID: 1938057110}
+  - component: {fileID: 1938057109}
+  - component: {fileID: 1938057108}
+  m_Layer: 0
+  m_Name: ESTAireM1M2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1938057108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938057107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5fca5dc8f641441b05965f88279ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableMarker: {fileID: 1938057111}
+  _dialogToTrigger: {fileID: 115454980}
+--- !u!212 &1938057109
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938057107}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8446ee3b0db43244e8ed0375dcda8577, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.65, y: 0.69}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1938057110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938057107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91eff719c33f4647b642b13ff1f4930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1938057111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938057107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.184, y: 1.43, z: -5.869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1974751666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4849409169201825809, guid: 62faca9ef05f8164fa6493a0814bd806,
     type: 3}
   m_PrefabInstance: {fileID: 1744442312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1985313210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1985313211}
-  m_Layer: 0
-  m_Name: 0 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1985313211
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985313210}
-  m_LocalRotation: {x: -0, y: -0.6760842, z: -0, w: 0.73682433}
-  m_LocalPosition: {x: 4.35, y: 0.38, z: -7.64}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1974751666}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -85.077, z: 0}
---- !u!1 &2009604767
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2009604768}
-  m_Layer: 0
-  m_Name: 0 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2009604768
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009604767}
-  m_LocalRotation: {x: -0, y: -0.99778926, z: -0, w: 0.06645791}
-  m_LocalPosition: {x: -1.24, y: 0.31, z: -13.91}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1974751666}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -172.37901, z: 0}
 --- !u!1001 &2014680717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10968,22 +12046,22 @@ PrefabInstance:
     - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.006
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.076
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.352
+      value: -12.3
       objectReference: {fileID: 0}
     - target: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
@@ -11028,41 +12106,12 @@ PrefabInstance:
     - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
       propertyPath: _sceneName
-      value: SST_4_sala_observacion
+      value: EST_SegundaPlanta
       objectReference: {fileID: 0}
     - target: {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
         type: 3}
       propertyPath: _startingPoint
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4003932723123627098, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f, type: 3}
---- !u!1 &2014680718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4003932723123627097, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-    type: 3}
-  m_PrefabInstance: {fileID: 2014680717}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2014680719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4003932723123627094, guid: d2c5e764ce9728a4ca3cb6a6f1f6568f,
-    type: 3}
-  m_PrefabInstance: {fileID: 2014680717}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2014680720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014680718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8b86a4ec5e56084585c4aee2cbf08a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableMarker: {fileID: 2014680719}
-  _sceneName: SST_4_sala_observacion
-  _startingPoint: 0
-  _dialog: {fileID: 847290923}

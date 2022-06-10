@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Lean.Localization;
 using UnityEngine.UI;
+using TMPro;
 
 public class WorldSelectorSceneController : MonoBehaviour
 {
     
-    static string[] _worldNames= { "Lomnicky_0_Llegada de UV", "Einstein_0_alrededores_torre", "PicDuMidi_0_sala_paneles_a_c", "Gregor_0_exterior", "SST_0_residencia_roque", "EST" };
-    [SerializeField] private Image _einsteinImage;
-    [SerializeField] private Image _einsteinImageLock;
+    static string[] _worldNames= { "Lomnicky_0_Llegada de UV", "Einstein_0_alrededores_torre", "PicDuMidi_0_sala_paneles_a_c", "Gregor_0_exterior", "SST_0_residencia_roque", "EST_exterior EST" };
+    [SerializeField] private Image[] _worldImages;
+    [SerializeField] private Image[] _worldLockImages;
+    [SerializeField] private Button[] _worldButtons;
+    [SerializeField] private TextMeshProUGUI[] _worldNamesText;
     public void BackHome()
     {
         GameEvents.LoadScene.Invoke("MainMenu");
@@ -17,12 +20,53 @@ public class WorldSelectorSceneController : MonoBehaviour
 
     public void Start()
     {
-        // if (!GameProgressController.GetIsLomnickySolved())
-        // {
-        //     _einsteinImage.color = Color.black;
-        //     _einsteinImage.transform.parent.GetComponent<Button>().interactable = false;
-        //     _einsteinImageLock.gameObject.SetActive(true);
-        // }
+        PlayerPrefs.DeleteAll();
+
+        //_worldImages[0].color = Color.white;
+        //_worldLockImages[0].gameObject.SetActive(false);
+        //_worldButtons[0].interactable = true;
+        //_worldNamesText[0].text = "Lomnicky";
+
+        if (GameProgressController.GetIsLomnickySolved())
+        {
+            _worldImages[1].color = Color.white;
+            _worldLockImages[1].gameObject.SetActive(false);
+            _worldButtons[1].interactable = true;
+            _worldNamesText[1].text = "Einstein";
+        }
+        if (GameProgressController.EinsteinFinished)
+        {
+            _worldImages[2].color = Color.white;
+            _worldLockImages[2].gameObject.SetActive(false);
+            _worldButtons[2].interactable = true;
+            _worldNamesText[2].text = "Pic du Midi";
+
+        }
+        if (GameProgressController.PicDuMidiFinished)
+        {
+            _worldImages[3].color = Color.white;
+            _worldLockImages[3].gameObject.SetActive(false);
+            _worldButtons[3].interactable = true;
+            _worldNamesText[3].text = "Gregor";
+
+        }
+        if (GameProgressController.GregorFinished)
+        {
+            _worldImages[4].color = Color.white;
+            _worldLockImages[4].gameObject.SetActive(false);
+            _worldButtons[4].interactable = true;
+            _worldNamesText[4].text = "SST";
+
+        }
+        GameProgressController.SSTFinished = true;
+        if (GameProgressController.SSTFinished)
+        {
+            _worldImages[5].color = Color.white;
+            _worldLockImages[5].gameObject.SetActive(false);
+            _worldButtons[5].interactable = true;
+            _worldNamesText[5].text = "EST";
+        }
+
     }
 
     public void LoadWorld(int world)

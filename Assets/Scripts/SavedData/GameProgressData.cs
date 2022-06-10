@@ -7,6 +7,11 @@ using System;
 public class GameProgressData
 {
     public bool _isLomnickySolved;
+    public bool _einsteinFinished;
+    public bool _picdumidiFinished;
+    public bool _gregorFinished;
+    public bool _SSTFinished;
+    public bool _ESTFinished;
     public bool _hasTornadoesSkill;
     public bool _hasFuse;
     public bool _motorFixed;
@@ -89,6 +94,21 @@ public class GameProgressData
     public bool _solvedPuzzleAO;
     public bool _adviceHR;
     public bool _testedHR;
+
+    public bool _estGenerador;
+    public bool _estFirstAdvice;
+    public bool _estDomeOpen;
+    public bool _estSecondAdvice;
+    public bool _estAireM1M2;
+    public bool _estOA;
+    public bool _estMirror0;
+    public bool _estMirror1;
+    public bool _estMirror2;
+    public bool _estMirror3;
+    public bool _mirrorsM3M6;
+    public bool _estHR;
+    public bool _mirror;
+    public bool _mirrorAdvice;
 
     public GameProgressData()
     {

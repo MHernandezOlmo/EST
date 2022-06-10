@@ -13,7 +13,6 @@ public class SceneChangeInteractable : Interactable
         {
             _interacted = true;
             GameProgressController.SetCurrentStartPoint(_startingPoint);
-
             GameEvents.LoadScene.Invoke(_sceneName);
         }
 

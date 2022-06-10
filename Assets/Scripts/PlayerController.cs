@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject _shieldObject;
     private CameraShake _cameraShake;
     private VignettingController _vignettingController;
-    public enum Character {Goran, MsProminence, Flare, Eclipse, None, Spot};
+    public enum Character {Goran, MsProminence, Flare, Eclipse, None, Spot, Spectro};
     public Character _currentCharacter;
     [SerializeField] GameObject _solarCanonBall;
     float _shootTime;
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         _interactButton = FindObjectOfType<InputCanvasController>().InteractButton;
         _combatButton= FindObjectOfType<InputCanvasController>().CombatButton;
         _currentHp = _maxHP;
-        _animator = transform.GetChild(0).GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
         _shootTime = 1f;
         _vignettingController = FindObjectOfType<VignettingController>();
         Physics.gravity = Vector3.zero; 

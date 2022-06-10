@@ -8,6 +8,7 @@ public class GameProgressController : MonoBehaviour
     public static GameProgressData _gameProgressData;
     
     const string _gameProgressDataFileName = "GameProgressData.json";
+    
 
     public static bool GetIsLomnickySolved()
     {
@@ -28,7 +29,281 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+    public static bool ESTGenerador
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estGenerador;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estGenerador = value;
+            SaveGameProgressData();
+        }
+    }
 
+    public static bool MirrorAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._mirrorAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._mirrorAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTOA
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estOA;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estOA = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTMirror0
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estMirror0;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estMirror0 = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTMirror1
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estMirror1;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estMirror1 = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTMirror2
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estMirror2;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estMirror2 = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTMirror3
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estMirror3;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estMirror3 = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTMirrorsM3M6
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._mirrorsM3M6;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._mirrorsM3M6 = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool ESTHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estHR;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estHR = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool Mirror
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._mirror;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._mirror = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTAireM1M2
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estAireM1M2;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estAireM1M2 = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool ESTDomeOpen
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estDomeOpen;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estDomeOpen= value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool ESTSecondAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estSecondAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estSecondAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool ESTFirstAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estFirstAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estFirstAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool PicDuMidiFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picdumidiFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picdumidiFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool GregorFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool ESTFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._ESTFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._ESTFinished = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool GregorDome
     {
         get

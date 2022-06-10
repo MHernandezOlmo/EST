@@ -48,6 +48,9 @@ public class PuzzleStatesController : MonoBehaviour
                 case "TestHR":
                     FindObjectOfType<TestHRController>().StartGame();
                     break;
+                case "Espejo":
+                    FindObjectOfType<EspejoController>().StartGame();
+                    break;
             }
             StartCoroutine(CrStartPuzzle());
         }
@@ -92,6 +95,11 @@ public class PuzzleStatesController : MonoBehaviour
                 break;
             case "TestHR":
                 GameProgressController.TestedHR = true;
+                GameEvents.LoadScene.Invoke("Gregor_11_almacen");
+                break;
+            case "Espejo":
+                GameProgressController.Mirror = true;
+                GameProgressController.SetCurrentStartPoint(1);
                 GameEvents.LoadScene.Invoke("Gregor_11_almacen");
                 break;
         }

@@ -11,7 +11,7 @@ public class LeanLocalizationController : MonoBehaviour
     private void Awake()
     {
         _leanLocalization = FindObjectOfType<LeanLocalization>();
-        SetLanguage(SavedDataController.GetLanguage());
+        SetLanguage("English");
     }
     public string GetCurrentLanguage()
     {

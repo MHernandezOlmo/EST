@@ -307,29 +307,72 @@ public class SceneShortcuts : MonoBehaviour
     {
         LoadScene("Worlds/Einstein/Gregor_3_acuaticas");
     }
+
     //EST
-    [MenuItem("Scenes/Worlds/EST/0-->Hall")]
+    [MenuItem("Scenes/Worlds/EST/0-->Exteriores")]
+    public static void OpenESTExteriores()
+    {
+        LoadScene("Worlds/EST/EST_exterior EST");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/1-->Hall")]
     public static void OpenESTHall()
     {
         LoadScene("Worlds/EST/EST_hall");
     }
 
-    [MenuItem("Scenes/Worlds/EST/1-->Galería")]
-    public static void OpenESTSotano()
+    [MenuItem("Scenes/Worlds/EST/2-->Galería")]
+    public static void OpenESTGaleria()
     {
-        LoadScene("Worlds/EST/EST_1_sotano");
+        LoadScene("Worlds/EST/EST_Galeria");
     }
 
-    [MenuItem("Scenes/Worlds/EST/2-->Laseres")]
-    public static void OpenESTBase()
+    [MenuItem("Scenes/Worlds/EST/3-->PrimeraPlanta")]
+    public static void OpenESTPrimeraPlanta()
     {
-        LoadScene("Worlds/EST/EST_2_laseres");
+        LoadScene("Worlds/EST/EST_PrimeraPlanta");
     }
 
-    [MenuItem("Scenes/Worlds/EST/3-->Acuaticas 1")]
-    public static void OpenESTAcuaticas1()
+    [MenuItem("Scenes/Worlds/EST/4-->SegundaPlanta")]
+    public static void OpenESTSegundaPlanta()
     {
-        LoadScene("Worlds/Einstein/EST_3_acuaticas");
+        LoadScene("Worlds/EST/EST_SegundaPlanta");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/5-->Cupula")]
+    public static void OpenESTCupula()
+    {
+        LoadScene("Worlds/EST/EST_Cupula");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/6-->CalibrarOA")]
+    public static void OpenESTCalibrarOA()
+    {
+        LoadScene("Worlds/EST/EST_CalibrarOA");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/7-->HRyAbrirCupula")]
+    public static void OpenESTHRyAbrirCupula()
+    {
+        LoadScene("Worlds/EST/EST_HRyAbrirCupula");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/8-->SalaCorrrientesAireM1M2")]
+    public static void OpenESTSalaCorrrientesAireM1M2()
+    {
+        LoadScene("Worlds/EST/EST_SalaCorrrientesAireM1M2");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/9-->RefrigeranteM3aM6")]
+    public static void OpenESTRefrigeranteM3aM6()
+    {
+        LoadScene("Worlds/EST/EST_RefrigeranteM3aM6");
+    }
+
+    [MenuItem("Scenes/Worlds/EST/10-->SalaGenerador")]
+    public static void OpenESTSalaGenerador()
+    {
+        LoadScene("Worlds/EST/EST_SalaGenerador");
     }
 
 

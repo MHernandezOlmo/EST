@@ -23,6 +23,36 @@ public class UserDataEditor : EditorWindow
         int height = 20;
         if (_checked)
         {
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Lomnicky", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._isLomnickySolved = EditorGUILayout.Toggle(_gameProgressData._isLomnickySolved, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Einstein", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinFinished = EditorGUILayout.Toggle(_gameProgressData._einsteinFinished, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("PicDuMidi", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picdumidiFinished = EditorGUILayout.Toggle(_gameProgressData._picdumidiFinished, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Gregor", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorFinished = EditorGUILayout.Toggle(_gameProgressData._gregorFinished, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("SST", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTFinished = EditorGUILayout.Toggle(_gameProgressData._SSTFinished, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._ESTFinished = EditorGUILayout.Toggle(_gameProgressData._ESTFinished, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Jetpack", GUILayout.Height(height), GUILayout.Width(200));
@@ -82,11 +112,76 @@ public class UserDataEditor : EditorWindow
             _gameProgressData._piezasAO= EditorGUILayout.IntField(_gameProgressData._piezasAO, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Generador", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estGenerador= EditorGUILayout.Toggle(_gameProgressData._estGenerador, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST First Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estFirstAdvice = EditorGUILayout.Toggle(_gameProgressData._estFirstAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Dome Open", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estDomeOpen= EditorGUILayout.Toggle(_gameProgressData._estDomeOpen, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+            
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Second Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estSecondAdvice= EditorGUILayout.Toggle(_gameProgressData._estSecondAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal(); 
+            
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("ESTOA", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estOA = EditorGUILayout.Toggle(_gameProgressData._estOA, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Mirror0", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estMirror0= EditorGUILayout.Toggle(_gameProgressData._estMirror0, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Mirror1", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estMirror1 = EditorGUILayout.Toggle(_gameProgressData._estMirror1, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Mirror2", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estMirror2 = EditorGUILayout.Toggle(_gameProgressData._estMirror2, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Mirror3", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estMirror3 = EditorGUILayout.Toggle(_gameProgressData._estMirror3, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Mirrors M3M6", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._mirrorsM3M6 = EditorGUILayout.Toggle(_gameProgressData._mirrorsM3M6, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST HR", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estHR = EditorGUILayout.Toggle(_gameProgressData._estHR, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST MIRROR", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._mirror= EditorGUILayout.Toggle(_gameProgressData._mirror, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST mirror advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._mirrorAdvice = EditorGUILayout.Toggle(_gameProgressData._mirrorAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
             if (GUILayout.Button("Save Data"))
             {
                 File.WriteAllText(Application.persistentDataPath + "/" + _gameProgressDataFileName, JsonUtility.ToJson(_gameProgressData));
                 _checked = false;
-
             }
 
             if (GUILayout.Button("Clear Data"))
