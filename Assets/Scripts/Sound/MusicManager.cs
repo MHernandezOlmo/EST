@@ -8,8 +8,8 @@ public class MusicManager : MonoBehaviour
     public enum MusicCode {None, Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein};
     [SerializeField] MusicCode musicCode;
     [SerializeField] private AudioSource _music;
-    [SerializeField] private List<AudioClip> _musicClips, _insideClips;
-    private bool _musicTransition, _usingMuteCr;
+    [SerializeField] private List<string> _musicClipsNames, _insideClipsNames;
+    private bool _usingMuteCr;
     private Coroutine _transitionCr, _muteCr;
     public static int currentClipIndex;
     
@@ -32,21 +32,28 @@ public class MusicManager : MonoBehaviour
         AudioEvents.unmuteMusic.AddListener(UnmuteMusic);
         AudioEvents.playDefMusic.AddListener(PlayDefMusic);
 
-        if (FindObjectOfType<CurrentSceneManager>().IsExterior)
+        if(FindObjectOfType<CurrentSceneManager>() != null)
         {
-            if (musicCode != MusicCode.None)
+            if (FindObjectOfType<CurrentSceneManager>().IsExterior)
             {
-                PlayMusicTransition(musicCode);
+                if (musicCode != MusicCode.None)
+                {
+                    PlayMusicTransition(musicCode);
+                }
+                else if (currentClipIndex != (int)GetDefMusicCode() - 1)
+                {
+                    PlayMusicTransition(GetDefMusicCode());
+                }
             }
-            else if (currentClipIndex != (int)GetDefMusicCode() - 1)
+            else
             {
-                PlayMusicTransition(GetDefMusicCode());
+                PlayMusicTransition(Random.Range(0, _insideClipsNames.Count));
             }
         }
         else
         {
-            PlayMusicTransition(Random.Range(0,_insideClips.Count));
-        }
+            PlayMusicTransition(GetDefMusicCode());
+        }     
     }
 
 
@@ -57,7 +64,8 @@ public class MusicManager : MonoBehaviour
         {
             StopCoroutine(_transitionCr);
         }
-        _transitionCr = StartCoroutine(MusicTransition(_musicClips[(int)code - 1]));
+        AudioClip targetClip = Resources.Load<AudioClip>("Music/MusicClips/" + _musicClipsNames[(int)code - 1]);
+        _transitionCr = StartCoroutine(MusicTransition(targetClip));
     }
     public void PlayMusicTransition(int codeIndex)
     {
@@ -66,7 +74,8 @@ public class MusicManager : MonoBehaviour
         {
             StopCoroutine(_transitionCr);
         }
-        _transitionCr = StartCoroutine(MusicTransition(_insideClips[codeIndex]));
+        AudioClip targetClip = Resources.Load<AudioClip>("Music/RandomMusic/" + _insideClipsNames[codeIndex]);
+        _transitionCr = StartCoroutine(MusicTransition(targetClip));
     }
 
     public IEnumerator MusicTransition(AudioClip clip)
