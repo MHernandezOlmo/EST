@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager musicManager;
     public enum MusicCode {None, Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein};
     [SerializeField] MusicCode musicCode;
-    [SerializeField] private AudioSource _music;
+    [SerializeField] private AudioSource _music, _music2;
     [SerializeField] private List<string> _musicClipsNames, _insideClipsNames;
-    private bool _usingMuteCr;
+    [SerializeField] private AudioMixer _aMixer;
+    [SerializeField] private AnimationCurve _aCurveIn, _aCurveOut;
+    private bool _alternatedCh;
     private Coroutine _transitionCr, _muteCr;
     public static int currentClipIndex;
     
@@ -80,31 +83,34 @@ public class MusicManager : MonoBehaviour
 
     public IEnumerator MusicTransition(AudioClip clip)
     {
-        if (_usingMuteCr)
+        AudioSource lastAsource = _music;
+        AudioSource newAsource = _music2;
+        if (_alternatedCh)
         {
+            lastAsource = _music2;
+            newAsource = _music;
+        }
+        float dur = 3f;
+
+        newAsource.volume = 0;
+        newAsource.clip = clip;
+        newAsource.Play();
+
+        for (float i = 0; i < dur; i += Time.deltaTime)
+        {
+            lastAsource.volume = 1 - _aCurveOut.Evaluate(i / dur);
+            newAsource.volume = _aCurveIn.Evaluate(i / dur);
             yield return null;
-            _music.clip = clip;
-            _music.Play();
         }
-        else
-        {
-            float dur = 1f;
-            for (float i = 0; i < dur; i += Time.deltaTime)
-            {
-                _music.volume = 1 - i / dur;
-                yield return null;
-            }
-            _music.volume = 0;
-            _music.clip = clip;
-            _music.Play();
-            for (float i = 0; i < dur; i += Time.deltaTime)
-            {
-                _music.volume = i / dur;
-                yield return null;
-            }
-            _music.volume = 1;
-        }
+        lastAsource.volume = 0;
+        newAsource.volume = 1;
+        //for (float i = 0; i < dur; i += Time.deltaTime)
+        //{
+        //    lastAsource.volume = i / dur;
+        //    yield return null;
+        //}
         _transitionCr = null;
+        _alternatedCh = !_alternatedCh;
     }
 
     public void MuteMusic()
@@ -127,17 +133,16 @@ public class MusicManager : MonoBehaviour
 
     IEnumerator CrSetVolume(float targetVol)
     {
-        _usingMuteCr = true;
-        float currentVol = _music.volume;
+        float currentVol;
+        _aMixer.GetFloat("OSTParentVol", out currentVol);
         float dur = 1f;
 
         for (float i = 0; i < dur; i+= Time.deltaTime)
         {
             yield return null;
-            _music.volume = Mathf.Lerp(currentVol, targetVol, i/dur);
+            _aMixer.SetFloat("OSTParentVol", Mathf.Lerp(currentVol, targetVol, i / dur));
         }
-        _music.volume = targetVol;
-        _usingMuteCr = false;
+        _aMixer.SetFloat("OSTParentVol", targetVol);
         _muteCr = null;
     }
 
