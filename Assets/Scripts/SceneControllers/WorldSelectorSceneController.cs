@@ -20,12 +20,11 @@ public class WorldSelectorSceneController : MonoBehaviour
 
     public void Start()
     {
-        PlayerPrefs.DeleteAll();
 
-        //_worldImages[0].color = Color.white;
-        //_worldLockImages[0].gameObject.SetActive(false);
-        //_worldButtons[0].interactable = true;
-        //_worldNamesText[0].text = "Lomnicky";
+        _worldImages[0].color = Color.white;
+        _worldLockImages[0].gameObject.SetActive(false);
+        _worldButtons[0].interactable = true;
+        _worldNamesText[0].text = "Lomnicky";
 
         if (GameProgressController.GetIsLomnickySolved())
         {
@@ -47,7 +46,7 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldImages[3].color = Color.white;
             _worldLockImages[3].gameObject.SetActive(false);
             _worldButtons[3].interactable = true;
-            _worldNamesText[3].text = "Gregor";
+            _worldNamesText[3].text = "GREGOR";
 
         }
         if (GameProgressController.GregorFinished)
@@ -58,7 +57,6 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldNamesText[4].text = "SST";
 
         }
-        GameProgressController.SSTFinished = true;
         if (GameProgressController.SSTFinished)
         {
             _worldImages[5].color = Color.white;
