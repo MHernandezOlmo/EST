@@ -16,7 +16,7 @@ public class Gafas : Interactable
     {
         GameProgressController.SetHasGlasses(true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtained: Sunglasses");
+        GameEvents.ShowScreenText.Invoke("<b>Obtained Sunglasses:</b>\nFilters from UV radiation");
         Destroy(gameObject);
     }
 }

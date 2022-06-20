@@ -16,7 +16,7 @@ public class Abrigo : Interactable
     {
         GameProgressController.SetHasAbrigo(true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtained: Coat");
+        GameEvents.ShowScreenText.Invoke("<b>Obtained Coat:</b>\nProtects from IR radiation");
         Destroy(gameObject);
     }
 }

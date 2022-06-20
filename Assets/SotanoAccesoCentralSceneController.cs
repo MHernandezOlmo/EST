@@ -5,10 +5,6 @@ using UnityEngine;
 public class SotanoAccesoCentralSceneController : MonoBehaviour
 {
     [SerializeField] GameObject _player;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

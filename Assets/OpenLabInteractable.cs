@@ -5,13 +5,16 @@ using UnityEngine;
 public class OpenLabInteractable : Interactable
 {
     [SerializeField] private GameObject _door;
-    private void Awake()
-    {
-        
-    }
+    private bool _isOpen;
+
+
     public override void Interact()
     {
-        StartCoroutine(CrOpenDoor());
+        if (!_isOpen)
+        {
+            StartCoroutine(CrOpenDoor());
+            _isOpen = true;
+        }
     }
 
     IEnumerator CrOpenDoor()
