@@ -41,13 +41,12 @@ public class GameFlowController : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         StartCoroutine(coLoadScene(sceneName));
-
     }
     IEnumerator coLoadScene(string sn)
     {
         yield return StartCoroutine(_transitionsController.coFadeToBlack());
         yield return null;
         SceneManager.LoadScene(sn);
+        GameEvents.OnLoadSceneMoment.Invoke(sn);
     }
-
 }

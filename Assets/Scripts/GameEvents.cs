@@ -59,6 +59,7 @@ public static class GameEvents
     public static BoolEvent CombatEvent = new BoolEvent();
     public static StringEvent LoadScene =  new StringEvent();
     public static StringEvent LoadSceneAsync = new StringEvent();
+    public static StringEvent OnLoadSceneMoment = new StringEvent();
     public static BoolEvent eDialogue = new BoolEvent();
     public static IntEvent ShowDialog = new IntEvent();
     public static StringEvent ShowScreenText = new StringEvent();
@@ -66,7 +67,9 @@ public static class GameEvents
     public static BoolEvent ToggleSFX = new BoolEvent();
     public static BoolEvent ToggleOST = new BoolEvent();
     public static BoolEvent CanInteract = new BoolEvent();
-    
+
+
+
     public class StringEvent : UnityEvent<string> { };
     public class StringListEvent : UnityEvent<List<string>> { };
     public class IntEvent : UnityEvent<int> { };
