@@ -12,12 +12,14 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private List<string> _musicClipsNames, _insideClipsNames;
     [SerializeField] private AudioMixer _aMixer;
     [SerializeField] private AnimationCurve _aCurveIn, _aCurveOut;
+    private int _lastRandomIndex;
     private bool _alternatedCh;
-    private Coroutine _transitionCr, _muteCr;
+    private Coroutine _transitionCr, _muteCr, _musicCheckCr;
     public static int currentClipIndex;
     
     private void Start()
     {
+        _lastRandomIndex = -1;
         transform.SetParent(null);
         DontDestroyOnLoad(this);
 
@@ -50,7 +52,7 @@ public class MusicManager : MonoBehaviour
             }
             else
             {
-                PlayMusicTransition(Random.Range(0, _insideClipsNames.Count));
+                PlayMusicTransition(GetRandomMusicIndex());
             }
         }
         else
@@ -59,6 +61,24 @@ public class MusicManager : MonoBehaviour
         }     
     }
 
+    public int GetRandomMusicIndex()
+    {
+        int randomIndex;
+        if(_lastRandomIndex == -1)
+        {
+            randomIndex = Random.Range(0, _insideClipsNames.Count);
+        }
+        else
+        {
+            do
+            {
+                randomIndex = Random.Range(0, _insideClipsNames.Count);
+            }
+            while (randomIndex == _lastRandomIndex);
+        }
+        _lastRandomIndex = randomIndex;
+        return randomIndex;
+    }
 
     public void PlayMusicTransition(MusicCode code)
     {
@@ -70,6 +90,8 @@ public class MusicManager : MonoBehaviour
         AudioClip targetClip = Resources.Load<AudioClip>("Music/MusicClips/" + _musicClipsNames[(int)code - 1]);
         _transitionCr = StartCoroutine(MusicTransition(targetClip));
     }
+
+    //RANDOM MUSIC
     public void PlayMusicTransition(int codeIndex)
     {
         currentClipIndex = -1;
@@ -95,6 +117,14 @@ public class MusicManager : MonoBehaviour
         newAsource.volume = 0;
         newAsource.clip = clip;
         newAsource.Play();
+        if(clip.name != "0_Menu")
+        {
+            if (_musicCheckCr != null)
+            {
+                StopCoroutine(_musicCheckCr);
+            }
+            _musicCheckCr = StartCoroutine(CrCheckMusicFinish(newAsource));
+        }
 
         for (float i = 0; i < dur; i += Time.deltaTime)
         {
@@ -111,6 +141,21 @@ public class MusicManager : MonoBehaviour
         //}
         _transitionCr = null;
         _alternatedCh = !_alternatedCh;
+    }
+
+    IEnumerator CrCheckMusicFinish(AudioSource asource)
+    {
+        bool detected = false;
+
+        while (asource.isPlaying)
+        {
+            if(asource.time > asource.clip.length - 4f && !detected)
+            {
+                PlayMusicTransition(Random.Range(0, _insideClipsNames.Count));
+                detected = true;
+            }
+            yield return null;
+        }
     }
 
     public void MuteMusic()
