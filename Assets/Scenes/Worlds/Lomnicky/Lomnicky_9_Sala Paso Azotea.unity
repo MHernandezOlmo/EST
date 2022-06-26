@@ -871,6 +871,7 @@ MonoBehaviour:
   _spin: {fileID: 1369388040}
   _realGoran: {fileID: 1660336334}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -898,6 +899,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _currentHPBar: {fileID: 0}
+  _interactButton: {fileID: 0}
+  _combatButton: {fileID: 0}
   _shootPosition: {fileID: 0}
   electricBall1: {fileID: 0}
 --- !u!1 &862527610
@@ -1474,6 +1477,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1419946982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4859781107789325776, guid: 6f1c9dbceaf32a945b35370399f2a485,
+    type: 3}
+  m_PrefabInstance: {fileID: 1815972352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1419946987
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419946982}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49668455, y: 2.137789, z: 0.5696792}
+  m_Center: {x: 0.021034934, y: 0.07517375, z: -0.0000003928926}
 --- !u!1 &1615206208
 GameObject:
   m_ObjectHideFlags: 3
@@ -5613,6 +5635,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849694242453823169, guid: 6f1c9dbceaf32a945b35370399f2a485,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.16054
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849694242453823169, guid: 6f1c9dbceaf32a945b35370399f2a485,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.382939
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849694242453823169, guid: 6f1c9dbceaf32a945b35370399f2a485,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.5708439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849694242453823169, guid: 6f1c9dbceaf32a945b35370399f2a485,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -1.1802707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849694242453823169, guid: 6f1c9dbceaf32a945b35370399f2a485,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.1914696
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849694242453823169, guid: 6f1c9dbceaf32a945b35370399f2a485,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.38542175
       objectReference: {fileID: 0}
     - target: {fileID: 2202503246783465111, guid: 6f1c9dbceaf32a945b35370399f2a485,
         type: 3}

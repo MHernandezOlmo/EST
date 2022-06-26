@@ -375,6 +375,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &122795296 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590109312915459629, guid: 42a809cf768bba742b9e3ec9d5907835,
+    type: 3}
+  m_PrefabInstance: {fileID: 1295724628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &142490744
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +932,7 @@ MonoBehaviour:
   _spin: {fileID: 2098856428}
   _realGoran: {fileID: 498890767}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -953,8 +960,54 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _currentHPBar: {fileID: 0}
+  _interactButton: {fileID: 0}
+  _combatButton: {fileID: 0}
   _shootPosition: {fileID: 0}
   electricBall1: {fileID: 0}
+--- !u!1 &686676820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686676821}
+  - component: {fileID: 686676822}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686676821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686676820}
+  m_LocalRotation: {x: -0, y: -0.14601502, z: -0, w: 0.98928237}
+  m_LocalPosition: {x: -0.21, y: 1.6, z: -14.127251}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 122795296}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -16.792002, z: 0}
+--- !u!65 &686676822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686676820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2828062, y: 4.501857, z: 5.7489624}
+  m_Center: {x: -0.6414036, y: 0, z: 0.51035357}
 --- !u!1 &1011616980
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class StepsSFXManager : MonoBehaviour
 {
     [SerializeField] float _volume, _minPitch, _maxPitch;
-    [SerializeField] AudioClip _stepSound;
+    [SerializeField] AudioClip _stepSound, _insideStepSound;
     [SerializeField] AudioSource[] _aSources;
     [SerializeField] bool _isPlayer;
     private int _currentIndex;
@@ -15,13 +15,20 @@ public class StepsSFXManager : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        CurrentSceneManager cSM = FindObjectOfType<CurrentSceneManager>();
         foreach(AudioSource aS in _aSources)
         {
-            aS.clip = _stepSound;
+            if (cSM.IsExterior)
+            {
+                aS.clip = _stepSound;
+            }
+            else
+            {
+                aS.clip = _insideStepSound;
+            }
             aS.volume = _volume;
         }
     }
-
 
     public void Step()
     {
