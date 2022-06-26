@@ -11,6 +11,7 @@ public class PhotoFrame : MonoBehaviour
     [SerializeField] RectTransform _myRectTransform;
     [SerializeField] Color _color;
     [SerializeField] Image _image;
+    private Coroutine _crPhoto;
     bool _active;
     bool _canCheck;
     int _moveCounter;
@@ -27,10 +28,9 @@ public class PhotoFrame : MonoBehaviour
     }
     public void CheckPhoto()
     {
-        if (_canCheck)
+        if (_canCheck && _crPhoto == null)
         {
-            StartCoroutine(TakePhoto());
-
+            _crPhoto = StartCoroutine(TakePhoto());
         }
     }
     IEnumerator TakePhoto()
@@ -54,6 +54,7 @@ public class PhotoFrame : MonoBehaviour
             FindObjectOfType<CoronografoController>().LoseLife();
             StartCoroutine(Recover());
         }
+        _crPhoto = null;
     }
     IEnumerator Recover()
     {
