@@ -25,6 +25,7 @@ public class CurrentSceneManager : MonoBehaviour
         _canShield = true;
         _canSpin = true;
         _canJetpack = true;
+        CanDash = true;
         GameEvents.ChangeGameState.AddListener(SetGameState);
         if (_speed == 0)
         {

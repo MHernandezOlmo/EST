@@ -213,8 +213,11 @@ public class PlayerController : MonoBehaviour
                 {
                     if (CurrentSceneManager.CanDash)
                     {
-                        CurrentSceneManager.CanDash = false;
-                        StartCoroutine(CrDash());
+                        if (GameProgressController.HasDash())
+                        {
+                            CurrentSceneManager.CanDash = false;
+                            StartCoroutine(CrDash());
+                        }
                     }
                 }
                 if (_currentCharacter == Character.Flare)
