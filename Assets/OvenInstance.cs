@@ -34,7 +34,7 @@ public class OvenInstance : MonoBehaviour
     IEnumerator CrAlerted()
     {
         yield return new WaitForSeconds(1f);
-        while (Vector3.Distance(_player.position, transform.position) > _attackDist)
+        while (Vector3.Distance(_player.position, transform.position) > _attackDist || CurrentSceneManager._state == GameStates.Dialogue)
         {
             yield return null;
         }
