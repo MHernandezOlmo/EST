@@ -557,6 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MAX_MOVEMENT_SPEED: 4
+  customTurnSpeed: 0
 --- !u!114 &11752484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +573,7 @@ MonoBehaviour:
   _spin: {fileID: 11752482}
   _realGoran: {fileID: 11752481}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -599,6 +601,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _currentHPBar: {fileID: 0}
+  _interactButton: {fileID: 0}
+  _combatButton: {fileID: 0}
   _shootPosition: {fileID: 0}
   electricBall1: {fileID: 0}
 --- !u!1 &31294998
@@ -7089,8 +7093,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651565784747240134, guid: 86c6f6c5b555220489b97351b3134c37,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20.609028
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651565784747240134, guid: 86c6f6c5b555220489b97351b3134c37,
+        type: 3}
       propertyPath: m_LocalScale.y
       value: -0.10238
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651565784747240134, guid: 86c6f6c5b555220489b97351b3134c37,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.005
       objectReference: {fileID: 0}
     - target: {fileID: 8651565784747240134, guid: 86c6f6c5b555220489b97351b3134c37,
         type: 3}
@@ -8453,6 +8467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _customCollider: {fileID: 0}
+  _combatActivator: {fileID: 0}
   _combatName: 
   enemies:
   - {fileID: 1575488462}
@@ -8461,8 +8476,11 @@ MonoBehaviour:
   - {fileID: 1072864121}
   _combatCamera: {fileID: 819299218}
   _requiredKills: 4
-  _enemyHPPool: {fileID: 525567702}
+  _kills: 0
+  _previousMode: 0
   _startingPoint: 0
+  _enemyHPPool: {fileID: 525567702}
+  _startingDash: 0
 --- !u!1 &1733008218
 GameObject:
   m_ObjectHideFlags: 0
@@ -8733,7 +8751,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.3981789, y: 2.4205523, z: 3.8791904}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2002788764
 Transform:
@@ -8743,8 +8761,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002788761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.77, y: 0.39, z: -4.06}
-  m_LocalScale: {x: 3.1952, y: 1, z: 1.5479923}
+  m_LocalPosition: {x: -3.77, y: 0.16, z: -6.52}
+  m_LocalScale: {x: 3.0753798, y: 1, z: 1.3445398}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
