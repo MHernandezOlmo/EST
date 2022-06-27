@@ -51,6 +51,9 @@ public class PuzzleStatesController : MonoBehaviour
                 case "Espejo":
                     FindObjectOfType<EspejoController>().StartGame();
                     break;
+                case "Asociacion":
+                    FindObjectOfType<AsociacionElementosController>().StartPlaying();
+                    break;
             }
             StartCoroutine(CrStartPuzzle());
         }
@@ -80,6 +83,10 @@ public class PuzzleStatesController : MonoBehaviour
                 break;
             case "Coronografo":
                 GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d");
+                break;
+            case "Asociacion":
+                GameProgressController.SetAsociacionElementos(true);
+                GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
                 break;
             case "Bomba":
                 GameEvents.LoadScene.Invoke("SST_3_sala_maquinas");

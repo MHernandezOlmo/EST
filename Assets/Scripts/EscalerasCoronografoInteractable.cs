@@ -24,7 +24,7 @@ public class EscalerasCoronografoInteractable :Interactable
     }
     public void LoadOtherScene()
     {
-        GameEvents.LoadScene.Invoke("Parejas");
+        GameEvents.LoadScene.Invoke("Asociacion");
     }
     IEnumerator RestoreInteract()
     {
