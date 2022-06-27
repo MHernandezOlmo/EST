@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour
 	const float GROUND_RAY_LENGTH = 0.3f;
 	const float MAX_VERTICAL_SPEED = 20.0f;
 	[SerializeField] private float MAX_MOVEMENT_SPEED = 4f;
+	[SerializeField] private float customTurnSpeed;
 	const float TURN_SPEED = 15f;
 	const float ACCEL = 11f;
 
@@ -136,7 +137,14 @@ public class MovementController : MonoBehaviour
 		if (input.magnitude > 0 && rotationEnabled)
 		{
 			Quaternion rot = Quaternion.LookRotation(facing);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rot, TURN_SPEED * Time.deltaTime);
+			if(customTurnSpeed != 0)
+            {
+				transform.rotation = Quaternion.Lerp(transform.rotation, rot, customTurnSpeed * Time.deltaTime);
+			}
+            else
+            {
+				transform.rotation = Quaternion.Lerp(transform.rotation, rot, TURN_SPEED * Time.deltaTime);
+			}
 		}
 
 		Vector3 velocity_xz = velocity.xz();

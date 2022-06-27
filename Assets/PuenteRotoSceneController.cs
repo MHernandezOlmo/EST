@@ -6,15 +6,11 @@ using UnityEngine.SceneManagement;
 public class PuenteRotoSceneController : MonoBehaviour
 {
     [SerializeField] private Transform _player;
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float _minHeight;
 
-    
     void Update()
     {
-        if (_player.transform.position.y < -2f)
+        if (_player.transform.position.y < _minHeight)
         {
             GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
         }
