@@ -6,23 +6,16 @@ public class CombatTrigger : MonoBehaviour
 {
     [SerializeField] GameObject _customCollider, _combatActivator;
     [SerializeField] string _combatName;
-    [SerializeField]
-    List<EnemySpawner> enemies;
-    float _elapsedTime;
+    [SerializeField] List<EnemySpawner> enemies;
+    [SerializeField] CinemachineVirtualCamera _combatCamera;
+    [SerializeField] private int _requiredKills, _kills, _previousMode, _startingPoint;
+    [SerializeField] EnemyHPPool _enemyHPPool;
+    [SerializeField] private bool _startingDash;
     CombatController _combatController;
-    [SerializeField]
-    CinemachineVirtualCamera _combatCamera;
-    [SerializeField]
-    int _requiredKills;
-    int _kills;
-    float _combatTime;
-    bool _canSpawn;
+    private bool _canSpawn, _done;
     List<EnemySpawner> _enemiesToinstantiate;
     GameObject _boundaries;
-    [SerializeField] EnemyHPPool _enemyHPPool;
-    bool _done;
-    private int _previousMode;
-    [SerializeField] private int _startingPoint;
+
     void Start()
     {
         if(_combatName != "")
@@ -34,6 +27,10 @@ public class CombatTrigger : MonoBehaviour
             }
         }
         _combatController = FindObjectOfType<CombatController>();
+        if (_startingDash)
+        {
+            CurrentSceneManager.CanDash = true;
+        }
     }
     public int GetKills()
     {

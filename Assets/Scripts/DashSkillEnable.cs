@@ -8,16 +8,13 @@ public class DashSkillEnable : MonoBehaviour
     GameObject _actionButton;
     private void OnTriggerEnter(Collider other)
     {
-
         CurrentSceneManager.CanDash = true;
         _actionButton.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-
         CurrentSceneManager.CanDash = false;
         _actionButton.SetActive(false);
     }
-
 }
