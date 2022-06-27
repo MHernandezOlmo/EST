@@ -56,13 +56,20 @@ public class ToastieInstance : MonoBehaviour
         }
         transform.position = targetPos;
 
-        if(Vector3.Distance(transform.position, _player.position) < 15)
+        if(Vector3.Distance(transform.position, _player.position) < 10)
         {
-            _shootAnim.Play("CreateToast");
-            bullet = Instantiate(_toastPrefab, _shootPoint.position, _shootPoint.rotation).transform;
-            bullet.SetParent(_shootPoint);
-            yield return new WaitForSeconds(0.5f);
-            StartCoroutine(CrAttack());
+            if (CurrentSceneManager._state != GameStates.Dialogue)
+            {
+                _shootAnim.Play("CreateToast");
+                bullet = Instantiate(_toastPrefab, _shootPoint.position, _shootPoint.rotation).transform;
+                bullet.SetParent(_shootPoint);
+                yield return new WaitForSeconds(0.5f);
+                StartCoroutine(CrAttack());
+            }
+            else
+            {
+                StartCoroutine(CrMove());
+            }
         }
         else
         {
