@@ -23,5 +23,4 @@ public class JetPackSkill : Interactable
             Destroy(gameObject.transform.parent.gameObject);
         }
     }
-
 }

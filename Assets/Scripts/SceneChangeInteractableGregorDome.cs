@@ -29,4 +29,9 @@ public class SceneChangeInteractableGregorDome : Interactable
         base.Start();
         _interactableMarker = transform;
     }
+
+    public void LaunchPanel()
+    {
+        GameEvents.ShowScreenText.Invoke("<size=80%>Find the tunnels to GREGOR from the VTT telescope");
+    }
 }

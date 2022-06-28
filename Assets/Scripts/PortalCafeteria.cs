@@ -16,6 +16,7 @@ public class PortalCafeteria : MonoBehaviour
     }
     void Start()
     {
+        if(_boxCollider != null)
         _boxCollider.enabled = false;
     }
 
