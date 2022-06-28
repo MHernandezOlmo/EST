@@ -9,14 +9,19 @@ public class PortalCafeteria : MonoBehaviour
     [SerializeField] BoxCollider _boxCollider;
     private void OnTriggerEnter(Collider other)
     {
-        if (!_canExit)
+        if (_canExit)
         {
+            GameProgressController.SetCurrentStartPoint(0);
+            GameEvents.LoadScene.Invoke("PicDuMidi_1_puente_roto");
+        }
+        else
+        {
+            FindObjectOfType<SalaPanelesACSceneController>().OpenCloset();
             trigger.triggerDialogueEvent(true);
         }
     }
     void Start()
     {
-        if(_boxCollider != null)
         _boxCollider.enabled = false;
     }
 
@@ -24,7 +29,7 @@ public class PortalCafeteria : MonoBehaviour
     {
         if (!_canExit)
         {
-            if(GameProgressController.GetHasAbrigo() && GameProgressController.GetHasGlasses())
+            if (GameProgressController.GetHasAbrigo() && GameProgressController.GetHasGlasses())
             {
                 _canExit = true;
                 _boxCollider.enabled = true;

@@ -10,6 +10,7 @@ public class UserDataEditor : EditorWindow
 {
     GameProgressData _gameProgressData;
     const string _gameProgressDataFileName = "GameProgressData.json";
+    Vector2 scrollPosition = Vector2.zero;
 
     [MenuItem("Window/GameProgress")]
     public static void ShowWindow()
@@ -23,6 +24,8 @@ public class UserDataEditor : EditorWindow
         int height = 20;
         if (_checked)
         {
+            scrollPosition = GUILayout.BeginScrollView(scrollPosition, true, true, GUILayout.Width(position.width), GUILayout.Height(position.height));
+
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Lomnicky", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._isLomnickySolved = EditorGUILayout.Toggle(_gameProgressData._isLomnickySolved, GUILayout.Height(height), GUILayout.Width(200));
@@ -177,6 +180,7 @@ public class UserDataEditor : EditorWindow
             GUILayout.Label("EST mirror advice", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._mirrorAdvice = EditorGUILayout.Toggle(_gameProgressData._mirrorAdvice, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
+            EditorGUILayout.EndScrollView();
 
             if (GUILayout.Button("Save Data"))
             {

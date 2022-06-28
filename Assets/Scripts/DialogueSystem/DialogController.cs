@@ -15,6 +15,7 @@ public class DialogController : MonoBehaviour
     int _counter;
     [SerializeField]
     GameObject _nextButton;
+    [SerializeField] private Color[] _characterColors;
     public void SetCurrentDialogue(TestDialogue newDialogue)
     {
         _currentDialogue = newDialogue;
@@ -58,7 +59,8 @@ public class DialogController : MonoBehaviour
         Sprite faceSprite = Resources.Load<Sprite>(name);
 
         _name.text = _currentDialogue.speakerFaces[_counter].ToString();
-        
+        _mainText.color = _characterColors[(int)_currentDialogue.speakerFaces[_counter]];
+        _name.color = _characterColors[(int)_currentDialogue.speakerFaces[_counter]];
         _faceImage.sprite = faceSprite;
         _faceImage.overrideSprite = faceSprite;
         _nextButton.SetActive(false);

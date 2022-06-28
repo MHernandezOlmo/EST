@@ -11,6 +11,7 @@ public class SalaPanelesACSceneController : MonoBehaviour
     Transform _autoPilotTarget0;
     [SerializeField] private DialogueTrigger _welcomeDialog;
     [SerializeField] private DialogueTrigger _endTrigger;
+    public GameObject _closet;
     private void Awake()
     {
         if (!GameProgressController.getArrivedToPicDuMudi())
@@ -20,7 +21,10 @@ public class SalaPanelesACSceneController : MonoBehaviour
         StartCoroutine(CrEnd());
         
     }
-
+    public void OpenCloset()
+    {
+        _closet.SetActive(true);
+    }
     IEnumerator CrEnd()
     {
         yield return new WaitForSeconds(1f);
