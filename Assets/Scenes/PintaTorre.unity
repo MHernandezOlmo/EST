@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3968,9 +3968,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Those creatures are staining the tower! It needs to be wait to keep reflecting
-    the light. Be faster than them! Choose the white paint  drops before the time
-    runs out!
+  m_text: Turn GREGOR into white again to avoid the heating excess inside the tower.
+    Pick all the white paint drops before it is too late!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47315bd6f9b4a434bb6773dcc105fd0d, type: 2}
   m_sharedMaterial: {fileID: -7097640782908820028, guid: 47315bd6f9b4a434bb6773dcc105fd0d,
@@ -3998,7 +3997,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.3
+  m_fontSize: 72
   m_fontSizeBase: 106.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6304,7 +6303,7 @@ GameObject:
   - component: {fileID: 2045191089}
   - component: {fileID: 2045191088}
   m_Layer: 5
-  m_Name: Retry Button
+  m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

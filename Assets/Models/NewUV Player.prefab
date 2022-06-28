@@ -326,6 +326,7 @@ MonoBehaviour:
   _minPitch: 1
   _maxPitch: 1
   _stepSound: {fileID: 8300000, guid: 032922d11adac044eb28dfb360a477b5, type: 3}
+  _insideStepSound: {fileID: 8300000, guid: a498e0f77a21c964fa9865a015e41bfa, type: 3}
   _aSources:
   - {fileID: 2757721787198263268}
   - {fileID: 846666146095358967}
@@ -399,6 +400,7 @@ MonoBehaviour:
   _spin: {fileID: 2399300465144114002}
   _realGoran: {fileID: 3282401605180857816}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -426,6 +428,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _currentHPBar: {fileID: 0}
+  _interactButton: {fileID: 0}
+  _combatButton: {fileID: 0}
   _shootPosition: {fileID: 0}
   electricBall1: {fileID: 0}
 --- !u!114 &1597381682
@@ -441,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MAX_MOVEMENT_SPEED: 4
+  customTurnSpeed: 0
 --- !u!1001 &2399300464953204873
 PrefabInstance:
   m_ObjectHideFlags: 0
