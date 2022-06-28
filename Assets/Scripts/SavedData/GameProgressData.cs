@@ -91,6 +91,8 @@ public class GameProgressData
 
     public bool _hasAO;
 
+    public bool _hasReadHeatMessages;
+
     public bool _solvedPuzzleAO;
     public bool _adviceHR;
     public bool _testedHR;
@@ -112,28 +114,13 @@ public class GameProgressData
 
     public GameProgressData()
     {
-        _hasArrivedToPicDuMidi = false;
         _recopiledDataAdvice = true;
-        _salaCombateCombate = false;
-        _hasFuse = false;
-        _motorFixed = false;
-        _countdownActive = false;
-        _closedCeiling = false;
-        _cazadorDeFlaresSolved = false;
         _piezasCamara = new bool[6];
         _piezasHeatRejecter= new bool[6];
         _filtros = new bool[6];
         _currentScene = "";
         _currentStartPoint = 0;
         _countDownStartTime = DateTime.Now.ToBinary().ToString();
-        _choosePhenomenomSolved = false;
-        _hasDash = false;
-        _hasPicDuMidiGlasses = false;
-        _hasPicDuMidiAbrigo = false;
-        _advisedCoronograph = false;
-        _floatingPlatformLeft = false;
-        _asociacionElementosSolved = false;
     }
-
 }
 

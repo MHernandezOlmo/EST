@@ -44,6 +44,21 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
+    public static bool HeatMessages
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._hasReadHeatMessages;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._hasReadHeatMessages = value;
+            SaveGameProgressData();
+        }
+    }
+
     public static bool MirrorAdvice
     {
         get

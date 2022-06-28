@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Cinemachine;
 
 public class ExterioresGregorSceneController : MonoBehaviour
 {
@@ -9,19 +11,43 @@ public class ExterioresGregorSceneController : MonoBehaviour
     [SerializeField] private DialogueTrigger _missionDialog;
     [SerializeField] private DialogueTrigger _ovensAdviceDialog;
     [SerializeField] private DialogueTrigger _ovensAdviceDialog2;
+    [SerializeField] private GameObject _timePanel, _bushesCollider;
+    [SerializeField] private TextMeshProUGUI _timeText;
+    [SerializeField] private CinemachineVirtualCamera _camera;
+    [SerializeField] private Transform _retryPos;
     [SerializeField] Image _heatImage;
     [SerializeField] Image _termometerFillImage;
     private float _temperature;
     private PlayerController _player;
     private bool _ovensAdvice, _ovensAdvice2, _sceneChange, _heatStarted;
     int _bushes;
+    private Coroutine _crTimeCount;
+    private float _currentTimeCount;
+
     IEnumerator Start()
     {
         _player = FindObjectOfType<PlayerController>();
+        yield return null;
+        if (GameProgressController.HeatMessages)
+        {
+            _camera.Priority = 50;
+            Camera.main.transform.position = _camera.transform.position;
+            _player.transform.position = _retryPos.position;
+        }
         yield return new WaitForSeconds(1f);
-        _missionDialog.triggerDialogueEvent(true);
-        _termometerFillImage.fillAmount = 0.1f;
-        _heatImage.color = Color.Lerp(new Color(1, 0, 0, 0), Color.red, 0.1f);
+        if (GameProgressController.HeatMessages)
+        {
+            EnableBushInteractables();
+            ShowMissionPanel();
+            EnableHeat();
+            _bushesCollider.SetActive(true);
+        }
+        else
+        {
+            _missionDialog.triggerDialogueEvent(true);
+            _termometerFillImage.fillAmount = 0.1f;
+            _heatImage.color = Color.Lerp(new Color(1, 0, 0, 0), Color.red, 0.1f);
+        }
     }
 
     public void EnableHeat()
@@ -46,8 +72,12 @@ public class ExterioresGregorSceneController : MonoBehaviour
     public void AddBush()
     {
         _bushes++;
-        if(_bushes == 6)
+        string targetTx = "<size=140%>Picked " + _bushes + "/6";
+        GameEvents.ShowScreenText.Invoke(targetTx);
+        if (_bushes == 6)
         {
+            StopCoroutine(_crTimeCount);
+            _timePanel.SetActive(false);
             if (!_sceneChange)
             {
                 _sceneChange = true;
@@ -59,15 +89,18 @@ public class ExterioresGregorSceneController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(_player.transform.position, transform.position);
-        if (!_ovensAdvice && distance < 20)
+        if (!GameProgressController.HeatMessages)
         {
-            _ovensAdvice = true;
-            _ovensAdviceDialog.triggerDialogueEvent(true);
-        }
-        if (!_ovensAdvice2 && distance < 12)
-        {
-            _ovensAdvice2 = true;
-            _ovensAdviceDialog2.triggerDialogueEvent(true);
+            if (!_ovensAdvice && distance < 20)
+            {
+                _ovensAdvice = true;
+                _ovensAdviceDialog.triggerDialogueEvent(true);
+            }
+            if (!_ovensAdvice2 && distance < 12)
+            {
+                _ovensAdvice2 = true;
+                _ovensAdviceDialog2.triggerDialogueEvent(true);
+            }
         }
         if (_heatStarted)
         {
@@ -86,6 +119,39 @@ public class ExterioresGregorSceneController : MonoBehaviour
         foreach(InteractableBush b in FindObjectsOfType<InteractableBush>())
         {
             b.EnableInteractable();
+        }
+    }
+
+    public void ShowMissionPanel()
+    {
+        GameEvents.ShowScreenText.Invoke("Pick up the bushes");
+        StartBushMission();
+        GameProgressController.HeatMessages = true;
+    }
+
+    public void StartBushMission()
+    {
+        if (GameProgressController.HeatMessages)
+        {
+            _currentTimeCount = 100f;
+        }
+        else
+        {
+            _currentTimeCount = 75f;
+        }
+        _timePanel.SetActive(true);
+        _crTimeCount = StartCoroutine(CrTimeCount());
+        IEnumerator CrTimeCount()
+        {
+            while (_currentTimeCount > 0)
+            {
+                _currentTimeCount -= Time.deltaTime;
+                int minutes = (int)_currentTimeCount / 60;
+                int seconds = (int)_currentTimeCount % 60;
+                _timeText.text = "<mspace=0.75em>" + minutes.ToString("00") + ":" + seconds.ToString("00");
+                yield return null;
+            }
+            GameEvents.LoadScene.Invoke("Gregor_0_exterior");
         }
     }
 }
