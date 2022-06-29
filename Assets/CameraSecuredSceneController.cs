@@ -17,6 +17,10 @@ public class CameraSecuredSceneController : MonoBehaviour
         {
             GameProgressController.EinsteinFinished = true;
         }
+        else
+        {
+            GameProgressController.LomnickySolved = true;
+        }
 
         GameEvents.LoadScene.Invoke("WorldSelector");
     }

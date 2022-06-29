@@ -10,7 +10,7 @@ public class SalaContiguaSceneController : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI _countDownText;
-    DateTime _startTime;
+    float _startTime;
 
     bool _lost;
     MovementController _player;
@@ -29,14 +29,14 @@ public class SalaContiguaSceneController : MonoBehaviour
         _player = FindObjectOfType<MovementController>();
         _firstTime = PlayerPrefs.GetInt("IsContiguaFirstTime",1);
 
-        if (!GameProgressController.IsCeilingClosed())
+        if (!GameProgressController.LomnickyClosedCeiling)
         {
-            if (!GameProgressController.GetCountdown())
+            if (!GameProgressController.LomnickyCountdown)
             {
                 //Activo Cuenta Atrás
-                GameProgressController.SetCountdownActive(true);
+                GameProgressController.LomnickyCountdown =true;
             }
-            _startTime = GameProgressController.GetCountDownTime();
+            _startTime = GameProgressController.LomnickyCountdownTime;
             _blockStairsDialog.SetActive(true);
             _stairsPortal.SetActive(false);
             _dialogueTrigger.gameObject.SetActive(false);
@@ -44,7 +44,7 @@ public class SalaContiguaSceneController : MonoBehaviour
         }
         else
         {
-            if (GameProgressController.IsCazadoresDeFlaresSolved())
+            if (GameProgressController.LomnickyPuzzleFlareHunters)
             {
                 _blockDomeColsed.SetActive(false);
             }
@@ -71,16 +71,16 @@ public class SalaContiguaSceneController : MonoBehaviour
     void Update()
     {
 
-        if (!GameProgressController.IsCeilingClosed())
-        {   
-            TimeSpan _span = System.DateTime.Now.Subtract(_startTime);
-            int remainingSeconds = 150 - (int)_span.TotalSeconds;
+        if (!GameProgressController.LomnickyClosedCeiling)
+        {
+            GameProgressController.LomnickyCountdownTime += Time.deltaTime;
+            int remainingSeconds =(int)(150 - GameProgressController.LomnickyCountdownTime);
             if (remainingSeconds < 0)
             {
                 if (!_lost)
                 {
                     _lost = true;
-                    GameProgressController.SetCountdownActive(false);
+                    GameProgressController.LomnickyCountdown =false;
                     GameProgressController.SetArrivingRoomDoor(false);
 
                     GameEvents.LoadScene.Invoke("Lomnicky_2_Sala llegada");

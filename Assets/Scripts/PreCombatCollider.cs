@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PreCombatCollider : MonoBehaviour
 {
-
     void Update()
     {
-        if (GameProgressController.GetHasTornadoSkill())
+        if (GameProgressController.LomnickyTornadoSkill)
         {
             Destroy(gameObject);
         }

@@ -7,7 +7,7 @@ public class Teleferico : Interactable
 {
     public override void Interact()
     {
-        if (GameProgressController.IsMotorFixed())
+        if (GameProgressController.LomnickyMotor)
         {
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LMetalDoor);
             PlayerPrefs.SetInt("CinematicOpenCupula", 1);

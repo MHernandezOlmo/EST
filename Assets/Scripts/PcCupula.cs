@@ -11,7 +11,7 @@ public class PcCupula : Interactable
         
         if (_havePieces)
         {
-            GameEvents.LoadScene.Invoke("Manchas");    
+            GameEvents.LoadScene.Invoke("LomnickyPuzzleLayers");    
         }
         
     }
@@ -20,7 +20,7 @@ public class PcCupula : Interactable
     {
         base.Start();
 
-        if (GameProgressController.IsChoosePhenomenomSolved())
+        if (GameProgressController.LomnickyPuzzleLayers)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);

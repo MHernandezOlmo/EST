@@ -93,7 +93,7 @@ public class SalaAzoteaSceneController : MonoBehaviour
             yield return null;
         }
         _cupula.transform.rotation = Quaternion.Euler(0, 90, 90);
-        GameProgressController.SetCeilingClosed(true);
+        GameProgressController.LomnickyClosedCeiling =true;
 
         //PlayerPrefs.SetInt("PreviousPoint", 2);
         GameProgressController.SetCurrentStartPoint(2);

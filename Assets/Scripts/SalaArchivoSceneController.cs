@@ -14,32 +14,20 @@ public class SalaArchivoSceneController : MonoBehaviour
     {
         _player = FindObjectOfType<MovementController>();
 
-        yield return null;
-        if (GameProgressController.IsCazadoresDeFlaresSolved())
+        if (GameProgressController.LomnickyPuzzleFlareHunters)
         {
             _block.SetActive(false);
-            if (!GameProgressController.GetRecopiledDataAdvice())
+            if (!GameProgressController.LomnickyRecopiledDataAdvice)
             {
-                
+                yield return new WaitForSeconds(1f);
                 _d.triggerDialogueEvent(true);
-                yield return new WaitForSeconds(0.2f);
-                while (CurrentSceneManager._state != GameStates.Exploration)
-                {
-                    yield return null;
-                }
-                
-                //CAMBIAR
-                GameEvents.ShowScreenText.Invoke("Find the 6 camera parts");
-                GameProgressController.SetRecopiledDataAdvice(true);
+                GameProgressController.LomnickyRecopiledDataAdvice=true;
             }
         }
-
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void FindCameraAdvice()
     {
-        
+        GameEvents.ShowScreenText.Invoke("Find the 6 camera parts");
     }
 }

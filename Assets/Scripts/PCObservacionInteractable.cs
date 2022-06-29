@@ -13,7 +13,7 @@ public class PCObservacionInteractable : Interactable
         }
         else
         {
-            GameEvents.LoadScene.Invoke("CazaFlares");
+            GameEvents.LoadScene.Invoke("LomnickyPuzzleFlareHunters");
 
         }
     }

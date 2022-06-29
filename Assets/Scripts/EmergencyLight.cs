@@ -14,7 +14,7 @@ public class EmergencyLight : MonoBehaviour
 
     void Update()
     {
-        if (!GameProgressController.IsCeilingClosed())
+        if (!GameProgressController.LomnickyClosedCeiling)
         {
             _elapsedTime += Time.deltaTime;
             if (_elapsedTime > 1f)

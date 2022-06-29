@@ -176,8 +176,6 @@ public class CazaFlaresController : MonoBehaviour
         _text.text = $"Captured Flares\n {_correctCounter}/20";
         if (_correctCounter >= 20)
         {
-            GameProgressController.SetCazadoresDeFlaresSolved(true);
-            PlayerPrefs.SetString("PuzzleSceneBack", "SST_4_sala_observacion Lomnicky");
             FindObjectOfType<PuzzleStatesController>().Win();
         }
     }
@@ -194,15 +192,5 @@ public class CazaFlaresController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            GameProgressController.SetCazadoresDeFlaresSolved(true);
-            PlayerPrefs.SetString("PuzzleSceneBack", "SST_4_sala_observacion Lomnicky");
-            FindObjectOfType<PuzzleStatesController>().Win();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            FindObjectOfType<PuzzleStatesController>().GameOver();
-        }
     }
 }

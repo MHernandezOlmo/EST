@@ -9,8 +9,8 @@ public class DomeSceneController : MonoBehaviour
     IEnumerator Start()
     {
         _havePieces = false;
-        yield return null;
-        if (GameProgressController.IsChoosePhenomenomSolved())
+        yield return new WaitForSeconds(1f);
+        if (GameProgressController.LomnickyPuzzleLayers)
         {
             _dialogueTrigger.triggerDialogueEvent(true);
             GameEvents.ShowScreenText.Invoke("Go back to the cableway");

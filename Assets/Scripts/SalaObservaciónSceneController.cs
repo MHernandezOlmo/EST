@@ -31,7 +31,7 @@ public class SalaObservaciónSceneController : MonoBehaviour
         }
         else
         {
-            if (GameProgressController.IsCazadoresDeFlaresSolved())
+            if (GameProgressController.LomnickyPuzzleFlareHunters)
             {
                 _pc.gameObject.SetActive(false);
             }
@@ -56,7 +56,7 @@ public class SalaObservaciónSceneController : MonoBehaviour
         }
         else
         {
-            if (GameProgressController.IsCazadoresDeFlaresSolved())
+            if (GameProgressController.LomnickyPuzzleFlareHunters)
             {
                 if (!_launchDialogue)
                 {

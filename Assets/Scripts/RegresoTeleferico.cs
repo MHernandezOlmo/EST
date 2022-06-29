@@ -6,7 +6,7 @@ public class RegresoTeleferico : Interactable
 {
     public override void Interact()
     {
-        if (GameProgressController.IsChoosePhenomenomSolved())
+        if (GameProgressController.LomnickyPuzzleLayers)
         {
             GameProgressController.SetCurrentStartPoint(1);
             GameEvents.LoadScene.Invoke("Lomnicky_1_Estacion teleferico");
@@ -14,7 +14,7 @@ public class RegresoTeleferico : Interactable
     }
     private void Start()
     {
-        if (!GameProgressController.IsChoosePhenomenomSolved())
+        if (!GameProgressController.LomnickyPuzzleLayers)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.root.gameObject);

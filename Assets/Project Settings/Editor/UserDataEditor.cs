@@ -21,16 +21,71 @@ public class UserDataEditor : EditorWindow
 
     private void OnGUI()
     {
+        scrollPosition = GUILayout.BeginScrollView(scrollPosition, true, true, GUILayout.Width(position.width), GUILayout.Height(position.height));
         int height = 20;
         if (_checked)
         {
-            scrollPosition = GUILayout.BeginScrollView(scrollPosition, true, true, GUILayout.Width(position.width), GUILayout.Height(position.height));
+            GUILayout.Label("Lomnicky", GUILayout.Height(height), GUILayout.Width(200));
 
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Lomnicky", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._isLomnickySolved = EditorGUILayout.Toggle(_gameProgressData._isLomnickySolved, GUILayout.Height(height), GUILayout.Width(200));
+            GUILayout.Label("Tornado Skill", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyTornadoSkill= EditorGUILayout.Toggle(_gameProgressData._lomnickyTornadoSkill, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Fuse", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyFuse= EditorGUILayout.Toggle(_gameProgressData._lomnickyFuse, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Motor", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyMotor = EditorGUILayout.Toggle(_gameProgressData._lomnickyMotor, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Closed Ceiling", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyClosedCeiling= EditorGUILayout.Toggle(_gameProgressData._lomnickyClosedCeiling, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Countdown", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyCountdown= EditorGUILayout.Toggle(_gameProgressData._lomnickyCountdown, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Countdown Time", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyCountdownTime = EditorGUILayout.FloatField(_gameProgressData._lomnickyCountdownTime, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Puzzle Flare Hunters", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyPuzzleFlareHunters = EditorGUILayout.Toggle(_gameProgressData._lomnickyPuzzleFlareHunters, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Recopiled Data Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyRecopiledDataAdvice = EditorGUILayout.Toggle(_gameProgressData._lomnickyRecopiledDataAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Camera Pieces", GUILayout.Height(height), GUILayout.Width(200));
+            for (int i = 0; i < _gameProgressData._lomnickyPiezasCamara.Length; i++)
+            {
+                _gameProgressData._lomnickyPiezasCamara[i] = EditorGUILayout.Toggle(_gameProgressData._lomnickyPiezasCamara[i], GUILayout.Height(height), GUILayout.Width(20));
+            }
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Lomnicky Puzzle Layers", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickyPuzzleLayers = EditorGUILayout.Toggle(_gameProgressData._lomnickyPuzzleLayers, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Lomnicky Solved", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._lomnickySolved = EditorGUILayout.Toggle(_gameProgressData._lomnickySolved, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            GuiLine();
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Einstein", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._einsteinFinished = EditorGUILayout.Toggle(_gameProgressData._einsteinFinished, GUILayout.Height(height), GUILayout.Width(200));
@@ -180,7 +235,6 @@ public class UserDataEditor : EditorWindow
             GUILayout.Label("EST mirror advice", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._mirrorAdvice = EditorGUILayout.Toggle(_gameProgressData._mirrorAdvice, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
-            EditorGUILayout.EndScrollView();
 
             if (GUILayout.Button("Save Data"))
             {
@@ -201,8 +255,19 @@ public class UserDataEditor : EditorWindow
             }
         }
 
+            EditorGUILayout.EndScrollView();
     }
+    void GuiLine(int i_height = 1)
 
+    {
+
+        Rect rect = EditorGUILayout.GetControlRect(false, i_height);
+
+        rect.height = i_height;
+
+        EditorGUI.DrawRect(rect, Color.black);
+
+    }
     void LoadGameProgressData()
     {
         _gameProgressData = JsonUtility.FromJson<GameProgressData>(File.ReadAllText(Application.persistentDataPath + "/" + _gameProgressDataFileName));

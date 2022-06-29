@@ -24,13 +24,13 @@ public class PuzzleStatesController : MonoBehaviour
             PlayerPrefs.SetInt("NoInstructions", 0);
             switch (SceneManager.GetActiveScene().name)
             {
-                case "Manchas":
+                case "LomnickyPuzzleLayers":
                     FindObjectOfType<Roulette>().StartGame();
                     break;
                 case "Parejas":
                     FindObjectOfType<OpticaAdaptativaController>().StartPlaying();
                     break;
-                case "CazaFlares":
+                case "LomnickyPuzzleFlareHunters":
                     FindObjectOfType<CazaFlaresController>().StartGame();
                     break;
                 case "Coronografo":
@@ -70,10 +70,12 @@ public class PuzzleStatesController : MonoBehaviour
     {
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Manchas":
+            case "LomnickyPuzzleLayers":
+                GameProgressController.LomnickyPuzzleLayers = true;
                 GameEvents.LoadScene.Invoke("Lomnicky_11_Sala Cupula");
                 break;
-            case "CazaFlares":
+            case "LomnickyPuzzleFlareHunters":
+                GameProgressController.LomnickyPuzzleFlareHunters = true;
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion Lomnicky");
                 break;
             case "Parejas":

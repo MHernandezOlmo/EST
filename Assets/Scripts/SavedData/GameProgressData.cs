@@ -6,23 +6,27 @@ using System;
 [System.Serializable]
 public class GameProgressData
 {
-    public bool _isLomnickySolved;
+
+    //LOMNICKY
+    public bool _lomnickyTornadoSkill;
+    public bool _lomnickyFuse;
+    public bool _lomnickyMotor;
+    public bool _lomnickyClosedCeiling;
+    public bool _lomnickyCountdown;
+    public float _lomnickyCountdownTime;
+    public bool _lomnickyPuzzleFlareHunters;
+    public bool _lomnickyRecopiledDataAdvice;
+    public bool[] _lomnickyPiezasCamara;
+    public bool _lomnickyPuzzleLayers;
+    public bool _lomnickySolved;
+
     public bool _einsteinFinished;
     public bool _picdumidiFinished;
     public bool _gregorFinished;
     public bool _SSTFinished;
     public bool _ESTFinished;
-    public bool _hasTornadoesSkill;
-    public bool _hasFuse;
-    public bool _motorFixed;
-    public bool _countdownActive;
-    public string _countDownStartTime;
-    public bool _closedCeiling;
     public bool _arrivingRoomDoor;
     public bool _combatDoor;
-    public bool _cazadorDeFlaresSolved;
-    public bool _choosePhenomenomSolved;
-    public bool[] _piezasCamara;
     public bool[] _piezasHeatRejecter;
     public bool _heatRejecter;
     public bool _heatRejecterPlaced;
@@ -32,7 +36,6 @@ public class GameProgressData
 
     public string _currentScene;
     public int _currentStartPoint;
-    public bool _recopiledDataAdvice;
     public bool _recopiledDataAdvicePDMD;
     public bool _hasArrivedToPicDuMidi;
     public bool _hasDash;
@@ -114,13 +117,11 @@ public class GameProgressData
 
     public GameProgressData()
     {
-        _recopiledDataAdvice = true;
-        _piezasCamara = new bool[6];
+        _lomnickyPiezasCamara = new bool[6];
         _piezasHeatRejecter= new bool[6];
         _filtros = new bool[6];
         _currentScene = "";
         _currentStartPoint = 0;
-        _countDownStartTime = DateTime.Now.ToBinary().ToString();
     }
 }
 

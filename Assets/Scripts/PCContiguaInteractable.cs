@@ -92,7 +92,7 @@ public class PCContiguaInteractable : Interactable
         {
             _hasShownDialog = true;
         }
-        if (GameProgressController.IsCeilingClosed())
+        if (GameProgressController.LomnickyClosedCeiling)
         {
             gameObject.SetActive(false);
         }

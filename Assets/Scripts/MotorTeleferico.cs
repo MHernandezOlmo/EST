@@ -19,9 +19,9 @@ public class MotorTeleferico : Interactable
     {
         if (_canInteract)
         {
-            if (!GameProgressController.IsMotorFixed())
+            if (!GameProgressController.LomnickyMotor)
             {
-                if (!GameProgressController.HasFuse())
+                if (!GameProgressController.LomnickyFuse)
                 {
                     
                     _dialogue.triggerDialogueEvent(true);
@@ -37,7 +37,7 @@ public class MotorTeleferico : Interactable
                     _shake.enabled = true;
                     GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FixEngine"));
                     GetComponent<AudioSource>().Play();
-                    GameProgressController.SetMotorFixed(true);
+                    GameProgressController.LomnickyMotor = true;
                 }
             }
             else
@@ -54,7 +54,7 @@ public class MotorTeleferico : Interactable
     private void Start()
     {
         base.Start();
-        if (GameProgressController.IsMotorFixed())
+        if (GameProgressController.LomnickyMotor)
         {
             GetComponent<AudioSource>().Play();
             _shake.enabled = true;

@@ -7,7 +7,7 @@ public class Fusible : Interactable
 {
     public override void Interact()
     {
-        GameProgressController.SetHasFuse(true);
+        GameProgressController.LomnickyFuse = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/GetFuse"));
         Destroy(gameObject);

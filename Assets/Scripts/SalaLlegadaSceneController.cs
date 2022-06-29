@@ -8,7 +8,7 @@ public class SalaLlegadaSceneController : MonoBehaviour
 {
     MovementController _player;
 
-    DateTime _startTime;
+    float _startTime;
     [SerializeField]
     TextMeshProUGUI _countDownText;
     bool _lost;
@@ -16,29 +16,29 @@ public class SalaLlegadaSceneController : MonoBehaviour
     {
         _player = FindObjectOfType<MovementController>();
         GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
-        if (!GameProgressController.IsCeilingClosed())
+        if (!GameProgressController.LomnickyClosedCeiling)
         {
-            if (!GameProgressController.GetCountdown())
+            if (!GameProgressController.LomnickyCountdown)
             {
                 //Activo Cuenta Atrás
-                GameProgressController.SetCountdownActive(true);
+                GameProgressController.LomnickyCountdown = true;
             }
-            _startTime = GameProgressController.GetCountDownTime();
+            _startTime = GameProgressController.LomnickyCountdownTime;
         }
         
     }
     private void Update()
     {
-        if (!GameProgressController.IsCeilingClosed())
+        if (!GameProgressController.LomnickyClosedCeiling)
         {
-            TimeSpan _span = System.DateTime.Now.Subtract(_startTime);
-            int remainingSeconds = 150 - _span.Seconds;
+            GameProgressController.LomnickyCountdownTime += Time.deltaTime;
+            int remainingSeconds = (int)(150 - GameProgressController.LomnickyCountdownTime);
             if (remainingSeconds < 0)
             {
                 if (!_lost)
                 {
                     _lost = true;
-                    GameProgressController.SetCountdownActive(false);
+                    GameProgressController.LomnickyCountdown =false;
                     GameProgressController.SetArrivingRoomDoor(false);
                     GameEvents.LoadScene.Invoke("Lomnicky_2_Sala llegada");
 

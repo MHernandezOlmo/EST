@@ -150,22 +150,12 @@ public class Roulette : MonoBehaviour
                 if (won)
                 {
                     _gameStarted = false;
-                    GameProgressController.SetChoosePhenomenomSolved(true);
-                    PlayerPrefs.SetString("PuzzleSceneBack", "Lomnicky_11_Sala Cupula");
+
                     FindObjectOfType<PuzzleStatesController>().Win();
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            GameProgressController.SetChoosePhenomenomSolved(true);
-            PlayerPrefs.SetString("PuzzleSceneBack", "Lomnicky_11_Sala Cupula");
-            FindObjectOfType<PuzzleStatesController>().Win();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            FindObjectOfType<PuzzleStatesController>().GameOver();
-        }
+
     }
 
     IEnumerator CrRotateIntoID(Quaternion startRotation, Quaternion targetRotation)

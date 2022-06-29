@@ -25,7 +25,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
             en.enabled = false;
             en.GetComponent<Animator>().enabled = false;
         }
-        if (!GameProgressController.IsCazadoresDeFlaresSolved())
+        if (!GameProgressController.LomnickyPuzzleFlareHunters)
         {
             GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
             StartCoroutine(CrInitialCinematic());
@@ -35,7 +35,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
         else
         {
             _firstCamera.Priority = 0;
-            if (GameProgressController.IsChoosePhenomenomSolved())
+            if (GameProgressController.LomnickyPuzzleLayers)
             {
                 _dialog.SetActive(false);
                 _end.SetActive(true);

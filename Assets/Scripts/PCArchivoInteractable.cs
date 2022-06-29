@@ -30,7 +30,7 @@ public class PCArchivoInteractable : Interactable
     private void Start()
     {
         base.Start();
-        if (GameProgressController.IsCazadoresDeFlaresSolved())
+        if (GameProgressController.LomnickyPuzzleFlareHunters)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             gameObject.SetActive(false);

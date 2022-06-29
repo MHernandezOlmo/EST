@@ -26,7 +26,7 @@ public class PiezasObserver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameProgressController.IsChoosePhenomenomSolved())
+        if (GameProgressController.LomnickyPuzzleLayers)
         {
             _text.text = "";
         }

@@ -25,7 +25,7 @@ public class LamparaBot : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         _originPosition = transform.position;
-        if (GameProgressController.IsChoosePhenomenomSolved())
+        if (GameProgressController.LomnickyPuzzleLayers)
         {
             _skmr.material = _realMaterial;
             _canDie = true;

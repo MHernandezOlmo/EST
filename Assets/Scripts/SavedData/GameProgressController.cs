@@ -8,27 +8,595 @@ public class GameProgressController : MonoBehaviour
     public static GameProgressData _gameProgressData;
     
     const string _gameProgressDataFileName = "GameProgressData.json";
-    
 
-    public static bool GetIsLomnickySolved()
-    {
-        CheckInitialized();
-        return _gameProgressData._isLomnickySolved;
-    }
-    public static bool TopPiecePicked
+    #region Lomnicky
+
+    public static bool LomnickyTornadoSkill
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._topPiecePicked;
+            return _gameProgressData._lomnickyTornadoSkill;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._topPiecePicked = value;
+            _gameProgressData._lomnickyTornadoSkill = value;
             SaveGameProgressData();
         }
     }
+    public static bool LomnickyFuse
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyFuse;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyFuse=value;
+            SaveGameProgressData();
+        }
+
+    }
+    public static bool LomnickyMotor
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyMotor;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyMotor = value;
+            SaveGameProgressData();
+        }
+
+    }
+
+    public static bool LomnickyClosedCeiling
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyClosedCeiling;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyClosedCeiling = value;
+            SaveGameProgressData();
+        }
+
+    }
+    public static bool LomnickyCountdown
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyCountdown;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyCountdown = value;
+            SaveGameProgressData();
+        }
+    }
+    public static float LomnickyCountdownTime
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyCountdownTime;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyCountdownTime = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool LomnickyPuzzleFlareHunters
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyPuzzleFlareHunters;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyPuzzleFlareHunters = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool LomnickyRecopiledDataAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyRecopiledDataAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyRecopiledDataAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
+
+    public static bool GetPiezaCamara(int pieza)
+    {
+        CheckInitialized();
+        return _gameProgressData._lomnickyPiezasCamara[pieza];
+    }
+
+    public static void SetPiezaCamara(int pieza, bool state)
+    {
+        CheckInitialized();
+        _gameProgressData._lomnickyPiezasCamara[pieza] = state;
+        SaveGameProgressData();
+    }
+
+    public static bool LomnickyPuzzleLayers
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyPuzzleLayers;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickyPuzzleLayers = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool LomnickySolved
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickySolved;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._lomnickySolved = value;
+            SaveGameProgressData();
+        }
+    }
+
+
+    public static bool IsArrivingRoomDoorOpen()
+    {
+        CheckInitialized();
+        return _gameProgressData._arrivingRoomDoor;
+    }
+    public static void SetArrivingRoomDoor(bool newState)
+    {
+        CheckInitialized();
+        _gameProgressData._arrivingRoomDoor = newState;
+        SaveGameProgressData();
+
+    }
+    public static bool IsCombatRoomDoorOpen()
+    {
+        CheckInitialized();
+        return _gameProgressData._combatDoor;
+    }
+    public static void SetCombatRoomDoor(bool newState)
+    {
+        CheckInitialized();
+        _gameProgressData._combatDoor = newState;
+        SaveGameProgressData();
+
+    }
+    #endregion
+
+    #region PicDuMidi
+    public static bool GetHasAbrigo()
+    {
+        CheckInitialized();
+        return _gameProgressData._hasPicDuMidiAbrigo;
+    }
+    public static void SetHasAbrigo(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._hasPicDuMidiAbrigo = newValue;
+        SaveGameProgressData();
+    }
+    public static bool GetHasGlasses()
+    {
+        CheckInitialized();
+        return _gameProgressData._hasPicDuMidiGlasses;
+    }
+    public static void SetHasGlasses(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._hasPicDuMidiGlasses = newValue;
+        SaveGameProgressData();
+    }
+    public static void SetArrivedToPicDuMidi(bool value)
+    {
+        CheckInitialized();
+        _gameProgressData._hasArrivedToPicDuMidi = value;
+        SaveGameProgressData();
+    }
+    public static bool getArrivedToPicDuMudi()
+    {
+        CheckInitialized();
+        return _gameProgressData._hasArrivedToPicDuMidi;
+    }
+    public static bool PicDuMidiFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picdumidiFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picdumidiFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool CoronalAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._coronalEjectionAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._coronalEjectionAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool ToastersAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._toastersAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._toastersAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    #endregion
+
+    #region Einstein
+    public static bool EinsteinFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool GetHasPrismEinstein()
+    {
+        CheckInitialized();
+        return _gameProgressData._hasPrismEinstein;
+    }
+    public static void SetHasPrismEinstein(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._hasPrismEinstein = newValue;
+        SaveGameProgressData();
+    }
+    public static bool GetEinsteinTowerFirstAdvice()
+    {
+        CheckInitialized();
+        return _gameProgressData._einsteinTowerFirstAdvice;
+    }
+    public static void SetEinsteinTowerFirstAdvice(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._einsteinTowerFirstAdvice = newValue;
+        SaveGameProgressData();
+    }
+
+    public static bool GetNeedsPrismEinstein()
+    {
+        CheckInitialized();
+        return _gameProgressData._needPrismEinstein;
+    }
+    public static void SetNeedsPrismEinstein(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._needPrismEinstein = newValue;
+        SaveGameProgressData();
+    }
+
+    public static bool GetUsedPrismEinstein()
+    {
+        CheckInitialized();
+        return _gameProgressData._usedPrismEinstein;
+    }
+    public static void SetUsedPrismEinstein(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._usedPrismEinstein = newValue;
+        SaveGameProgressData();
+    }
+
+    public static bool GetShownPrismDialog()
+    {
+        CheckInitialized();
+        return _gameProgressData._shownPrismDialog;
+    }
+
+    public static void SetShownPrismDialog(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._shownPrismDialog = newValue;
+        SaveGameProgressData();
+    }
+
+
+    public static bool GetCorrectPositionSotanoAxis0()
+    {
+        CheckInitialized();
+        return _gameProgressData._correctPositionSotanoAxis0;
+    }
+
+    public static void SetCorrectPositionSotanoAxis0(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._correctPositionSotanoAxis0 = newValue;
+        SaveGameProgressData();
+    }
+    public static void SetCorrectPositionSotanoAxis1(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._correctPositionSotanoAxis1 = newValue;
+        SaveGameProgressData();
+    }
+
+    public static bool GetOpenEinsteinBasementDoor()
+    {
+        CheckInitialized();
+        return _gameProgressData._openEinsteinBasementDoor;
+    }
+
+    public static void SetOpenEinsteinBasementDoor(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._openEinsteinBasementDoor = newValue;
+        SaveGameProgressData();
+    }
+    public static bool GetCorrectPositionSotanoAxis1()
+    {
+        CheckInitialized();
+        return _gameProgressData._correctPositionSotanoAxis1;
+    }
+
+    public static bool GetCorrectPositionAxis0()
+    {
+        CheckInitialized();
+        return _gameProgressData._correctPositionAxis0;
+    }
+    public static bool GetCorrectPositionAxis1()
+    {
+        CheckInitialized();
+        return _gameProgressData._correctPositionAxis1;
+    }
+
+    public static bool GetCorrectPositionAxis2()
+    {
+        CheckInitialized();
+        return _gameProgressData._correctPositionAxis2;
+    }
+
+    public static void SetCorrectPositionAxis0(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._correctPositionAxis0 = newValue;
+        SaveGameProgressData();
+    }
+    public static void SetCorrectPositionAxis1(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._correctPositionAxis1 = newValue;
+        SaveGameProgressData();
+    }
+    public static void SetCorrectPositionAxis2(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._correctPositionAxis2 = newValue;
+        SaveGameProgressData();
+    }
+    public static bool GetIsFullRayWorking()
+    {
+        CheckInitialized();
+        bool fullRay = _gameProgressData._correctPositionAxis0 && _gameProgressData._correctPositionAxis1 && _gameProgressData._correctPositionAxis2;
+        return fullRay;
+    }
+
+    public static bool GetIsRayCrossingBasement()
+    {
+        CheckInitialized();
+        return GetIsFullRayWorking() && _gameProgressData._correctPositionSotanoAxis0 && _gameProgressData._correctPositionSotanoAxis1;
+    }
+
+    public static bool GetHasOpenBarrierEinstein()
+    {
+        CheckInitialized();
+
+        return _gameProgressData._hasOpenBarrierEinstein;
+    }
+    public static void SetHasOpenBarrierEinstein(bool newValue)
+    {
+        CheckInitialized();
+
+        _gameProgressData._hasOpenBarrierEinstein = newValue;
+        SaveGameProgressData();
+    }
+    public static bool GetNeedMirrorEinstein()
+    {
+        CheckInitialized();
+        return _gameProgressData._needMirrorEinstein;
+    }
+    public static void SetNeedMirrorEinstein(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._needMirrorEinstein = newValue;
+        SaveGameProgressData();
+    }
+
+    public static bool GetHasMirrorEinstein()
+    {
+        CheckInitialized();
+        return _gameProgressData._hasMirrorEinstein;
+    }
+    public static void SetHasMirrorEinstein(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._hasMirrorEinstein = newValue;
+        SaveGameProgressData();
+    }
+
+    public static bool GetUsedMirrorEinstein()
+    {
+        CheckInitialized();
+        return _gameProgressData._usedMirrorEinstein;
+    }
+    public static void SetUsedMirrorEinstein(bool newValue)
+    {
+        CheckInitialized();
+        _gameProgressData._usedMirrorEinstein = newValue;
+        SaveGameProgressData();
+    }
+
+
+    public static bool GetHasOpenDomeEinstein()
+    {
+        CheckInitialized();
+
+        return _gameProgressData._hasDomeOpenEinstein;
+
+    }
+    public static void SetHasOpenDomeEinstein(bool newValue)
+    {
+        CheckInitialized();
+
+        _gameProgressData._hasDomeOpenEinstein = newValue;
+        SaveGameProgressData();
+
+    }
+    #endregion
+
+    #region SST
+    public static bool SSTFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    #endregion
+
+    #region GREGOR
+    public static bool GregorDome
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorDome;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorDome = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool PlaceHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._heatRejecterPlaced;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._heatRejecterPlaced = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool GregorFinished
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorFinished;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorFinished = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool AdviceHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._adviceHR;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._adviceHR = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool TestedHR
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._testedHR;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._testedHR = value;
+            SaveGameProgressData();
+        }
+    }
+    #endregion
+
+    #region EST
     public static bool ESTGenerador
     {
         get
@@ -43,7 +611,6 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
     public static bool HeatMessages
     {
         get
@@ -58,7 +625,6 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
     public static bool MirrorAdvice
     {
         get
@@ -73,7 +639,6 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
     public static bool ESTOA
     {
         get
@@ -88,7 +653,6 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
     public static bool ESTMirror0
     {
         get
@@ -103,7 +667,6 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
     public static bool ESTMirror1
     {
         get
@@ -216,7 +779,7 @@ public class GameProgressController : MonoBehaviour
         set
         {
             CheckInitialized();
-            _gameProgressData._estDomeOpen= value;
+            _gameProgressData._estDomeOpen = value;
             SaveGameProgressData();
         }
     }
@@ -249,62 +812,6 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool EinsteinFinished
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._einsteinFinished;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._einsteinFinished = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool PicDuMidiFinished
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._picdumidiFinished;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._picdumidiFinished = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool GregorFinished
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._gregorFinished;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._gregorFinished = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool SSTFinished
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._SSTFinished;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._SSTFinished = value;
-            SaveGameProgressData();
-        }
-    }
     public static bool ESTFinished
     {
         get
@@ -319,77 +826,30 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool GregorDome
+    #endregion
+    public static bool TopPiecePicked
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._gregorDome;
+            return _gameProgressData._topPiecePicked;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._gregorDome = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool PlaceHR
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._heatRejecterPlaced;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._heatRejecterPlaced = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool AdviceHR
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._adviceHR;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._adviceHR = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool TestedHR
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._testedHR;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._testedHR = value;
+            _gameProgressData._topPiecePicked = value;
             SaveGameProgressData();
         }
     }
 
-    public static bool ToastersAdvice
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._toastersAdvice;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._toastersAdvice = value;
-            SaveGameProgressData();
-        }
-    }
+
+
+
+
+   
+
+
+
     public static bool HeatRejecter
     {
         get
@@ -404,20 +864,7 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool CoronalAdvice
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._coronalEjectionAdvice;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._coronalEjectionAdvice = value;
-            SaveGameProgressData();
-        }
-    }
+    
     public static bool NeedContactUV
     {
         get
@@ -516,28 +963,6 @@ public class GameProgressController : MonoBehaviour
             _gameProgressData._telescopeReady = value;
             SaveGameProgressData();
         }
-    }
-
-
-
-    public static void SetIsLomickySolved(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._isLomnickySolved = newValue;
-        SaveGameProgressData();
-    }
-    
-    public static bool GetHasTornadoSkill()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasTornadoesSkill;
-    }
-
-    public static void SetHasTornadoSkill(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasTornadoesSkill = newValue;
-        SaveGameProgressData();
     }
     
     public static int GetPiezasAO()
@@ -699,217 +1124,7 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static bool GetHasPrismEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasPrismEinstein;
-    }
-    public static void SetHasPrismEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasPrismEinstein = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetEinsteinTowerFirstAdvice()
-    {
-        CheckInitialized();
-        return _gameProgressData._einsteinTowerFirstAdvice;
-    }
-    public static void SetEinsteinTowerFirstAdvice(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._einsteinTowerFirstAdvice = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetNeedsPrismEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._needPrismEinstein;
-    }
-    public static void SetNeedsPrismEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._needPrismEinstein= newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetUsedPrismEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._usedPrismEinstein;
-    }
-    public static void SetUsedPrismEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._usedPrismEinstein= newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetShownPrismDialog()
-    {
-        CheckInitialized();
-        return _gameProgressData._shownPrismDialog;
-    }
     
-    public static void SetShownPrismDialog(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._shownPrismDialog = newValue;
-        SaveGameProgressData();
-    }
-
-
-    public static bool GetCorrectPositionSotanoAxis0()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionSotanoAxis0;
-    }
-
-    public static void SetCorrectPositionSotanoAxis0(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionSotanoAxis0 = newValue;
-        SaveGameProgressData();
-    }
-    public static void SetCorrectPositionSotanoAxis1(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionSotanoAxis1 = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetOpenEinsteinBasementDoor()
-    {
-        CheckInitialized();
-        return _gameProgressData._openEinsteinBasementDoor;
-    }
-
-    public static void SetOpenEinsteinBasementDoor(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._openEinsteinBasementDoor = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetCorrectPositionSotanoAxis1()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionSotanoAxis1;
-    }
-
-    public static bool GetCorrectPositionAxis0()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionAxis0;
-    }
-    public static bool GetCorrectPositionAxis1()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionAxis1;
-    }
-
-    public static bool GetCorrectPositionAxis2()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionAxis2;
-    }
-
-    public static void SetCorrectPositionAxis0(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionAxis0 = newValue;
-        SaveGameProgressData();
-    }
-    public static void SetCorrectPositionAxis1(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionAxis1 = newValue;
-        SaveGameProgressData();
-    }
-    public static void SetCorrectPositionAxis2(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionAxis2 = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetIsFullRayWorking()
-    {
-        CheckInitialized();
-        bool fullRay = _gameProgressData._correctPositionAxis0 && _gameProgressData._correctPositionAxis1 && _gameProgressData._correctPositionAxis2;
-        return fullRay;
-    } 
-
-    public static bool GetIsRayCrossingBasement()
-    {
-        CheckInitialized();
-        return GetIsFullRayWorking() && _gameProgressData._correctPositionSotanoAxis0 && _gameProgressData._correctPositionSotanoAxis1;
-    }
-
-    public static bool GetHasOpenBarrierEinstein()
-    {
-        CheckInitialized();
-
-        return _gameProgressData._hasOpenBarrierEinstein;
-    }
-    public static void SetHasOpenBarrierEinstein(bool newValue)
-    {
-        CheckInitialized();
-
-        _gameProgressData._hasOpenBarrierEinstein = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetNeedMirrorEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._needMirrorEinstein;
-    }
-    public static void SetNeedMirrorEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._needMirrorEinstein= newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetHasMirrorEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasMirrorEinstein;
-    }
-    public static void SetHasMirrorEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasMirrorEinstein= newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetUsedMirrorEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._usedMirrorEinstein;
-    }
-    public static void SetUsedMirrorEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._usedMirrorEinstein = newValue;
-        SaveGameProgressData();
-    }
-
-
-    public static bool GetHasOpenDomeEinstein()
-    {
-        CheckInitialized();
-
-        return _gameProgressData._hasDomeOpenEinstein;
-
-    }
-    public static void SetHasOpenDomeEinstein(bool newValue)
-    {
-        CheckInitialized();
-
-        _gameProgressData._hasDomeOpenEinstein = newValue;
-        SaveGameProgressData();
-
-    }
 
     public static bool GetAdvisedCoronograph()
     {
@@ -956,33 +1171,8 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static bool GetHasAbrigo()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasPicDuMidiAbrigo;
-    }
-    public static void SetHasAbrigo(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasPicDuMidiAbrigo = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetHasGlasses()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasPicDuMidiGlasses;
-    }
-    public static void SetHasGlasses(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasPicDuMidiGlasses = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetPiezaCamara(int pieza)
-    {
-        CheckInitialized();
-        return _gameProgressData._piezasCamara[pieza];
-    }
+
+
 
     public static bool GetPiezaHR(int pieza)
     {
@@ -1001,17 +1191,7 @@ public class GameProgressController : MonoBehaviour
         CheckInitialized();
         return _gameProgressData._filtros[filtro];
     }
-    public static void SetArrivedToPicDuMidi(bool value)
-    {
-        CheckInitialized();
-        _gameProgressData._hasArrivedToPicDuMidi = value;
-        SaveGameProgressData();
-    }
-    public static bool getArrivedToPicDuMudi()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasArrivedToPicDuMidi;
-    }
+
     public static void Reset()
     {
         CheckInitialized();
@@ -1036,17 +1216,7 @@ public class GameProgressController : MonoBehaviour
         return _gameProgressData._currentStartPoint;
 
     }
-    public static bool GetRecopiledDataAdvice()
-    {
-        CheckInitialized();
-        return _gameProgressData._recopiledDataAdvice;
-    }
-    public static void SetRecopiledDataAdvice(bool value)
-    {
-        CheckInitialized();
-        _gameProgressData._recopiledDataAdvice = value;
-        SaveGameProgressData();
-    }
+
     public static bool GetRecopiledDataAdvicePDMD()
     {
         CheckInitialized();
@@ -1101,78 +1271,17 @@ public class GameProgressController : MonoBehaviour
         CheckInitialized();
         return _gameProgressData._salaCombateCombate;
     }
-    public static void SetPiezaCamara(int pieza, bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._piezasCamara[pieza] = state;
-        SaveGameProgressData();
-    }
+
     public static void SetFiltro(int pieza, bool state)
     {
         CheckInitialized();
         _gameProgressData._filtros[pieza] = state;
         SaveGameProgressData();
     }
-    public static bool IsChoosePhenomenomSolved()
-    {
-        CheckInitialized();
-        return _gameProgressData._choosePhenomenomSolved;
-    }
-    public static void SetChoosePhenomenomSolved(bool newState)
-    {
-        CheckInitialized();
-        _gameProgressData._choosePhenomenomSolved = newState;
-        SaveGameProgressData();
-    }
-    public static bool IsCazadoresDeFlaresSolved()
-    {
-        CheckInitialized();
-        return _gameProgressData._cazadorDeFlaresSolved;
-    }
-    public static void SetCazadoresDeFlaresSolved(bool newState)
-    {
-        CheckInitialized();
-        _gameProgressData._cazadorDeFlaresSolved= newState;
-        SaveGameProgressData();
-    }
-    public static bool IsArrivingRoomDoorOpen()
-    {
-        CheckInitialized();
-        return _gameProgressData._arrivingRoomDoor;
-    }
-    public static void SetArrivingRoomDoor(bool newState)
-    {
-        CheckInitialized();
-        _gameProgressData._arrivingRoomDoor = newState;
-        SaveGameProgressData();
 
-    }
-    public static bool IsCombatRoomDoorOpen()
-    {
-        CheckInitialized();
-        return _gameProgressData._combatDoor;
-    }
-    public static void SetCombatRoomDoor(bool newState)
-    {
-        CheckInitialized();
-        _gameProgressData._combatDoor = newState;
-        SaveGameProgressData();
 
-    }
-    public static bool IsCeilingClosed()
-    {
-        CheckInitialized();
+    
 
-        return _gameProgressData._closedCeiling;
-    }
-    public static void SetCeilingClosed(bool newState)
-    {
-        CheckInitialized();
-
-        _gameProgressData._closedCeiling = newState;
-        SaveGameProgressData();
-
-    }
     public static bool IsInitialized()
     {
         bool hasGameProgressData = File.Exists(Application.persistentDataPath + "/" + _gameProgressDataFileName);
@@ -1194,26 +1303,6 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
-    public static bool GetCountdown()
-    {
-        CheckInitialized();
-        return _gameProgressData._countdownActive;
-    }
-    public static DateTime GetCountDownTime()
-    {
-        CheckInitialized();
-        DateTime countDownStart = DateTime.FromBinary(Convert.ToInt64(_gameProgressData._countDownStartTime));
-        return countDownStart;
-    }
-    public static void SetCountdownActive(bool newState)
-    {
-        CheckInitialized();
-        _gameProgressData._countdownActive = newState;
-        if(newState == true)
-        {
-            _gameProgressData._countDownStartTime = System.DateTime.Now.ToBinary().ToString();
-        }
-    }
     static void LoadAll()
     {
         LoadGameProgressData();
@@ -1232,20 +1321,7 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static bool IsMotorFixed()
-    {
-        CheckInitialized();
-        return _gameProgressData._motorFixed;
-
-    }
-
-    public static void SetMotorFixed(bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._motorFixed = state;
-        SaveGameProgressData();
-
-    }
+    
 
     public static bool HasDash()
     {
@@ -1258,11 +1334,7 @@ public class GameProgressController : MonoBehaviour
         _gameProgressData._hasDash = state;
         SaveGameProgressData();
     }
-    public static bool HasFuse()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasFuse;
-    }
+
     public static bool IsPanelFixed()
     {
         CheckInitialized();
@@ -1275,11 +1347,4 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static void SetHasFuse(bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._hasFuse = state;
-        SaveGameProgressData();
-
-    }
 }

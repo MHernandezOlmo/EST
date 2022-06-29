@@ -26,7 +26,7 @@ public class WorldSelectorSceneController : MonoBehaviour
         _worldButtons[0].interactable = true;
         _worldNamesText[0].text = "Lomnicky";
 
-        if (GameProgressController.GetIsLomnickySolved())
+        if (GameProgressController.LomnickySolved)
         {
             _worldImages[1].color = Color.white;
             _worldLockImages[1].gameObject.SetActive(false);

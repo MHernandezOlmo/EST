@@ -8,9 +8,8 @@ public class SpinSkill : Interactable
     [SerializeField] DialogueTrigger _skillText;
     public override void Interact()
     {
-
-        
-        GameProgressController.SetHasTornadoSkill(true);
+        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+        GameProgressController.LomnickyTornadoSkill = true;
         _skillText.triggerDialogueEvent(true);
         Destroy(gameObject.transform.parent.gameObject);
     }
