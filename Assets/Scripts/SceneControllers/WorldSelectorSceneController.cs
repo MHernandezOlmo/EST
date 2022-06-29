@@ -33,7 +33,7 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldButtons[1].interactable = true;
             _worldNamesText[1].text = "Einstein";
         }
-        if (GameProgressController.EinsteinFinished)
+        if (GameProgressController.EinsteinSolved)
         {
             _worldImages[2].color = Color.white;
             _worldLockImages[2].gameObject.SetActive(false);

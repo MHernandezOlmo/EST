@@ -19,7 +19,7 @@ public class SalaArchivoBISSceneController : MonoBehaviour
     public void ReturnToEinstein()
     {
         GameEvents.LoadScene.Invoke("Einstein_3_planta_1_sala_archivo");
-        GameProgressController.SetHasPrismEinstein(true);
+        GameProgressController.EinsteinHasPrism = true;
         GameProgressController.SetCurrentStartPoint(1);
     }
 }

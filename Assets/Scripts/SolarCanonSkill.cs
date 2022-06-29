@@ -10,7 +10,7 @@ public class SolarCanonSkill : Interactable
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         
         _skillText.triggerDialogueEvent(true);
-        GameProgressController.SetHasSolarCanon(true);
+        GameProgressController.EinsteinSolarCanonSkill = true;
         Destroy(gameObject.transform.parent.gameObject);
     }
 

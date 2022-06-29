@@ -39,7 +39,7 @@ public class PrismaController : MonoBehaviour
             if(_leftSolarPanel._active && _rightSolarPanel._active)
             {
                 _openBarrier= true;
-                GameProgressController.SetHasOpenBarrierEinstein(true);
+                GameProgressController.EinsteinOpenBarrier = true;
                 StartCoroutine(CrOpenBarrier());
             }
         }

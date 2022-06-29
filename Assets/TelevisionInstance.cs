@@ -18,7 +18,7 @@ public class TelevisionInstance : MonoBehaviour
     private SkinnedMeshRenderer _sMRenderer;
     void Start()
     {
-        if (GameProgressController.GetUsedPrismEinstein())
+        if (GameProgressController.EinsteinUsedPrism)
         {
             gameObject.layer = 0;
         }
@@ -30,13 +30,13 @@ public class TelevisionInstance : MonoBehaviour
         if(transform.parent == null)
         {
             isMain = true;
-            if (GameProgressController.GetUsedPrismEinstein())
+            if (GameProgressController.EinsteinUsedPrism)
             {
                 _sMRenderer = GetComponent<SkinnedMeshRenderer>();
                 _sMRenderer.materials = _unlockedMats;
             }
         }
-        else if (GameProgressController.GetUsedPrismEinstein())
+        else if (GameProgressController.EinsteinUsedPrism)
         {
             gameObject.SetActive(false);
         }
@@ -44,7 +44,7 @@ public class TelevisionInstance : MonoBehaviour
 
         if (isMain)
         {
-            if (GameProgressController.GetUsedPrismEinstein())
+            if (GameProgressController.EinsteinUsedPrism)
             {
                 GetComponent<EnemyController>().enabled = true;
             }

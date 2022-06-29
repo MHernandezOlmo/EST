@@ -15,7 +15,7 @@ public class CameraSecuredSceneController : MonoBehaviour
     {
         if (_spectropolarimeter)
         {
-            GameProgressController.EinsteinFinished = true;
+            GameProgressController.EinsteinSolved = true;
         }
         else
         {

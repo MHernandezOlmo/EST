@@ -64,7 +64,7 @@ public class CombatActivator : MonoBehaviour
             _sameTimeColliders++;
             if (_isEinsteinTower)
             {
-                if (GameProgressController.GetUsedPrismEinstein())
+                if (GameProgressController.EinsteinUsedPrism)
                 {
                     EnableCombat();
                 }
@@ -142,7 +142,7 @@ public class CombatActivator : MonoBehaviour
             }
         }
         CurrentSceneManager.SetGameState(GameStates.Exploration);
-        if (GameProgressController.GetUsedPrismEinstein() && SceneManager.GetActiveScene().name == "Einstein_0_alrededores_torre")
+        if (GameProgressController.EinsteinUsedPrism && SceneManager.GetActiveScene().name == "Einstein_0_alrededores_torre")
         {
             if (_finalCollider != null)
             {

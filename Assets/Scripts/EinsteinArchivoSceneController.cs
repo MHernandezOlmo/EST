@@ -9,7 +9,7 @@ public class EinsteinArchivoSceneController : MonoBehaviour
     private void Start()
     {
         _interactablePC = FindObjectOfType<EinsteinPCArchivo>();
-        if(!(GameProgressController.GetNeedsPrismEinstein() && !GameProgressController.GetHasPrismEinstein()))
+        if(!(GameProgressController.EinsteinNeedPrism && !GameProgressController.EinsteinHasPrism))
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(_interactablePC);
             Destroy(_interactablePC.transform.parent.gameObject);

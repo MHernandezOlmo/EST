@@ -8,7 +8,7 @@ public class SolarCanonSkillEnable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (GameProgressController.GetHasSolarCanon())
+        if (GameProgressController.EinsteinSolarCanonSkill)
         {
             if (other.CompareTag("Player"))
             {
@@ -21,7 +21,7 @@ public class SolarCanonSkillEnable : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (GameProgressController.GetHasSolarCanon())
+        if (GameProgressController.EinsteinSolarCanonSkill)
         {
             if (other.CompareTag("Player"))
             {

@@ -36,8 +36,8 @@ public class EinsteinDomeSceneController : MonoBehaviour
     IEnumerator Start()
     {
         CurrentSceneManager._skillEnabled = false;
-        _isDomeOpen = GameProgressController.GetHasOpenDomeEinstein();
-        if (GameProgressController.GetUsedMirrorEinstein())
+        _isDomeOpen = GameProgressController.EinsteinDomeOpen;
+        if (GameProgressController.EinsteinPlacedMirror)
         {
             _mirror.GetComponent<MeshRenderer>().materials[0] = _materialWhite; 
             _domeLeverAxis0.SetActive(true);
@@ -46,15 +46,15 @@ public class EinsteinDomeSceneController : MonoBehaviour
         }
         else
         {
-            if (GameProgressController.GetHasMirrorEinstein())
+            if (GameProgressController.EinsteinHasMirror)
             {
                 _mirrorInteractable.SetActive(true);
             }
         }
 
-        _axis0CorrectPosition = GameProgressController.GetCorrectPositionAxis0();
-        _axis1CorrectPosition = GameProgressController.GetCorrectPositionAxis1();
-        _axis2CorrectPosition = GameProgressController.GetCorrectPositionAxis2();
+        _axis0CorrectPosition = GameProgressController.EinsteinDomeAxis0;
+        _axis1CorrectPosition = GameProgressController.EinsteinDomeAxis1;
+        _axis2CorrectPosition = GameProgressController.EinsteinDomeAxis2;
         if (_axis0CorrectPosition)
         {
             _axis0.transform.localRotation = Quaternion.identity;
@@ -109,15 +109,15 @@ public class EinsteinDomeSceneController : MonoBehaviour
         _domeLeverAxis0.SetActive(true);
         _domeLeverAxis1.SetActive(true);
         _domeLeverAxis2.SetActive(true);
-        GameProgressController.SetUsedMirrorEinstein(true);
+        GameProgressController.EinsteinPlacedMirror = true;
     }
     public void OpenDome()
     {
         if (!_isDomeOpen)
         {
             _isDomeOpen = true;
-            GameProgressController.SetHasOpenDomeEinstein(true);
-            GameProgressController.SetNeedMirrorEinstein(true);
+            GameProgressController.EinsteinDomeOpen = true;
+            GameProgressController.EinsteinNeedMirror = true;
             StartCoroutine(CrOpenDome());
         }
     }
@@ -205,10 +205,10 @@ public class EinsteinDomeSceneController : MonoBehaviour
     {
         if (_axis0CorrectPosition)
         {
-            GameProgressController.SetCorrectPositionAxis0(true);
+            GameProgressController.EinsteinDomeAxis0 = true;
             if (_axis1CorrectPosition)
             {
-                GameProgressController.SetCorrectPositionAxis1(true);
+                GameProgressController.EinsteinDomeAxis1 = true;
                 _firstRay.GetComponent<LineRenderer>().SetPosition(0, _firstRay.transform.position);
                 _firstRay.GetComponent<LineRenderer>().SetPosition(1, _secondRay.transform.position);
                 _firstRay.SetActive(true);
@@ -220,12 +220,12 @@ public class EinsteinDomeSceneController : MonoBehaviour
                     _secondRay.GetComponent<LineRenderer>().SetPosition(0, _secondRay.transform.position);
                     _secondRay.GetComponent<LineRenderer>().SetPosition(1, _middleHole.transform.position);
                     _secondRay.SetActive(true);
-                    GameProgressController.SetCorrectPositionAxis2(true);
+                    GameProgressController.EinsteinDomeAxis2 = true;
                     _celostateWorking.triggerDialogueEvent(true);
                 }
                 else
                 {
-                    GameProgressController.SetCorrectPositionAxis2(false);
+                    GameProgressController.EinsteinDomeAxis2 = false;
                     _secondRay.SetActive(false);
                 }
             }
@@ -235,13 +235,13 @@ public class EinsteinDomeSceneController : MonoBehaviour
                 _skyRay.SetActive(false);
                 _secondRay.SetActive(false);
 
-                GameProgressController.SetCorrectPositionAxis1(false);
+                GameProgressController.EinsteinDomeAxis1 = false;
             }
 
         }
         else
         {
-            GameProgressController.SetCorrectPositionAxis0(false);
+            GameProgressController.EinsteinDomeAxis0 = false;
             _firstRay.SetActive(false);
             _skyRay.SetActive(false);
 

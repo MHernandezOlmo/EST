@@ -20,7 +20,25 @@ public class GameProgressData
     public bool _lomnickyPuzzleLayers;
     public bool _lomnickySolved;
 
-    public bool _einsteinFinished;
+    //Einstein
+    public bool _einsteinSolarCanonSkill;
+    public bool _einsteinOpenBarrier;
+    public bool _einsteinTowerFirstAdvice;
+    public bool _einsteinDomeOpen;
+    public bool _einsteinNeedMirror;
+    public bool _einsteinHasMirror;
+    public bool _einsteinPlacedMirror;
+    public bool _einsteinDomeAxis0;
+    public bool _einsteinDomeAxis1;
+    public bool _einsteinDomeAxis2;
+    public bool _einsteinBasementAxis0;
+    public bool _einsteinBasementAxis1;
+    public bool _einsteinNoPrismDialog;
+    public bool _einsteinNeedPrism;
+    public bool _einsteinHasPrism;
+    public bool _einsteinUsedPrism;
+    public bool _einsteinSolved;
+
     public bool _picdumidiFinished;
     public bool _gregorFinished;
     public bool _SSTFinished;
@@ -46,33 +64,17 @@ public class GameProgressData
     public bool _advisedCoronograph;
     public bool _floatingPlatformLeft;
     public bool _asociacionElementosSolved;
-    public bool _hasSolarCanon;
-    public bool _hasOpenBarrierEinstein;
-    public bool _hasDomeOpenEinstein;
-    public bool _needMirrorEinstein;
-    public bool _hasMirrorEinstein;
-    public bool _usedMirrorEinstein;
-    public bool _correctPositionAxis0;
-    public bool _correctPositionAxis1;
-    public bool _correctPositionAxis2;
     public bool _toastersAdvice;
     public bool _coronalEjectionAdvice;
     public bool _topPiecePicked;
-    public bool _correctPositionSotanoAxis0;
-    public bool _correctPositionSotanoAxis1;
 
     public bool _openEinsteinBasementDoor;
 
-    public bool _shownPrismDialog;
     public bool _needContactUV;
     public bool _findFiltersAdvice;
     public bool _telescopeReady;
     public bool _jetpack;
 
-    public bool _needPrismEinstein;
-    public bool _hasPrismEinstein;
-    public bool _usedPrismEinstein;
-    public bool _einsteinTowerFirstAdvice;
     public bool _parejas;
     public bool _tetris;
     public bool _paintTower;

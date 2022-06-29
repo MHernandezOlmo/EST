@@ -86,10 +86,94 @@ public class UserDataEditor : EditorWindow
             EditorGUILayout.EndHorizontal();
 
             GuiLine();
-            EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Einstein", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._einsteinFinished = EditorGUILayout.Toggle(_gameProgressData._einsteinFinished, GUILayout.Height(height), GUILayout.Width(200));
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Solar Canon Skill", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinSolarCanonSkill = EditorGUILayout.Toggle(_gameProgressData._einsteinSolarCanonSkill, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Open Barrier", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinOpenBarrier = EditorGUILayout.Toggle(_gameProgressData._einsteinOpenBarrier, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Tower First Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinTowerFirstAdvice= EditorGUILayout.Toggle(_gameProgressData._einsteinTowerFirstAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Dome Open", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinDomeOpen = EditorGUILayout.Toggle(_gameProgressData._einsteinDomeOpen, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Need Mirror", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinNeedMirror = EditorGUILayout.Toggle(_gameProgressData._einsteinNeedMirror, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Has Mirror", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinHasMirror = EditorGUILayout.Toggle(_gameProgressData._einsteinHasMirror, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Placed Mirror", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinPlacedMirror = EditorGUILayout.Toggle(_gameProgressData._einsteinPlacedMirror, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Dome Axis 0", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinDomeAxis0 = EditorGUILayout.Toggle(_gameProgressData._einsteinDomeAxis0, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Dome Axis 1", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinDomeAxis1 = EditorGUILayout.Toggle(_gameProgressData._einsteinDomeAxis1, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Dome Axis 2", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinDomeAxis2 = EditorGUILayout.Toggle(_gameProgressData._einsteinDomeAxis2, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Basement Axis 0", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinBasementAxis0 = EditorGUILayout.Toggle(_gameProgressData._einsteinBasementAxis0, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Basement Axis 1", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinBasementAxis1 = EditorGUILayout.Toggle(_gameProgressData._einsteinBasementAxis1, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("No Prism Dialog", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinNoPrismDialog = EditorGUILayout.Toggle(_gameProgressData._einsteinNoPrismDialog, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Need Prism", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinNeedPrism = EditorGUILayout.Toggle(_gameProgressData._einsteinNeedPrism, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Has Prism", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinHasPrism = EditorGUILayout.Toggle(_gameProgressData._einsteinHasPrism, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Used Prism", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinUsedPrism = EditorGUILayout.Toggle(_gameProgressData._einsteinUsedPrism, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Einstein Solved", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinSolved = EditorGUILayout.Toggle(_gameProgressData._einsteinSolved, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            GuiLine();
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("PicDuMidi", GUILayout.Height(height), GUILayout.Width(200));

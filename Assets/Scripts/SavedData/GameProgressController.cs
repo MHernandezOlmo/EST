@@ -279,99 +279,255 @@ public class GameProgressController : MonoBehaviour
     #endregion
 
     #region Einstein
-    public static bool EinsteinFinished
+    public static bool EinsteinSolarCanonSkill
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._einsteinFinished;
+            return _gameProgressData._einsteinSolarCanonSkill;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._einsteinFinished = value;
+            _gameProgressData._einsteinSolarCanonSkill = value;
             SaveGameProgressData();
         }
     }
-    public static bool GetHasPrismEinstein()
+    public static bool EinsteinSolved
     {
-        CheckInitialized();
-        return _gameProgressData._hasPrismEinstein;
-    }
-    public static void SetHasPrismEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasPrismEinstein = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetEinsteinTowerFirstAdvice()
-    {
-        CheckInitialized();
-        return _gameProgressData._einsteinTowerFirstAdvice;
-    }
-    public static void SetEinsteinTowerFirstAdvice(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._einsteinTowerFirstAdvice = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetNeedsPrismEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._needPrismEinstein;
-    }
-    public static void SetNeedsPrismEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._needPrismEinstein = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetUsedPrismEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._usedPrismEinstein;
-    }
-    public static void SetUsedPrismEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._usedPrismEinstein = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetShownPrismDialog()
-    {
-        CheckInitialized();
-        return _gameProgressData._shownPrismDialog;
-    }
-
-    public static void SetShownPrismDialog(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._shownPrismDialog = newValue;
-        SaveGameProgressData();
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinSolved;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinSolved = value;
+            SaveGameProgressData();
+        }
     }
 
 
-    public static bool GetCorrectPositionSotanoAxis0()
+    public static bool EinsteinOpenBarrier
     {
-        CheckInitialized();
-        return _gameProgressData._correctPositionSotanoAxis0;
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinOpenBarrier;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinOpenBarrier = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinTowerFirstAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinTowerFirstAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinTowerFirstAdvice = value;
+            SaveGameProgressData();
+        }
     }
 
-    public static void SetCorrectPositionSotanoAxis0(bool newValue)
+    public static bool EinsteinDomeOpen
     {
-        CheckInitialized();
-        _gameProgressData._correctPositionSotanoAxis0 = newValue;
-        SaveGameProgressData();
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinDomeOpen;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinDomeOpen = value;
+            SaveGameProgressData();
+        }
     }
-    public static void SetCorrectPositionSotanoAxis1(bool newValue)
+    public static bool EinsteinNeedMirror
     {
-        CheckInitialized();
-        _gameProgressData._correctPositionSotanoAxis1 = newValue;
-        SaveGameProgressData();
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinNeedMirror;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinNeedMirror = value;
+            SaveGameProgressData();
+        }
     }
+    public static bool EinsteinHasMirror
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinHasMirror;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinHasMirror = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinPlacedMirror
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinPlacedMirror;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinPlacedMirror = value;
+            SaveGameProgressData();
+        }
+    }
+
+
+    public static bool EinsteinDomeAxis0
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinDomeAxis0;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinDomeAxis0 = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinDomeAxis1
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinDomeAxis1;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinDomeAxis1 = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinDomeAxis2
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinDomeAxis2;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinDomeAxis2 = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinBasementAxis0
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinBasementAxis0;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinBasementAxis0 = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool EinsteinBasementAxis1
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinBasementAxis1;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinBasementAxis1 = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinNoPrismDialog
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinNoPrismDialog;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinNoPrismDialog = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinNeedPrism
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinNeedPrism;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinNeedPrism = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinHasPrism
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinHasPrism;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinHasPrism = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool EinsteinUsedPrism
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinUsedPrism;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinUsedPrism = value;
+            SaveGameProgressData();
+        }
+    }
+
+
+
+
+
 
     public static bool GetOpenEinsteinBasementDoor()
     {
@@ -385,125 +541,20 @@ public class GameProgressController : MonoBehaviour
         _gameProgressData._openEinsteinBasementDoor = newValue;
         SaveGameProgressData();
     }
-    public static bool GetCorrectPositionSotanoAxis1()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionSotanoAxis1;
-    }
 
-    public static bool GetCorrectPositionAxis0()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionAxis0;
-    }
-    public static bool GetCorrectPositionAxis1()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionAxis1;
-    }
-
-    public static bool GetCorrectPositionAxis2()
-    {
-        CheckInitialized();
-        return _gameProgressData._correctPositionAxis2;
-    }
-
-    public static void SetCorrectPositionAxis0(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionAxis0 = newValue;
-        SaveGameProgressData();
-    }
-    public static void SetCorrectPositionAxis1(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionAxis1 = newValue;
-        SaveGameProgressData();
-    }
-    public static void SetCorrectPositionAxis2(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._correctPositionAxis2 = newValue;
-        SaveGameProgressData();
-    }
     public static bool GetIsFullRayWorking()
     {
         CheckInitialized();
-        bool fullRay = _gameProgressData._correctPositionAxis0 && _gameProgressData._correctPositionAxis1 && _gameProgressData._correctPositionAxis2;
+        bool fullRay = _gameProgressData._einsteinDomeAxis0 && _gameProgressData._einsteinDomeAxis1 && _gameProgressData._einsteinDomeAxis2;
         return fullRay;
     }
 
     public static bool GetIsRayCrossingBasement()
     {
         CheckInitialized();
-        return GetIsFullRayWorking() && _gameProgressData._correctPositionSotanoAxis0 && _gameProgressData._correctPositionSotanoAxis1;
+        return GetIsFullRayWorking() && _gameProgressData._einsteinBasementAxis0 && _gameProgressData._einsteinBasementAxis1;
     }
 
-    public static bool GetHasOpenBarrierEinstein()
-    {
-        CheckInitialized();
-
-        return _gameProgressData._hasOpenBarrierEinstein;
-    }
-    public static void SetHasOpenBarrierEinstein(bool newValue)
-    {
-        CheckInitialized();
-
-        _gameProgressData._hasOpenBarrierEinstein = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetNeedMirrorEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._needMirrorEinstein;
-    }
-    public static void SetNeedMirrorEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._needMirrorEinstein = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetHasMirrorEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasMirrorEinstein;
-    }
-    public static void SetHasMirrorEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasMirrorEinstein = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetUsedMirrorEinstein()
-    {
-        CheckInitialized();
-        return _gameProgressData._usedMirrorEinstein;
-    }
-    public static void SetUsedMirrorEinstein(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._usedMirrorEinstein = newValue;
-        SaveGameProgressData();
-    }
-
-
-    public static bool GetHasOpenDomeEinstein()
-    {
-        CheckInitialized();
-
-        return _gameProgressData._hasDomeOpenEinstein;
-
-    }
-    public static void SetHasOpenDomeEinstein(bool newValue)
-    {
-        CheckInitialized();
-
-        _gameProgressData._hasDomeOpenEinstein = newValue;
-        SaveGameProgressData();
-
-    }
     #endregion
 
     #region SST
@@ -1131,17 +1182,7 @@ public class GameProgressController : MonoBehaviour
         CheckInitialized();
         return _gameProgressData._advisedCoronograph;
     }
-    public static bool GetHasSolarCanon()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasSolarCanon;
-    }
-    public static void SetHasSolarCanon(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasSolarCanon = newValue;
-        SaveGameProgressData();
-    }
+
     public static void SetAdvisedCoronograph(bool newValue)
     {
         CheckInitialized();

@@ -9,13 +9,13 @@ public class Plant0SceneController : MonoBehaviour
     [SerializeField] GameObject _portalOutside;
     void Start()
     {
-        if (!GameProgressController.GetEinsteinTowerFirstAdvice())
+        if (!GameProgressController.EinsteinTowerFirstAdvice)
         {
             StartCoroutine(CrPlayDialog());
         }
         bool isRay = GameProgressController.GetIsFullRayWorking();
         _ray.SetActive(isRay);
-        if (GameProgressController.GetUsedPrismEinstein())
+        if (GameProgressController.EinsteinUsedPrism)
         {
             _portalOutside.SetActive(true);
         }
@@ -24,7 +24,7 @@ public class Plant0SceneController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         _dialogTrigger.GetComponent<DialogueTrigger>().triggerDialogueEvent();
-        GameProgressController.SetEinsteinTowerFirstAdvice(true);
+        GameProgressController.EinsteinTowerFirstAdvice =true;
     }
     void Update()
     {

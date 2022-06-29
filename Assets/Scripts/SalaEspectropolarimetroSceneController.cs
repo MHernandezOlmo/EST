@@ -31,7 +31,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
             else
             {
                 _ray2.SetActive(true);
-                if (GameProgressController.GetUsedPrismEinstein())
+                if (GameProgressController.EinsteinUsedPrism)
                 {
                     SaveEspectropolarimetro();
                 }
@@ -47,7 +47,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     void Start()
     {
         CurrentSceneManager._skillEnabled = false;
-        if (!GameProgressController.GetShownPrismDialog())
+        if (!GameProgressController.EinsteinNoPrismDialog)
         {
             _prismAdvice.gameObject.SetActive(true);
         }
@@ -55,7 +55,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
         {
             _prismAdvice.gameObject.SetActive(false);
         }
-        if(GameProgressController.GetHasPrismEinstein() && !GameProgressController.GetUsedPrismEinstein())
+        if(GameProgressController.EinsteinHasPrism && !GameProgressController.EinsteinUsedPrism)
         {
             _spectropolarimetroInteractable.SetActive(true);
         }
@@ -73,7 +73,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
             _rayoBifurcadoR.SetActive(false);
         }
 
-        if (GameProgressController.GetUsedPrismEinstein())
+        if (GameProgressController.EinsteinUsedPrism)
         {
             SaveEspectropolarimetro();
         }
@@ -87,8 +87,8 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     }
     public void PrismAdvice()
     {
-        GameProgressController.SetShownPrismDialog(true);
-        GameProgressController.SetNeedsPrismEinstein(true);
+        GameProgressController.EinsteinNoPrismDialog = true;
+        GameProgressController.EinsteinNeedPrism = true;
     }
     public void AnimateSpectropolarimetro()
     {
@@ -108,7 +108,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     }
     public void UseBeamSplitter()
     {
-        GameProgressController.SetUsedPrismEinstein(true);
+        GameProgressController.EinsteinUsedPrism = true;
         HasPrism();
         _beamSplitter.SetActive(true);
 

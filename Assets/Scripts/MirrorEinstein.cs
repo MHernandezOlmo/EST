@@ -10,9 +10,9 @@ public class MirrorEinstein : Interactable
     private void Start()
     {
         base.Start();
-        if (GameProgressController.GetNeedMirrorEinstein())
+        if (GameProgressController.EinsteinNeedMirror)
         {
-            if (GameProgressController.GetHasMirrorEinstein())
+            if (GameProgressController.EinsteinHasMirror)
             {
                 FindObjectOfType<InteractablesController>().RemoveInteractable(this);
                 Destroy(_animator.gameObject);
@@ -29,7 +29,7 @@ public class MirrorEinstein : Interactable
     }
     public override void Interact()
     {
-        GameProgressController.SetHasMirrorEinstein(true);
+        GameProgressController.EinsteinHasMirror = true;
         _animator.SetTrigger("Get");
         _dialog.triggerDialogueEvent();
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);

@@ -33,7 +33,7 @@ public class Einstein0Alrededores : MonoBehaviour
     void Start()
     {
 
-        if (!GameProgressController.GetUsedPrismEinstein())
+        if (!GameProgressController.EinsteinUsedPrism)
         {
             _player = FindObjectOfType<MovementController>();
             //_player.autopilot = new Vector3(2.7f, 0.7f, -1.67f);

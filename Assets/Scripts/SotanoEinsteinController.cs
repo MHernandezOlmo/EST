@@ -33,8 +33,8 @@ public class SotanoEinsteinController : MonoBehaviour
         {
             _firstRay.SetActive(false);
         }
-        _correctPositionAxis0 = GameProgressController.GetCorrectPositionSotanoAxis0();
-        _correctPositionAxis1 = GameProgressController.GetCorrectPositionSotanoAxis1();
+        _correctPositionAxis0 = GameProgressController.EinsteinBasementAxis0;
+        _correctPositionAxis1 = GameProgressController.EinsteinBasementAxis1;
         _openBasementDoor = GameProgressController.GetOpenEinsteinBasementDoor();
         if (_correctPositionAxis0)
         {
@@ -102,7 +102,7 @@ public class SotanoEinsteinController : MonoBehaviour
 
         _sotanoAxis0.transform.localRotation = targetRotation;
         
-        GameProgressController.SetCorrectPositionSotanoAxis0(_correctPositionAxis0);
+        GameProgressController.EinsteinBasementAxis0 = _correctPositionAxis0;
         Check();
         _moving0 = false;
     }
@@ -124,7 +124,7 @@ public class SotanoEinsteinController : MonoBehaviour
         }
         _sotanoAxis1.transform.localRotation = targetRotation;
         _correctPositionAxis1 = !_correctPositionAxis1;
-        GameProgressController.SetCorrectPositionSotanoAxis1(_correctPositionAxis1);
+        GameProgressController.EinsteinBasementAxis1 = _correctPositionAxis1;
         Check();
         _moving1 = false;
     }
@@ -136,10 +136,10 @@ public class SotanoEinsteinController : MonoBehaviour
 
             if (_correctPositionAxis0)
             {
-                GameProgressController.SetCorrectPositionSotanoAxis0(true);
+                GameProgressController.EinsteinBasementAxis0 = true;
                 if (_correctPositionAxis1)
                 {
-                    GameProgressController.SetCorrectPositionSotanoAxis1(true);
+                    GameProgressController.EinsteinBasementAxis1 = true;
                     _ray.GetComponent<LineRenderer>().SetPosition(0, mirrorPoint.transform.position);
 
                     _ray.SetActive(true);
@@ -150,13 +150,13 @@ public class SotanoEinsteinController : MonoBehaviour
                 }
                 else
                 {
-                    GameProgressController.SetCorrectPositionSotanoAxis1(false);
+                    GameProgressController.EinsteinBasementAxis1 =false;
                     _ray.SetActive(false);
                 }
             }
             else
             {
-                GameProgressController.SetCorrectPositionSotanoAxis0(false);
+                GameProgressController.EinsteinBasementAxis0 = false;
                 _ray.SetActive(false);
             }
         }
