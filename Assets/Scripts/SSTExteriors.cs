@@ -15,7 +15,6 @@ public class SSTExteriors : MonoBehaviour
     bool _ended;
     void Start()
     {
-        
         _shownAlert = GameProgressController.GetMicrowaveAlert();
         _microWaves = FindObjectsOfType<EnemyMicroWave>();
         _playerController = FindObjectOfType<PlayerController>();
@@ -71,7 +70,6 @@ public class SSTExteriors : MonoBehaviour
                 _dialogTrigger.triggerDialogueEvent();
                 GameProgressController.SetMicrowaveAlert(true);
             }
-        }
-        
+        }      
     }
 }

@@ -125,6 +125,7 @@ public class CombatActivator : MonoBehaviour
     public void DisableCombat()
     {
         CurrentSceneManager._skillEnabled = false;
+        FindObjectOfType<EnemyHPPool>().DisableBars();
         _combatCanvas.Hide();
         _combatButton.SetActive(false);
         if (!_isLomnicky)

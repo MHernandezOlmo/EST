@@ -14,7 +14,11 @@ public class ObservacionSSTSceneController : MonoBehaviour
         }
         if (GameProgressController.GetHasAO())
         {
-            StartCoroutine(CrPlayDialog2());
+            if (PlayerPrefs.GetInt("HasReadedDialog", 0) == 0)
+            {
+                StartCoroutine(CrPlayDialog2());
+                PlayerPrefs.SetInt("HasReadedDialog", 1);
+            }
         }
     }
     IEnumerator CrPlayDialog()

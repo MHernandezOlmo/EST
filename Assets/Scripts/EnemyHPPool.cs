@@ -31,4 +31,12 @@ public class EnemyHPPool : MonoBehaviour
             }
         }
     }
+
+    public void DisableBars()
+    {
+        for (int i = 0; i < _hpBarRTs.Length; i++)
+        {
+            _hpBarRTs[i].gameObject.SetActive(false);
+        }
+    }
 }
