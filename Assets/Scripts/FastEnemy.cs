@@ -53,8 +53,11 @@ public class FastEnemy : MonoBehaviour
     IEnumerator CrShoot()
     {
         yield return new WaitForSeconds(_shootAnimationTime);
-        Instantiate(_shootPrefab, _shootPosition.position, Quaternion.identity);
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
+        if(CurrentSceneManager._state != GameStates.Dialogue)
+        {
+            Instantiate(_shootPrefab, _shootPosition.position, Quaternion.identity);
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
+        }
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(CrMove());
         yield return new WaitForSeconds(1f);

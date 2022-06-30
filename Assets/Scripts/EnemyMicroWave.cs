@@ -104,7 +104,7 @@ public class EnemyMicroWave : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(transform.position + transform.forward*2f + Vector3.up*2, Vector3.down,out hit,10,1<<14);
 
-        Vector3 targetPos = hit.point;
+        Vector3 targetPos = hit.point + Vector3.up * 0.1f;
 
         for (float i = 0; i < movDur; i += Time.deltaTime)
         {
@@ -116,7 +116,14 @@ public class EnemyMicroWave : MonoBehaviour
         if (Vector3.Distance(transform.position, _player.position) < 15)
         {
             yield return new WaitForSeconds(0.5f);
-            StartCoroutine(CrAttack());
+            if (CurrentSceneManager._state != GameStates.Dialogue)
+            {
+                StartCoroutine(CrAttack());
+            }
+            else
+            {
+                StartCoroutine(CrMove());
+            }
         }
         else
         {
