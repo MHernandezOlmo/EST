@@ -34,9 +34,4 @@ public class ESTOpenDome : Interactable
     {
         _dialogToTrigger = _trigger;
     }
-
-    public void LoadOtherScene()
-    {
-
-    }
 }

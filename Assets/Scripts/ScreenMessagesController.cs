@@ -17,6 +17,8 @@ public class ScreenMessagesController : MonoBehaviour
     Image _background;
     [SerializeField]
     GameObject _screenMessagesHolder;
+    Coroutine _crShowText;
+
     private void Awake()
     {
         GameEvents.ShowScreenText.AddListener(ShowText);
@@ -28,7 +30,11 @@ public class ScreenMessagesController : MonoBehaviour
     {
         _currentTextToShow = textToShow;
         _counter = 0;
-        StartCoroutine(CrShowText());
+        if(_crShowText != null)
+        {
+            StopCoroutine(_crShowText);
+        }
+        _crShowText = StartCoroutine(CrShowText());
     }
     IEnumerator CrShowText()
     {
@@ -51,7 +57,6 @@ public class ScreenMessagesController : MonoBehaviour
         }
         _rt.transform.localScale = Vector3.zero;
         _screenMessagesHolder.SetActive(false);
-
     }
 
     public void Next()
@@ -60,5 +65,4 @@ public class ScreenMessagesController : MonoBehaviour
         _counter++;
         StartCoroutine(CrShowText());
     }
-
 }

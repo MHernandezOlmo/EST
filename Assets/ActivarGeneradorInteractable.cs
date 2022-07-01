@@ -24,6 +24,7 @@ public class ActivarGeneradorInteractable : Interactable
             GameProgressController.ESTGenerador = true;
             _dialogToTrigger.triggerDialogueEvent(true);
             FindObjectOfType<DarknessController>().TurnOnLight();
+            FindObjectOfType<MissionCanvasController>().HideMission();
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
         }

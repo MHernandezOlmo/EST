@@ -50,15 +50,49 @@ public class MusicManager : MonoBehaviour
                     PlayMusicTransition(GetDefMusicCode());
                 }
             }
-            else
+            else 
             {
-                PlayMusicTransition(GetRandomMusicIndex());
+                char firstChar = 'a';
+                char secondChar = 'a';
+                if (GameProgressController.GetCurrentScene().Length > 2)
+                {
+                    firstChar = GameProgressController.GetCurrentScene()[0];
+                    secondChar = GameProgressController.GetCurrentScene()[1];
+                }
+                if(firstChar == 'E' && secondChar == 'S')
+                {
+                    PlayMusicTransition(GetRandomESTIndex());
+                }
+                else
+                {
+                    PlayMusicTransition(GetRandomMusicIndex());
+                }
             }
         }
         else
         {
             PlayMusicTransition(GetDefMusicCode());
         }     
+    }
+
+    public int GetRandomESTIndex()
+    {
+        int randomIndex;
+        int[] validIndexes = new int[] {8,10,12};
+        if (_lastRandomIndex == -1)
+        {
+            randomIndex = Random.Range(0, validIndexes.Length);
+        }
+        else
+        {
+            do
+            {
+                randomIndex = Random.Range(0, validIndexes.Length);
+            }
+            while (validIndexes[randomIndex] == _lastRandomIndex);
+        }
+        _lastRandomIndex = randomIndex;
+        return validIndexes[randomIndex];
     }
 
     public int GetRandomMusicIndex()

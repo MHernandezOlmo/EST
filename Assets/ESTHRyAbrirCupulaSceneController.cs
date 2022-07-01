@@ -9,19 +9,24 @@ public class ESTHRyAbrirCupulaSceneController : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(1f);
-
         if (GameProgressController.ESTDomeOpen)
         {
             if (!GameProgressController.ESTSecondAdvice)
             {
+                yield return null;
+                FindObjectOfType<MissionCanvasController>().HideMission();
+            }
+        }
+        yield return new WaitForSeconds(1f);
+        if (GameProgressController.ESTDomeOpen)
+        {
+            if (!GameProgressController.ESTSecondAdvice)
+            {
+                FindObjectOfType<MissionCanvasController>().HideMission();
                 GameProgressController.ESTSecondAdvice = true;
                 _dialog3.triggerDialogueEvent(true);
             }
         }
-
-        
-
         if(GameProgressController.Mirror && !GameProgressController.MirrorAdvice)
         {
             GameProgressController.MirrorAdvice = true;
@@ -33,5 +38,4 @@ public class ESTHRyAbrirCupulaSceneController : MonoBehaviour
     {
         GameEvents.LoadScene.Invoke("Espejo");
     }
-
 }

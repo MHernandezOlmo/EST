@@ -29,6 +29,7 @@ public class ESTAireM1M2 : Interactable
             _interacted = true;
             _dialogToTrigger.triggerDialogueEvent(true);
             GameProgressController.ESTAireM1M2 = true;
+            FindObjectOfType<MissionCanvasController>().HideMission();
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
         }

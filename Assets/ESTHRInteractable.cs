@@ -28,6 +28,7 @@ public class ESTHRInteractable : Interactable
             _interacted = true;
             _dialogToTrigger.triggerDialogueEvent(true);
             GameProgressController.ESTHR = true;
+            FindObjectOfType<MissionCanvasController>().HideMission();
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
         }

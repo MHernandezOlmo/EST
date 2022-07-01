@@ -56,7 +56,7 @@ public class BadassAttack : MonoBehaviour
     {
         if(Vector3.Distance(_playerController.transform.position, transform.position) < 1)
         {
-            _playerController.ReceiveDamage(10000);
+            _playerController.ReceiveDamage(5000);
         }
     }
 

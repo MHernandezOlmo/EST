@@ -27,6 +27,7 @@ public class ESTOA : Interactable
             _interacted = true;
             _dialogToTrigger.triggerDialogueEvent(true);
             GameProgressController.ESTOA = true;
+            FindObjectOfType<MissionCanvasController>().HideMission();
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
         }

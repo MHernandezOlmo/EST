@@ -24,10 +24,9 @@ public class PlayerController : MonoBehaviour
     bool isJetpacking;
     [SerializeField] AnimationCurve _animationCurve;
     private Animator _animator;
-    private bool _superRotate;
     private int _currentHp;
     private int _maxHP =300;
-    private bool _dead, _underCD;
+    private bool _superRotate, _dead, _underCD, _megaRobot;
     private Coroutine _cDCr;
     public HPBar _currentHPBar;
     float _restoreHP = 0f;
@@ -47,10 +46,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.GetComponent<EnemyController>() != null)
         {
-
             if (isJetpacking)
             {
-
                 other.GetComponent<EnemyController>().ReceiveDamage(1000);
             }
         }
@@ -59,6 +56,10 @@ public class PlayerController : MonoBehaviour
 
     public void ReceiveDamage(int newValue)
     {
+        if(newValue == 5000)
+        {
+            _megaRobot = true;
+        }
         if (FindObjectOfType<CameraShake>() == null)
         {
             Camera.main.gameObject.AddComponent<CameraShake>();
@@ -111,8 +112,25 @@ public class PlayerController : MonoBehaviour
     IEnumerator CrWaitForDie()
     {
         yield return new WaitForSeconds(1f);
-        AudioEvents.playDefMusic.Invoke();
-        GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+        if(CurrentSceneManager._state == GameStates.Combat)
+        {
+            AudioEvents.playDefMusic.Invoke();
+        }
+        if (_megaRobot)
+        {
+            if (SceneManager.GetActiveScene().name.Contains("exterior"))
+            {
+                GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                GameEvents.LoadScene.Invoke("EST_hall");
+            }
+        }
+        else
+        {
+            GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+        }
     }
 
     IEnumerator CrPosition()
