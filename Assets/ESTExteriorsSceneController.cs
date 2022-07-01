@@ -7,6 +7,7 @@ public class ESTExteriorsSceneController : MonoBehaviour
 {
     [SerializeField] private DialogueTrigger _dialogTrigger;
     [SerializeField] private DialogueTrigger _dialogTriggerPreCombat;
+    [SerializeField] private GameObject _trappedCanvas;
     private BadassEnemy _badassEnemy;
     private PlayerController _playerController;
     [SerializeField] private CinemachineVirtualCamera _bossCamera;
@@ -20,11 +21,15 @@ public class ESTExteriorsSceneController : MonoBehaviour
         //FindObjectOfType<BadassAttack>().StartAttack();
 
     }
-    IEnumerator Start()
+    void Start()
     {
         _badassEnemy = FindObjectOfType<BadassEnemy>();
         _playerController = FindObjectOfType<PlayerController>();
-        yield return new WaitForSeconds(1f);
+    }
+
+    public void LaunchDialog()
+    {
+        _trappedCanvas.SetActive(true);
         _dialogTrigger.triggerDialogueEvent(true);
     }
 
