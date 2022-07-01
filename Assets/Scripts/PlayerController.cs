@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     private bool _superRotate;
     private int _currentHp;
     private int _maxHP =300;
-    private bool _dead;
+    private bool _dead, _underCD;
+    private Coroutine _cDCr;
     public HPBar _currentHPBar;
     float _restoreHP = 0f;
     [SerializeField] GameObject _interactButton;
@@ -69,6 +70,11 @@ public class PlayerController : MonoBehaviour
         }
         if (!_dead)
         {
+            if(_cDCr != null)
+            {
+                StopCoroutine(_cDCr);
+            }
+            _cDCr = StartCoroutine(CrCoolDown());
             _currentHPBar.Show();
             _currentHp -= newValue;
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Hit);
@@ -142,15 +148,21 @@ public class PlayerController : MonoBehaviour
                 if (!isJetpacking) ReceiveDamage(9999);
             }
         }
-        _restoreHP += Time.deltaTime*10;
-        if (_restoreHP >= 1)
+        if (!_dead)
         {
-            _currentHp++;
-            _restoreHP = 0;
-        }
-        if (_currentHp > _maxHP)
-        {
-            _currentHp = _maxHP;
+            if (!_underCD)
+            {
+                _restoreHP += Time.deltaTime * 10;
+                if (_restoreHP >= 1)
+                {
+                    _currentHp++;
+                    _restoreHP = 0;
+                }
+                if (_currentHp > _maxHP)
+                {
+                    _currentHp = _maxHP;
+                }
+            }
         }
         if (_currentCharacter == Character.Goran)
         {
@@ -480,5 +492,12 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.25f); //Attack wait time
         CurrentSceneManager._canSpin = true;
+    }
+
+    IEnumerator CrCoolDown()
+    {
+        _underCD = true;
+        yield return new WaitForSeconds(1f);
+        _underCD = false;
     }
 }
