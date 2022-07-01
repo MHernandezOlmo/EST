@@ -9,11 +9,4 @@ public class ESTSalaGeneradorSceneController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         FindObjectOfType<BadassAttack>().ContinuosAttack();
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
