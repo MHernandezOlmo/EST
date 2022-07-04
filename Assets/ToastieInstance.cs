@@ -14,7 +14,7 @@ public class ToastieInstance : MonoBehaviour
     [SerializeField] private SkinnedMeshRenderer _meshRenderer;
     void Start()
     {
-        if (!GameProgressController.HasAllFilters())
+        if (!GameProgressController.HasAllPicDuMidiFilters())
         {
             Material[] mats = _meshRenderer.materials;
             mats[1]= _fresnel;

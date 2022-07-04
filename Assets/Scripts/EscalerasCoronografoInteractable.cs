@@ -11,7 +11,7 @@ public class EscalerasCoronografoInteractable :Interactable
     public override void Interact()
     {
         canInteract = false;
-        if (GameProgressController.HasAllFilters())
+        if (GameProgressController.HasAllPicDuMidiFilters())
         {
             _triggerStart.triggerDialogueEvent(true);
 
@@ -24,7 +24,7 @@ public class EscalerasCoronografoInteractable :Interactable
     }
     public void LoadOtherScene()
     {
-        GameEvents.LoadScene.Invoke("Asociacion");
+        GameEvents.LoadScene.Invoke("PicDuMidiPuzzleAssociation");
     }
     IEnumerator RestoreInteract()
     {

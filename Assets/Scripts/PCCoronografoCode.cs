@@ -12,20 +12,26 @@ public class PCCoronografoCode : Interactable
     [SerializeField] private DialogueTrigger _dialog;
     public override void Interact()
     {
-        if (GameProgressController.HasAllFilters())
+        if (GameProgressController.HasAllPicDuMidiFilters())
         {
             GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
             StartCoroutine(CrShowTablon());
         }
-        else
+    }
+    private void Start()
+    {
+        base.Start();
+        if (!GameProgressController.HasAllPicDuMidiFilters())
         {
-            _dialog.triggerDialogueEvent(true);
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(gameObject);
         }
-
+        
     }
     public void Hide()
     {
         StartCoroutine(CrHideTablon());
+
     }
     public void Comprobar()
     {

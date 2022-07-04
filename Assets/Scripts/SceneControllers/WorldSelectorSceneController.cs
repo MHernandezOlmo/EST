@@ -41,7 +41,7 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldNamesText[2].text = "Pic du Midi";
 
         }
-        if (GameProgressController.PicDuMidiFinished)
+        if (GameProgressController.PicDuMidiSolved)
         {
             _worldImages[3].color = Color.white;
             _worldLockImages[3].gameObject.SetActive(false);

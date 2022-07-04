@@ -16,7 +16,7 @@ public class ProjectorInteractable : Interactable
 
     public override void Interact()
     {
-        if (GameProgressController.HasAllFilters())
+        if (GameProgressController.HasAllPicDuMidiFilters())
         {
             _projectorCamera.SetActive(true);
             _projectorCanvas.SetActive(true);

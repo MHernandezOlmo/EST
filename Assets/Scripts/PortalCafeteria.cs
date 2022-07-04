@@ -29,7 +29,7 @@ public class PortalCafeteria : MonoBehaviour
     {
         if (!_canExit)
         {
-            if (GameProgressController.GetHasAbrigo() && GameProgressController.GetHasGlasses())
+            if (GameProgressController.PicDuMidiCoat && GameProgressController.PicDuMidiGlasses)
             {
                 _canExit = true;
                 _boxCollider.enabled = true;

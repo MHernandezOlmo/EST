@@ -14,7 +14,7 @@ public class SceneChangeInteractableCafeteria : Interactable
     {
         if (!_canExit)
         {
-            if (GameProgressController.GetHasAbrigo() && GameProgressController.GetHasGlasses())
+            if (GameProgressController.PicDuMidiCoat && GameProgressController.PicDuMidiGlasses)
             {
                 _canExit = true;
             }

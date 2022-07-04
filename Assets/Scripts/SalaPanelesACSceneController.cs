@@ -14,7 +14,7 @@ public class SalaPanelesACSceneController : MonoBehaviour
     public GameObject _closet;
     private void Awake()
     {
-        if (!GameProgressController.getArrivedToPicDuMudi())
+        if (!GameProgressController.PicDuMidiWelcome)
         {
             GameProgressController.SetCurrentStartPoint(0);
         }
@@ -28,7 +28,7 @@ public class SalaPanelesACSceneController : MonoBehaviour
     IEnumerator CrEnd()
     {
         yield return new WaitForSeconds(1f);
-        if (GameProgressController.Parejas)
+        if (GameProgressController.PicDuMidiPuzzleAssociation)
         {
             _endTrigger.triggerDialogueEvent(true);
         }
@@ -37,16 +37,17 @@ public class SalaPanelesACSceneController : MonoBehaviour
 
     public void LoadMenu()
     {
-        GameEvents.LoadScene.Invoke("WorldSelector");
+        PlayerPrefs.SetInt("PieceToSecure", 2);
+        GameEvents.LoadScene.Invoke("SecurePiece");
     }
     void Start()
     {
-        if (!GameProgressController.getArrivedToPicDuMudi())
+        if (!GameProgressController.PicDuMidiWelcome)
         {
             player = FindObjectOfType<MovementController>();
             GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
             StartCoroutine(CrStart());
-            GameProgressController.SetArrivedToPicDuMidi(true);
+            GameProgressController.PicDuMidiWelcome = true;
         }
         else
         {

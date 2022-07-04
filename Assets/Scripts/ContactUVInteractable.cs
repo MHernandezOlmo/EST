@@ -7,7 +7,7 @@ public class ContactUVInteractable : Interactable
     [SerializeField] DialogueTrigger _dialogTrigger;
     private void Awake()
     {
-        if (!GameProgressController.NeedContactUV)
+        if (!GameProgressController.PicDuMidiNeedContactUV)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);

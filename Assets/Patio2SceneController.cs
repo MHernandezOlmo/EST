@@ -9,7 +9,7 @@ public class Patio2SceneController : MonoBehaviour
 
     void Start()
     {
-        if (GameProgressController.CoronalAdvice)
+        if (GameProgressController.PicDuMidiCoronalEjectionAdvice)
         {
             _dialog.gameObject.SetActive(false);
         }
@@ -17,13 +17,13 @@ public class Patio2SceneController : MonoBehaviour
 
     public void ReadAdvice()
     {
-        GameProgressController.CoronalAdvice = true;
+        GameProgressController.PicDuMidiCoronalEjectionAdvice = true;
         _dialog.gameObject.SetActive(false);
     }
     public void ContactUV()
     {
         GameEvents.ShowScreenText.Invoke("Find a way to contact UV");
-        GameProgressController.NeedContactUV = true;
+        GameProgressController.PicDuMidiNeedContactUV = true;
 
     }
 }

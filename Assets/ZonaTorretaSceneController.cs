@@ -9,7 +9,7 @@ public class ZonaTorretaSceneController : MonoBehaviour
 
     void Start()
     {
-        if (GameProgressController.ToastersAdvice)
+        if (GameProgressController.PicDuMidiToastersAdvice)
         {
             _dialog.gameObject.SetActive(false);
         }
@@ -17,7 +17,7 @@ public class ZonaTorretaSceneController : MonoBehaviour
 
     public void ReadAdvice()
     {
-        GameProgressController.ToastersAdvice = true;
+        GameProgressController.PicDuMidiToastersAdvice = true;
         _dialog.gameObject.SetActive(false);
     }
 }

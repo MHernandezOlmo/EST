@@ -8,7 +8,7 @@ public class DashSkill : Interactable
 
     public void Awake()
     {
-        if (GameProgressController.HasDash())
+        if (GameProgressController.PicDuMidiDashSkill)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject.transform.parent.gameObject);
@@ -17,7 +17,7 @@ public class DashSkill : Interactable
 
     public override void Interact()
     {
-        GameProgressController.SetHasDash(true);
+        GameProgressController.PicDuMidiDashSkill = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         _skillText.triggerDialogueEvent(true);
         Destroy(gameObject.transform.parent.gameObject);

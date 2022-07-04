@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
     {
         if (!_dead)
         {
-            if(_enemyType == EnemyType.Toast && !GameProgressController.HasAllFilters())
+            if(_enemyType == EnemyType.Toast && !GameProgressController.HasAllPicDuMidiFilters())
             {
                 return;
             }

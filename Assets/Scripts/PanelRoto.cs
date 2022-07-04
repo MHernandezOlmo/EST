@@ -10,7 +10,7 @@ public class PanelRoto : Interactable
     [SerializeField] DialogueTrigger _filterQuest;
     public override void Interact()
     {
-        if (GameProgressController.IsPanelFixed())
+        if (GameProgressController.PicDuMidiPuzzleCoronagraph)
         {
 
         }
@@ -26,11 +26,6 @@ public class PanelRoto : Interactable
     private void Start()
     {
         base.Start();
-        //if (PlayerPrefs.GetInt("ComingFromPDMD") == 1)
-        //{
-        //    PlayerPrefs.SetInt("ComingFromPDMD", 0);
-        //    StartCoroutine(WaitForDialog());
-        //}
     }
     IEnumerator WaitForDialog()
     {

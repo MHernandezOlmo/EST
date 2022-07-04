@@ -5270,6 +5270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba2af8de0f0be444ae31ebb0ae2d493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inCam: {fileID: 0}
+  _midCam: {fileID: 0}
+  _endCam: {fileID: 0}
 --- !u!1 &380775879
 GameObject:
   m_ObjectHideFlags: 0
@@ -14576,7 +14579,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1884925855}
   - component: {fileID: 1884925854}
-  - component: {fileID: 1884925853}
   - component: {fileID: 1884925852}
   m_Layer: 0
   m_Name: ToEscaleras (1)
@@ -14594,28 +14596,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884925851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc12558cb552194d93d028a42513165, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e7b0414fdba2284294f5a3b2291dff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _point: 0
---- !u!114 &1884925853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884925851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec76b358af57dbd4995a1b605d76a283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetScene:
-    sceneAsset: {fileID: 102900000, guid: bfdf3953cdd72e44783e70aa3dd662bd, type: 3}
-    scenePath: Assets/Scenes/Worlds/Lomnicky/SpectropolarimeterSecured.unity
-  canComeBack: 1
-  arrivingAutopilotOffset: {x: 0, y: 0, z: -1}
-  leavingAutopilotOffset: {x: 0, y: 0, z: 1}
+  piece: 1
 --- !u!65 &1884925854
 BoxCollider:
   m_ObjectHideFlags: 0

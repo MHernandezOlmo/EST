@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (CurrentSceneManager.CanDash)
                     {
-                        if (GameProgressController.HasDash())
+                        if (GameProgressController.PicDuMidiDashSkill)
                         {
                             CurrentSceneManager.CanDash = false;
                             StartCoroutine(CrDash());

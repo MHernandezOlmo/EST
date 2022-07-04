@@ -6,7 +6,6 @@ using System;
 [System.Serializable]
 public class GameProgressData
 {
-
     //LOMNICKY
     public bool _lomnickyTornadoSkill;
     public bool _lomnickyFuse;
@@ -39,7 +38,23 @@ public class GameProgressData
     public bool _einsteinUsedPrism;
     public bool _einsteinSolved;
 
-    public bool _picdumidiFinished;
+    //PicDuMidi
+    public bool _picDuMidiWelcome;
+    public bool _picDuMidiCoat;
+    public bool _picDuMidiGlasses;
+    public bool _picDuMidiDashSkill;
+    public bool _picDuMidiToastersAdvice;
+    public bool _picDuMidiUncoveredJeanRoch;
+    public bool _picDuMidiPuzzleCoronagraph;
+    public bool _picDuMidiCoronalEjectionAdvice;
+    public bool[] _picDuMidiFilters;
+    public bool _picDuMidiNeedContactUV;
+    public bool _picDuMidiFindFiltersAdvice;
+    public bool _picDuMidiFloatingPlatformLeft;
+    public bool _picDuMidiPuzzleAssociation;
+    public bool _picDuMidiAssociationSolvedAdvice;
+    public bool _picDuMidiSolved;
+
     public bool _gregorFinished;
     public bool _SSTFinished;
     public bool _ESTFinished;
@@ -48,30 +63,16 @@ public class GameProgressData
     public bool[] _piezasHeatRejecter;
     public bool _heatRejecter;
     public bool _heatRejecterPlaced;
-    public bool[] _filtros;
     public bool _salaCombateCombate;
     public bool _gregorDome;
 
     public string _currentScene;
     public int _currentStartPoint;
     public bool _recopiledDataAdvicePDMD;
-    public bool _hasArrivedToPicDuMidi;
-    public bool _hasDash;
-    public bool _isPanelFixed;
-    public bool _uncovered;
-    public bool _hasPicDuMidiAbrigo;
-    public bool _hasPicDuMidiGlasses;
-    public bool _advisedCoronograph;
-    public bool _floatingPlatformLeft;
-    public bool _asociacionElementosSolved;
-    public bool _toastersAdvice;
-    public bool _coronalEjectionAdvice;
     public bool _topPiecePicked;
 
     public bool _openEinsteinBasementDoor;
 
-    public bool _needContactUV;
-    public bool _findFiltersAdvice;
     public bool _telescopeReady;
     public bool _jetpack;
 
@@ -121,7 +122,7 @@ public class GameProgressData
     {
         _lomnickyPiezasCamara = new bool[6];
         _piezasHeatRejecter= new bool[6];
-        _filtros = new bool[6];
+        _picDuMidiFilters = new bool[6];
         _currentScene = "";
         _currentStartPoint = 0;
     }

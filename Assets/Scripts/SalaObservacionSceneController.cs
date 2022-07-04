@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SalaObservaciónSceneController : MonoBehaviour
+public class SalaObservacionSceneController : MonoBehaviour
 {
     MovementController _player;
     [SerializeField]
@@ -24,7 +24,7 @@ public class SalaObservaciónSceneController : MonoBehaviour
         {
             FindObjectOfType<PCObservacionInteractable>().picDuMidi = true;
             PlayerPrefs.SetInt("ComingFromPDMD", 0);
-            if (GameProgressController.IsPanelFixed())
+            if (GameProgressController.PicDuMidiPuzzleCoronagraph)
             {
                 _pc.gameObject.SetActive(false);
             }
@@ -44,7 +44,7 @@ public class SalaObservaciónSceneController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (_pdmd)
         {
-            if (GameProgressController.IsPanelFixed())
+            if (GameProgressController.PicDuMidiPuzzleCoronagraph)
             {
                 if (!_launchDialogue)
                 {

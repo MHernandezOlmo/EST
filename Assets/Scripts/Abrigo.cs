@@ -6,7 +6,7 @@ public class Abrigo : Interactable
 {
     public void Awake()
     {
-        if (GameProgressController.GetHasAbrigo())
+        if (GameProgressController.PicDuMidiCoat)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
@@ -14,7 +14,7 @@ public class Abrigo : Interactable
     }
     public override void Interact()
     {
-        GameProgressController.SetHasAbrigo(true);
+        GameProgressController.PicDuMidiCoat = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         GameEvents.ShowScreenText.Invoke("<b>Obtained Coat:</b>\nProtects from IR radiation");
         Destroy(gameObject);

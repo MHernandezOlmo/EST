@@ -11,7 +11,7 @@ public class ExteriorJeanRoc : MonoBehaviour
     [SerializeField] private DialogueTrigger _dialog;
     private void Awake()
     {
-        if (GameProgressController.GetUncovered())
+        if (GameProgressController.PicDuMidiUncoveredJeanRoch)
         {
             uncoverInteractable.gameObject.SetActive(false);
             _tapa.transform.localPosition = new Vector3(-237.19f, -6.05f, 42.825f);

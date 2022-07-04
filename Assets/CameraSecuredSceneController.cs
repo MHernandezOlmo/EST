@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class CameraSecuredSceneController : MonoBehaviour
 {
-    [SerializeField] private DialogueTrigger _trigger;
-    [SerializeField] private  bool _spectropolarimeter;
+    [SerializeField] private DialogueTrigger[] _piezesTrigger;
+    public enum PiezesToSecure{ Camera, Spectropolarimeter, Filters};
+    PiezesToSecure _pieze;
     IEnumerator Start()
     {
+        _pieze = (PiezesToSecure)PlayerPrefs.GetInt("PieceToSecure");
         yield return new WaitForSeconds(1f);
-        _trigger.triggerDialogueEvent(true);
+        _piezesTrigger[(int)_pieze].triggerDialogueEvent(true);
     }
     public void End()
     {
-        if (_spectropolarimeter)
+        print(_pieze);
+        switch (_pieze)
         {
-            GameProgressController.EinsteinSolved = true;
-        }
-        else
-        {
-            GameProgressController.LomnickySolved = true;
+            case PiezesToSecure.Camera:
+                GameProgressController.LomnickySolved = true;
+                break;
+            case PiezesToSecure.Spectropolarimeter:
+                GameProgressController.LomnickySolved = true;
+                break;
+            case PiezesToSecure.Filters:
+                GameProgressController.PicDuMidiSolved = true;
+                break;
         }
 
         GameEvents.LoadScene.Invoke("WorldSelector");

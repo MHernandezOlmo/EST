@@ -6,14 +6,9 @@ public class AvisoCoronografo : MonoBehaviour
 {
     [SerializeField] DialogueTrigger _trigger;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
-        if (GameProgressController.GetAdvisedCoronograph())
+        if (GameProgressController.PicDuMidiCoronalEjectionAdvice)
         {
             Destroy(gameObject);
         }
@@ -31,6 +26,6 @@ public class AvisoCoronografo : MonoBehaviour
         {
             yield return null;
         }
-        GameProgressController.SetAdvisedCoronograph(true);       
+        GameProgressController.PicDuMidiCoronalEjectionAdvice = true;
     }
 }

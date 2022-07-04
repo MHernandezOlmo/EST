@@ -131,6 +131,8 @@ public class GameProgressController : MonoBehaviour
     }
 
 
+
+
     public static bool GetPiezaCamara(int pieza)
     {
         CheckInitialized();
@@ -201,81 +203,227 @@ public class GameProgressController : MonoBehaviour
     #endregion
 
     #region PicDuMidi
-    public static bool GetHasAbrigo()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasPicDuMidiAbrigo;
-    }
-    public static void SetHasAbrigo(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasPicDuMidiAbrigo = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetHasGlasses()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasPicDuMidiGlasses;
-    }
-    public static void SetHasGlasses(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasPicDuMidiGlasses = newValue;
-        SaveGameProgressData();
-    }
-    public static void SetArrivedToPicDuMidi(bool value)
-    {
-        CheckInitialized();
-        _gameProgressData._hasArrivedToPicDuMidi = value;
-        SaveGameProgressData();
-    }
-    public static bool getArrivedToPicDuMudi()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasArrivedToPicDuMidi;
-    }
-    public static bool PicDuMidiFinished
+    public static bool PicDuMidiWelcome
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._picdumidiFinished;
+            return _gameProgressData._picDuMidiWelcome;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._picdumidiFinished = value;
+            _gameProgressData._picDuMidiWelcome = value;
             SaveGameProgressData();
         }
     }
-    public static bool CoronalAdvice
+    public static bool PicDuMidiCoat
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._coronalEjectionAdvice;
+            return _gameProgressData._picDuMidiCoat;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._coronalEjectionAdvice = value;
+            _gameProgressData._picDuMidiCoat = value;
             SaveGameProgressData();
         }
     }
-    public static bool ToastersAdvice
+
+    public static bool PicDuMidiGlasses
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._toastersAdvice;
+            return _gameProgressData._picDuMidiGlasses;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._toastersAdvice = value;
+            _gameProgressData._picDuMidiGlasses = value;
             SaveGameProgressData();
         }
     }
+
+    public static bool PicDuMidiDashSkill
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiDashSkill;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiDashSkill = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool PicDuMidiSolved
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiSolved;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiSolved = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool PicDuMidiUncoveredJeanRoch
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiUncoveredJeanRoch;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiUncoveredJeanRoch = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool PicDuMidiPuzzleCoronagraph
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiPuzzleCoronagraph;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiPuzzleCoronagraph = value;
+            SaveGameProgressData();
+        }
+    }
+
+   
+    public static bool PicDuMidiCoronalEjectionAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiCoronalEjectionAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiCoronalEjectionAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool PicDuMidiFindFiltersAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiFindFiltersAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiFindFiltersAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool PicDuMidiToastersAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiToastersAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiToastersAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool GetPicDuMidiFilter(int filtro)
+    {
+        CheckInitialized();
+        return _gameProgressData._picDuMidiFilters[filtro];
+    }
+
+    public static bool HasAllPicDuMidiFilters()
+    {
+        CheckInitialized();
+        bool hasFilters = true;
+        for (int i = 0; i < 6; i++)
+        {
+            if (!_gameProgressData._picDuMidiFilters[i])
+            {
+                hasFilters = false;
+            }
+        }
+        return hasFilters;
+
+    }
+
+    public static void SetPicDuMidiFilter(int pieza, bool state)
+    {
+        CheckInitialized();
+        _gameProgressData._picDuMidiFilters[pieza] = state;
+        SaveGameProgressData();
+    }
+    public static bool PicDuMidiFloatingPlatformLeft
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiFloatingPlatformLeft;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiFloatingPlatformLeft = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool PicDuMidiPuzzleAssociation
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiPuzzleAssociation;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiPuzzleAssociation = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool PicDuMidiAssociationSolvedAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiAssociationSolvedAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiAssociationSolvedAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
     #endregion
 
     #region Einstein
@@ -916,17 +1064,17 @@ public class GameProgressController : MonoBehaviour
         }
     }
     
-    public static bool NeedContactUV
+    public static bool PicDuMidiNeedContactUV
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._needContactUV;
+            return _gameProgressData._picDuMidiNeedContactUV;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._needContactUV = value;
+            _gameProgressData._picDuMidiNeedContactUV = value;
             SaveGameProgressData();
         }
     }
@@ -987,20 +1135,7 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
-    public static bool FindFiltersAdvice
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._findFiltersAdvice;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._findFiltersAdvice = value;
-            SaveGameProgressData();
-        }
-    }
+
     public static bool TelescopeReady
     {
         get
@@ -1175,42 +1310,7 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    
 
-    public static bool GetAdvisedCoronograph()
-    {
-        CheckInitialized();
-        return _gameProgressData._advisedCoronograph;
-    }
-
-    public static void SetAdvisedCoronograph(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._advisedCoronograph = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetAsociacionElementos()
-    {
-        CheckInitialized();
-        return _gameProgressData._asociacionElementosSolved;
-    }
-    public static void SetAsociacionElementos(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._asociacionElementosSolved = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetPlatformLeft()
-    {
-        CheckInitialized();
-        return _gameProgressData._floatingPlatformLeft;
-    }
-    public static void SetPlatformLeft(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._floatingPlatformLeft = newValue;
-        SaveGameProgressData();
-    }
 
 
 
@@ -1227,11 +1327,6 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static bool GetFiltro(int filtro)
-    {
-        CheckInitialized();
-        return _gameProgressData._filtros[filtro];
-    }
 
     public static void Reset()
     {
@@ -1281,44 +1376,16 @@ public class GameProgressController : MonoBehaviour
         _gameProgressData._salaCombateCombate = true;
         SaveGameProgressData();
     }
-    public static bool GetUncovered()
-    {
-        CheckInitialized();
-        return _gameProgressData._uncovered;
+ 
+   
 
-    }
-    public static bool HasAllFilters()
-    {
-        CheckInitialized();
-        bool hasFilters = true;
-        for(int i = 0; i< 6; i++)
-        {
-            if (!_gameProgressData._filtros[i])
-            {
-                hasFilters = false;
-            }
-        }
-        return hasFilters;
 
-    }
-    public static void SetUncovered(bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._uncovered = state;
-        SaveGameProgressData();
-    }
     public static bool GetSalaCombateCombate()
     {
         CheckInitialized();
         return _gameProgressData._salaCombateCombate;
     }
 
-    public static void SetFiltro(int pieza, bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._filtros[pieza] = state;
-        SaveGameProgressData();
-    }
 
 
     
@@ -1364,28 +1431,8 @@ public class GameProgressController : MonoBehaviour
 
     
 
-    public static bool HasDash()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasDash;
-    }
-    public static void SetHasDash(bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._hasDash = state;
-        SaveGameProgressData();
-    }
 
-    public static bool IsPanelFixed()
-    {
-        CheckInitialized();
-        return _gameProgressData._isPanelFixed;
-    }
-    public static void SetIsPanelFixed(bool state)
-    {
-        CheckInitialized();
-        _gameProgressData._isPanelFixed = state;
-        SaveGameProgressData();
-    }
+
+
 
 }

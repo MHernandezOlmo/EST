@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EndTrigger : MonoBehaviour
 {
+    [SerializeField] int piece;
     private void OnTriggerEnter(Collider other)
     {
-        GameEvents.LoadScene.Invoke("camerasecured");
+        PlayerPrefs.SetInt("PieceToSecure",piece);
+        GameEvents.LoadScene.Invoke("SecurePiece");
     }
 }

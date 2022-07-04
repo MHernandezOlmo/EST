@@ -174,11 +174,83 @@ public class UserDataEditor : EditorWindow
             EditorGUILayout.EndHorizontal();
 
             GuiLine();
+            GUILayout.Label("PicDuMidi", GUILayout.Height(height), GUILayout.Width(200));
 
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("PicDuMidi", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._picdumidiFinished = EditorGUILayout.Toggle(_gameProgressData._picdumidiFinished, GUILayout.Height(height), GUILayout.Width(200));
+            GUILayout.Label("Welcome", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiWelcome = EditorGUILayout.Toggle(_gameProgressData._picDuMidiWelcome, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Coat", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiCoat = EditorGUILayout.Toggle(_gameProgressData._picDuMidiCoat, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Glasses", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiGlasses = EditorGUILayout.Toggle(_gameProgressData._picDuMidiGlasses, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Dash Skill", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiDashSkill= EditorGUILayout.Toggle(_gameProgressData._picDuMidiDashSkill, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Toasters advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiToastersAdvice = EditorGUILayout.Toggle(_gameProgressData._picDuMidiToastersAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Uncovered Jean Roch", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiUncoveredJeanRoch = EditorGUILayout.Toggle(_gameProgressData._picDuMidiUncoveredJeanRoch, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Puzzle Coronagraph", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiPuzzleCoronagraph = EditorGUILayout.Toggle(_gameProgressData._picDuMidiPuzzleCoronagraph, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Coronal Ejection Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiCoronalEjectionAdvice = EditorGUILayout.Toggle(_gameProgressData._picDuMidiCoronalEjectionAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Filters", GUILayout.Height(height), GUILayout.Width(200));
+            for (int i = 0; i < _gameProgressData._picDuMidiFilters.Length; i++)
+            {
+                _gameProgressData._picDuMidiFilters[i] = EditorGUILayout.Toggle(_gameProgressData._picDuMidiFilters[i], GUILayout.Height(height), GUILayout.Width(20));
+            }
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Need Contact UV", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiNeedContactUV = EditorGUILayout.Toggle(_gameProgressData._picDuMidiNeedContactUV, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Find Filters Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiFindFiltersAdvice = EditorGUILayout.Toggle(_gameProgressData._picDuMidiFindFiltersAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Puzzle Association", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiPuzzleAssociation= EditorGUILayout.Toggle(_gameProgressData._picDuMidiPuzzleAssociation, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Association Solved Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiAssociationSolvedAdvice = EditorGUILayout.Toggle(_gameProgressData._picDuMidiAssociationSolvedAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("PicDuMidi Solved", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiSolved= EditorGUILayout.Toggle(_gameProgressData._picDuMidiSolved, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Gregor", GUILayout.Height(height), GUILayout.Width(200));

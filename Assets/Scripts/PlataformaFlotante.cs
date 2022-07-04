@@ -14,7 +14,7 @@ public class PlataformaFlotante : Interactable
         pointA = new Vector3(-2.9f, 38.42f, 39.31f);
         pointB = new Vector3(-2.9f, 38.42f, -17.11f);
 
-        if (GameProgressController.GetPlatformLeft())
+        if (GameProgressController.PicDuMidiFloatingPlatformLeft)
         {
             transform.parent.position = pointB;
         }
@@ -36,7 +36,7 @@ public class PlataformaFlotante : Interactable
         FindObjectOfType<MovementController>().transform.SetParent(gameObject.transform);
 
         Vector3 characterOffset = FindObjectOfType<MovementController>().transform.position-transform.position;
-        if (GameProgressController.GetPlatformLeft())
+        if (GameProgressController.PicDuMidiFloatingPlatformLeft)
         {
             for (float i = 0; i < 4; i += Time.deltaTime)
             {
@@ -45,7 +45,7 @@ public class PlataformaFlotante : Interactable
             }
             transform.parent.position = pointA;
             
-            GameProgressController.SetPlatformLeft(false);
+            GameProgressController.PicDuMidiFloatingPlatformLeft =false;
         }
         else
         {
@@ -55,11 +55,10 @@ public class PlataformaFlotante : Interactable
                 transform.parent.position = Vector3.Lerp(pointA, pointB, _animationCurve.Evaluate(i / 4f));
             }
             transform.parent.position = pointB;
-            GameProgressController.SetPlatformLeft(true);
+            GameProgressController.PicDuMidiFloatingPlatformLeft = true;
         }
         FindObjectOfType<MovementController>().transform.SetParent(null);
         CurrentSceneManager._canMove = true;
         FindObjectOfType<CharacterController>().detectCollisions = true;
-        //FindObjectOfType<CharacterController>().transform.position = transform.position+ characterOffset;
     }
 }

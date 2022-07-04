@@ -30,7 +30,7 @@ public class CombatActivator : MonoBehaviour
         {
             _toasties = FindObjectsOfType<ToastieInstance>();
             _aliveEnemies = _toasties.Length;
-            if (!GameProgressController.HasAllFilters())
+            if (!GameProgressController.HasAllPicDuMidiFilters())
             {
                 _canFight = false;
             }

@@ -31,11 +31,10 @@ public class Entrada2 : Interactable
     private void Start()
     {
         base.Start();
-        canUse = GameProgressController.GetUncovered() && GameProgressController.TelescopeReady && GameProgressController.IsPanelFixed();
+        canUse = GameProgressController.PicDuMidiUncoveredJeanRoch && GameProgressController.TelescopeReady && GameProgressController.PicDuMidiPuzzleCoronagraph;
         
         if (GameProgressController.Parejas)
         {
-            GameProgressController.SetHasDash(true);
             StartCoroutine(CrFight());
         }
     }

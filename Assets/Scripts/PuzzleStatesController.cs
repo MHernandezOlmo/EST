@@ -33,7 +33,7 @@ public class PuzzleStatesController : MonoBehaviour
                 case "LomnickyPuzzleFlareHunters":
                     FindObjectOfType<CazaFlaresController>().StartGame();
                     break;
-                case "Coronografo":
+                case "PicDuMidiPuzzleCoronagraph":
                     FindObjectOfType<CoronografoController>().StartGame();
                     break;
                 case "Bomba":
@@ -83,11 +83,12 @@ public class PuzzleStatesController : MonoBehaviour
                 GameProgressController.Parejas = true;
                 GameEvents.LoadScene.Invoke("SST_PicDuMidi_13_laboratory");
                 break;
-            case "Coronografo":
+            case "PicDuMidiPuzzleCoronagraph":
+                GameProgressController.PicDuMidiPuzzleCoronagraph = true;
                 GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d");
                 break;
-            case "Asociacion":
-                GameProgressController.SetAsociacionElementos(true);
+            case "PicDuMidiPuzzleAssociation":
+                GameProgressController.PicDuMidiPuzzleAssociation = true;
                 GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
                 break;
             case "Bomba":

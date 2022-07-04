@@ -46,11 +46,11 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
     private IEnumerator Start()
     {
 
-        if (GameProgressController.IsPanelFixed())
+        if (GameProgressController.PicDuMidiPuzzleCoronagraph)
         {
-            if (!GameProgressController.FindFiltersAdvice)
+            if (!GameProgressController.PicDuMidiFindFiltersAdvice)
             {
-                GameProgressController.FindFiltersAdvice = true;
+                GameProgressController.PicDuMidiFindFiltersAdvice = true;
                 yield return new WaitForSeconds(1f);
                 _filtersDialog.triggerDialogueEvent(true);
             }
@@ -63,7 +63,7 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
 
     public void LoadCoronagraph()
     {
-        GameProgressController.NeedContactUV = false;
-        GameEvents.LoadScene.Invoke("Coronografo");
+        GameProgressController.PicDuMidiNeedContactUV = false;
+        GameEvents.LoadScene.Invoke("PicDuMidiPuzzleCoronagraph");
     }
 }

@@ -10,12 +10,12 @@ public class PiezaFiltro : Interactable
 
     public override void Interact()
     {
-        GameProgressController.SetFiltro(_pieza, true);
+        GameProgressController.SetPicDuMidiFilter(_pieza, true);
         int filterAmount=0;
 
         for (int i = 0;i< 6; i++)
         {
-            if (GameProgressController.GetFiltro(i))
+            if (GameProgressController.GetPicDuMidiFilter(i))
             {
                 filterAmount++;
             }
@@ -37,14 +37,14 @@ public class PiezaFiltro : Interactable
         if (!_checked)
         {
             _checked = true;
-            if (!GameProgressController.IsPanelFixed())
+            if (!GameProgressController.PicDuMidiPuzzleCoronagraph)
             {
                 FindObjectOfType<InteractablesController>().RemoveInteractable(this);
                 Destroy(transform.root.gameObject);
             }
             else
             {
-                if (GameProgressController.GetFiltro(_pieza))
+                if (GameProgressController.GetPicDuMidiFilter(_pieza))
                 {
                     FindObjectOfType<InteractablesController>().RemoveInteractable(this);
                     Destroy(transform.root.gameObject);

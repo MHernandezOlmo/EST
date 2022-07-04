@@ -6,7 +6,7 @@ public class Uncover : Interactable
 {
     public override void Interact()
     {
-        GameProgressController.SetUncovered(true);
+        GameProgressController.PicDuMidiUncoveredJeanRoch = true;
         GameProgressController.SetCurrentStartPoint(1);
         GameEvents.LoadScene.Invoke("PicDuMidi_8_exterior_jeanrock");
     }
