@@ -171,7 +171,7 @@ public class EnemyController : MonoBehaviour
         if (_animator != null)_animator.SetTrigger("Dead");
         if (_enemyType == EnemyType.Oven && SceneManager.GetActiveScene().name == "Gregor_0_exteriorBis")
         {
-            if (GameProgressController.PlaceHR)
+            if (GameProgressController.GregorPlacedHeatRejecter)
             {
                 FindObjectOfType<ExterioresGregorBisSceneController>().Kill();
                 Destroy(gameObject);

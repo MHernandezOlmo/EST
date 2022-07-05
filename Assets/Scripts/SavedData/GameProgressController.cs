@@ -911,6 +911,51 @@ public class GameProgressController : MonoBehaviour
     #endregion
 
     #region GREGOR
+    public static bool GregorHeatAdvices
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorHeatAdvices;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorHeatAdvices = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool GregorHasHeatRejecter
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorHasHeatRejecter;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorHasHeatRejecter = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool GregorPlacedHeatRejecter
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._gregorPlacedHeatRejecter;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._gregorPlacedHeatRejecter = value;
+            SaveGameProgressData();
+        }
+    }
+
     public static bool GregorDome
     {
         get
@@ -925,17 +970,17 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool PlaceHR
+    public static bool GregorTestedHR
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._heatRejecterPlaced;
+            return _gameProgressData._gregorTestedHR;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._heatRejecterPlaced = value;
+            _gameProgressData._gregorTestedHR = value;
             SaveGameProgressData();
         }
     }
@@ -967,20 +1012,7 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool TestedHR
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._testedHR;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._testedHR = value;
-            SaveGameProgressData();
-        }
-    }
+
     #endregion
 
     #region EST
@@ -998,20 +1030,7 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool HeatMessages
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._hasReadHeatMessages;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._hasReadHeatMessages = value;
-            SaveGameProgressData();
-        }
-    }
+
     public static bool MirrorAdvice
     {
         get
@@ -1220,20 +1239,7 @@ public class GameProgressController : MonoBehaviour
 
 
 
-    public static bool HeatRejecter
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._heatRejecter;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._heatRejecter = value;
-            SaveGameProgressData();
-        }
-    }
+    
     
     public static bool PicDuMidiNeedContactUV
     {
@@ -1251,36 +1257,46 @@ public class GameProgressController : MonoBehaviour
     }
 
 
-    public static bool PaintTower
+    public static bool GregorPuzzlePaintTower
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._paintTower;
+            return _gameProgressData._gregorPuzzlePaintTower;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._paintTower = value;
+            _gameProgressData._gregorPuzzlePaintTower = value;
             SaveGameProgressData();
         }
     }
-    public static bool Jetpack
+    public static bool GregorJetpackSkill
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._jetpack;
+            return _gameProgressData._gregorJetpackSkill;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._jetpack = value;
+            _gameProgressData._gregorJetpackSkill = value;
             SaveGameProgressData();
         }
     }
 
-
+    public static bool GetHRPiece(int pieza)
+    {
+        CheckInitialized();
+        return _gameProgressData._gregorHRPieces[pieza];
+    }
+    public static void SetHRPiece(int pieza, bool value)
+    {
+        CheckInitialized();
+        _gameProgressData._gregorHRPieces[pieza] = value;
+        SaveGameProgressData();
+    }
     public static bool TelescopeReady
     {
         get
@@ -1343,17 +1359,7 @@ public class GameProgressController : MonoBehaviour
 
 
 
-    public static bool GetPiezaHR(int pieza)
-    {
-        CheckInitialized();
-        return _gameProgressData._piezasHeatRejecter[pieza];
-    }
-    public static void SetPiezaHR(int pieza, bool value)
-    {
-        CheckInitialized();
-        _gameProgressData._piezasHeatRejecter[pieza] = value;
-        SaveGameProgressData();
-    }
+
 
 
     public static void Reset()

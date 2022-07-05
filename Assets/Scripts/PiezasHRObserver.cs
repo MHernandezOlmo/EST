@@ -11,7 +11,7 @@ public class PiezasHRObserver : MonoBehaviour
         int piezasObtenidas = 0;
         for (int i = 0; i < 6; i++)
         {
-            if (GameProgressController.GetPiezaHR(i))
+            if (GameProgressController.GetHRPiece(i))
             {
                 piezasObtenidas++;
             }
@@ -26,7 +26,7 @@ public class PiezasHRObserver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameProgressController.HeatRejecter)
+        if (GameProgressController.GregorHasHeatRejecter)
         {
             _text.text = "";
         }
@@ -35,7 +35,7 @@ public class PiezasHRObserver : MonoBehaviour
             int piezasObtenidas = 0;
             for (int i = 0; i < 6; i++)
             {
-                if (GameProgressController.GetPiezaHR(i))
+                if (GameProgressController.GetHRPiece(i))
                 {
                     piezasObtenidas++;
                 }

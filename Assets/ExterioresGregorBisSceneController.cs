@@ -17,7 +17,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
     IEnumerator Start()
     {
         neededKills = 4;
-        if (GameProgressController.PaintTower)
+        if (GameProgressController.GregorPuzzlePaintTower)
         {
             _tower.material = _white;
             _cleanParticles.SetActive(true);
@@ -35,7 +35,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
             _dialogueTriggerCleanGarden.triggerDialogueEvent(true);
         }
 
-        if (GameProgressController.Jetpack)
+        if (GameProgressController.GregorJetpackSkill)
         {
             _skillEnable.SetActive(true);
         }
@@ -54,7 +54,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
 
     public void LoadTorre()
     {
-        GameEvents.LoadScene.Invoke("PintaTorre");
+        GameEvents.LoadScene.Invoke("GregorPuzzlePaintTower");
     }
     public void Kill()
     {
@@ -64,8 +64,5 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
             GameEvents.LoadScene.Invoke("WorldSelector");
         }
     }
-    void Update()
-    {
-        
-    }
+
 }

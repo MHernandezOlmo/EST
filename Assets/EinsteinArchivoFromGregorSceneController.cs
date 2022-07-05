@@ -8,7 +8,7 @@ public class EinsteinArchivoFromGregorSceneController : MonoBehaviour
 
     IEnumerator Start()
     {
-        if (!GameProgressController.TestedHR)
+        if (!GameProgressController.GregorTestedHR)
         {
             yield return new WaitForSeconds(1f);
             _trigger.triggerDialogueEvent(true);

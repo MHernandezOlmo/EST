@@ -11,26 +11,25 @@ public class ExterioresGregorDome : MonoBehaviour
     [SerializeField] private GameObject _canPlaceHR;
     IEnumerator Start()
     {
-        if (!GameProgressController.HeatRejecter)
+        if (!GameProgressController.GregorHasHeatRejecter)
         {
             yield return new WaitForSeconds(1f);
             _trigger.triggerDialogueEvent(true);
         }
         else
         {
-            if (!GameProgressController.PlaceHR)
+            if (!GameProgressController.GregorPlacedHeatRejecter)
             {
                 _dome1.transform.localRotation = Quaternion.Euler(-10, 0, 0);
                 _dome2.transform.localRotation = Quaternion.Euler(-10, 180, 0);
                 Instantiate(_canPlaceHR);
-
             }
         }   
     }
 
     public void PlaceHR()
     {
-        GameProgressController.PlaceHR = true;
+        GameProgressController.GregorPlacedHeatRejecter = true;
         _trigger2.triggerDialogueEvent(true);
     }
 

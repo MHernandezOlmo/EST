@@ -15,7 +15,6 @@ public class CameraSecuredSceneController : MonoBehaviour
     }
     public void End()
     {
-        print(_pieze);
         switch (_pieze)
         {
             case PiezesToSecure.Camera:

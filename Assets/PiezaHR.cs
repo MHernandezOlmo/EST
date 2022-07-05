@@ -10,19 +10,19 @@ public class PiezaHR : Interactable
     [SerializeField] public DialogueTrigger _allPartsTrigger;
     public override void Interact()
     {
-        GameProgressController.SetPiezaHR(_pieza, true);
+        GameProgressController.SetHRPiece(_pieza, true);
         int hramount = 0;
 
         for (int i = 0; i < 6; i++)
         {
-            if (GameProgressController.GetPiezaHR(i))
+            if (GameProgressController.GetHRPiece(i))
             {
                 hramount++;
             }
         }
         if(hramount == 6)
         {
-            GameProgressController.HeatRejecter = true;
+            GameProgressController.GregorHasHeatRejecter = true;
             _allPartsTrigger.triggerDialogueEvent(true);
             if (FindObjectOfType<AlmacenGregorSceneController>() != null)
             {
@@ -47,14 +47,14 @@ public class PiezaHR : Interactable
         if (!_checked)
         {
             _checked = true;
-            if (GameProgressController.HeatRejecter)
+            if (GameProgressController.GregorHasHeatRejecter)
             {
                 FindObjectOfType<InteractablesController>().RemoveInteractable(this);
                 Destroy(transform.root.gameObject);
             }
             else
             {
-                if (GameProgressController.GetPiezaHR(_pieza))
+                if (GameProgressController.GetHRPiece(_pieza))
                 {
                     FindObjectOfType<InteractablesController>().RemoveInteractable(this);
                     Destroy(transform.root.gameObject);

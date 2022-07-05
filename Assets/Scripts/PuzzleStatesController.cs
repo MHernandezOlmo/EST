@@ -42,7 +42,7 @@ public class PuzzleStatesController : MonoBehaviour
                 case "SSTPuzzleTetrisAO":
                     FindObjectOfType<TetrisDeOndaController>().StartPlaying();
                     break;
-                case "PintaTorre":
+                case "GregorPuzzlePaintTower":
                     FindObjectOfType<PaintPuzzleController>().StartGame();
                     break;
                 case "TestHR":
@@ -99,12 +99,12 @@ public class PuzzleStatesController : MonoBehaviour
                 GameProgressController.SSTHasAO = true;
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion");
                 break;
-            case "PintaTorre":
-                GameProgressController.PaintTower = true;
+            case "GregorPuzzlePaintTower":
+                GameProgressController.GregorPuzzlePaintTower = true;
                 GameEvents.LoadScene.Invoke("Gregor_0_dome");
                 break;
             case "TestHR":
-                GameProgressController.TestedHR = true;
+                GameProgressController.GregorTestedHR = true;
                 GameEvents.LoadScene.Invoke("Gregor_11_almacen");
                 break;
             case "Espejo":

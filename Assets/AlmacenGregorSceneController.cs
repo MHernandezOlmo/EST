@@ -11,13 +11,14 @@ public class AlmacenGregorSceneController : MonoBehaviour
     [SerializeField] GameObject _heatRejecterCanvas;
     IEnumerator Start()
     {
-        if(GameProgressController.HeatRejecter && !GameProgressController.TestedHR)
+        if(GameProgressController.GregorHasHeatRejecter && !GameProgressController.GregorTestedHR)
         {
             InstantiatePC();
         }
         else
         {
-            if (GameProgressController.HeatRejecter){
+            if (GameProgressController.GregorHasHeatRejecter)
+            {
                 if (!GameProgressController.GregorDome)
                 {
                     yield return new WaitForSeconds(1f);

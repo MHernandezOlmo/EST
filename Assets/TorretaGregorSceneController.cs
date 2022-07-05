@@ -8,7 +8,7 @@ public class TorretaGregorSceneController : MonoBehaviour
     [SerializeField] private GameObject[] _enemies;
     void Start()
     {
-        if(!GameProgressController.Jetpack)
+        if(!GameProgressController.GregorJetpackSkill)
         {
             _combatTrigger.gameObject.SetActive(false); 
         }

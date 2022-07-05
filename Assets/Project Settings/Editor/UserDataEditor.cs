@@ -330,6 +330,22 @@ public class UserDataEditor : EditorWindow
 
 
             EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Puzzle Paint Tower", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorPuzzlePaintTower= EditorGUILayout.Toggle(_gameProgressData._gregorPuzzlePaintTower, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Has HeatRejecter", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorHasHeatRejecter = EditorGUILayout.Toggle(_gameProgressData._gregorHasHeatRejecter, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Placed HeatRejecter", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorPlacedHeatRejecter = EditorGUILayout.Toggle(_gameProgressData._gregorPlacedHeatRejecter, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+
+            EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Gregor", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._gregorFinished = EditorGUILayout.Toggle(_gameProgressData._gregorFinished, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
@@ -342,35 +358,20 @@ public class UserDataEditor : EditorWindow
 
 
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Jetpack", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._jetpack = EditorGUILayout.Toggle(_gameProgressData._jetpack, GUILayout.Height(height), GUILayout.Width(200));
+            GUILayout.Label("Jetpack Skill", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorJetpackSkill = EditorGUILayout.Toggle(_gameProgressData._gregorJetpackSkill, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("HeatRejecter", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._heatRejecter = EditorGUILayout.Toggle(_gameProgressData._heatRejecter, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Placed HeatRejecter", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._heatRejecterPlaced = EditorGUILayout.Toggle(_gameProgressData._heatRejecterPlaced, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
+     
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Gregor Dome", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._gregorDome = EditorGUILayout.Toggle(_gameProgressData._gregorDome, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Paint Tower", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._paintTower = EditorGUILayout.Toggle(_gameProgressData._paintTower, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Piezas HR", GUILayout.Height(height), GUILayout.Width(200));
-            for (int i = 0; i < _gameProgressData._piezasHeatRejecter.Length; i++)
+            GUILayout.Label("HR Pieces", GUILayout.Height(height), GUILayout.Width(200));
+            for (int i = 0; i < _gameProgressData._gregorHRPieces.Length; i++)
             {
-                _gameProgressData._piezasHeatRejecter[i] = EditorGUILayout.Toggle(_gameProgressData._piezasHeatRejecter[i], GUILayout.Height(height), GUILayout.Width(20));
+                _gameProgressData._gregorHRPieces[i] = EditorGUILayout.Toggle(_gameProgressData._gregorHRPieces[i], GUILayout.Height(height), GUILayout.Width(20));
             }
             EditorGUILayout.EndHorizontal();
 
@@ -381,8 +382,8 @@ public class UserDataEditor : EditorWindow
 
 
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("TestedHR", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._testedHR = EditorGUILayout.Toggle(_gameProgressData._testedHR, GUILayout.Height(height), GUILayout.Width(200));
+            GUILayout.Label("GregorTestedHR", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorTestedHR = EditorGUILayout.Toggle(_gameProgressData._gregorTestedHR, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
 

@@ -28,14 +28,14 @@ public class ExterioresGregorSceneController : MonoBehaviour
     {
         _player = FindObjectOfType<PlayerController>();
         yield return null;
-        if (GameProgressController.HeatMessages)
+        if (GameProgressController.GregorHeatAdvices)
         {
             _camera.Priority = 50;
             Camera.main.transform.position = _camera.transform.position;
             _player.transform.position = _retryPos.position;
         }
         yield return new WaitForSeconds(1f);
-        if (GameProgressController.HeatMessages)
+        if (GameProgressController.GregorHeatAdvices)
         {
             EnableBushInteractables();
             ShowMissionPanel();
@@ -89,7 +89,7 @@ public class ExterioresGregorSceneController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(_player.transform.position, transform.position);
-        if (!GameProgressController.HeatMessages)
+        if (!GameProgressController.GregorHeatAdvices)
         {
             if (!_ovensAdvice && distance < 20)
             {
@@ -126,12 +126,12 @@ public class ExterioresGregorSceneController : MonoBehaviour
     {
         GameEvents.ShowScreenText.Invoke("Pick up the bushes");
         StartBushMission();
-        GameProgressController.HeatMessages = true;
+        GameProgressController.GregorHeatAdvices = true;
     }
 
     public void StartBushMission()
     {
-        if (GameProgressController.HeatMessages)
+        if (GameProgressController.GregorHeatAdvices)
         {
             _currentTimeCount = 100f;
         }

@@ -8,7 +8,7 @@ public class JetPackSkill : Interactable
     [SerializeField] DialogueTrigger _skillText;
     public override void Interact()
     {
-        GameProgressController.Jetpack =true;
+        GameProgressController.GregorJetpackSkill = true;
         _skillText.triggerDialogueEvent(true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         Destroy(gameObject.transform.parent.gameObject);
@@ -17,7 +17,7 @@ public class JetPackSkill : Interactable
     private void Start()
     {
         base.Start();
-        if (GameProgressController.Jetpack)
+        if (GameProgressController.GregorJetpackSkill)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject.transform.parent.gameObject);

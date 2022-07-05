@@ -71,15 +71,19 @@ public class GameProgressData
     public bool _SSTBackFromTetrisAdvice;
     public bool _SSTSolved;
 
-    public bool _hasReadHeatMessages;
+    //Gregor
+    public bool _gregorHeatAdvices;
+    public bool _gregorPuzzlePaintTower;
+    public bool _gregorJetpackSkill;
+    public bool _gregorHasHeatRejecter;
+    public bool _gregorPlacedHeatRejecter;
+    public bool[] _gregorHRPieces;
+    public bool _gregorTestedHR;
 
     public bool _gregorFinished;
     public bool _ESTFinished;
     public bool _arrivingRoomDoor;
     public bool _combatDoor;
-    public bool[] _piezasHeatRejecter;
-    public bool _heatRejecter;
-    public bool _heatRejecterPlaced;
     public bool _salaCombateCombate;
     public bool _gregorDome;
 
@@ -90,9 +94,7 @@ public class GameProgressData
     public bool _openEinsteinBasementDoor;
 
     public bool _telescopeReady;
-    public bool _jetpack;
 
-    public bool _paintTower;
 
     public bool _sstCollaborativeCallSolved;
 
@@ -101,7 +103,6 @@ public class GameProgressData
 
     public bool _solvedPuzzleAO;
     public bool _adviceHR;
-    public bool _testedHR;
 
     public bool _estGenerador;
     public bool _estFirstAdvice;
@@ -121,7 +122,7 @@ public class GameProgressData
     public GameProgressData()
     {
         _lomnickyPiezasCamara = new bool[6];
-        _piezasHeatRejecter= new bool[6];
+        _gregorHRPieces= new bool[6];
         _picDuMidiFilters = new bool[6];
         _currentScene = "";
         _currentStartPoint = 0;

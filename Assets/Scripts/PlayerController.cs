@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
                 }
                 if (_currentCharacter == Character.Spot)
                 {
-                    if (GameProgressController.Jetpack)
+                    if (GameProgressController.GregorJetpackSkill)
                     {
                         if (CurrentSceneManager._canJetpack)
                         {
