@@ -8,7 +8,7 @@ public class SSTTestAO : Interactable
     {
         base.Start();
 
-        if (GameProgressController.Tetris || !(GameProgressController.GetPiezasAO()==10))
+        if (GameProgressController.SSTPuzzleTetrisAO || !(GameProgressController.SSTAOPieces==10))
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.parent.gameObject);
@@ -16,10 +16,7 @@ public class SSTTestAO : Interactable
     }
     public override void Interact()
     {
-        GameEvents.LoadScene.Invoke("Tetris");
+        GameEvents.LoadScene.Invoke("SSTPuzzleTetrisAO");
     }
 
-    public void LoadNextScene()
-    {
-    }
 }

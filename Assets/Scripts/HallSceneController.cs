@@ -7,7 +7,7 @@ public class HallSceneController : MonoBehaviour
     [SerializeField] DialogueTrigger _firstSSTEntryDialog;
     void Start()
     {
-        if (!GameProgressController.GetFistSSTEntry())
+        if (!GameProgressController.SSTHallAdvice)
         {
             StartCoroutine(PlayFirstSSTEntryDialog());
         }   
@@ -17,7 +17,7 @@ public class HallSceneController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         _firstSSTEntryDialog.triggerDialogueEvent();
-        GameProgressController.SetFirstSSTEntry(true);
+        GameProgressController.SSTHallAdvice = true;
     }
 
     // Update is called once per frame

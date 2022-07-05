@@ -33,7 +33,7 @@ public class Entrada2 : Interactable
         base.Start();
         canUse = GameProgressController.PicDuMidiUncoveredJeanRoch && GameProgressController.TelescopeReady && GameProgressController.PicDuMidiPuzzleCoronagraph;
         
-        if (GameProgressController.Parejas)
+        if (GameProgressController.PicDuMidiPuzzleAssociation)
         {
             StartCoroutine(CrFight());
         }

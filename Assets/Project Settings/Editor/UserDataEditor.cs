@@ -250,6 +250,83 @@ public class UserDataEditor : EditorWindow
             _gameProgressData._picDuMidiSolved= EditorGUILayout.Toggle(_gameProgressData._picDuMidiSolved, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
+            GuiLine();
+            GUILayout.Label("SST", GUILayout.Height(height), GUILayout.Width(200));
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Microwave alert", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTMicrowaveAlert = EditorGUILayout.Toggle(_gameProgressData._SSTMicrowaveAlert, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Hall Advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTHallAdvice = EditorGUILayout.Toggle(_gameProgressData._SSTHallAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Cold System Fixed", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTColdSystemFixed = EditorGUILayout.Toggle(_gameProgressData._SSTColdSystemFixed, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Vacuum System Fixed", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTVacuumSystemFixed = EditorGUILayout.Toggle(_gameProgressData._SSTVacuumSystemFixed, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Colaborative Alert", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTColaborativeAlert = EditorGUILayout.Toggle(_gameProgressData._SSTColaborativeAlert, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Puzzle Pairs", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTColaborativeAlert = EditorGUILayout.Toggle(_gameProgressData._SSTColaborativeAlert, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("AO Pieces Alert", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTAOPiezesAlertShown = EditorGUILayout.Toggle(_gameProgressData._SSTAOPiezesAlertShown, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Shield Skill", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTShieldSkill = EditorGUILayout.Toggle(_gameProgressData._SSTShieldSkill, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("AO Pieces", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTAOPieces = EditorGUILayout.IntField(_gameProgressData._SSTAOPieces, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Dome AO piece", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTDomePiece = EditorGUILayout.Toggle(_gameProgressData._SSTDomePiece, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Has AO", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTHasAO = EditorGUILayout.Toggle(_gameProgressData._SSTHasAO, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Puzzle Tetris AO", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTPuzzleTetrisAO = EditorGUILayout.Toggle(_gameProgressData._SSTPuzzleTetrisAO, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Back from Tetris advice", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTBackFromTetrisAdvice = EditorGUILayout.Toggle(_gameProgressData._SSTBackFromTetrisAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("SST Solved", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTSolved= EditorGUILayout.Toggle(_gameProgressData._SSTSolved, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+
+            GuiLine();
+            GUILayout.Label("Gregor", GUILayout.Height(height), GUILayout.Width(200));
 
 
             EditorGUILayout.BeginHorizontal();
@@ -257,10 +334,6 @@ public class UserDataEditor : EditorWindow
             _gameProgressData._gregorFinished = EditorGUILayout.Toggle(_gameProgressData._gregorFinished, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("SST", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._SSTFinished = EditorGUILayout.Toggle(_gameProgressData._SSTFinished, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("EST", GUILayout.Height(height), GUILayout.Width(200));
@@ -306,24 +379,10 @@ public class UserDataEditor : EditorWindow
             _gameProgressData._adviceHR = EditorGUILayout.Toggle(_gameProgressData._adviceHR, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Has Shield", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._hasShield= EditorGUILayout.Toggle(_gameProgressData._hasShield, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("TestedHR", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._testedHR = EditorGUILayout.Toggle(_gameProgressData._testedHR, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Has AO", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._hasAO = EditorGUILayout.Toggle(_gameProgressData._hasAO, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Piezas AO", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._piezasAO= EditorGUILayout.IntField(_gameProgressData._piezasAO, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
 

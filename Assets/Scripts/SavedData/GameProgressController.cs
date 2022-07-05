@@ -706,17 +706,205 @@ public class GameProgressController : MonoBehaviour
     #endregion
 
     #region SST
-    public static bool SSTFinished
+    public static bool SSTMicrowaveAlert
     {
         get
         {
             CheckInitialized();
-            return _gameProgressData._SSTFinished;
+            return _gameProgressData._SSTMicrowaveAlert;
         }
         set
         {
             CheckInitialized();
-            _gameProgressData._SSTFinished = value;
+            _gameProgressData._SSTMicrowaveAlert = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTHallAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTHallAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTHallAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool SSTColdSystemFixed
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTColdSystemFixed;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTColdSystemFixed = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool SSTVacuumSystemFixed
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTVacuumSystemFixed;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTVacuumSystemFixed = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTColaborativeAlert
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTColaborativeAlert;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTColaborativeAlert = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTPuzzlePairs
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTPuzzlePairs;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTPuzzlePairs = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool SSTAOPiezesAlertShown
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTAOPiezesAlertShown;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTAOPiezesAlertShown = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTShieldSkill
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTShieldSkill;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTShieldSkill = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static int SSTAOPieces
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTAOPieces;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTAOPieces = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool SSTHasAO
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTHasAO;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTHasAO = value;
+            SaveGameProgressData();
+        }
+    }
+
+    public static bool SSTDomePiece
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTDomePiece;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTDomePiece = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTPuzzleTetrisAO
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTPuzzleTetrisAO;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTPuzzleTetrisAO = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTBackFromTetrisAdvice
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTBackFromTetrisAdvice;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTBackFromTetrisAdvice = value;
+            SaveGameProgressData();
+        }
+    }
+    public static bool SSTSolved
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._SSTSolved;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._SSTSolved = value;
             SaveGameProgressData();
         }
     }
@@ -1026,23 +1214,6 @@ public class GameProgressController : MonoBehaviour
         }
     }
     #endregion
-    public static bool TopPiecePicked
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._topPiecePicked;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._topPiecePicked = value;
-            SaveGameProgressData();
-        }
-    }
-
-
-
 
 
    
@@ -1078,34 +1249,8 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-    public static bool Parejas
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._parejas;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._parejas = value;
-            SaveGameProgressData();
-        }
-    }
-    public static bool Tetris
-    {
-        get
-        {
-            CheckInitialized();
-            return _gameProgressData._tetris;
-        }
-        set
-        {
-            CheckInitialized();
-            _gameProgressData._tetris = value;
-            SaveGameProgressData();
-        }
-    }
+
+
     public static bool PaintTower
     {
         get
@@ -1151,35 +1296,6 @@ public class GameProgressController : MonoBehaviour
         }
     }
     
-    public static int GetPiezasAO()
-    {
-        CheckInitialized();
-        return _gameProgressData._piezasAO;
-    }
-    public static void SetPiezasAO(int piezes)
-    {
-        CheckInitialized();
-        _gameProgressData._piezasAO = piezes;
-        SaveGameProgressData();
-
-    }
-    public static void AddPiezaAO()
-    {
-        CheckInitialized();
-        _gameProgressData._piezasAO++;
-        SaveGameProgressData();
-    }
-    public static bool GetHasAO()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasAO;
-    }
-
-    public static bool GetSolvedAOPuzzle()
-    {
-        CheckInitialized();
-        return _gameProgressData._solvedPuzzleAO;
-    }
 
     public static void SetSolvedAOPuzzle(bool newValue)
     {
@@ -1188,37 +1304,6 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static void SetHasAO(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasAO = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetHasShield()
-    {
-        CheckInitialized();
-        return _gameProgressData._hasShield;
-    }
-
-    public static void SetHasShield(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._hasShield = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetAdaptativeOpticsPiezesAlertShown()
-    {
-        CheckInitialized();
-        return _gameProgressData._adaptativeOpticPiezesAlertShown;
-    }
-
-    public static void SetAdaptativeOpticsPiezesAlertShown(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._adaptativeOpticPiezesAlertShown = newValue;
-        SaveGameProgressData();
-    }
 
     public static bool GetSolvedPuzzleParejas()
     {
@@ -1246,69 +1331,12 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-    public static bool GetSSTCollaborativeAlertShown()
-    {
-        CheckInitialized();
-        return _gameProgressData._sstColaborativeAlert;
-    }
 
-    public static void SetSSTCollaborativeAlertShown(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._sstColaborativeAlert = newValue;
-        SaveGameProgressData();
-    }
 
-    public static bool GetIsSSTColdSystemFixed()
-    {
-        CheckInitialized();
-        return _gameProgressData._isSSTColdSystemFixed;
-    }
 
-    public static void SetIsSSTColdSystemFixed(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._isSSTColdSystemFixed = newValue;
-        SaveGameProgressData();
-    }
 
-    public static bool GetIsVacuumSolved()
-    {
-        CheckInitialized();
-        return _gameProgressData._isVacuumSolved;
-    }
 
-    public static void SetIsVacuumSolved(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._isVacuumSolved = newValue;
-        SaveGameProgressData();
-    }
-    public static bool GetFistSSTEntry()
-    {
-        CheckInitialized();
-        return _gameProgressData._firstSSTEntry;
-    }
 
-    public static void SetFirstSSTEntry(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._firstSSTEntry = newValue;
-        SaveGameProgressData();
-    }
-
-    public static bool GetMicrowaveAlert()
-    {
-        CheckInitialized();
-        return _gameProgressData._microwaveAlert;
-    }
-
-    public static void SetMicrowaveAlert(bool newValue)
-    {
-        CheckInitialized();
-        _gameProgressData._microwaveAlert = newValue;
-        SaveGameProgressData();
-    }
 
 
 

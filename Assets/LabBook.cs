@@ -7,7 +7,7 @@ public class LabBook :  Interactable
     void Start()
     {
         base.Start();
-        if (GameProgressController.Parejas)
+        if (GameProgressController.SSTPuzzlePairs)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.parent.gameObject);

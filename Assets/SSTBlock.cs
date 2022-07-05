@@ -6,7 +6,7 @@ public class SSTBlock : MonoBehaviour
 {
     void Start()
     {
-        if (GameProgressController.Parejas)
+        if (GameProgressController.SSTPuzzlePairs)
         {
             Destroy(gameObject);
         }

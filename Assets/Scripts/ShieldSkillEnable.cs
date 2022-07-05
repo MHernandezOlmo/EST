@@ -8,15 +8,9 @@ public class ShieldSkillEnable : MonoBehaviour
     GameObject _actionButton;
     void Start()
     {
-        if (GameProgressController.GetHasShield())
+        if (GameProgressController.SSTShieldSkill)
         {
             _actionButton.SetActive(true);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

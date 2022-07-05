@@ -8,17 +8,17 @@ public class SSTSalaMaquinasSceneController : MonoBehaviour
     void Awake()
     {
 
-        if (PlayerPrefs.GetInt("GlycolAmount")==70f && !GameProgressController.GetIsSSTColdSystemFixed())
+        if (PlayerPrefs.GetInt("GlycolAmount")==70f && !GameProgressController.SSTColdSystemFixed)
         {
-            GameProgressController.SetIsSSTColdSystemFixed(true);
+            GameProgressController.SSTColdSystemFixed =true;
         }
 
-        if (!GameProgressController.GetSSTCollaborativeAlertShown())
+        if (!GameProgressController.SSTColaborativeAlert)
         {
-            if(GameProgressController.GetIsSSTColdSystemFixed() && GameProgressController.GetIsVacuumSolved())
+            if(GameProgressController.SSTColdSystemFixed && GameProgressController.SSTVacuumSystemFixed)
             {
                 StartCoroutine(CrPlayDialog());
-                GameProgressController.SetSSTCollaborativeAlertShown(true);
+                GameProgressController.SSTColaborativeAlert = true;
             }
         }
     }

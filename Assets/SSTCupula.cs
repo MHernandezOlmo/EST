@@ -12,20 +12,19 @@ public class SSTCupula : MonoBehaviour
     int _piecesAO;
     private void Start()
     {
-        if (!GameProgressController.GetHasAO() && GameProgressController.GetHasShield())
+        if (!GameProgressController.SSTHasAO && GameProgressController.SSTShieldSkill)
         {
             AOPiecesCanvas.SetActive(true);
-            _piecesAO = GameProgressController.GetPiezasAO();
+            _piecesAO = GameProgressController.SSTAOPieces;
         }
     }
     public void GetPiece()
     {
         _piecesAO++;
-        GameProgressController.AddPiezaAO();
+        GameProgressController.SSTAOPieces++;
         if (_piecesAO == 10)
         {
             GetAOTriggerDialog.triggerDialogueEvent();
-            GameProgressController.SetHasAO(true);
         }
     }
     private void Update()

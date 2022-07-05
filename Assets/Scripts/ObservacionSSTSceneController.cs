@@ -8,16 +8,16 @@ public class ObservacionSSTSceneController : MonoBehaviour
     [SerializeField] DialogueTrigger _youHaveEverything;
     void Start()
     {
-        if (GameProgressController.Parejas && ! GameProgressController.GetAdaptativeOpticsPiezesAlertShown())
+        if (GameProgressController.SSTPuzzlePairs && ! GameProgressController.SSTAOPiezesAlertShown)
         {
             StartCoroutine(CrPlayDialog());
         }
-        if (GameProgressController.GetHasAO())
+        if (GameProgressController.SSTPuzzleTetrisAO)
         {
-            if (PlayerPrefs.GetInt("HasReadedDialog", 0) == 0)
+            if (!GameProgressController.SSTBackFromTetrisAdvice)
             {
+                GameProgressController.SSTBackFromTetrisAdvice = true;
                 StartCoroutine(CrPlayDialog2());
-                PlayerPrefs.SetInt("HasReadedDialog", 1);
             }
         }
     }
@@ -25,7 +25,7 @@ public class ObservacionSSTSceneController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         _adaptativeOpticPiezesAlertDialog.triggerDialogueEvent(true);
-        GameProgressController.SetAdaptativeOpticsPiezesAlertShown(true);
+        GameProgressController.SSTAOPiezesAlertShown = true;
     }
     IEnumerator CrPlayDialog2()
     {

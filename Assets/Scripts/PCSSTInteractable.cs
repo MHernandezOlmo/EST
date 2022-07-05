@@ -90,9 +90,6 @@ public class PCSSTInteractable : Interactable
         {
             _hasShownDialog = true;
         }
-        if (GameProgressController.LomnickyClosedCeiling)
-        {
-            gameObject.SetActive(false);
-        }
+
     }
 }

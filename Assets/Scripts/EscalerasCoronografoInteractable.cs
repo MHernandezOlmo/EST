@@ -34,7 +34,7 @@ public class EscalerasCoronografoInteractable :Interactable
     }
     private void Awake()
     {
-        if (GameProgressController.Parejas)
+        if (GameProgressController.PicDuMidiPuzzleAssociation)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);

@@ -6,7 +6,7 @@ public class PuzzleVacioInProgressSceneController : MonoBehaviour
 {
     public void Continue()
     {
-        GameProgressController.SetIsVacuumSolved(true);
+        GameProgressController.SSTVacuumSystemFixed = true;
         GameProgressController.SetCurrentStartPoint(1);
 
         GameEvents.LoadScene.Invoke("SST_3_sala_maquinas");

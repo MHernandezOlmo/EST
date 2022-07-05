@@ -29,7 +29,7 @@ public class EnemyMicroWave : MonoBehaviour
         _startDegrees = transform.rotation.eulerAngles.y;
         _player = FindObjectOfType<PlayerController>().transform;
         _animator = GetComponent<Animator>();
-        if (GameProgressController.Tetris)
+        if (GameProgressController.SSTPuzzleTetrisAO)
         {
             canBeSeen = true;
         }

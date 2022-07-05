@@ -55,8 +55,25 @@ public class GameProgressData
     public bool _picDuMidiAssociationSolvedAdvice;
     public bool _picDuMidiSolved;
 
+    //SST
+    public bool _SSTMicrowaveAlert;
+    public bool _SSTHallAdvice;
+    public bool _SSTColdSystemFixed;
+    public bool _SSTVacuumSystemFixed;
+    public bool _SSTColaborativeAlert;
+    public bool _SSTPuzzlePairs;
+    public bool _SSTAOPiezesAlertShown;
+    public bool _SSTShieldSkill;
+    public int _SSTAOPieces;
+    public bool _SSTHasAO;
+    public bool _SSTDomePiece;
+    public bool _SSTPuzzleTetrisAO;
+    public bool _SSTBackFromTetrisAdvice;
+    public bool _SSTSolved;
+
+    public bool _hasReadHeatMessages;
+
     public bool _gregorFinished;
-    public bool _SSTFinished;
     public bool _ESTFinished;
     public bool _arrivingRoomDoor;
     public bool _combatDoor;
@@ -69,35 +86,18 @@ public class GameProgressData
     public string _currentScene;
     public int _currentStartPoint;
     public bool _recopiledDataAdvicePDMD;
-    public bool _topPiecePicked;
 
     public bool _openEinsteinBasementDoor;
 
     public bool _telescopeReady;
     public bool _jetpack;
 
-    public bool _parejas;
-    public bool _tetris;
     public bool _paintTower;
-    public bool _microwaveAlert;
-    public bool _firstSSTEntry;
-    public bool _isVacuumSolved;
-    public bool _isSSTColdSystemFixed;
 
-    public bool _sstColaborativeAlert;
     public bool _sstCollaborativeCallSolved;
 
     public bool _solvedPuzzleParejas;
 
-    public bool _adaptativeOpticPiezesAlertShown;
-
-    public bool _hasShield;
-
-    public int _piezasAO;
-
-    public bool _hasAO;
-
-    public bool _hasReadHeatMessages;
 
     public bool _solvedPuzzleAO;
     public bool _adviceHR;

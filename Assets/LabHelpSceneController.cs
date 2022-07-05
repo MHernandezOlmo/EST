@@ -9,7 +9,7 @@ public class LabHelpSceneController : MonoBehaviour
 
     IEnumerator Start()
     {
-        if (GameProgressController.Parejas)
+        if (GameProgressController.SSTPuzzlePairs)
         {
             yield return new WaitForSeconds(1f);
             _dialogs[3].triggerDialogueEvent(true);
@@ -23,7 +23,7 @@ public class LabHelpSceneController : MonoBehaviour
     {
         if (counter == 3)
         {
-            GameEvents.LoadScene.Invoke("Parejas");
+            GameEvents.LoadScene.Invoke("SSTPuzzlePairs");
         }
         else
         {

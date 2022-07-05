@@ -15,20 +15,20 @@ public class SSTExteriors : MonoBehaviour
     bool _ended;
     void Start()
     {
-        _shownAlert = GameProgressController.GetMicrowaveAlert();
+        _shownAlert = GameProgressController.SSTMicrowaveAlert;
         _microWaves = FindObjectsOfType<EnemyMicroWave>();
         _playerController = FindObjectOfType<PlayerController>();
         
-        if (!GameProgressController.GetHasAO() && GameProgressController.GetHasShield())
+        if (!GameProgressController.SSTHasAO && GameProgressController.SSTShieldSkill)
         {
             AOPiecesCanvas.SetActive(true);
-            _piecesAO = GameProgressController.GetPiezasAO();
+            _piecesAO = GameProgressController.SSTAOPieces;
         }
     }
     public void GetPiece()
     {
         _piecesAO++;
-        GameProgressController.AddPiezaAO();
+        GameProgressController.SSTAOPieces++;
         if(_piecesAO == 10)
         {
             GetAOTriggerDialog.triggerDialogueEvent();
@@ -49,7 +49,8 @@ public class SSTExteriors : MonoBehaviour
             if (!_ended)
             {
                 _ended = true;
-                GameEvents.LoadScene.Invoke("WorldSelector");
+                PlayerPrefs.SetInt("PieceToSecure", 3);
+                GameEvents.LoadScene.Invoke("SecurePiece");
             }
         }
         _aoPiecesText.text = "AO pieces: " + _piecesAO + "/10";
@@ -68,7 +69,7 @@ public class SSTExteriors : MonoBehaviour
             {
                 _shownAlert = true;
                 _dialogTrigger.triggerDialogueEvent();
-                GameProgressController.SetMicrowaveAlert(true);
+                GameProgressController.SSTMicrowaveAlert =true;
             }
         }      
     }

@@ -44,7 +44,7 @@ public class CombatActivator : MonoBehaviour
         {
             _microwaves = FindObjectsOfType<EnemyMicroWave>();
             _aliveEnemies = _microwaves.Length;
-            if (!GameProgressController.GetHasShield())
+            if (!GameProgressController.SSTShieldSkill)
             {
                 _canFight = false;
             }

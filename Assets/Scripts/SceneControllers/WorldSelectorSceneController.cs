@@ -57,7 +57,7 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldNamesText[4].text = "SST";
 
         }
-        if (GameProgressController.SSTFinished)
+        if (GameProgressController.SSTSolved)
         {
             _worldImages[5].color = Color.white;
             _worldLockImages[5].gameObject.SetActive(false);
@@ -85,7 +85,6 @@ public class WorldSelectorSceneController : MonoBehaviour
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.PicDuMidi);
                 break;
             case 4:
-                GameProgressController.Parejas = false;
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.SST);
                 break;
             case 5:

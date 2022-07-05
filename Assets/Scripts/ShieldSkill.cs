@@ -8,7 +8,7 @@ public class ShieldSkill : Interactable
     private void Start()
     {
         base.Start();
-        if (GameProgressController.GetHasShield())
+        if (GameProgressController.SSTShieldSkill)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.parent.gameObject);
@@ -17,7 +17,7 @@ public class ShieldSkill : Interactable
     public override void Interact()
     {
         _shieldDialog.triggerDialogueEvent();
-        GameProgressController.SetHasShield(true);
+        GameProgressController.SSTShieldSkill = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         GameEvents.ShowScreenText.Invoke("Obtained: Shield Skill");
         Destroy(gameObject.transform.parent.gameObject);

@@ -6,7 +6,7 @@ public class SistemaDeEnfriamientoInProgressSceneController : MonoBehaviour
 {
     public void Continue()
     {
-        GameProgressController.SetIsSSTColdSystemFixed(true);
+        GameProgressController.SSTColdSystemFixed = true;
         GameProgressController.SetCurrentStartPoint(2);
 
         GameEvents.LoadScene.Invoke("SST_3_sala_maquinas");

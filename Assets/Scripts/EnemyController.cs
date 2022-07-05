@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour
             {
                 return;
             }
-            if (_enemyType == EnemyType.Microwave && !GameProgressController.Tetris)
+            if (_enemyType == EnemyType.Microwave && !GameProgressController.SSTPuzzleTetrisAO)
             {
                 return;
             }
@@ -128,16 +128,16 @@ public class EnemyController : MonoBehaviour
 
             if (_lastone)
             {
-                if (!GameProgressController.TopPiecePicked)
+                if (!GameProgressController.SSTDomePiece)
                 {
-                    GameProgressController.TopPiecePicked = true;
+                    GameProgressController.SSTDomePiece = true;
                     Instantiate(_piece, transform.position + Vector3.up * 1, transform.rotation);
                 }
             }
             else
             {
-                int totalPieces = GameProgressController.GetPiezasAO() + FindObjectsOfType<PiezaAO>().Length;
-                if (GameProgressController.TopPiecePicked)
+                int totalPieces = GameProgressController.SSTAOPieces + FindObjectsOfType<PiezaAO>().Length;
+                if (GameProgressController.SSTDomePiece)
                 {
                     if (totalPieces < 10)
                     {

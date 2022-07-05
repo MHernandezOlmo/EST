@@ -27,7 +27,7 @@ public class PuzzleStatesController : MonoBehaviour
                 case "LomnickyPuzzleLayers":
                     FindObjectOfType<Roulette>().StartGame();
                     break;
-                case "Parejas":
+                case "SSTPuzzlePairs":
                     FindObjectOfType<OpticaAdaptativaController>().StartPlaying();
                     break;
                 case "LomnickyPuzzleFlareHunters":
@@ -36,10 +36,10 @@ public class PuzzleStatesController : MonoBehaviour
                 case "PicDuMidiPuzzleCoronagraph":
                     FindObjectOfType<CoronografoController>().StartGame();
                     break;
-                case "Bomba":
+                case "SSTPuzzleVacuumPump":
                     FindObjectOfType<BombaVacioController>().StartGame();
                     break;
-                case "Tetris":
+                case "SSTPuzzleTetrisAO":
                     FindObjectOfType<TetrisDeOndaController>().StartPlaying();
                     break;
                 case "PintaTorre":
@@ -78,9 +78,9 @@ public class PuzzleStatesController : MonoBehaviour
                 GameProgressController.LomnickyPuzzleFlareHunters = true;
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion Lomnicky");
                 break;
-            case "Parejas":
+            case "SSTPuzzlePairs":
                 GameProgressController.SetCurrentStartPoint(1);
-                GameProgressController.Parejas = true;
+                GameProgressController.SSTPuzzlePairs = true;
                 GameEvents.LoadScene.Invoke("SST_PicDuMidi_13_laboratory");
                 break;
             case "PicDuMidiPuzzleCoronagraph":
@@ -91,12 +91,12 @@ public class PuzzleStatesController : MonoBehaviour
                 GameProgressController.PicDuMidiPuzzleAssociation = true;
                 GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
                 break;
-            case "Bomba":
+            case "SSTPuzzleVacuumPump":
                 GameEvents.LoadScene.Invoke("SST_3_sala_maquinas");
                 break;
-            case "Tetris":
-                GameProgressController.Tetris = true;
-                GameProgressController.SetHasAO(true);
+            case "SSTPuzzleTetrisAO":
+                GameProgressController.SSTPuzzleTetrisAO = true;
+                GameProgressController.SSTHasAO = true;
                 GameEvents.LoadScene.Invoke("SST_4_sala_observacion");
                 break;
             case "PintaTorre":

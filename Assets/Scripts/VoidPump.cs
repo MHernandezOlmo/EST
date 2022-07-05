@@ -7,7 +7,7 @@ public class VoidPump : Interactable
     private void Start()
     {
         base.Start();
-        if (GameProgressController.GetIsVacuumSolved())
+        if (GameProgressController.SSTVacuumSystemFixed)
         {
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(transform.parent.gameObject);
@@ -15,6 +15,6 @@ public class VoidPump : Interactable
     }
     public override void Interact()
     {
-        GameEvents.LoadScene.Invoke("Bomba");
+        GameEvents.LoadScene.Invoke("SSTPuzzleVacuumPump");
     }
 }

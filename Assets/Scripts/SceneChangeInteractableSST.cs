@@ -10,7 +10,7 @@ public class SceneChangeInteractableSST : Interactable
     bool _interacted;
     public override void Interact()
     {
-        if(!GameProgressController.GetIsVacuumSolved() || !GameProgressController.GetIsSSTColdSystemFixed())
+        if(!GameProgressController.SSTVacuumSystemFixed || !GameProgressController.SSTColdSystemFixed)
         {
             _dialog.triggerDialogueEvent(true);
         }

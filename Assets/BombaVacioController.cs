@@ -79,7 +79,7 @@ public class BombaVacioController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _pressure.color = Color.green;
         yield return new WaitForSeconds(1f);
-        GameProgressController.SetIsVacuumSolved(true);
+        GameProgressController.SSTVacuumSystemFixed =true;
         _mainPuzzleController.Win();
     }
     IEnumerator UpdatePressure(float _amount)

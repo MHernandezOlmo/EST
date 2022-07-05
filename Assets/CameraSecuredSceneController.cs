@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraSecuredSceneController : MonoBehaviour
 {
     [SerializeField] private DialogueTrigger[] _piezesTrigger;
-    public enum PiezesToSecure{ Camera, Spectropolarimeter, Filters};
+    public enum PiezesToSecure{ Camera, Spectropolarimeter, Filters, AO};
     PiezesToSecure _pieze;
     IEnumerator Start()
     {
@@ -26,6 +26,9 @@ public class CameraSecuredSceneController : MonoBehaviour
                 break;
             case PiezesToSecure.Filters:
                 GameProgressController.PicDuMidiSolved = true;
+                break;
+            case PiezesToSecure.AO:
+                GameProgressController.SSTSolved= true;
                 break;
         }
 
