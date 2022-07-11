@@ -11,7 +11,6 @@ public class MirrorRobot : MonoBehaviour
     RectTransform _rectTransform;
     Coroutine routine;
     EspejoController _espejoController;
-
     private void Start()
     {
         _espejoController = FindObjectOfType<EspejoController>();
@@ -19,6 +18,7 @@ public class MirrorRobot : MonoBehaviour
         maxPoint = new Vector2(652f, 182);
         _rectTransform = GetComponent<RectTransform>();
         GetComponent<Button>().onClick.AddListener(()=>Kill());
+        FindObjectOfType<EspejoController>().AddRobot();
         Appear();
     }
 
@@ -49,12 +49,19 @@ public class MirrorRobot : MonoBehaviour
         Vector2 randomTarget = new Vector2(randomPointX, randomPointY);
         _rectTransform.anchoredPosition = randomTarget;
         _espejoController.RobotKills++;
-        yield return new WaitForSeconds(Random.Range(2, 5));
 
-        if (_espejoController.RobotKills < 30)
+        print(FindObjectOfType<EspejoController>().robotsCount);
+        if (FindObjectOfType<EspejoController>().robotsCount < 30)
         {
-            StartCoroutine(CrAppear());
+            FindObjectOfType<EspejoController>().AddRobot();
+            yield return new WaitForSeconds(Random.Range(2, 5));
+            Appear();
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
     IEnumerator CrAppear()
     {

@@ -32,7 +32,7 @@ public class ProjectorInteractable : Interactable
     {
         _projectorCamera.SetActive(false);
         _projectorCanvas.SetActive(false);
-        _filtroSR.sprite = _filtros[3];
+        _filtroSR.sprite = _filtros[5];
         CurrentSceneManager._canMove = true;
     }
     

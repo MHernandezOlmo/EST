@@ -10,6 +10,7 @@ public class MirrorDirt : MonoBehaviour
     private RectTransform _rectTransform;
     private Image _image;
     EspejoController _espejoController;
+    public bool _clean;
     public Image ImageComponent
     {
         get
@@ -44,11 +45,13 @@ public class MirrorDirt : MonoBehaviour
         }
         transform.localScale = Vector3.zero;
         _image.enabled = false;
+        _clean = true;
     }
     public void CreateDirt(Vector2 pos)
     {
         if (!_image.enabled)
         {
+            _clean = false;
             _image.enabled = true;
             _rectTransform.anchoredPosition = pos;
             _appearRoutine = StartCoroutine(CrAppear());

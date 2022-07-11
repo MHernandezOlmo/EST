@@ -236,6 +236,11 @@ public class UserDataEditor : EditorWindow
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Laberymth Dialog", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._picDuMidiLaberynthDialog= EditorGUILayout.Toggle(_gameProgressData._picDuMidiLaberynthDialog, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Puzzle Association", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._picDuMidiPuzzleAssociation= EditorGUILayout.Toggle(_gameProgressData._picDuMidiPuzzleAssociation, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();

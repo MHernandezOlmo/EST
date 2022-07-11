@@ -61,7 +61,8 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
         neededKills--;
         if (neededKills == 0)
         {
-            GameEvents.LoadScene.Invoke("WorldSelector");
+            PlayerPrefs.SetInt("PieceToSecure", 3);
+            GameEvents.LoadScene.Invoke("SecurePiece");
         }
     }
 

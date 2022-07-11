@@ -20,7 +20,7 @@ public class PiezaFiltro : Interactable
                 filterAmount++;
             }
         }
-        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+
         GameEvents.ShowScreenText.Invoke("Obtained: Filter\n"+filterAmount+"/6");
         Destroy(transform.root.gameObject);
     }

@@ -18,6 +18,7 @@ public class Patio2SceneController : MonoBehaviour
     public void ReadAdvice()
     {
         GameProgressController.PicDuMidiCoronalEjectionAdvice = true;
+        GameEvents.ShowScreenText.Invoke("Use the coronagraph");
         _dialog.gameObject.SetActive(false);
     }
     public void ContactUV()

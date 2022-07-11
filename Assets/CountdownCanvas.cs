@@ -8,11 +8,21 @@ public class CountdownCanvas : MonoBehaviour
     float _totalTime;
     float _elapsedTime;
     TextMeshProUGUI _text;
+    private static CountdownCanvas c;
+
     void Start()
     {
         _text = GetComponent<TextMeshProUGUI>();
         _totalTime = 90;
         DontDestroyOnLoad(transform.parent.gameObject);
+        if (c== null)
+        {
+            c = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
@@ -25,5 +35,10 @@ public class CountdownCanvas : MonoBehaviour
             GameEvents.LoadScene.Invoke("Gregor_11_almacen");
             Destroy(gameObject);
         }
+    }
+    public void Restart()
+    {
+        GameEvents.LoadScene.Invoke("Gregor_11_almacen");
+        Destroy(gameObject);
     }
 }

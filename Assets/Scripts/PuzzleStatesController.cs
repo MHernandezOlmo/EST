@@ -127,7 +127,7 @@ public class PuzzleStatesController : MonoBehaviour
     {
         for (float i = 0; i < 2f; i += Time.deltaTime)
         {
-            _winholder.anchoredPosition = Vector3.Lerp(new Vector3(0, 1100, 0), Vector3.zero, _animationCurve.Evaluate(i / 2f));
+            _winholder.anchoredPosition = Vector3.Lerp(new Vector3(0, 2000, 0), Vector3.zero, _animationCurve.Evaluate(i / 2f));
             yield return null;
         }
         _winholder.anchoredPosition = new Vector3(0, 0, 0);
@@ -136,7 +136,7 @@ public class PuzzleStatesController : MonoBehaviour
     {
         for (float i = 0; i < 2f; i += Time.deltaTime)
         {
-            _gameOverholder.anchoredPosition = Vector3.Lerp(new Vector3(0, 1100, 0), Vector3.zero,  _animationCurve.Evaluate(i / 2f));
+            _gameOverholder.anchoredPosition = Vector3.Lerp(new Vector3(0, 2000, 0), Vector3.zero,  _animationCurve.Evaluate(i / 2f));
             yield return null;
         }
         _gameOverholder.anchoredPosition = new Vector3(0, 0, 0);
@@ -145,10 +145,10 @@ public class PuzzleStatesController : MonoBehaviour
     {
         for(float i = 0; i< 2f; i += Time.deltaTime)
         {
-            _holder.anchoredPosition = Vector3.Lerp(Vector3.zero, new Vector3(0, 1100, 0),_animationCurve.Evaluate(i / 2f));
+            _holder.anchoredPosition = Vector3.Lerp(Vector3.zero, new Vector3(0, 2000, 0),_animationCurve.Evaluate(i / 2f));
             yield return null;
         }
-        _holder.anchoredPosition = new Vector3(0, 1100, 0);
+        _holder.anchoredPosition = new Vector3(0, 2000, 0);
     }
 
     public void CorrectFeedback()

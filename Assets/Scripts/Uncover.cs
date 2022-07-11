@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Uncover : Interactable
 {
+    void Start()
+    {
+        base.Start();
+        if (!GameProgressController.PicDuMidiPuzzleCoronagraph)
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(gameObject);
+        }
+    }
     public override void Interact()
     {
         GameProgressController.PicDuMidiUncoveredJeanRoch = true;

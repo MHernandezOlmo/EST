@@ -129,7 +129,15 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+            if (FindObjectOfType<CountdownCanvas>() != null)
+            {
+                FindObjectOfType<CountdownCanvas>().Restart();
+            }
+            else
+            {
+
+                GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
+            }
         }
     }
 

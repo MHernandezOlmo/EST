@@ -394,7 +394,20 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
+    public static bool PicDuMidiLaberynthDialog
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._picDuMidiLaberynthDialog;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._picDuMidiLaberynthDialog = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool PicDuMidiPuzzleAssociation
     {
         get

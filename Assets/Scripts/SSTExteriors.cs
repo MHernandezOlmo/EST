@@ -49,7 +49,7 @@ public class SSTExteriors : MonoBehaviour
             if (!_ended)
             {
                 _ended = true;
-                PlayerPrefs.SetInt("PieceToSecure", 3);
+                PlayerPrefs.SetInt("PieceToSecure", 4);
                 GameEvents.LoadScene.Invoke("SecurePiece");
             }
         }

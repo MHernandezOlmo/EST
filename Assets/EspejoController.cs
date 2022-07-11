@@ -7,6 +7,12 @@ public class EspejoController : MonoBehaviour
     [SerializeField] MirrorRobot[] _robots;
     [SerializeField] MirrorDirt[] _dirts;
     private int _robotKills;
+    public int robotsCount;
+    bool won;
+    public void AddRobot()
+    {
+        robotsCount++;
+    }
     public int RobotKills
     {
         get
@@ -17,15 +23,34 @@ public class EspejoController : MonoBehaviour
         {
             _robotKills = value;
 
-            if (_robotKills == 30)
-            {
-                FindObjectOfType<PuzzleStatesController>().Win();
-            }
         }
     }
     public void StartGame()
     {
 
+    }
+
+    void Update()
+    {
+        if (_robotKills == 30)
+        {
+            bool allClean = true;
+            for(int i = 0; i< _dirts.Length; i++)
+            {
+                if (!_dirts[i]._clean)
+                {
+                    allClean = false;
+                }
+            }
+            if (allClean)
+            {
+                if (!won)
+                {
+                    won = true;
+                    FindObjectOfType<PuzzleStatesController>().Win();
+                }
+            }
+        }
     }
 
     void Start()

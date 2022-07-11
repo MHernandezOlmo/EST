@@ -7,12 +7,26 @@ public class PortalCafeteria : MonoBehaviour
     bool _canExit;
     [SerializeField] DialogueTrigger trigger;
     [SerializeField] BoxCollider _boxCollider;
+    [SerializeField] private int portal;
     private void OnTriggerEnter(Collider other)
     {
+        if (Time.timeSinceLevelLoad < 0.2f)
+        {
+            return;
+        }
         if (_canExit)
         {
-            GameProgressController.SetCurrentStartPoint(0);
-            GameEvents.LoadScene.Invoke("PicDuMidi_1_puente_roto");
+            if (portal == 0)
+            {
+                GameProgressController.SetCurrentStartPoint(0);
+                GameEvents.LoadScene.Invoke("PicDuMidi_1_puente_roto");
+            }
+            else
+            {
+                GameProgressController.SetCurrentStartPoint(0);
+                GameEvents.LoadScene.Invoke("PicDuMidi_2_terraza_antena");
+            }
+            
         }
         else
         {

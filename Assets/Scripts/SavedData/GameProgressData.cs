@@ -51,6 +51,7 @@ public class GameProgressData
     public bool _picDuMidiNeedContactUV;
     public bool _picDuMidiFindFiltersAdvice;
     public bool _picDuMidiFloatingPlatformLeft;
+    public bool _picDuMidiLaberynthDialog;
     public bool _picDuMidiPuzzleAssociation;
     public bool _picDuMidiAssociationSolvedAdvice;
     public bool _picDuMidiSolved;

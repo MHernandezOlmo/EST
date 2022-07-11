@@ -14,9 +14,11 @@ public class PortalPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameProgressController.SetCurrentStartPoint(_point);
+        if (Time.timeSinceLevelLoad > 0.2f)
+        {
+            GameProgressController.SetCurrentStartPoint(_point);
+        }
 
-//        PlayerPrefs.SetInt("PreviousPoint", _point);
     }
 
     // Update is called once per frame

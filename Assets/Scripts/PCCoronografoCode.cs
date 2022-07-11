@@ -35,7 +35,7 @@ public class PCCoronografoCode : Interactable
     }
     public void Comprobar()
     {
-        if(_answerText.text == "#1357962")
+        if(_answerText.text == "#1457962")
         {
             FindObjectOfType<EscalerasCoronografo>().DownStairs();
             StartCoroutine(CrHideTablon());

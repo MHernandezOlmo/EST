@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class TetrisDeOndaController : MonoBehaviour
     int _score;
     int _lifes;
     bool _playing;
+    [SerializeField] TextMeshProUGUI _scoreText;
     [SerializeField] GameObject[] _heart;
     void Start()
     {
@@ -39,6 +41,7 @@ public class TetrisDeOndaController : MonoBehaviour
     {
         if (_playing)
         {
+            _scoreText.text = $"{_score}/30";
             _elapsedTime += Time.deltaTime;
             if (_elapsedTime > _spawnTime)
             {
@@ -70,7 +73,7 @@ public class TetrisDeOndaController : MonoBehaviour
 
     public void LoseLife()
     {
-
+        FindObjectOfType<PuzzleStatesController>().FailFeedback();
         _lifes--;
         _heart[_lifes].SetActive(false);
         if (_lifes<=0)
@@ -86,10 +89,12 @@ public class TetrisDeOndaController : MonoBehaviour
         {
             for (int i = 0; i < _instantiatedWaves[waveRow].Count; i++)
             {
-                if (Vector3.Distance(_camera.ScreenToViewportPoint(_instantiatedWaves[waveRow][i].position), _camera.ScreenToViewportPoint(_wavebuttons[waveRow].position)) < 0.1f)
+                float dist = Vector3.Distance(_camera.ScreenToViewportPoint(_instantiatedWaves[waveRow][i].position), _camera.ScreenToViewportPoint(_wavebuttons[waveRow].position));
+                if (dist < 0.05f)
                 {
                     _instantiatedWaves[waveRow][i].GetComponent<Wave>().TransformToOndaPlana();
                     _instantiatedWaves[waveRow].RemoveAt(i);
+                    FindObjectOfType<PuzzleStatesController>().CorrectFeedback();
                     _score++;
                     if (_score >= 30)
                     {

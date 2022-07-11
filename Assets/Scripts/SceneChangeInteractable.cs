@@ -13,7 +13,21 @@ public class SceneChangeInteractable : Interactable
         {
             _interacted = true;
             GameProgressController.SetCurrentStartPoint(_startingPoint);
-            GameEvents.LoadScene.Invoke(_sceneName);
+            if(_sceneName == "Gregor_0_dome")
+            {
+                if (FindObjectOfType<CountdownCanvas>() != null)
+                {
+                    GameEvents.LoadScene.Invoke("Gregor_0_openDome");
+                }
+                else
+                {
+                    GameEvents.LoadScene.Invoke(_sceneName);
+                }
+            }
+            else
+            {
+                GameEvents.LoadScene.Invoke(_sceneName);
+            }
         }
 
     }

@@ -8,29 +8,23 @@ public class PanelRoto : Interactable
     DialogueTrigger _dialogue;
     bool _hasInteracted;
     [SerializeField] DialogueTrigger _filterQuest;
+
+    
     public override void Interact()
     {
-        if (GameProgressController.PicDuMidiPuzzleCoronagraph)
-        {
+        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+        Destroy(gameObject);
+        _dialogue.triggerDialogueEvent(true);
 
-        }
-        else
-        {
-            if (!_hasInteracted)
-            {
-                _hasInteracted = true;
-                _dialogue.triggerDialogueEvent(true);
-            }
-        }
     }
     private void Start()
     {
         base.Start();
-    }
-    IEnumerator WaitForDialog()
-    {
-        yield return new WaitForSeconds(1f);
-        _filterQuest.triggerDialogueEvent();
+        if (GameProgressController.PicDuMidiPuzzleCoronagraph || GameProgressController.PicDuMidiNeedContactUV)
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(gameObject);
+        }
     }
 
 

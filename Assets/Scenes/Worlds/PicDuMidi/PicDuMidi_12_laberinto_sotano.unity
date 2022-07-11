@@ -2289,6 +2289,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d36d91ef78cee45b055cbcdc7d2d94, type: 3}
+--- !u!1 &892424030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892424032}
+  - component: {fileID: 892424031}
+  m_Layer: 0
+  m_Name: LaberynthDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &892424031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892424030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bff83412ab1aa41899a090c916b010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trigger: {fileID: 1915849145}
+--- !u!4 &892424032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892424030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9, y: 1.628183, z: -11.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894546154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,16 +2921,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744946710979353085, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 744946710979353085, guid: 62faca9ef05f8164fa6493a0814bd806,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 744946710979353085, guid: 62faca9ef05f8164fa6493a0814bd806,
-        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2903,16 +2937,6 @@ PrefabInstance:
     - target: {fileID: 744946711407603143, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 744946711407603143, guid: 62faca9ef05f8164fa6493a0814bd806,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 744946711407603143, guid: 62faca9ef05f8164fa6493a0814bd806,
-        type: 3}
-      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 744946711407603143, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -3063,7 +3087,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.size
-      value: 196
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -3803,62 +3827,62 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[168].Name
-      value: SST/PumpSuccess3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
-        type: 3}
-      propertyPath: multilanguageEntries.Array.data[169].Name
       value: SST/PumpSuccess4
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[170].Name
+      propertyPath: multilanguageEntries.Array.data[169].Name
       value: SST/PumpSuccess5
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[171].Name
+      propertyPath: multilanguageEntries.Array.data[170].Name
       value: SST/CallMSProminence0
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[172].Name
+      propertyPath: multilanguageEntries.Array.data[171].Name
       value: SST/CallMSProminence1
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[173].Name
+      propertyPath: multilanguageEntries.Array.data[172].Name
       value: SST/CallMSProminence2
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[174].Name
+      propertyPath: multilanguageEntries.Array.data[173].Name
       value: SST/CallMSProminence3
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[175].Name
+      propertyPath: multilanguageEntries.Array.data[174].Name
       value: SST/ArchivePicduMidi0
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[176].Name
+      propertyPath: multilanguageEntries.Array.data[175].Name
       value: SST/ArchivePicduMidi1
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[177].Name
+      propertyPath: multilanguageEntries.Array.data[176].Name
       value: SST/ArchivePicduMidi2
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[178].Name
+      propertyPath: multilanguageEntries.Array.data[177].Name
       value: SST/NeedHelp0
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
-      propertyPath: multilanguageEntries.Array.data[179].Name
+      propertyPath: multilanguageEntries.Array.data[178].Name
       value: SST/NeedHelp1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[179].Name
+      value: SST/NeedHelp2
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -3883,62 +3907,382 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[184].Name
-      value: SST/GuitarSuccess2
+      value: SST/EternalSuccess0
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[185].Name
-      value: Missions
+      value: SST/EternalSuccess1
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[186].Name
-      value: Alert/FindCableCar
+      value: SST/Books0
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[187].Name
-      value: Alert/GetTornado
+      value: SST/Books1
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[188].Name
-      value: Alert/FindFuse
+      value: SST/Books2
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[189].Name
-      value: Alert/RepairEngine
+      value: SST/BooksFail
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[190].Name
-      value: Alert/GetFuse
+      value: SST/BetterFix
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[191].Name
-      value: Alert/FixEngine
+      value: SST/NoTimeToExplore
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[192].Name
-      value: Alert/FixedEngineInteract
+      value: Missions
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Name
-      value: Alert/HelpArchive
+      value: Alert/FindCableCar
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[194].Name
-      value: Alert/Coat
+      value: Alert/GetTornado
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[195].Name
+      value: Alert/FindFuse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[196].Name
+      value: Alert/RepairEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[197].Name
+      value: Alert/GetFuse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[198].Name
+      value: Alert/FixEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[199].Name
+      value: Alert/FixedEngineInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[200].Name
+      value: Alert/HelpArchive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[201].Name
+      value: Alert/Coat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[202].Name
       value: Alert/Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Name
+      value: Gregor/Mission_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Name
+      value: Gregor/Mission_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Name
+      value: Gregor/Mission_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Name
+      value: Gregor/Mission_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Name
+      value: Gregor/Mission_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Name
+      value: Gregor/HotAdvice_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Name
+      value: Gregor/OvenAdvice_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Name
+      value: Gregor/OvenAdvice_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Name
+      value: Gregor/OvenAdvice_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Name
+      value: Gregor/OvenAdvice_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Name
+      value: Gregor/OvenAdvice_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Name
+      value: Gregor/CleanGarden_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Name
+      value: Gregor/CleanGarden_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Name
+      value: Gregor/CleanGarden_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Name
+      value: Gregor/CleanGarden_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Name
+      value: Gregor/PaintSolved
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Name
+      value: Gregor/BlockDoor_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Name
+      value: Gregor/BlockDoor_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Name
+      value: Gregor/FindHRParts_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Name
+      value: Gregor/FindHRParts_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Name
+      value: Gregor/GetSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Name
+      value: Gregor/FoundAllParts_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Name
+      value: Gregor/FoundAllParts_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Name
+      value: Gregor/FoundAllParts_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Name
+      value: Gregor/FlareCall_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Name
+      value: Gregor/FlareCall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Name
+      value: Gregor/TestHR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Name
+      value: Gregor/FixedHR_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Name
+      value: Gregor/FixedHR_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Name
+      value: Gregor/FixedHR_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Name
+      value: Gregor/FixedHR_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Name
+      value: Gregor/PlacedHR_Success
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Name
+      value: Gregor/PlacedHR_01_Fail
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Name
+      value: Gregor/Got_HR_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Name
+      value: Gregor/Got_HR_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Name
+      value: EST/Intro_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Name
+      value: EST/Intro_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Name
+      value: EST/Intro_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Name
+      value: EST/Intro_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Name
+      value: EST/Ops_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Name
+      value: EST/Ops_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Name
+      value: EST/First
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Name
+      value: EST/Second_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Name
+      value: EST/Second_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Name
+      value: EST/Second_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Name
+      value: EST/Third_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Name
+      value: EST/Third_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Name
+      value: EST/Fourth_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Name
+      value: EST/Fourth_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Name
+      value: EST/Fifth_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Name
+      value: EST/Fifth_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Name
+      value: EST/Sixth_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Name
+      value: EST/Sixth_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Name
+      value: EST/Seventh_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Name
+      value: EST/Seventh_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Name
+      value: EST/PolishedMirror_00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[259].Name
+      value: EST/PolishedMirror_01
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4687,6 +5031,326 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[196].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[197].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[198].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[199].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[200].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[201].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[202].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[259].Translations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[0].Translations.Array.data[0]
       value: Solar Mission EST
       objectReference: {fileID: 0}
@@ -4707,17 +5371,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[1].Translations.Array.data[2]
+      value: Options
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[2].Translations.Array.data[1]
       value: HelloWorld!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[2].Translations.Array.data[2]
-      value: 
+      value: HelloWorld!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[3].Translations.Array.data[1]
+      value: Hello testing 1 2 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[3].Translations.Array.data[2]
       value: Hello testing 1 2 3
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4727,7 +5401,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[4].Translations.Array.data[2]
+      value: Hello testing 4 5 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[5].Translations.Array.data[1]
+      value: New Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[5].Translations.Array.data[2]
       value: New Game
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4737,7 +5421,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[6].Translations.Array.data[2]
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[7].Translations.Array.data[1]
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[7].Translations.Array.data[2]
       value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4747,7 +5441,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[8].Translations.Array.data[2]
+      value: Music and sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[9].Translations.Array.data[1]
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[9].Translations.Array.data[2]
       value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4757,7 +5461,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[10].Translations.Array.data[2]
+      value: Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[11].Translations.Array.data[1]
+      value: Language
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[11].Translations.Array.data[2]
       value: Language
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4767,12 +5481,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[12].Translations.Array.data[2]
+      value: Spanish
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[13].Translations.Array.data[1]
       value: English
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[13].Translations.Array.data[2]
+      value: English
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[14].Translations.Array.data[1]
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[14].Translations.Array.data[2]
       value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -4807,6 +5536,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[17].Translations.Array.data[2]
+      value: 'It''s just what we need right now!%The Sun is reaching the highest
+        levels of activity ever recorded. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[18].Translations.Array.data[0]
       value: We need you to observe the corona to obtain more information about what
         is happening!
@@ -4814,6 +5549,12 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[18].Translations.Array.data[1]
+      value: We need you to observe the corona to obtain more information about what
+        is happening!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[18].Translations.Array.data[2]
       value: We need you to observe the corona to obtain more information about what
         is happening!
       objectReference: {fileID: 0}
@@ -4830,7 +5571,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[19].Translations.Array.data[2]
-      value: But& be careful. Strange things... are happening...
+      value: Above all& don't forget to test the new camera for EST.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4841,6 +5582,12 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[20].Translations.Array.data[1]
+      value: Thanks to it& we will be able to study the Sun in different wavelengths
+        with a resolution never achieved before.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[20].Translations.Array.data[2]
       value: Thanks to it& we will be able to study the Sun in different wavelengths
         with a resolution never achieved before.
       objectReference: {fileID: 0}
@@ -4857,7 +5604,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[21].Translations.Array.data[2]
-      value: 
+      value: But& be careful. Strange things... are happening...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4872,25 +5619,25 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[22].Translations.Array.data[2]
-      value: 
+      value: Good luck! (You will need it).
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.data[0]
-      value: "Congratulations!%You now have the power of generating \u201Csolar magnetic
-        tornadoes\u201D!"
+      value: Congratulations!%You now have the power of generating $solar magnetic
+        tornadoes$!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.data[1]
-      value: "Congratulations!%You now have the power of generating \u201Csolar magnetic
-        tornadoes\u201D!"
+      value: Congratulations!%You now have the power of generating $solar magnetic
+        tornadoes$!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[23].Translations.Array.data[2]
-      value: "Congratulations! Now you have the power of generating \u201Csolar magnetic
-        tornadoes\u201D!"
+      value: Congratulations!%You now have the power of generating $solar magnetic
+        tornadoes$!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4908,7 +5655,7 @@ PrefabInstance:
         type: 3}
       propertyPath: multilanguageEntries.Array.data[24].Translations.Array.data[2]
       value: Magnetic tornadoes are plasma structures rotating in the atmosphere
-        of the Sun. They can reach velocities of more than 10000 km/h.
+        of the Sun.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4923,7 +5670,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[25].Translations.Array.data[2]
-      value: This ability will help you accomplish your mission!
+      value: They can reach velocities of more than 10000 kilometres per hour.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4938,7 +5685,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[26].Translations.Array.data[2]
-      value: 
+      value: This ability will help you accomplish your mission!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4953,8 +5700,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[27].Translations.Array.data[2]
-      value: An aurora! What??!! They occur when particles launched from the Sun
-        collide with the Earth's magnetic field
+      value: 'An aurora!%What??!! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4971,7 +5717,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[28].Translations.Array.data[2]
-      value: It's rare to see them at these low latitudes... and in daylight!
+      value: 'They occur when particles launched from the Sun collide with the Earth''s
+        magnetic field.%It''s rare to see them at these low latitudes... '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -4988,8 +5735,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[29].Translations.Array.data[2]
-      value: Certainly& the solar activity must be very intense. So much as my hunger.
-        I better hurry up!
+      value: Certainly& the solar activity must be very intense.%As much as my hunger.%I
+        better hurry up!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5006,7 +5753,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[30].Translations.Array.data[2]
-      value: 
+      value: 'Oh boy!%Am I suffering from altitude sickness?%A bunch of invisible
+        lamps are attacking me! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5021,7 +5769,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[31].Translations.Array.data[2]
-      value: 
+      value: I need something to see them and beat them.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5038,7 +5786,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[32].Translations.Array.data[2]
-      value: 
+      value: Rats!%The cable car engine doesn't work.%The fuse is even more roasted
+        than my breakfast this morning!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5071,7 +5820,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[34].Translations.Array.data[2]
-      value: 
+      value: The best conditions for astronomical observations occur high in mountains.%But...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5086,8 +5835,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[35].Translations.Array.data[2]
-      value: I have to CLOSE IT  before the snow damages the telescope and Spectro
-        turns me into sausage paste (or sauerkraut!).
+      value: It's snowing! And the telescope dome is open! How is this possible?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5104,7 +5852,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[36].Translations.Array.data[2]
-      value: 
+      value: I have to CLOSE IT before the snow damages the telescope and Spectro
+        kills me.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5139,8 +5888,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[38].Translations.Array.data[2]
-      value: "Oh no! I never remember the code to close the dome! Is it my cat\u2019s
-        birthday date...?  Where did I write it down?"
+      value: "Oh no!%I never remember the code to close the dome! Is it my cat\u2019s
+        birthday ...?%Where did I write it down?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5155,8 +5904,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[39].Translations.Array.data[2]
-      value: Thank goodness! But it is impossible to observe anything with this snowstorm.
-        I've got it! I'll ask Eclipse to use the Swedish Solar Telescope (SST).
+      value: Thank goodness!%But it is impossible to observe anything with this snowstorm.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5171,7 +5919,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[40].Translations.Array.data[2]
-      value: 
+      value: I'll ask Eclipse to use the Swedish Solar Telescope (SST).
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5186,7 +5934,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[41].Translations.Array.data[2]
-      value: "Primero deber\xEDa pedir ayuda a alg\xFAn compa\xF1ero."
+      value: I should ask for help first.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5201,8 +5949,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[42].Translations.Array.data[2]
-      value: Eclipse! Do you copy? I need your help! A blizzard is preventing me
-        from using the telescope. Can you make some observations at the SST?
+      value: 'Eclipse!%Do you copy?%I need your help! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5219,7 +5966,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[43].Translations.Array.data[2]
-      value: 
+      value: A blizzard is preventing me from using the telescope.%Can you make some
+        observations at the SST?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5234,7 +5982,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[44].Translations.Array.data[2]
-      value: Roger that! But you owe me a meal. Or better& two.
+      value: 'Roger that! But you owe me a meal. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5249,7 +5997,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[45].Translations.Array.data[2]
-      value: 
+      value: Or better& two.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5264,7 +6012,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[46].Translations.Array.data[2]
-      value: UV& I'm freaking out!
+      value: 'UV& I''m freaking out! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5281,8 +6029,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[47].Translations.Array.data[2]
-      value: Certainly& the solar magnetic field is now even crazier than Spectro
-        at the Christmas party. The activity has become increasingly explosive.
+      value: 'The solar magnetic field is now even crazier than Spectro at the Christmas
+        party! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5299,8 +6047,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[48].Translations.Array.data[2]
-      value: I've never seen anything like this! The consequences for the Earth are
-        unpredictable...
+      value: The activity has become increasingly explosive.%The consequences for
+        the Earth are unpredictable...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5315,7 +6063,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[49].Translations.Array.data[2]
-      value: So... when are you taking me out for lunch?
+      value: So...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5330,9 +6078,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[50].Translations.Array.data[2]
-      value: Before that& I must calibrate the camera and send it to the European
-        Solar Telescope as soon as possible. It's the only way to understand what's
-        happening in the Sun... Do you mind if I order some pizza& instead?
+      value: When are you taking me out for lunch?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5349,7 +6095,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[51].Translations.Array.data[2]
-      value: 
+      value: Before that& I must calibrate the camera and send it to the European
+        Solar Telescope as soon as possible.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5364,7 +6111,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[52].Translations.Array.data[2]
-      value: 
+      value: It's the only way to understand what's happening on the Sun...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5379,7 +6126,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[53].Translations.Array.data[2]
-      value: 
+      value: Do you mind if I order some pizza& instead?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5414,7 +6161,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[55].Translations.Array.data[2]
-      value: I know! But first& I have to find all the pieces! Someone has spread
+      value: I know!%But first& I have to find all the pieces!%Someone has spread
         them all around the observatory as if they were breadcrumbs!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -5465,7 +6212,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[58].Translations.Array.data[2]
-      value: 
+      value: Spectro must be impatient& he could explode like a coronal mass ejection
+        at any moment.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5497,9 +6245,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[60].Translations.Array.data[2]
-      value: Congratulations UV! Now go quickly to the cable car and take the camera
-        with you to set it up on EST. There is no time to waste! And bring me some
-        cookies!
+      value: 'Congratulations UV!%Now go quickly to the cable car and take the camera
+        with you to set it up on EST.%There is no time to waste! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5509,6 +6256,11 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[61].Translations.Array.data[1]
+      value: And bring me some cookies!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[61].Translations.Array.data[2]
       value: And bring me some cookies!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -5526,9 +6278,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[62].Translations.Array.data[2]
-      value: Hello& tiny lamps! Hiding in that wavelength is useless now. With my
-        camera& I can perfectly see you. Are you ready? I'm going to turn you into
-        meatballs!
+      value: 'Hello& tiny lamps!%Hiding in that wavelength is useless now.%With my
+        camera& I can perfectly see you. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5542,12 +6293,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[63].Translations.Array.data[2]
+      value: 'Are you ready?%I''m going to turn you into meatballs! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[64].Translations.Array.data[0]
       value: Camera secured. Mission accomplished. EST progress status& 1/5.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[64].Translations.Array.data[1]
+      value: Camera secured. Mission accomplished. EST progress status& 1/5.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[64].Translations.Array.data[2]
       value: Camera secured. Mission accomplished. EST progress status& 1/5.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -5585,7 +6346,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[66].Translations.Array.data[2]
-      value: ' Solar activity has become crazy& and we hope to find why by observing
+      value: 'Solar activity has become crazy& and we hope to find why by observing
         the Sun at different wavelengths.%Your mission is to get high-quality filters
         for EST. '
       objectReference: {fileID: 0}
@@ -5679,41 +6440,41 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[72].Translations.Array.data[0]
-      value: "Out there is freezing.%I should equip myself with my own \u201Cfilters\u201D:
-        coat and sunglasses to protect me from the solar radiation."
+      value: 'Out there is freezing.%I should equip myself with my own $filters$:
+        coat and sunglasses to protect me from the solar radiation.'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[72].Translations.Array.data[1]
-      value: "Out there is freezing.%I should equip myself with my own \u201Cfilters\u201D:
-        coat and sunglasses to protect me from the solar radiation."
+      value: 'Out there is freezing.%I should equip myself with my own $filters$:
+        coat and sunglasses to protect me from the solar radiation.'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[72].Translations.Array.data[2]
-      value: "Out there is freezing.%I should equip myself with my own \u201Cfilters\u201D:
-        coat and sunglasses to protect me from the solar radiation."
+      value: 'Out there is freezing.%I should equip myself with my own $filters$:
+        coat and sunglasses to protect me from the solar radiation.'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[73].Translations.Array.data[0]
       value: Congratulations!%With this device& you have the power of creating small
         solar flares.%The energy released by reconnecting magnetic fields will propel
-        you to the sky.
+        you to the sky!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[73].Translations.Array.data[1]
       value: Congratulations!%With this device& you have the power of creating small
         solar flares.%The energy released by reconnecting magnetic fields will propel
-        you to the sky.
+        you to the sky!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[73].Translations.Array.data[2]
       value: Congratulations!%With this device& you have the power of creating small
         solar flares.%The energy released by reconnecting magnetic fields will propel
-        you to the sky.
+        you to the sky!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5737,19 +6498,19 @@ PrefabInstance:
         type: 3}
       propertyPath: multilanguageEntries.Array.data[75].Translations.Array.data[0]
       value: Beware of the toasters& the only way to defeat them is by pointing directly
-        to their guts.&But we need filters to see what they have inside!
+        to their guts.%But we need filters to see what they have inside!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[75].Translations.Array.data[1]
       value: Beware of the toasters& the only way to defeat them is by pointing directly
-        to their guts.&But we need filters to see what they have inside!
+        to their guts.%But we need filters to see what they have inside!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[75].Translations.Array.data[2]
       value: Beware of the toasters& the only way to defeat them is by pointing directly
-        to their guts.&But we need filters to see what they have inside!
+        to their guts.%But we need filters to see what they have inside!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -5859,19 +6620,19 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[82].Translations.Array.data[0]
-      value: UV!&My coronagraph is sabotaged& and Spectro needs images of the solar
+      value: UV!%My coronagraph is sabotaged& and Spectro needs images of the solar
         corona.%Could you take them from Lomnicky?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[82].Translations.Array.data[1]
-      value: UV!&My coronagraph is sabotaged& and Spectro needs images of the solar
+      value: UV!%My coronagraph is sabotaged& and Spectro needs images of the solar
         corona.%Could you take them from Lomnicky?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[82].Translations.Array.data[2]
-      value: UV!&My coronagraph is sabotaged& and Spectro needs images of the solar
+      value: UV!%My coronagraph is sabotaged& and Spectro needs images of the solar
         corona.%Could you take them from Lomnicky?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -5961,20 +6722,20 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[88].Translations.Array.data[0]
-      value: "I don\u2019t have all the filters yet.%Why didn't I store them all
-        together...?"
+      value: I need the appropriate filters to see the image.%Why didn't I store
+        them all together...?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[88].Translations.Array.data[1]
-      value: "I don\u2019t have all the filters yet.%Why didn't I store them all
-        together...?"
+      value: I need the appropriate filters to see the image.%Why didn't I store
+        them all together...?together...?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[88].Translations.Array.data[2]
-      value: "I don\u2019t have all the filters yet.%Why didn't I store them all
-        together...?"
+      value: I need the appropriate filters to see the image.%Why didn't I store
+        them all together...?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -6278,8 +7039,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[107].Translations.Array.data[2]
-      value: Did you know that it was the first solar tower built in Europe? I still
-        remember when we laid the first brick. I was a young man with a mane flowing
+      value: Did you know that it was the first solar tower built in Europe?%I still
+        remember when we laid the first brick.%I was a young man with a mane flowing
         in the wind...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -6299,8 +7060,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[108].Translations.Array.data[2]
-      value: But let's not linger! The Einstein Tower has one of the best laboratories
-        in the world for developing solar instruments. We need you to get a SPECTROPOLARIMETER
+      value: But let's not linger!%The Einstein Tower has one of the best laboratories
+        in the world for developing solar instruments.%We need you to get a SPECTROPOLARIMETER
         from there& immediately!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -6349,9 +7110,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[111].Translations.Array.data[2]
-      value: 'Those crazed machines aren''t going to make things easy for us... That''s
-        why we''ve outfitted you with our latest invention: a miniature Coronal Mass
-        Ejection cannon'
+      value: Those crazy machines aren't going to make things easy for us...
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -6363,6 +7122,13 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[112].Translations.Array.data[1]
+      value: 'That''s why we''ve outfitted you with our latest invention: a miniature
+        Coronal Mass Ejection cannon. It is the pocket version of one of the most
+        energetic events in the Solar System.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[112].Translations.Array.data[2]
       value: 'That''s why we''ve outfitted you with our latest invention: a miniature
         Coronal Mass Ejection cannon. It is the pocket version of one of the most
         energetic events in the Solar System.'
@@ -6590,8 +7356,7 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[126].Translations.Array.data[2]
-      value: It is too dark! I have to open the dome and let the light come in. The
-        last time I was observing the Sun& there was a button over here...
+      value: 'It is too dark!%I have to open the dome and let the light come in. '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -6689,8 +7454,8 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[132].Translations.Array.data[2]
-      value: Now you have to point the mirror to the Sun so that the light reaches
-        the optics lab in the basement.
+      value: 'Now you have to point the mirror to the Sun so that the light reaches
+        the instrument lab in the basement.%Use the three levers on the wall:'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -6968,6 +7733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
+      propertyPath: multilanguageEntries.Array.data[149].Translations.Array.data[2]
+      value: Plutonium? What do we want Plutonium for?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
       propertyPath: multilanguageEntries.Array.data[150].Translations.Array.data[0]
       value: Here it is!%Flare& I'm sending the beam splitter to you at the speed
         of light! (wink& wink)
@@ -7053,419 +7823,419 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[155].Translations.Array.data[0]
-      value: Hello Eclipse! Sorry for interrupting your stay at Observatorio del
-        Roque de los Muchachos. This place has awesome conditions for solar observations&
-        isn't it?
+      value: Hello Eclipse!%Sorry for interrupting your stay at Roque de los Muchachos
+        Observatory. %This site has awesome conditions for solar observations& right?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[155].Translations.Array.data[1]
-      value: Hello Eclipse! Sorry for interrupting your stay at Observatorio del
-        Roque de los Muchachos. This place has awesome conditions for solar observations&
-        isn't it?
+      value: Hello Eclipse!%Sorry for interrupting your stay at Roque de los Muchachos
+        Observatory. %This site has awesome conditions for solar observations& right?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[155].Translations.Array.data[2]
-      value: Hello Eclipse! Sorry for interrupting your stay at Observatorio del
-        Roque de los Muchachos. This place has awesome conditions for solar observations&
-        isn't it?
+      value: Hello Eclipse!%Sorry for interrupting your stay at Roque de los Muchachos
+        Observatory. %This site has awesome conditions for solar observations& right?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[156].Translations.Array.data[0]
-      value: (Indeed& I'm just in the back& getting ready EST). But we need your
+      value: Indeed& I'm just around the corner& getting EST ready.%But we need your
         help right now!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[156].Translations.Array.data[1]
-      value: (Indeed& I'm just in the back& getting ready EST). But we need your
+      value: Indeed& I'm just around the corner& getting EST ready.%But we need your
         help right now!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[156].Translations.Array.data[2]
-      value: (Indeed& I'm just in the back& getting ready EST). But we need your
+      value: Indeed& I'm just around the corner& getting EST ready.%But we need your
         help right now!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[157].Translations.Array.data[0]
-      value: There is only one instrument left to complete EST& the ADAPTIVE OPTICS!
-        It will allow us to correct the disturbances in the images of the Sun caused
+      value: We are missing an important piece to complete EST.%The adaptive optics
+        system.%It is used to correct the distortions of the solar images caused
         by the atmosphere.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[157].Translations.Array.data[1]
-      value: There is only one instrument left to complete EST& the ADAPTIVE OPTICS!
-        It will allow us to correct the disturbances in the images of the Sun caused
+      value: We are missing an important piece to complete EST.%The adaptive optics
+        system.%It is used to correct the distortions of the solar images caused
         by the atmosphere.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[157].Translations.Array.data[2]
-      value: There is only one instrument left to complete EST& the ADAPTIVE OPTICS!
-        It will allow us to correct the disturbances in the images of the Sun caused
+      value: We are missing an important piece to complete EST.%The adaptive optics
+        system.%It is used to correct the distortions of the solar images caused
         by the atmosphere.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[158].Translations.Array.data[0]
-      value: Your mission is to enter the Swedish Solar Tower and bring the Adaptive
-        Optics to EST. We rely on you!
+      value: Your mission is to go to the Swedish Solar Telescope and bring the adaptive
+        optics system to EST.%We are relying on you!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[158].Translations.Array.data[1]
-      value: Your mission is to enter the Swedish Solar Tower and bring the Adaptive
-        Optics to EST. We rely on you!
+      value: Your mission is to go to the Swedish Solar Telescope and bring the adaptive
+        optics system to EST.%We are relying on you!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[158].Translations.Array.data[2]
-      value: Your mission is to enter the Swedish Solar Tower and bring the Adaptive
-        Optics to EST. We rely on you!
+      value: Your mission is to go to the Swedish Solar Telescope and bring the adaptive
+        optics system to EST.%We are relying on you!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[159].Translations.Array.data[0]
-      value: Really? But& I had an appointment with some colleagues for... studying.
+      value: Really?%But& I have an appointment with some colleagues for... studying.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[159].Translations.Array.data[1]
-      value: Really? But& I had an appointment with some colleagues for... studying.
+      value: Really?%But& I have an appointment with some colleagues for... studying.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[159].Translations.Array.data[2]
-      value: Really? But& I had an appointment with some colleagues for... studying.
+      value: Really?%But& I have an appointment with some colleagues for... studying.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[160].Translations.Array.data[0]
-      value: Good& that's my girl. So& you better hurry up!
+      value: Good scientist!%So& you better hurry up!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[160].Translations.Array.data[1]
-      value: Good& that's my girl. So& you better hurry up!
+      value: Good scientist!%So& you better hurry up!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[160].Translations.Array.data[2]
-      value: Good& that's my girl. So& you better hurry up!
+      value: Good scientist!%So& you better hurry up!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[0]
-      value: The atmospheric turbulences don't let us distinguish those microwaves
-        clearly. We see them moving as if they were dancing Macarena.
+      value: The atmospheric turbulence does not allow us to distinguish those microwave
+        ovens clearly. We see them moving all the time!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[1]
-      value: The atmospheric turbulences don't let us distinguish those microwaves
-        clearly. We see them moving as if they were dancing Macarena.
+      value: The atmospheric turbulence does not allow us to distinguish those microwave
+        ovens clearly. We see them moving all the time!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[2]
-      value: The atmospheric turbulences don't let us distinguish those microwaves
-        clearly. We see them moving as if they were dancing Macarena.
+      value: The atmospheric turbulence does not allow us to distinguish those microwave
+        ovens clearly. We see them moving all the time!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[0]
-      value: Don't waste your time with them& Eclipse. Only Adaptive Optics can correct
-        the distortion. We'll have time to party later!
+      value: Don't waste your time with them& Eclipse.%Only adaptive optics can correct
+        the distortions. We'll have time to party later!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[1]
-      value: Don't waste your time with them& Eclipse. Only Adaptive Optics can correct
-        the distortion. We'll have time to party later!
+      value: Don't waste your time with them& Eclipse.%Only adaptive optics can correct
+        the distortions. We'll have time to party later!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[2]
-      value: Don't waste your time with them& Eclipse. Only Adaptive Optics can correct
-        the distortion. We'll have time to party later!
+      value: Don't waste your time with them& Eclipse.%Only adaptive optics can correct
+        the distortions. We'll have time to party later!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[163].Translations.Array.data[0]
-      value: Alarm! Things are getting hot there! The robots have sabotaged the vacuum
-        and refrigeration systems of the tower.
+      value: Mayday! Things are getting hot there!%The robots have sabotaged the
+        vacuum and refrigeration systems of the telescope.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[163].Translations.Array.data[1]
-      value: Alarm! Things are getting hot there! The robots have sabotaged the vacuum
-        and refrigeration systems of the tower.
+      value: Mayday! Things are getting hot there!%The robots have sabotaged the
+        vacuum and refrigeration systems of the telescope.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[163].Translations.Array.data[2]
-      value: Alarm! Things are getting hot there! The robots have sabotaged the vacuum
-        and refrigeration systems of the tower.
+      value: Mayday! Things are getting hot there!%The robots have sabotaged the
+        vacuum and refrigeration systems of the telescope.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[164].Translations.Array.data[0]
-      value: That systems avoid the accumulation of heating proceeding from the Sun.
-        You'll have to restore it before all the instrumentation gets roasted!
+      value: Those systems prevent the telescope from being heated by sunlight.%You'll
+        have to restore them before all the instruments get roasted!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[164].Translations.Array.data[1]
-      value: That systems avoid the accumulation of heating proceeding from the Sun.
-        You'll have to restore it before all the instrumentation gets roasted!
+      value: Those systems prevent the telescope from being heated by sunlight.%You'll
+        have to restore them before all the instruments get roasted!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[164].Translations.Array.data[2]
-      value: That systems avoid the accumulation of heating proceeding from the Sun.
-        You'll have to restore it before all the instrumentation gets roasted!
+      value: Those systems prevent the telescope from being heated by sunlight.%You'll
+        have to restore them before all the instruments get roasted!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[165].Translations.Array.data[0]
-      value: Good job& Eclipse! SST is working again!
+      value: Good job& Eclipse!%The Swedish Solar Telescope is working again!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[165].Translations.Array.data[1]
-      value: Good job& Eclipse! SST is working again!
+      value: Good job& Eclipse!%The Swedish Solar Telescope is working again!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[165].Translations.Array.data[2]
-      value: Good job& Eclipse! SST is working again!
+      value: Good job& Eclipse!%The Swedish Solar Telescope is working again!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[166].Translations.Array.data[0]
-      value: Oh& I nearly forgot! You were a full expert on how Adaptive Optics works&
-        weren't you? I'm finding it too hard to install all the components in EST.
+      value: "Oh& by the way! You are an expert on adaptive optics& aren\u2019t you?%I'm
+        finding it very hard to install the adaptive optics system at EST.%Can you
+        help me? Remember to bring an instruction manual!"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[166].Translations.Array.data[1]
-      value: Oh& I nearly forgot! You were a full expert on how Adaptive Optics works&
-        weren't you? I'm finding it too hard to install all the components in EST.
+      value: "Oh& by the way! You are an expert on adaptive optics& aren\u2019t you?%I'm
+        finding it very hard to install the adaptive optics system at EST.%Can you
+        help me? Remember to bring an instruction manual!"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[166].Translations.Array.data[2]
-      value: Oh& I nearly forgot! You were a full expert on how Adaptive Optics works&
-        weren't you? I'm finding it too hard to install all the components in EST.
+      value: "Oh& by the way! You are an expert on adaptive optics& aren\u2019t you?%I'm
+        finding it very hard to install the adaptive optics system at EST.%Can you
+        help me? Remember to bring an instruction manual!"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[167].Translations.Array.data[0]
-      value: So& remember also to bring an instructions manual or some guidance!
+      value: Sure& Spectro!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[167].Translations.Array.data[1]
-      value: So& remember also to bring an instructions manual or some guidance!
+      value: Sure& Spectro!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[167].Translations.Array.data[2]
-      value: So& remember also to bring an instructions manual or some guidance!
+      value: Sure& Spectro!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[168].Translations.Array.data[0]
-      value: Sure& Spectro!
+      value: Goodness me! I don't even remember what adaptive optics do... (too many
+        nights $studying$ at the observatory residence).
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[168].Translations.Array.data[1]
-      value: Sure& Spectro!
+      value: Goodness me! I don't even remember what adaptive optics do... (too many
+        nights $studying$ at the observatory residence).
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[168].Translations.Array.data[2]
-      value: Sure& Spectro!
+      value: Goodness me! I don't even remember what adaptive optics do... (too many
+        nights $studying$ at the observatory residence).
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[169].Translations.Array.data[0]
-      value: "Heavens! I don't even remember what Adaptive Optics do! (Too many nights
-        \u201Cstudying\u201D at ORM residence)."
+      value: I'll ask Ms. Prominence for help before Spectro withdraws my allowance!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[169].Translations.Array.data[1]
-      value: "Heavens! I don't even remember what Adaptive Optics do! (Too many nights
-        \u201Cstudying\u201D at ORM residence)."
+      value: I'll ask Ms. Prominence for help before Spectro withdraws my allowance!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[169].Translations.Array.data[2]
-      value: "Heavens! I don't even remember what Adaptive Optics do! (Too many nights
-        \u201Cstudying\u201D at ORM residence)."
+      value: I'll ask Ms. Prominence for help before Spectro withdraws my allowance!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[170].Translations.Array.data[0]
-      value: I'll ask Ms. Prominence for help before Spectro withdraws my allowance!
+      value: "Bonjour ma ch\xE9rie! Are you having a good time at the observatory?%What
+        can I do for you?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[170].Translations.Array.data[1]
-      value: I'll ask Ms. Prominence for help before Spectro withdraws my allowance!
+      value: "Bonjour ma ch\xE9rie! Are you having a good time at the observatory?%What
+        can I do for you?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[170].Translations.Array.data[2]
-      value: I'll ask Ms. Prominence for help before Spectro withdraws my allowance!
+      value: "Bonjour ma ch\xE9rie! Are you having a good time at the observatory?%What
+        can I do for you?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[171].Translations.Array.data[0]
-      value: Bonjour Cherie! Are you having a good time at ORM Residence? What can
-        I do for you?
+      value: Yes! A lot of fun. Maybe too much... I don't remember how adaptive optics
+        work.... %I'm sure you have accurate documentation in the Pic du Midi Observatory
+        archives.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[171].Translations.Array.data[1]
-      value: Bonjour Cherie! Are you having a good time at ORM Residence? What can
-        I do for you?
+      value: Yes! A lot of fun. Maybe too much... I don't remember how adaptive optics
+        work.... %I'm sure you have accurate documentation in the Pic du Midi Observatory
+        archives.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[171].Translations.Array.data[2]
-      value: Bonjour Cherie! Are you having a good time at ORM Residence? What can
-        I do for you?
+      value: Yes! A lot of fun. Maybe too much... I don't remember how adaptive optics
+        work.... %I'm sure you have accurate documentation in the Pic du Midi Observatory
+        archives.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[172].Translations.Array.data[0]
-      value: Yes! A lot of fun. Maybe too much... I don't remember how Adaptive Optics
-        work. I'm sure you will have accurate documentation in Pic du Midi archives.
+      value: Could you help me?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[172].Translations.Array.data[1]
-      value: Yes! A lot of fun. Maybe too much... I don't remember how Adaptive Optics
-        work. I'm sure you will have accurate documentation in Pic du Midi archives.
+      value: Could you help me?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[172].Translations.Array.data[2]
-      value: Yes! A lot of fun. Maybe too much... I don't remember how Adaptive Optics
-        work. I'm sure you will have accurate documentation in Pic du Midi archives.
+      value: Could you help me?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[173].Translations.Array.data[0]
-      value: Could you help me? Next Saturday night there is a... conference& and
-        I don't want Spectro to forbid me to go.
+      value: "Of course& ch\xE9rie. I'll see what I can find."
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[173].Translations.Array.data[1]
-      value: Could you help me? Next Saturday night there is a... conference& and
-        I don't want Spectro to forbid me to go.
+      value: "Of course& ch\xE9rie. I'll see what I can find."
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[173].Translations.Array.data[2]
-      value: Could you help me? Next Saturday night there is a... conference& and
-        I don't want Spectro to forbid me to go.
+      value: "Of course& ch\xE9rie. I'll see what I can find."
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[174].Translations.Array.data[0]
-      value: Of course& Cherie. I'll see what I can find.
+      value: 'I found the documents in the archive! There you are! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[174].Translations.Array.data[1]
-      value: Of course& Cherie. I'll see what I can find.
+      value: 'I found the documents in the archive! There you are! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[174].Translations.Array.data[2]
-      value: Of course& Cherie. I'll see what I can find.
+      value: 'I found the documents in the archive! There you are! '
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[175].Translations.Array.data[0]
-      value: "I found the documents in the archive! There you are! Enjoy your \u201Cconference\u201D
-        on Saturday& my friend."
+      value: Yeah! Thanks! You rock& Ms. Prominence!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[175].Translations.Array.data[1]
-      value: "I found the documents in the archive! There you are! Enjoy your \u201Cconference\u201D
-        on Saturday& my friend."
+      value: Yeah! Thanks! You rock& Ms. Prominence!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[175].Translations.Array.data[2]
-      value: "I found the documents in the archive! There you are! Enjoy your \u201Cconference\u201D
-        on Saturday& my friend."
+      value: Yeah! Thanks! You rock& Ms. Prominence!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[176].Translations.Array.data[0]
-      value: Yeah! Thanks! You rock& Ms. Prominence!
+      value: Yeah! Thanks!%You rock& Ms. Prominence!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[176].Translations.Array.data[1]
-      value: Yeah! Thanks! You rock& Ms. Prominence!
+      value: Yeah! Thanks!%You rock& Ms. Prominence!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[176].Translations.Array.data[2]
-      value: Yeah! Thanks! You rock& Ms. Prominence!
+      value: Yeah! Thanks!%You rock& Ms. Prominence!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[177].Translations.Array.data[0]
-      value: Bad news again& Eclipse! The robots have torn the Adaptive Optics to
-        pieces. We have seen them wandering around ORM outdoors! You'll have to recover
-        all the parts!
+      value: Bad news again& Eclipse!%The robots have torn the adaptive optics system
+        to pieces. We have seen them going free range around the observatory.%You'll
+        have to recover all the parts.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[177].Translations.Array.data[1]
-      value: Bad news again& Eclipse! The robots have torn the Adaptive Optics to
-        pieces. We have seen them wandering around ORM outdoors! You'll have to recover
-        all the parts!
+      value: Bad news again& Eclipse!%The robots have torn the adaptive optics system
+        to pieces. We have seen them going free range around the observatory.%You'll
+        have to recover all the parts.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[177].Translations.Array.data[2]
-      value: Bad news again& Eclipse! The robots have torn the Adaptive Optics to
-        pieces. We have seen them wandering around ORM outdoors! You'll have to recover
-        all the parts!
+      value: Bad news again& Eclipse!%The robots have torn the adaptive optics system
+        to pieces. We have seen them going free range around the observatory.%You'll
+        have to recover all the parts.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[178].Translations.Array.data[0]
-      value: 'I''m afraid that solar activity is increasing& and things are getting
-        worse! You''ll need extra help. '
+      value: I'm afraid that solar activity is increasing& and things are getting
+        worse...%You'll need extra help.%We have a surprise for you& so please go
+        to the observing room to get it.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[178].Translations.Array.data[1]
-      value: 'I''m afraid that solar activity is increasing& and things are getting
-        worse! You''ll need extra help. '
+      value: I'm afraid that solar activity is increasing& and things are getting
+        worse...%You'll need extra help.%We have a surprise for you& so please go
+        to the observing room to get it.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[178].Translations.Array.data[2]
-      value: 'I''m afraid that solar activity is increasing& and things are getting
-        worse! You''ll need extra help. '
+      value: I'm afraid that solar activity is increasing& and things are getting
+        worse...%You'll need extra help.%We have a surprise for you& so please go
+        to the observing room to get it.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -7488,23 +8258,23 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[180].Translations.Array.data[0]
-      value: This device pools small solar magnetic fields& creating a shield that
-        repels the enemies' attacks. It was supposed to be your graduation gift.
-        But well& go outside and beat them!
+      value: This device produces small solar magnetic fields& creating a shield
+        that repels the enemies' attacks.%It was supposed to be your PhD graduation
+        gift...%But well& go outside and beat them!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[180].Translations.Array.data[1]
-      value: This device pools small solar magnetic fields& creating a shield that
-        repels the enemies' attacks. It was supposed to be your graduation gift.
-        But well& go outside and beat them!
+      value: This device produces small solar magnetic fields& creating a shield
+        that repels the enemies' attacks.%It was supposed to be your PhD graduation
+        gift...%But well& go outside and beat them!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[180].Translations.Array.data[2]
-      value: This device pools small solar magnetic fields& creating a shield that
-        repels the enemies' attacks. It was supposed to be your graduation gift.
-        But well& go outside and beat them!
+      value: This device produces small solar magnetic fields& creating a shield
+        that repels the enemies' attacks.%It was supposed to be your PhD graduation
+        gift...%But well& go outside and beat them!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -7524,221 +8294,1301 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[182].Translations.Array.data[0]
-      value: Congratulations! You have all the pieces! But maybe the AO has been
-        damaged. Please run a test on SST!
+      value: Congratulations! You have all the pieces!%But the adaptive optics system
+        might have been damaged.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[182].Translations.Array.data[1]
-      value: Congratulations! You have all the pieces! But maybe the AO has been
-        damaged. Please run a test on SST!
+      value: Congratulations! You have all the pieces!%But the adaptive optics system
+        might have been damaged.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[182].Translations.Array.data[2]
-      value: Congratulations! You have all the pieces! But maybe the AO has been
-        damaged. Please run a test on SST!
+      value: Congratulations! You have all the pieces!%But the adaptive optics system
+        might have been damaged.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[183].Translations.Array.data[0]
-      value: Incredible performance& Eclipse! Full marks!
+      value: Please test it at the telescope!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[183].Translations.Array.data[1]
-      value: Incredible performance& Eclipse! Full marks!
+      value: Please test it at the telescope!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[183].Translations.Array.data[2]
-      value: Incredible performance& Eclipse! Full marks!
+      value: Please test it at the telescope!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[184].Translations.Array.data[0]
-      value: With the AO the atmospheric turbulences don't affect your vision. You
-        can see clearly now those microwaves! Deactivate them and come inmediately
-        to EST.
+      value: Incredible performance& Eclipse!%You deserve the highest marks!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[184].Translations.Array.data[1]
-      value: With the AO the atmospheric turbulences don't affect your vision. You
-        can see clearly now those microwaves! Deactivate them and come inmediately
-        to EST.
+      value: Incredible performance& Eclipse!%You deserve the highest marks!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[184].Translations.Array.data[2]
-      value: With the AO the atmospheric turbulences don't affect your vision. You
-        can see clearly now those microwaves! Deactivate them and come inmediately
-        to EST.
+      value: Incredible performance& Eclipse!%You deserve the highest marks!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[185].Translations.Array.data[0]
-      value: I have a mission to accomplish.
+      value: With adaptive optics& the atmosphere does not degrade your vision.%Now
+        you can clearly see those microwaves!%Deactivate them and bring the adaptive
+        optics system to EST immediately.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[185].Translations.Array.data[1]
-      value: I have a mission to accomplish.
+      value: With adaptive optics& the atmosphere does not degrade your vision.%Now
+        you can clearly see those microwaves!%Deactivate them and bring the adaptive
+        optics system to EST immediately.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[185].Translations.Array.data[2]
-      value: I have a mission to accomplish.
+      value: With adaptive optics& the atmosphere does not degrade your vision.%Now
+        you can clearly see those microwaves!%Deactivate them and bring the adaptive
+        optics system to EST immediately.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[186].Translations.Array.data[0]
-      value: Find the way to the cable car station.
+      value: $End date of the Universe$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[186].Translations.Array.data[1]
-      value: Find the way to the cable car station.
+      value: $End date of the Universe$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[186].Translations.Array.data[2]
-      value: Find the way to the cable car station.
+      value: $End date of the Universe$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[187].Translations.Array.data[0]
-      value: 'Obtained: Solar magnetic tornadoes'
+      value: $Side effects of solar energy$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[187].Translations.Array.data[1]
-      value: 'Obtained: Solar magnetic tornadoes'
+      value: $Side effects of solar energy$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[187].Translations.Array.data[2]
-      value: 'Obtained: Solar magnetic tornadoes'
+      value: $Side effects of solar energy$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[188].Translations.Array.data[0]
-      value: The solar storm has burned the fuse. Find a new one.
+      value: $Is the Sun inhabited?$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[188].Translations.Array.data[1]
-      value: The solar storm has burned the fuse. Find a new one.
+      value: $Is the Sun inhabited?$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[188].Translations.Array.data[2]
-      value: The solar storm has burned the fuse. Find a new one.
+      value: $Is the Sun inhabited?$
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[189].Translations.Array.data[0]
-      value: You must repair the cable car engine to go up!
+      value: Focus on the problem! This is not what I'm looking for.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[189].Translations.Array.data[1]
-      value: You must repair the cable car engine to go up!
+      value: Focus on the problem! This is not what I'm looking for.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[189].Translations.Array.data[2]
-      value: You must repair the cable car engine to go up!
+      value: Focus on the problem! This is not what I'm looking for.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[190].Translations.Array.data[0]
-      value: 'Obtained: Fuse'
+      value: I better fix the vacuum and refrigeration system before.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[190].Translations.Array.data[1]
-      value: 'Obtained: Fuse'
+      value: I better fix the vacuum and refrigeration system before.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[190].Translations.Array.data[2]
-      value: 'Obtained: Fuse'
+      value: I better fix the vacuum and refrigeration system before.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[191].Translations.Array.data[0]
-      value: Engine is working again!
+      value: No time to explore!%I need to call Ms. Prominence right now!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[191].Translations.Array.data[1]
-      value: Engine is working again!
+      value: No time to explore!%I need to call Ms. Prominence right now!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[191].Translations.Array.data[2]
-      value: Engine is working again!
+      value: No time to explore!%I need to call Ms. Prominence right now!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[192].Translations.Array.data[0]
-      value: I can now use the cable car
+      value: I have a mission to accomplish.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[192].Translations.Array.data[1]
-      value: I can now use the cable car
+      value: I have a mission to accomplish.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[192].Translations.Array.data[2]
-      value: I can now use the cable car
+      value: I have a mission to accomplish.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Translations.Array.data[0]
-      value: Go to the Archive and ask for help
+      value: Find the way to the cable car station.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Translations.Array.data[1]
-      value: Go to the Archive and ask for help
+      value: Find the way to the cable car station.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Translations.Array.data[2]
-      value: Go to the Archive and ask for help
+      value: Find the way to the cable car station.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[194].Translations.Array.data[0]
-      value: 'Obtained: Coat'
+      value: 'Obtained: Solar magnetic tornadoes'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[194].Translations.Array.data[1]
-      value: 'Obtained: Coat'
+      value: 'Obtained: Solar magnetic tornadoes'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[194].Translations.Array.data[2]
-      value: 'Obtained: Coat'
+      value: 'Obtained: Solar magnetic tornadoes'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[195].Translations.Array.data[0]
-      value: 'Obtained: Glasses'
+      value: The solar storm has burned the fuse. Find a new one.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[195].Translations.Array.data[1]
-      value: 'Obtained: Glasses'
+      value: The solar storm has burned the fuse. Find a new one.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[195].Translations.Array.data[2]
+      value: The solar storm has burned the fuse. Find a new one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[196].Translations.Array.data[0]
+      value: You must repair the cable car engine to go up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[196].Translations.Array.data[1]
+      value: You must repair the cable car engine to go up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[196].Translations.Array.data[2]
+      value: You must repair the cable car engine to go up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[197].Translations.Array.data[0]
+      value: 'Obtained: Fuse'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[197].Translations.Array.data[1]
+      value: 'Obtained: Fuse'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[197].Translations.Array.data[2]
+      value: 'Obtained: Fuse'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[198].Translations.Array.data[0]
+      value: Engine is working again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[198].Translations.Array.data[1]
+      value: Engine is working again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[198].Translations.Array.data[2]
+      value: Engine is working again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[199].Translations.Array.data[0]
+      value: I can now use the cable car
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[199].Translations.Array.data[1]
+      value: I can now use the cable car
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[199].Translations.Array.data[2]
+      value: I can now use the cable car
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[200].Translations.Array.data[0]
+      value: Go to the Archive and ask for help
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[200].Translations.Array.data[1]
+      value: Go to the Archive and ask for help
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[200].Translations.Array.data[2]
+      value: Go to the Archive and ask for help
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[201].Translations.Array.data[0]
+      value: 'Obtained: Coat'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[201].Translations.Array.data[1]
+      value: 'Obtained: Coat'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[201].Translations.Array.data[2]
+      value: 'Obtained: Coat'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[202].Translations.Array.data[0]
       value: 'Obtained: Glasses'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[202].Translations.Array.data[1]
+      value: 'Obtained: Glasses'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[202].Translations.Array.data[2]
+      value: 'Obtained: Glasses'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.data[0]
+      value: What a hot day! Definitely& a solar astronomer's job is quite hard.%This
+        doesn't happen to a $night$ astronomer...%I can't even see up close! The
+        air is burning...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.data[1]
+      value: What a hot day! Definitely& a solar astronomer's job is quite hard.%This
+        doesn't happen to a $night$ astronomer...%I can't even see up close! The
+        air is burning...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[203].Translations.Array.data[2]
+      value: What a hot day! Definitely& a solar astronomer's job is quite hard.%This
+        doesn't happen to a $night$ astronomer...%I can't even see up close! The
+        air is burning...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[0]
+      value: Stop complaining& Spot! Show what a solar astronomer is made of!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[1]
+      value: Stop complaining& Spot! Show what a solar astronomer is made of!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[2]
+      value: Stop complaining& Spot! Show what a solar astronomer is made of!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.data[0]
+      value: 'But yes& the excess of heating blurs the images and makes it impossible
+        to observe what is happening on the Sun. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.data[1]
+      value: 'But yes& the excess of heating blurs the images and makes it impossible
+        to observe what is happening on the Sun. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[205].Translations.Array.data[2]
+      value: 'But yes& the excess of heating blurs the images and makes it impossible
+        to observe what is happening on the Sun. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.data[0]
+      value: We need you to go to the GREGOR telescope and recover the HEAT REJECTER
+        for EST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.data[1]
+      value: We need you to go to the GREGOR telescope and recover the HEAT REJECTER
+        for EST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[206].Translations.Array.data[2]
+      value: We need you to go to the GREGOR telescope and recover the HEAT REJECTER
+        for EST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.data[0]
+      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.data[1]
+      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[207].Translations.Array.data[2]
+      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.data[0]
+      value: "These ovens are too hot!%That\u2019s a big problem for a solar astronomer!
+        Until we find a way to cool them down& we can\u2019t fight them. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.data[1]
+      value: "These ovens are too hot!%That\u2019s a big problem for a solar astronomer!
+        Until we find a way to cool them down& we can\u2019t fight them. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[208].Translations.Array.data[2]
+      value: "These ovens are too hot!%That\u2019s a big problem for a solar astronomer!
+        Until we find a way to cool them down& we can\u2019t fight them. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.data[0]
+      value: "Oh no! I\u2019m burned out by those machines!&We can't operate GREGOR
+        in such conditions!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.data[1]
+      value: "Oh no! I\u2019m burned out by those machines!&We can't operate GREGOR
+        in such conditions!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[209].Translations.Array.data[2]
+      value: "Oh no! I\u2019m burned out by those machines!&We can't operate GREGOR
+        in such conditions!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.data[0]
+      value: Spot& we need you to do some maintenance work.%The bushes surrounding
+        the tower absorb part of the heating and help to reduce the temperature of
+        the telescope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.data[1]
+      value: Spot& we need you to do some maintenance work.%The bushes surrounding
+        the tower absorb part of the heating and help to reduce the temperature of
+        the telescope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[210].Translations.Array.data[2]
+      value: Spot& we need you to do some maintenance work.%The bushes surrounding
+        the tower absorb part of the heating and help to reduce the temperature of
+        the telescope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.data[0]
+      value: 'But the robots have broken all of them...%You have to restore them! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.data[1]
+      value: 'But the robots have broken all of them...%You have to restore them! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[211].Translations.Array.data[2]
+      value: 'But the robots have broken all of them...%You have to restore them! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.data[0]
+      value: Did I tell you to bring the scissors...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.data[1]
+      value: Did I tell you to bring the scissors...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[212].Translations.Array.data[2]
+      value: Did I tell you to bring the scissors...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.data[0]
+      value: 'Copy that& Spectro!%(Galaxies... why didn''t I study galaxies...?)  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.data[1]
+      value: 'Copy that& Spectro!%(Galaxies... why didn''t I study galaxies...?)  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[213].Translations.Array.data[2]
+      value: 'Copy that& Spectro!%(Galaxies... why didn''t I study galaxies...?)  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.data[0]
+      value: Good job& Spot! I'll hire you to clean my garden.%Now& look at the tower!
+        What a disaster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.data[1]
+      value: Good job& Spot! I'll hire you to clean my garden.%Now& look at the tower!
+        What a disaster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[214].Translations.Array.data[2]
+      value: Good job& Spot! I'll hire you to clean my garden.%Now& look at the tower!
+        What a disaster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.data[0]
+      value: Solar telescopes are white because that color reflects the light.%The
+        machines have painted GREGOR in black so the temperature is increasing! You
+        have to turn it into white again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.data[1]
+      value: Solar telescopes are white because that color reflects the light.%The
+        machines have painted GREGOR in black so the temperature is increasing! You
+        have to turn it into white again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[215].Translations.Array.data[2]
+      value: Solar telescopes are white because that color reflects the light.%The
+        machines have painted GREGOR in black so the temperature is increasing! You
+        have to turn it into white again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.data[0]
+      value: Did I tell you to bring the paintbrush...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.data[1]
+      value: Did I tell you to bring the paintbrush...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[216].Translations.Array.data[2]
+      value: Did I tell you to bring the paintbrush...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.data[0]
+      value: 'Sure& Spectro.%(Black holes... black holes were also interesting objects...) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.data[1]
+      value: 'Sure& Spectro.%(Black holes... black holes were also interesting objects...) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[217].Translations.Array.data[2]
+      value: 'Sure& Spectro.%(Black holes... black holes were also interesting objects...) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.data[0]
+      value: Well done!%Now enter GREGOR and bring the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.data[1]
+      value: Well done!%Now enter GREGOR and bring the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[218].Translations.Array.data[2]
+      value: Well done!%Now enter GREGOR and bring the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.data[0]
+      value: "Oh no!!! It\u2019s blocked!!!%Seriously??? What else???"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.data[1]
+      value: "Oh no!!! It\u2019s blocked!!!%Seriously??? What else???"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[219].Translations.Array.data[2]
+      value: "Oh no!!! It\u2019s blocked!!!%Seriously??? What else???"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.data[0]
+      value: Calm down& Spot.%The neighbouring telescope& the Vacuum Tower Telescope&
+        is connected with GREGOR by underground tunnels.%You can sneak into the telescope
+        and get the piece that we need!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.data[1]
+      value: Calm down& Spot.%The neighbouring telescope& the Vacuum Tower Telescope&
+        is connected with GREGOR by underground tunnels.%You can sneak into the telescope
+        and get the piece that we need!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[220].Translations.Array.data[2]
+      value: Calm down& Spot.%The neighbouring telescope& the Vacuum Tower Telescope&
+        is connected with GREGOR by underground tunnels.%You can sneak into the telescope
+        and get the piece that we need!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.data[0]
+      value: Our cameras have detected that the heat rejecter has been taken apart.%You
+        have to find all the parts and assemble them again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.data[1]
+      value: Our cameras have detected that the heat rejecter has been taken apart.%You
+        have to find all the parts and assemble them again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[221].Translations.Array.data[2]
+      value: Our cameras have detected that the heat rejecter has been taken apart.%You
+        have to find all the parts and assemble them again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.data[0]
+      value: Did I tell you to bring the toolbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.data[1]
+      value: Did I tell you to bring the toolbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[222].Translations.Array.data[2]
+      value: Did I tell you to bring the toolbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.data[0]
+      value: Congratulations& Spot! This jetpack can generate small Solar Spicules.%As
+        it happens on the Sun& these jets of gas will propel you far and high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.data[1]
+      value: Congratulations& Spot! This jetpack can generate small Solar Spicules.%As
+        it happens on the Sun& these jets of gas will propel you far and high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[223].Translations.Array.data[2]
+      value: Congratulations& Spot! This jetpack can generate small Solar Spicules.%As
+        it happens on the Sun& these jets of gas will propel you far and high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.data[0]
+      value: Great! You already have the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.data[1]
+      value: Great! You already have the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[224].Translations.Array.data[2]
+      value: Great! You already have the heat rejecter!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.data[0]
+      value: Now& make sure the system works fine& or we could fry our instruments
+        during an observation!%If you need assistance& Flare could help you to calibrate
+        the heat rejecter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.data[1]
+      value: Now& make sure the system works fine& or we could fry our instruments
+        during an observation!%If you need assistance& Flare could help you to calibrate
+        the heat rejecter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[225].Translations.Array.data[2]
+      value: Now& make sure the system works fine& or we could fry our instruments
+        during an observation!%If you need assistance& Flare could help you to calibrate
+        the heat rejecter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.data[0]
+      value: "Thank you& Spectro! I\u2019ll call her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.data[1]
+      value: "Thank you& Spectro! I\u2019ll call her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[226].Translations.Array.data[2]
+      value: "Thank you& Spectro! I\u2019ll call her."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.data[0]
+      value: Hello Flare! I had to assemble my heat rejecter again& but I need to
+        calibrate it before using it.%Can you help me to find the right values?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.data[1]
+      value: Hello Flare! I had to assemble my heat rejecter again& but I need to
+        calibrate it before using it.%Can you help me to find the right values?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[227].Translations.Array.data[2]
+      value: Hello Flare! I had to assemble my heat rejecter again& but I need to
+        calibrate it before using it.%Can you help me to find the right values?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.data[0]
+      value: Of course& Spot! Let me do some tests in the lab!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.data[1]
+      value: Of course& Spot! Let me do some tests in the lab!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[228].Translations.Array.data[2]
+      value: Of course& Spot! Let me do some tests in the lab!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.data[0]
+      value: I can test the heat rejecter using the computer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.data[1]
+      value: I can test the heat rejecter using the computer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[229].Translations.Array.data[2]
+      value: I can test the heat rejecter using the computer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.data[0]
+      value: Test completed& Spot!%The values needed to configure your heat rejecter
+        are fine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.data[1]
+      value: Test completed& Spot!%The values needed to configure your heat rejecter
+        are fine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[230].Translations.Array.data[2]
+      value: Test completed& Spot!%The values needed to configure your heat rejecter
+        are fine!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.data[0]
+      value: Thank you& Flare! You are the coolest!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.data[1]
+      value: Thank you& Flare! You are the coolest!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[231].Translations.Array.data[2]
+      value: Thank you& Flare! You are the coolest!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.data[0]
+      value: "No time for compliments& guys! It is insane& but the dome of GREGOR
+        is opening!%Without a heat rejecter& the whole telescope could be ruined
+        by the heating. Hurry up and install it before it\u2019s too late!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.data[1]
+      value: "No time for compliments& guys! It is insane& but the dome of GREGOR
+        is opening!%Without a heat rejecter& the whole telescope could be ruined
+        by the heating. Hurry up and install it before it\u2019s too late!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[232].Translations.Array.data[2]
+      value: "No time for compliments& guys! It is insane& but the dome of GREGOR
+        is opening!%Without a heat rejecter& the whole telescope could be ruined
+        by the heating. Hurry up and install it before it\u2019s too late!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.data[0]
+      value: 'Did I tell you to bring a heat rejecter? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.data[1]
+      value: 'Did I tell you to bring a heat rejecter? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[233].Translations.Array.data[2]
+      value: 'Did I tell you to bring a heat rejecter? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.data[0]
+      value: 'Great! You saved GREGOR! Your heat rejecter is ready for EST. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.data[1]
+      value: 'Great! You saved GREGOR! Your heat rejecter is ready for EST. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[234].Translations.Array.data[2]
+      value: 'Great! You saved GREGOR! Your heat rejecter is ready for EST. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.data[0]
+      value: Boom! Your equipment has melt. You have to return your funding. Try
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.data[1]
+      value: Boom! Your equipment has melt. You have to return your funding. Try
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[235].Translations.Array.data[2]
+      value: Boom! Your equipment has melt. You have to return your funding. Try
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.data[0]
+      value: "Awesome! Now bring immediately the heat rejecter to EST.%With it& the
+        excess of heating won\u2019t blur the images and we will have clear views
+        of what is happening on the Sun."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.data[1]
+      value: "Awesome! Now bring immediately the heat rejecter to EST.%With it& the
+        excess of heating won\u2019t blur the images and we will have clear views
+        of what is happening on the Sun."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[236].Translations.Array.data[2]
+      value: "Awesome! Now bring immediately the heat rejecter to EST.%With it& the
+        excess of heating won\u2019t blur the images and we will have clear views
+        of what is happening on the Sun."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.data[0]
+      value: And remember& if you find those strange ovens in your way& you can use
+        it to cool and deactivate them! Go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.data[1]
+      value: And remember& if you find those strange ovens in your way& you can use
+        it to cool and deactivate them! Go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[237].Translations.Array.data[2]
+      value: And remember& if you find those strange ovens in your way& you can use
+        it to cool and deactivate them! Go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.data[0]
+      value: Spectro! We got trapped! Where are you?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.data[1]
+      value: Spectro! We got trapped! Where are you?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[238].Translations.Array.data[2]
+      value: Spectro! We got trapped! Where are you?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.data[0]
+      value: Don't worry my friends&I'll free you in a minute!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.data[1]
+      value: Don't worry my friends&I'll free you in a minute!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[239].Translations.Array.data[2]
+      value: Don't worry my friends&I'll free you in a minute!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.data[0]
+      value: There is no time& Spectro. We need to turn EST on immediately.%We will
+        be here and ready to observe.%But you are on your own!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.data[1]
+      value: There is no time& Spectro. We need to turn EST on immediately.%We will
+        be here and ready to observe.%But you are on your own!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[240].Translations.Array.data[2]
+      value: There is no time& Spectro. We need to turn EST on immediately.%We will
+        be here and ready to observe.%But you are on your own!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.data[0]
+      value: Ok!%How bad can be a bunch of lamps and toasters...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.data[1]
+      value: Ok!%How bad can be a bunch of lamps and toasters...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[241].Translations.Array.data[2]
+      value: Ok!%How bad can be a bunch of lamps and toasters...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.data[0]
+      value: Ops...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.data[1]
+      value: Ops...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[242].Translations.Array.data[2]
+      value: Ops...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.data[0]
+      value: I better hurry up and watch my steps...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.data[1]
+      value: I better hurry up and watch my steps...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[243].Translations.Array.data[2]
+      value: I better hurry up and watch my steps...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.data[0]
+      value: First of all& you have to turn the generator on!%To avoid that the vibrations
+        affect the observing conditions& it is located in the building annexed to
+        the tower& far from the telescope. Hurry up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.data[1]
+      value: First of all& you have to turn the generator on!%To avoid that the vibrations
+        affect the observing conditions& it is located in the building annexed to
+        the tower& far from the telescope. Hurry up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[244].Translations.Array.data[2]
+      value: First of all& you have to turn the generator on!%To avoid that the vibrations
+        affect the observing conditions& it is located in the building annexed to
+        the tower& far from the telescope. Hurry up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.data[0]
+      value: The generator is working!%What's next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.data[1]
+      value: The generator is working!%What's next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[245].Translations.Array.data[2]
+      value: The generator is working!%What's next?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.data[0]
+      value: 'We have to control the seeing conditions to obtain sharp images of
+        the Sun.%Heating is one of our biggest problems!%Walk up the tower and open
+        the dome. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.data[1]
+      value: 'We have to control the seeing conditions to obtain sharp images of
+        the Sun.%Heating is one of our biggest problems!%Walk up the tower and open
+        the dome. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[246].Translations.Array.data[2]
+      value: 'We have to control the seeing conditions to obtain sharp images of
+        the Sun.%Heating is one of our biggest problems!%Walk up the tower and open
+        the dome. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.data[0]
+      value: The air will cool the telescope& avoiding image distortions!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.data[1]
+      value: The air will cool the telescope& avoiding image distortions!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[247].Translations.Array.data[2]
+      value: The air will cool the telescope& avoiding image distortions!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.data[0]
+      value: Well done& Spectro. Now& switch on the air streams that cool the primary
+        and the secondary mirrors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.data[1]
+      value: Well done& Spectro. Now& switch on the air streams that cool the primary
+        and the secondary mirrors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[248].Translations.Array.data[2]
+      value: Well done& Spectro. Now& switch on the air streams that cool the primary
+        and the secondary mirrors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.data[0]
+      value: On my way!%(Too many stairs... I think that I won't renew my gym subscription
+        this month)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.data[1]
+      value: On my way!%(Too many stairs... I think that I won't renew my gym subscription
+        this month)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[249].Translations.Array.data[2]
+      value: On my way!%(Too many stairs... I think that I won't renew my gym subscription
+        this month)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.data[0]
+      value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
+        of the M3-M6 mirrors system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.data[1]
+      value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
+        of the M3-M6 mirrors system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[250].Translations.Array.data[2]
+      value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
+        of the M3-M6 mirrors system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.data[0]
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.data[1]
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[251].Translations.Array.data[2]
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.data[0]
+      value: We are almost done!%But heating is not the only problem. Please& calibrate
+        the Adaptive Optics system to correct the distorsions caused by Earth's atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.data[1]
+      value: We are almost done!%But heating is not the only problem. Please& calibrate
+        the Adaptive Optics system to correct the distorsions caused by Earth's atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[252].Translations.Array.data[2]
+      value: We are almost done!%But heating is not the only problem. Please& calibrate
+        the Adaptive Optics system to correct the distorsions caused by Earth's atmosphere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.data[0]
+      value: It sounds easy if you don't have a giant robot attacking you& right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.data[1]
+      value: It sounds easy if you don't have a giant robot attacking you& right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[253].Translations.Array.data[2]
+      value: It sounds easy if you don't have a giant robot attacking you& right...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.data[0]
+      value: And last& but not least& activate the Heat Rejecter to avoid heating
+        accumulation coming from the sunlight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.data[1]
+      value: And last& but not least& activate the Heat Rejecter to avoid heating
+        accumulation coming from the sunlight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[254].Translations.Array.data[2]
+      value: And last& but not least& activate the Heat Rejecter to avoid heating
+        accumulation coming from the sunlight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.data[0]
+      value: Do I have to go upstairs again???%We'll have a serious conversation
+        later about the workflow...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.data[1]
+      value: Do I have to go upstairs again???%We'll have a serious conversation
+        later about the workflow...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[255].Translations.Array.data[2]
+      value: Do I have to go upstairs again???%We'll have a serious conversation
+        later about the workflow...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.data[0]
+      value: Amazing& Spectro!%The seeing is under control!%Steady to observe the
+        Sun as never before?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.data[1]
+      value: Amazing& Spectro!%The seeing is under control!%Steady to observe the
+        Sun as never before?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[256].Translations.Array.data[2]
+      value: Amazing& Spectro!%The seeing is under control!%Steady to observe the
+        Sun as never before?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.data[0]
+      value: Not so fast!%I'm detecting that the primary mirror has been corrupted!%I
+        need to polish it or all this work would be in vain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.data[1]
+      value: Not so fast!%I'm detecting that the primary mirror has been corrupted!%I
+        need to polish it or all this work would be in vain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[257].Translations.Array.data[2]
+      value: Not so fast!%I'm detecting that the primary mirror has been corrupted!%I
+        need to polish it or all this work would be in vain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.data[0]
+      value: "All the systems working& Spectro!%We are ready at the control room.%We
+        only need to point EST to the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.data[1]
+      value: "All the systems working& Spectro!%We are ready at the control room.%We
+        only need to point EST to the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[258].Translations.Array.data[2]
+      value: "All the systems working& Spectro!%We are ready at the control room.%We
+        only need to point EST to the Sun\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[259].Translations.Array.data[0]
+      value: Roger that!%Finally& after decades of research& we are going to understand
+        what happens in the Sun...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[259].Translations.Array.data[1]
+      value: Roger that!%Finally& after decades of research& we are going to understand
+        what happens in the Sun...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
+        type: 3}
+      propertyPath: multilanguageEntries.Array.data[259].Translations.Array.data[2]
+      value: Roger that!%Finally& after decades of research& we are going to understand
+        what happens in the Sun...
       objectReference: {fileID: 0}
     - target: {fileID: 5117504478396084345, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -7983,7 +9833,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244513, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -8063,7 +9913,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: speakerFaces.Array.data[0]
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -8083,7 +9933,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: translationName.Array.data[0]
-      value: Lomnicky/EclipseRecogidaDatos
+      value: PicDuMidi/Laberynth
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244516, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -8097,6 +9947,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360b28f7d2a395b46b6bcb2089d2af85, type: 3}
+--- !u!114 &1915849145 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915849144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2113451002
 GameObject:
   m_ObjectHideFlags: 0
