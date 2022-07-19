@@ -29,6 +29,7 @@ public class BadassEnemy : MonoBehaviour
 
     public void StartAnimation()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.MegaAnimation);
         _animatorControllerEnemies.Play("EnemyCollection");
     }
     public void ActivateBadassBoss()

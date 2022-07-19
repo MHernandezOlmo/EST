@@ -325,6 +325,8 @@ GameObject:
   - component: {fileID: 6414289392573455542}
   - component: {fileID: 1597381681}
   - component: {fileID: 1597381682}
+  - component: {fileID: 7558454916081665041}
+  - component: {fileID: 5625059802255510995}
   m_Layer: 10
   m_Name: NewSpectro Player
   m_TagString: Player
@@ -426,6 +428,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MAX_MOVEMENT_SPEED: 7
+  customTurnSpeed: 0
+--- !u!81 &7558454916081665041
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414289392573455537}
+  m_Enabled: 1
+--- !u!114 &5625059802255510995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414289392573455537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274db14e30ef6f3408fb122bfb0d5639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2475475648988081856
 PrefabInstance:
   m_ObjectHideFlags: 0

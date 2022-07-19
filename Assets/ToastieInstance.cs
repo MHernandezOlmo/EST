@@ -48,6 +48,7 @@ public class ToastieInstance : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         Vector3 startPos = transform.position;
         Vector3 targetPos = transform.position + transform.forward * 2f;
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.ToasterJump);
 
         for (float i = 0; i < movDur; i += Time.deltaTime)
         {
@@ -94,6 +95,7 @@ public class ToastieInstance : MonoBehaviour
 
     public void ShootCallBack()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.ToasterShot);
         bullet.SetParent(null);
         bullet.rotation = Quaternion.Euler(90, bullet.rotation.eulerAngles.y, bullet.rotation.eulerAngles.z);
         bullet.position += bullet.forward * 0.1f;

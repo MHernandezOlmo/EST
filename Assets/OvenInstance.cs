@@ -58,6 +58,7 @@ public class OvenInstance : MonoBehaviour
         }
         transform.rotation = targetRot;
 
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.OvenRun);
         _animator.SetTrigger("Run");
         _particles.SetActive(false);
         _particles.SetActive(true);
@@ -75,6 +76,7 @@ public class OvenInstance : MonoBehaviour
     }
     public void ShootCallBack()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.OvenShot);
         Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
         Instantiate(_bulletPrefab, _shootPoint.position + _shootPoint.right * 0.5f, _shootPoint.rotation);
         Instantiate(_bulletPrefab, _shootPoint.position - _shootPoint.right * 0.5f, _shootPoint.rotation);

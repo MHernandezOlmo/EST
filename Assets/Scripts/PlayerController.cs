@@ -246,7 +246,6 @@ public class PlayerController : MonoBehaviour
                     }
 
                 }
-
                 if (_currentCharacter == Character.MsProminence)
                 {
                     if (CurrentSceneManager.CanDash)
@@ -368,6 +367,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator CrUseJetpack()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.JetIgnition);
         _animator.SetBool("IsJetpacking", true);
         yield return new WaitForSeconds(0.1f);
         _shield.SetActive(true);

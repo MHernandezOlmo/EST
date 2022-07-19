@@ -147,6 +147,7 @@ public class EnemyMicroWave : MonoBehaviour
 
     public void ShootCallBack()
     {
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.MicrowaveShot);
         Vector3 diffA = _shootPoint.right * 0.5f;
         Vector3 diffB = _shootPoint.right * -0.5f;
         Instantiate(_bulletPrefab, _shootPoint.position + diffA, _shootPoint.rotation);

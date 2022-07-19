@@ -10,7 +10,8 @@ public class SFXManager : MonoBehaviour
     private int _currentSoundIndex;
     public enum AudioCode {SmoothSelect, InfoPanel, Back, Earned, Interact, Next, BlueEDeath, SoftShoot, EchoPops, Hit, Tornado,
     RobotShot, RobotHit, UIPanelSpawn, UIPanelDisappear, UIProblemSolved, UISpawn, UISelectMap, UISelectMenu, UIInstant, UINext,
-    LGreenLight, LRedLight, LMetalDoor, LaserShoot};
+    LGreenLight, LRedLight, LMetalDoor, LaserShoot, JetIgnition, MegaAnimation, MegaShot, MicrowaveShot, OvenRun, OvenShot, 
+    ToasterJump, ToasterShot};
 
     private void Start()
     {
