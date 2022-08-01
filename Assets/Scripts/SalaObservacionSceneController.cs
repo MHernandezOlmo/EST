@@ -14,16 +14,14 @@ public class SalaObservacionSceneController : MonoBehaviour
     [SerializeField]
     Interactable _pc;
     bool _launchDialogue;
-    bool _pdmd;
+    [SerializeField] private bool _pdmd;
 
     void Awake()
     {
         _player = FindObjectOfType<MovementController>();
-        _pdmd = PlayerPrefs.GetInt("ComingFromPDMD")>0;
         if (_pdmd)
         {
             FindObjectOfType<PCObservacionInteractable>().picDuMidi = true;
-            PlayerPrefs.SetInt("ComingFromPDMD", 0);
             if (GameProgressController.PicDuMidiPuzzleCoronagraph)
             {
                 _pc.gameObject.SetActive(false);
@@ -50,7 +48,6 @@ public class SalaObservacionSceneController : MonoBehaviour
                 {
                     _launchDialogue = true;
                     _dialogToTriggerPicDuMidi.triggerDialogueEvent(true);
-                    StartCoroutine(WaitForExploration());
                 }
             }
         }
@@ -62,19 +59,13 @@ public class SalaObservacionSceneController : MonoBehaviour
                 {
                     _launchDialogue = true;
                     _dialogToTrigger.triggerDialogueEvent(true);
-                    StartCoroutine(WaitForExploration());
                 }
             }
         }
     }
 
-
-    IEnumerator WaitForExploration()
+    public void LoadNextScene()
     {
-        while(CurrentSceneManager._state != GameStates.Exploration)
-        {
-            yield return null;
-        }
         if (_pdmd)
         {
             GameProgressController.SetCurrentStartPoint(1);
@@ -85,6 +76,5 @@ public class SalaObservacionSceneController : MonoBehaviour
             GameProgressController.SetCurrentStartPoint(2);
             GameEvents.LoadScene.Invoke("Lomnicky_5_Sala archivo");
         }
-        
     }
 }

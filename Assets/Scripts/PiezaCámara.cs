@@ -10,7 +10,6 @@ public class PiezaCámara : Interactable
 
     public override void Interact()
     {
-        print(transform.root.gameObject.name);
         GameProgressController.SetPiezaCamara(_pieza, true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         GameEvents.ShowScreenText.Invoke("Obtained: Camera part");

@@ -25,6 +25,11 @@ public class WorldSelectorSceneController : MonoBehaviour
         _worldLockImages[0].gameObject.SetActive(false);
         _worldButtons[0].interactable = true;
         _worldNamesText[0].text = "Lomnicky";
+        GameProgressController.LomnickySolved = true;
+        GameProgressController.EinsteinSolved= true;
+        GameProgressController.PicDuMidiSolved = true;
+        GameProgressController.GregorFinished= true;
+        GameProgressController.SSTSolved= true;
 
         if (GameProgressController.LomnickySolved)
         {
