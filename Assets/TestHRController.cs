@@ -15,12 +15,13 @@ public class TestHRController : MonoBehaviour
     [SerializeField] RectTransform[] _markers;
 
     [SerializeField] Sprite[] _iceCubes;
-    [SerializeField] Image _iceCube;
+    [SerializeField] SpriteRenderer _iceCube;
     int _step;
     bool _usingBomb;
     List<float> _values;
     List<float> _pressureChanges;
     PuzzleStatesController _mainPuzzleController;
+    [SerializeField] private GameObject _outBeam;
     float _temp;
 
     void Start()
@@ -116,10 +117,18 @@ public class TestHRController : MonoBehaviour
     public void Next()
     {
         _step++;
+        _outBeam.transform.localScale -=new Vector3(0,0.45f,0);
         if (_step == 6)
         {
-            FindObjectOfType<PuzzleStatesController>().Win();  
+            _outBeam.transform.position = new Vector3(5.2337f, 2.432f, -2.2356f);
+            _outBeam.transform.localScale= new Vector3(10.8130f,0.3607f,1f);
+            StartCoroutine(End());
         }
+    }
+    public IEnumerator End()
+    {
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<PuzzleStatesController>().Win();
     }
     void Update()
     {   
@@ -135,32 +144,6 @@ public class TestHRController : MonoBehaviour
         {
             _gameTime -= Time.deltaTime;
             float amount = _gameTime / _totalTime;
-            if(amount < 0.25f)
-            {
-                _iceCube.sprite = _iceCubes[3];
-            }
-            else
-            {
-                if (amount < 0.5f)
-                {
-                    _iceCube.sprite = _iceCubes[2];
-
-                }
-                else
-                {
-                    if (amount < 0.75f)
-                    {
-                        _iceCube.sprite = _iceCubes[1];
-
-                    }
-                    else
-                    {
-                        _iceCube.sprite = _iceCubes[0];
-
-                    }
-                }
-            }
-            
             _timeBar.fillAmount = 1-amount;
             if (_gameTime <= 0)
             {
