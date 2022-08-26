@@ -1753,6 +1753,36 @@ PrefabInstance:
       propertyPath: _playOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1733008219}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowAlert
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: m_RootOrder
@@ -4372,6 +4402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MAX_MOVEMENT_SPEED: 4
+  customTurnSpeed: 0
 --- !u!114 &1277568347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4387,6 +4418,7 @@ MonoBehaviour:
   _spin: {fileID: 1277568345}
   _realGoran: {fileID: 1277568344}
   _shield: {fileID: 0}
+  _shieldObject: {fileID: 0}
   _currentCharacter: 0
   _solarCanonBall: {fileID: 0}
   _animationCurve:
@@ -4414,6 +4446,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _currentHPBar: {fileID: 0}
+  _interactButton: {fileID: 0}
+  _combatButton: {fileID: 0}
   _shootPosition: {fileID: 0}
   electricBall1: {fileID: 0}
 --- !u!1 &1307211343

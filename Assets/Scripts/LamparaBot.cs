@@ -19,6 +19,7 @@ public class LamparaBot : MonoBehaviour
     bool _dead;
     private Vector3 _originPosition;
     private int _lastPoint;
+    [SerializeField] private GameObject _deathParticles;
     void Start()
     {
         _playerController = FindObjectOfType<PlayerController>();
@@ -112,7 +113,8 @@ public class LamparaBot : MonoBehaviour
     IEnumerator CrDie()
     {
         Vector3 localScale = transform.localScale;
-        for(float i = 0; i< 0.25f; i += Time.deltaTime)
+        Instantiate(_deathParticles, transform.position, Quaternion.identity);
+        for (float i = 0; i< 0.25f; i += Time.deltaTime)
         {
             transform.localScale = Vector3.Lerp(localScale, Vector3.zero, i / 0.25f);
             yield return null;

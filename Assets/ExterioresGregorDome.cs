@@ -26,6 +26,10 @@ public class ExterioresGregorDome : MonoBehaviour
             }
         }   
     }
+    public void DestroyInteractable()
+    {
+        FindObjectOfType<PlaceHRInteractable>().RemoveInteractable();
+    }
 
     public void PlaceHR()
     {

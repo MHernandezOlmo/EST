@@ -25,6 +25,10 @@ public class EinsteinArchivoSceneController : MonoBehaviour
             _trigger.triggerDialogueEvent(true);
         }
     }
+    public void Advice()
+    {
+        GameEvents.ShowScreenText.Invoke("Obtained beam-splitter");
+    }
     public void LoadLomnicky()
     {
         GameEvents.LoadScene.Invoke("Lomnicky_12_Sala Secreta 1");

@@ -9,11 +9,14 @@ public class AlmacenGregorSceneController : MonoBehaviour
     [SerializeField] DialogueTrigger _tested;
     [SerializeField] DialogueTrigger _needPlace;
     [SerializeField] GameObject _heatRejecterCanvas;
+    [SerializeField] private GameObject _scenePortal;
     IEnumerator Start()
     {
-        if(GameProgressController.GregorHasHeatRejecter && !GameProgressController.GregorTestedHR)
+        if (GameProgressController.GregorHasHeatRejecter && !GameProgressController.GregorTestedHR)
         {
             InstantiatePC();
+            _scenePortal.gameObject.SetActive(false);
+
         }
         else
         {
@@ -43,6 +46,7 @@ public class AlmacenGregorSceneController : MonoBehaviour
     }
     public void InstantiatePC()
     {
+        _scenePortal.gameObject.SetActive(false);
         GameObject g = Instantiate(_pc);
         g.GetComponent<PCGregorInteractable>().SetDialog(_call);
     }

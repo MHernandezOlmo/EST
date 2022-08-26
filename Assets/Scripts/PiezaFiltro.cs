@@ -7,13 +7,13 @@ public class PiezaFiltro : Interactable
     [SerializeField]
     int _pieza;
     bool _checked;
-
+    string[] _filterNames = new string[] { "H-Alpha", "G band", "Ca II H", "CN band", "TiO"}; 
     public override void Interact()
     {
         GameProgressController.SetPicDuMidiFilter(_pieza, true);
         int filterAmount=0;
 
-        for (int i = 0;i< 6; i++)
+        for (int i = 0;i< 5; i++)
         {
             if (GameProgressController.GetPicDuMidiFilter(i))
             {
@@ -21,7 +21,9 @@ public class PiezaFiltro : Interactable
             }
         }
 
-        GameEvents.ShowScreenText.Invoke("Obtained: Filter\n"+filterAmount+"/6");
+        GameEvents.ShowScreenText.Invoke("Obtained: "+_filterNames[_pieza]+" filter\n"+filterAmount+"/5");
+
+        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         Destroy(transform.root.gameObject);
     }
     private void Start()

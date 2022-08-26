@@ -12,6 +12,7 @@ public class CameraSecuredSceneController : MonoBehaviour
         _pieze = (PiezesToSecure)PlayerPrefs.GetInt("PieceToSecure");
         yield return new WaitForSeconds(1f);
         _piezesTrigger[(int)_pieze].triggerDialogueEvent(true);
+        GameProgressController.SetCurrentScene("WorldSelector");
     }
     public void End()
     {

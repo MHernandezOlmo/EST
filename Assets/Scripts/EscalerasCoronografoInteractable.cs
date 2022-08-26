@@ -24,7 +24,7 @@ public class EscalerasCoronografoInteractable :Interactable
     }
     public void LoadOtherScene()
     {
-        GameEvents.LoadScene.Invoke("PicDuMidiPuzzleAssociation");
+        GameEvents.LoadScene.Invoke("PicDuMidi_8_exterior_jeanrock_cinematic");
     }
     IEnumerator RestoreInteract()
     {

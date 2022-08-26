@@ -13,6 +13,21 @@ public class WorldSelectorSceneController : MonoBehaviour
     [SerializeField] private Image[] _worldLockImages;
     [SerializeField] private Button[] _worldButtons;
     [SerializeField] private TextMeshProUGUI[] _worldNamesText;
+    public void ResetLomnicky()
+    {
+        PlayerPrefs.DeleteAll();
+        GameProgressController.LomnickyClosedCeiling = false;
+        GameProgressController.LomnickyTornadoSkill = false;
+        GameProgressController.LomnickyFuse = false;
+        GameProgressController.LomnickyMotor = false;
+        GameProgressController.LomnickyClosedCeiling = false;
+        GameProgressController.LomnickyCountdown = false;
+        GameProgressController.LomnickyCountdownTime = 0f;
+        GameProgressController.LomnickyPuzzleFlareHunters = false;
+        GameProgressController.LomnickyRecopiledDataAdvice = false;
+        GameProgressController.ResetPiezaCamara();
+        GameProgressController.LomnickyPuzzleLayers = false;
+    }
     public void BackHome()
     {
         GameEvents.LoadScene.Invoke("MainMenu");
@@ -24,7 +39,7 @@ public class WorldSelectorSceneController : MonoBehaviour
         _worldImages[0].color = Color.white;
         _worldLockImages[0].gameObject.SetActive(false);
         _worldButtons[0].interactable = true;
-        _worldNamesText[0].text = "Lomnicky";
+        _worldNamesText[0].text = "Lomnický štít";
         GameProgressController.LomnickySolved = true;
         GameProgressController.EinsteinSolved= true;
         GameProgressController.PicDuMidiSolved = true;
@@ -36,7 +51,7 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldImages[1].color = Color.white;
             _worldLockImages[1].gameObject.SetActive(false);
             _worldButtons[1].interactable = true;
-            _worldNamesText[1].text = "Einstein";
+            _worldNamesText[1].text = "Einstein Tower";
         }
         if (GameProgressController.EinsteinSolved)
         {

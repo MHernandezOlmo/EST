@@ -445,7 +445,10 @@ public class PlayerController : MonoBehaviour
         {
             if (!(hit.collider.gameObject.GetComponent<EnemyController>() != null))
             {
-                targetPosition = hit.point - (hit.point - raycastStart).normalized;
+                if (!hit.collider.isTrigger)
+                {
+                    targetPosition = hit.point - (hit.point - raycastStart).normalized;
+                }
             }
         }
         for (float i = 0; i < 0.1f; i += Time.deltaTime)

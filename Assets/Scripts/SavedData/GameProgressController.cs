@@ -145,7 +145,15 @@ public class GameProgressController : MonoBehaviour
         _gameProgressData._lomnickyPiezasCamara[pieza] = state;
         SaveGameProgressData();
     }
-
+    public static void ResetPiezaCamara()
+    {
+        CheckInitialized();
+        for(int i =0; i< _gameProgressData._lomnickyPiezasCamara.Length; i++)
+        {
+            _gameProgressData._lomnickyPiezasCamara[i] = false;
+        }
+        SaveGameProgressData();
+    }
     public static bool LomnickyPuzzleLayers
     {
         get
@@ -363,7 +371,7 @@ public class GameProgressController : MonoBehaviour
     {
         CheckInitialized();
         bool hasFilters = true;
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (!_gameProgressData._picDuMidiFilters[i])
             {

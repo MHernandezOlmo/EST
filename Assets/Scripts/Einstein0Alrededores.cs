@@ -27,7 +27,7 @@ public class Einstein0Alrededores : MonoBehaviour
     }
     public void ShowSkillAdvice()
     {
-        GameEvents.ShowScreenText.Invoke("Obtained: Solar Canon Skill");
+        GameEvents.ShowScreenText.Invoke("Obtained: Coronal Mass Ejection Skill");
     }
 
     void Start()

@@ -124,7 +124,7 @@ public class GameProgressData
     {
         _lomnickyPiezasCamara = new bool[6];
         _gregorHRPieces= new bool[6];
-        _picDuMidiFilters = new bool[6];
+        _picDuMidiFilters = new bool[5];
         _currentScene = "";
         _currentStartPoint = 0;
     }

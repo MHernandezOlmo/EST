@@ -15,6 +15,12 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     [SerializeField] Animator _animator;
     [SerializeField] DialogueTrigger _hasEspectroPolarimetro;
     private bool _rayBlocked;
+    public IEnumerator Advice()
+    {
+        yield return new WaitForSeconds(2);
+        GameEvents.ShowScreenText.Invoke("Obtained spectropolarimeter");
+    }
+
     public bool RayBlocked
     {
         get
@@ -89,6 +95,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     {
         GameProgressController.EinsteinNoPrismDialog = true;
         GameProgressController.EinsteinNeedPrism = true;
+        GameEvents.ShowScreenText.Invoke("Contact UV to get a beam-splitter");
     }
     public void AnimateSpectropolarimetro()
     {
@@ -97,6 +104,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
         _rayoBifurcadoR.SetActive(false);
         _ray1.GetComponent<LineRenderer>().SetPosition(1, new Vector3(-0.2892f, 1.41478f, -14.16f));
         _animator.SetTrigger("Save");
+        StartCoroutine(Advice());
     }
     public void SaveEspectropolarimetro()
     {

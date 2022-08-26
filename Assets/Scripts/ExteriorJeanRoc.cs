@@ -9,8 +9,13 @@ public class ExteriorJeanRoc : MonoBehaviour
     [SerializeField]
     GameObject uncoverInteractable;
     [SerializeField] private DialogueTrigger _dialog;
+    [SerializeField] private GameObject _stairs;
     private void Awake()
     {
+        if (!GameProgressController.PicDuMidiPuzzleCoronagraph)
+        {
+            _stairs.gameObject.SetActive(false);
+        }
         if (GameProgressController.PicDuMidiUncoveredJeanRoch)
         {
             uncoverInteractable.gameObject.SetActive(false);

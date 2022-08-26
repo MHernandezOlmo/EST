@@ -55,11 +55,13 @@ public class SalaContiguaSceneController : MonoBehaviour
                 _stairsPortal.SetActive(true);
                 _dialogueTrigger.gameObject.SetActive(true);
                 yield return null;
-                GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/HelpArchive"));
             }
-            
         }
+    }
 
+    public void ShowAlert()
+    {
+        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/HelpArchive"));
     }
 
     IEnumerator WaitDialog()

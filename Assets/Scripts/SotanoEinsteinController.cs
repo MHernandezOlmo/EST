@@ -18,6 +18,10 @@ public class SotanoEinsteinController : MonoBehaviour
     private bool _moving0;
     private bool _moving1;
     [SerializeField] private GameObject mirrorPoint;
+    public void Advice()
+    {
+        _dialog.GetComponent<DialogueTrigger>().triggerDialogueEvent(true);
+    }
     void Start()
     {
 
@@ -27,7 +31,6 @@ public class SotanoEinsteinController : MonoBehaviour
             _firstRay.GetComponent<LineRenderer>().SetPosition(1,mirrorPoint.transform.position);
             _firstRay.SetActive(true);
             _dialog.SetActive(false);
-
         }
         else
         {
@@ -170,6 +173,7 @@ public class SotanoEinsteinController : MonoBehaviour
 
     IEnumerator CrOpenBasementDoor()
     {
+        FindObjectOfType<BasementDoorInteractableAttempt>().RemoveInteractable();
         _openBasementDoor = true;
         GameProgressController.SetOpenEinsteinBasementDoor(true);
         FindObjectOfType<BasementLeverAxis0>().RemoveInteractable();
