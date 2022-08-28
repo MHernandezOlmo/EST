@@ -16,7 +16,7 @@ public class CazaFlaresController : MonoBehaviour
     [SerializeField] private FlareBehaviour[] _flares;
     [SerializeField] private TextMeshProUGUI _feedbackText;
     private int _correctCounter;
-
+    bool _won;
 
     public void StartGame()
     {
@@ -176,7 +176,11 @@ public class CazaFlaresController : MonoBehaviour
         _text.text = $"Captured Flares\n {_correctCounter}/20";
         if (_correctCounter >= 20)
         {
-            FindObjectOfType<PuzzleStatesController>().Win();
+            if (!_won)
+            {
+                _won = true;
+                FindObjectOfType<PuzzleStatesController>().Win();
+            }
         }
     }
     void Update()
@@ -187,8 +191,11 @@ public class CazaFlaresController : MonoBehaviour
             _timeBarImage.fillAmount = _gameTime / _totalGameTime;
             if (_gameTime < 0)
             {
-                FindObjectOfType<PuzzleStatesController>().GameOver();
-                _gameStarted = false;
+                if (!_won)
+                {
+                    FindObjectOfType<PuzzleStatesController>().GameOver();
+                    _gameStarted = false;
+                }
             }
         }
 

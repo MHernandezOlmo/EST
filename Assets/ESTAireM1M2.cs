@@ -17,7 +17,6 @@ public class ESTAireM1M2 : Interactable
         }
         if (GameProgressController.ESTAireM1M2)
         {
-            
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
         }
@@ -27,12 +26,20 @@ public class ESTAireM1M2 : Interactable
         if (!_interacted)
         {
             _interacted = true;
-            _dialogToTrigger.triggerDialogueEvent(true);
+            StartCoroutine(TriggerDialoGue());
             GameProgressController.ESTAireM1M2 = true;
             FindObjectOfType<MissionCanvasController>().HideMission();
-            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-            Destroy(gameObject);
+            GameEvents.ShowScreenText.Invoke("“Primary and secondary mirrors, cooled");
+
         }
+
+    }
+    IEnumerator TriggerDialoGue()
+    {
+        yield return new WaitForSeconds(1);
+        _dialogToTrigger.triggerDialogueEvent(true);
+        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+        Destroy(gameObject);
 
     }
     public void SetDialog(DialogueTrigger _trigger)

@@ -19,7 +19,7 @@ public class ShieldSkill : Interactable
         _shieldDialog.triggerDialogueEvent();
         GameProgressController.SSTShieldSkill = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("Obtained: Shield Skill");
         Destroy(gameObject.transform.parent.gameObject);
     }
+
 }

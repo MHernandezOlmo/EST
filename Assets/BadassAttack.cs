@@ -11,6 +11,7 @@ public class BadassAttack : MonoBehaviour
     Coroutine _attack;
     public bool autoplay;
     GameStates _previousState;
+    bool stopped;
     private IEnumerator Start()
     {
         _playerController = FindObjectOfType<PlayerController>();
@@ -31,14 +32,18 @@ public class BadassAttack : MonoBehaviour
     }
     public IEnumerator CrExplode()
     {
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.MegaShot);
-        _aura.SetActive(true);
-        _aura.GetComponent<ParticleSystem>().Play();
-        transform.position = _playerController.transform.position;
-        yield return new WaitForSeconds(2f);
-        _explosion.Play();
-        CheckPlayer();
-        _aura.SetActive(false);
+        if (!stopped)
+        {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.MegaShot);
+            _aura.SetActive(true);
+            _aura.GetComponent<ParticleSystem>().Play();
+            transform.position = _playerController.transform.position;
+            yield return new WaitForSeconds(2f);
+            _explosion.Play();
+            CheckPlayer();
+            _aura.SetActive(false);
+        }
+
     }
     public IEnumerator CrExplodeAgain()
     {
@@ -66,6 +71,7 @@ public class BadassAttack : MonoBehaviour
     {
         StopAllCoroutines();
         _aura.SetActive(false);
+        stopped = true;
     }
 
     private void Update()

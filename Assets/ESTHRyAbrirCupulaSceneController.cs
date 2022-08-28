@@ -27,15 +27,5 @@ public class ESTHRyAbrirCupulaSceneController : MonoBehaviour
                 _dialog3.triggerDialogueEvent(true);
             }
         }
-        if(GameProgressController.Mirror && !GameProgressController.MirrorAdvice)
-        {
-            GameProgressController.MirrorAdvice = true;
-            _mirrorAdvice.triggerDialogueEvent(true);
-        }
-    }
-
-    public void Load1stPersonPuzzle()
-    {
-        GameEvents.LoadScene.Invoke("Espejo");
     }
 }

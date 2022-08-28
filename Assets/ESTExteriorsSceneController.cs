@@ -8,12 +8,13 @@ public class ESTExteriorsSceneController : MonoBehaviour
     [SerializeField] private DialogueTrigger _dialogTrigger;
     [SerializeField] private DialogueTrigger _dialogTriggerPreCombat;
     [SerializeField] private GameObject _trappedCanvas;
+    [SerializeField] private RectTransform _trappedCanvasRT;
+
     private BadassEnemy _badassEnemy;
     private PlayerController _playerController;
     [SerializeField] private CinemachineVirtualCamera _bossCamera;
     bool _cameraShown;
     [SerializeField] private Animator _enemyGrowAnimator;
-
     public void RestoreCamera()
     {
         _bossCamera.Priority = 0;
@@ -30,7 +31,36 @@ public class ESTExteriorsSceneController : MonoBehaviour
     public void LaunchDialog()
     {
         _trappedCanvas.SetActive(true);
+        StartCoroutine(CrShowCanvas());
+        
+    }
+
+    IEnumerator CrShowCanvas()
+    {
+        for (float i = 0; i < 0.25f; i += Time.deltaTime)
+        {
+            _trappedCanvasRT.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, i/0.25f);
+            yield return null;
+        }
+        _trappedCanvasRT.localScale = Vector3.one;
+        yield return new WaitForSeconds(2f);
         _dialogTrigger.triggerDialogueEvent(true);
+    }
+
+    public void HideCanvas()
+    {
+        StartCoroutine(CrHideCanvas());
+    }
+
+    IEnumerator CrHideCanvas()
+    {
+        for (float i = 0; i < 0.25f; i += Time.deltaTime)
+        {
+            _trappedCanvasRT.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, i / 0.25f);
+            yield return null;
+        }
+        _trappedCanvasRT.localScale = Vector3.zero;
+        yield return new WaitForSeconds(1f);
     }
 
     IEnumerator CrCameraShown()

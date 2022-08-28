@@ -23,7 +23,7 @@ public class ESTRefrigeranteM3aM6SceneController : MonoBehaviour
                 allMirrors = false;
             }
         }
-        GameEvents.ShowScreenText.Invoke($"Mirror {index} refilled. {mirrorCount}/4");
+        GameEvents.ShowScreenText.Invoke($"Mirror {index+3} refilled. {mirrorCount}/4");
         if (allMirrors)
         {
             FindObjectOfType<MissionCanvasController>().HideMission();
@@ -39,5 +39,9 @@ public class ESTRefrigeranteM3aM6SceneController : MonoBehaviour
     void Start()
     {
         _mirrors = new bool[4];
+        _mirrors[0] = GameProgressController.ESTMirror0;
+        _mirrors[1] = GameProgressController.ESTMirror1;
+        _mirrors[2] = GameProgressController.ESTMirror2;
+        _mirrors[3] = GameProgressController.ESTMirror3;
     }
 }

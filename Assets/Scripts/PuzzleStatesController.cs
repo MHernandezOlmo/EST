@@ -110,7 +110,7 @@ public class PuzzleStatesController : MonoBehaviour
             case "Espejo":
                 GameProgressController.Mirror = true;
                 GameProgressController.SetCurrentStartPoint(1);
-                GameEvents.LoadScene.Invoke("EST_HRyAbrirCupula");
+                GameEvents.LoadScene.Invoke("EST_Cupula");
                 break;
         }
     }

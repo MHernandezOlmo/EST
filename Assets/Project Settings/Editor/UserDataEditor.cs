@@ -448,6 +448,11 @@ public class UserDataEditor : EditorWindow
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST M1M2", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estAireM1M2= EditorGUILayout.Toggle(_gameProgressData._estAireM1M2, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
             GUILayout.Label("EST MIRROR", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._mirror= EditorGUILayout.Toggle(_gameProgressData._mirror, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();

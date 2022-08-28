@@ -13,15 +13,29 @@ public class SolarPediaController : MonoBehaviour
     [SerializeField] Image _image;
     [SerializeField] GameObject _contentGO;
     [SerializeField] GameObject _indexGO;
+    [SerializeField] private GameObject[] _contentList;
     int state;
     bool changed;
     [SerializeField]
     List<Sprite> _images;
     bool showing;
+    List<List<string>> entries;
     void Start()
     {
         SolarPedia slrpd = new SolarPedia();
         SetValue(0);
+        entries = new List<List<string>>();
+        entries.Add(new List<string>() { "Core", "Radiative zone", "Convection zone" });
+        entries.Add(new List<string>() { "Photosphere", "Chromosphere", "Transition Region", "Corona"});
+        entries.Add(new List<string>() { "General description", "Solar Dnamo", "Basis statistics", "Composition"});
+        entries.Add(new List<string>() { "Active regions", "Sunspots", "Umbra", "Penumbra", "Pores", "Bright Points", "Granulation"});
+        entries.Add(new List<string>() { "Spicules", "Filaments and Prominences"});
+        entries.Add(new List<string>() { "Coronal loops", "Coronal rain"});
+        entries.Add(new List<string>() { "Flares", "CMEs", "Solar wind","Solar energetic particles", "Aurora" , "Geomagnetic storm" });
+        entries.Add(new List<string>() { "Lomnický štít Observatory", "Pic du Midi Observatory", "Teide Observatory", "Roque de los Muchachos Observatory"});
+        entries.Add(new List<string>() { "Lunette Jean Rösch", "CLIMSO coronograph", "Einstein Tower", "GREGOR", "Swedish Solar 1-m Telescope", "European Solar Telescope" });
+        entries.Add(new List<string>() { "Solar Orbiter", "Parker Solar Probe", "HINODE", "SUNRISE", "SOHO" });
+        entries.Add(new List<string>() { "Solar Orbiter", "Parker Solar Probe", "HINODE", "SUNRISE", "SOHO" });
     }
     public void Back()
     {

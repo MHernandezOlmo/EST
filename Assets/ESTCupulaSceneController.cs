@@ -8,16 +8,19 @@ public class ESTCupulaSceneController : MonoBehaviour
     [SerializeField] public GameObject _b2;
     [SerializeField] public GameObject _b3;
 
+    [SerializeField] private DialogueTrigger _test;
     bool b1, b2, b3;
 
     [SerializeField] public Material _green;
     [SerializeField] public Material _red;
 
-    void Start()
+    IEnumerator Start()
     {
         _b1.GetComponent<MeshRenderer>().material = _red;   
         _b2.GetComponent<MeshRenderer>().material = _red;   
-        _b3.GetComponent<MeshRenderer>().material = _red;   
+        _b3.GetComponent<MeshRenderer>().material = _red;
+        yield return new WaitForSeconds(0.5f);
+        _test.triggerDialogueEvent();
     }
 
     public void PressButton(int index)

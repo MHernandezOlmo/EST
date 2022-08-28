@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
+
 public class SSTExteriors : MonoBehaviour
 {
     EnemyMicroWave[] _microWaves;
@@ -13,7 +15,9 @@ public class SSTExteriors : MonoBehaviour
     [SerializeField] DialogueTrigger GetAOTriggerDialog;
     [SerializeField] TextMeshProUGUI _aoPiecesText;
     bool _ended;
-    void Start()
+    [SerializeField] private CinemachineVirtualCamera _firstCamera;
+    [SerializeField] private CinemachineVirtualCamera _secondCamera;
+    IEnumerator Start()
     {
         _shownAlert = GameProgressController.SSTMicrowaveAlert;
         _microWaves = FindObjectsOfType<EnemyMicroWave>();
@@ -23,6 +27,15 @@ public class SSTExteriors : MonoBehaviour
         {
             AOPiecesCanvas.SetActive(true);
             _piecesAO = GameProgressController.SSTAOPieces;
+        }
+        if (!GameProgressController.SSTMicrowaveAlert)
+        {
+            yield return new WaitForSeconds(2);
+            _firstCamera.Priority = 0;
+        }
+        else
+        {
+            _firstCamera.Priority = 0;
         }
     }
     public void GetPiece()

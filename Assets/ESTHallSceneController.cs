@@ -17,7 +17,7 @@ public class ESTHallSceneController : MonoBehaviour
         if (!GameProgressController.ESTFirstAdvice)
         {
             _missionCanvas.SetActive(true);
-            FindObjectOfType<MissionCanvasController>().HideMission();
+            //FindObjectOfType<MissionCanvasController>().HideMission();
             GameProgressController.ESTFirstAdvice = true;
             _trigger.triggerDialogueEvent(true);
         }
