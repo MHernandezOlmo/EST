@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EspejoController : MonoBehaviour
 {
@@ -9,6 +11,16 @@ public class EspejoController : MonoBehaviour
     private int _robotKills;
     public int robotsCount;
     bool won;
+    float _elapsedTime;
+    float _totalTime;
+    bool _playing;
+    [SerializeField] private Image _image;
+    [SerializeField] private TextMeshProUGUI _robotsCount;
+    bool _polishing;
+    int _polishCount;
+    [SerializeField] private Image _mirrorImage;
+    [SerializeField] private TextMeshProUGUI _polishText;
+    [SerializeField] private Color _gray;
     public void AddRobot()
     {
         robotsCount++;
@@ -22,16 +34,40 @@ public class EspejoController : MonoBehaviour
         set
         {
             _robotKills = value;
-
+            _robotsCount.SetText("Robots: "+_robotKills + "/30");
         }
     }
     public void StartGame()
     {
-
+        _playing = true;
     }
-
+    public void PolishTap()
+    {
+        if (_polishing)
+        {
+            _polishCount++;
+            _mirrorImage.color = Color.Lerp(_gray, Color.white, _polishCount / 10f);
+        }
+    }
     void Update()
     {
+        if (_polishing)
+        {
+            if (_polishCount >= 10)
+            {
+                if (!won)
+                {
+
+                    won = true;
+                    FindObjectOfType<PuzzleStatesController>().Win();
+                }
+            }
+        }
+        if (_playing)
+        {
+            _elapsedTime += Time.deltaTime;
+            _image.fillAmount = 1 - (_elapsedTime / _totalTime);
+        }
         if (_robotKills == 30)
         {
             bool allClean = true;
@@ -44,18 +80,19 @@ public class EspejoController : MonoBehaviour
             }
             if (allClean)
             {
-                if (!won)
+                if (!_polishing)
                 {
-                    won = true;
-                    FindObjectOfType<PuzzleStatesController>().Win();
+                    _polishing = true;
+                    _polishText.gameObject.SetActive(true);
                 }
+
             }
         }
     }
 
     void Start()
     {
-        
+        _totalTime = 45f;
     }
 
     public void CreateDirt(Vector2 dirtAnchoredPosition)

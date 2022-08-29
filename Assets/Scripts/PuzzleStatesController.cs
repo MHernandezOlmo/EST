@@ -85,10 +85,13 @@ public class PuzzleStatesController : MonoBehaviour
                 break;
             case "PicDuMidiPuzzleCoronagraph":
                 GameProgressController.PicDuMidiPuzzleCoronagraph = true;
+                GameProgressController.SetCurrentStartPoint(1);
                 GameEvents.LoadScene.Invoke("PicDuMidi_9_paneles_d");
                 break;
             case "PicDuMidiPuzzleAssociation":
                 GameProgressController.PicDuMidiPuzzleAssociation = true;
+                GameProgressController.SetCurrentStartPoint(1);
+
                 GameEvents.LoadScene.Invoke("PicDuMidi_14_Sala b");
                 break;
             case "SSTPuzzleVacuumPump":
@@ -105,6 +108,7 @@ public class PuzzleStatesController : MonoBehaviour
                 break;
             case "TestHR":
                 GameProgressController.GregorTestedHR = true;
+                GameProgressController.SetCurrentStartPoint(1);
                 GameEvents.LoadScene.Invoke("Gregor_11_almacen");
                 break;
             case "Espejo":

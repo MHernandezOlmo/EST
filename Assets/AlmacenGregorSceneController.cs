@@ -42,7 +42,7 @@ public class AlmacenGregorSceneController : MonoBehaviour
     }
     public void LoadLab()
     {
-        GameEvents.LoadScene.Invoke("Einstein_3_planta_1_sala_archivoFromGregor");
+        GameEvents.LoadScene.Invoke("Einstein_6_planta-1_sala_del_espectropolarimetroFromGregor");
     }
     public void InstantiatePC()
     {

@@ -11,6 +11,8 @@ public class MirrorRobot : MonoBehaviour
     RectTransform _rectTransform;
     Coroutine routine;
     EspejoController _espejoController;
+    [SerializeField] List<RectTransform> _positions;
+    int _pointCounter;
     private void Start()
     {
         _espejoController = FindObjectOfType<EspejoController>();
@@ -29,6 +31,7 @@ public class MirrorRobot : MonoBehaviour
 
     public void Kill()
     {
+
         if (routine != null)
         {
             StopCoroutine(routine);
@@ -37,6 +40,7 @@ public class MirrorRobot : MonoBehaviour
     }
     IEnumerator CrDie()
     {
+
         for (float i = 0; i < 0.2f; i += Time.deltaTime)
         {
             yield return null;
@@ -44,13 +48,7 @@ public class MirrorRobot : MonoBehaviour
         }
         transform.localScale = Vector3.zero;
 
-        float randomPointX = Random.Range(minPoint.x, maxPoint.x);
-        float randomPointY = Random.Range(minPoint.y, maxPoint.y);
-        Vector2 randomTarget = new Vector2(randomPointX, randomPointY);
-        _rectTransform.anchoredPosition = randomTarget;
         _espejoController.RobotKills++;
-
-        print(FindObjectOfType<EspejoController>().robotsCount);
         if (FindObjectOfType<EspejoController>().robotsCount < 30)
         {
             FindObjectOfType<EspejoController>().AddRobot();
@@ -65,6 +63,7 @@ public class MirrorRobot : MonoBehaviour
     }
     IEnumerator CrAppear()
     {
+        _rectTransform.anchoredPosition = _positions[_pointCounter].anchoredPosition;
         for (float i = 0; i < 0.2f; i += Time.deltaTime)
         {
             yield return null;
@@ -76,22 +75,18 @@ public class MirrorRobot : MonoBehaviour
 
     IEnumerator CrMove()
     {
-        float randomPointX = Random.Range(minPoint.x, maxPoint.x);
-        float randomPointY = Random.Range(minPoint.y, maxPoint.y);
-        Vector2 randomTarget = new Vector2(randomPointX, randomPointY);
-        float distance = Vector2.Distance(_rectTransform.anchoredPosition, randomTarget);
-        float speed = 200;
-        Vector2 startPosition = _rectTransform.anchoredPosition;
-        float timeToMove = distance / speed;
+
+        int nextCounter = (_pointCounter + 1) % _positions.Count;
+        float timeToMove = Random.Range(0.75f, 1.5f);
         for(float i = 0; i< timeToMove; i += Time.deltaTime)
         {
+            _rectTransform.anchoredPosition = Vector2.Lerp(_positions[_pointCounter].anchoredPosition, _positions[nextCounter].anchoredPosition, i/timeToMove);
             yield return null;
-            _rectTransform.anchoredPosition = Vector2.Lerp(startPosition, randomTarget, i/timeToMove);
         }
-        _rectTransform.anchoredPosition = randomTarget;
-        yield return new WaitForSeconds(1f);
-
+        yield return new WaitForSeconds(Random.Range(0.25f, 0.75f));
         _espejoController.CreateDirt(_rectTransform.anchoredPosition);
+        _pointCounter++;
+        _pointCounter = _pointCounter % _positions.Count;
         routine = StartCoroutine(CrMove());
     }
     

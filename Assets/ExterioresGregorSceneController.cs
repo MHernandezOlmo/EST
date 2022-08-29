@@ -72,7 +72,7 @@ public class ExterioresGregorSceneController : MonoBehaviour
     public void AddBush()
     {
         _bushes++;
-        string targetTx = "<size=140%>Picked " + _bushes + "/6";
+        string targetTx = "<size=140%>Bushes: " + _bushes + "/6";
         GameEvents.ShowScreenText.Invoke(targetTx);
         if (_bushes == 6)
         {

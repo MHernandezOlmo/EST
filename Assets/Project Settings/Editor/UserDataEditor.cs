@@ -147,6 +147,11 @@ public class UserDataEditor : EditorWindow
             GUILayout.Label("Basement Axis 1", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._einsteinBasementAxis1 = EditorGUILayout.Toggle(_gameProgressData._einsteinBasementAxis1, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
+            
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Einstein BasementDoor", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._openEinsteinBasementDoor = EditorGUILayout.Toggle(_gameProgressData._openEinsteinBasementDoor, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("No Prism Dialog", GUILayout.Height(height), GUILayout.Width(200));
@@ -456,7 +461,7 @@ public class UserDataEditor : EditorWindow
             GUILayout.Label("EST MIRROR", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._mirror= EditorGUILayout.Toggle(_gameProgressData._mirror, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
-
+            
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("EST mirror advice", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._mirrorAdvice = EditorGUILayout.Toggle(_gameProgressData._mirrorAdvice, GUILayout.Height(height), GUILayout.Width(200));

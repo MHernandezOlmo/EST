@@ -87,6 +87,10 @@ public class BadassAttack : MonoBehaviour
             {
                 ContinuosAttack();
             }
+            else
+            {
+                stopped = false;
+            }
 
         }
         _previousState = CurrentSceneManager._state;

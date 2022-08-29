@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -198,7 +199,7 @@ public class MusicManager : MonoBehaviour
         {
             StopCoroutine(_muteCr);
         }
-        _muteCr = StartCoroutine(CrSetVolume(0f));
+        _muteCr = StartCoroutine(CrSetVolume(-80f));
     }
 
     public void UnmuteMusic()
@@ -207,7 +208,7 @@ public class MusicManager : MonoBehaviour
         {
             StopCoroutine(_muteCr);
         }
-        _muteCr = StartCoroutine(CrSetVolume(1f));
+        _muteCr = StartCoroutine(CrSetVolume(0f));
     }
 
     IEnumerator CrSetVolume(float targetVol)
@@ -215,7 +216,6 @@ public class MusicManager : MonoBehaviour
         float currentVol;
         _aMixer.GetFloat("OSTParentVol", out currentVol);
         float dur = 1f;
-
         for (float i = 0; i < dur; i+= Time.deltaTime)
         {
             yield return null;
@@ -232,8 +232,11 @@ public class MusicManager : MonoBehaviour
 
     public MusicCode GetDefMusicCode()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            return MusicCode.Menu;
+        }
         MusicCode defCode = MusicCode.EST;
-
         char firstChar = GameProgressController.GetCurrentScene()[0];
         switch (firstChar)
         {

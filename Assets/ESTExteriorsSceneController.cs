@@ -43,7 +43,7 @@ public class ESTExteriorsSceneController : MonoBehaviour
             yield return null;
         }
         _trappedCanvasRT.localScale = Vector3.one;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         _dialogTrigger.triggerDialogueEvent(true);
     }
 

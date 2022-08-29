@@ -19,34 +19,107 @@ public class BombaVacioController : MonoBehaviour
     List<float> _pressureChanges;
     PuzzleStatesController _mainPuzzleController;
     float _pressureValue;
-    
-    void Start()
+    [SerializeField] private TextMeshProUGUI _cd;
+    bool _realPlaying;
+    IEnumerator Start()
     {
-        _gameTime = 30;
-        _totalTime = 30;
+        _gameTime = 20;
+        _totalTime = 20;
         _mainPuzzleController = FindObjectOfType<PuzzleStatesController>();
         _values = new List<float>();
         _values.Add(0.75f);
         _values.Add(0.5f);
+        _values.Add(0.9f);
         _values.Add(0.65f);
         _pressureChanges= new List<float>();
-        _pressureChanges.Add(-2f);
-        _pressureChanges.Add(-0.6f);
-        _pressureChanges.Add(-0.2f);
+        _pressureChanges.Add(-1.2f);
+        _pressureChanges.Add(-0.8f);
+        _pressureChanges.Add(-0.5f);
+        _pressureChanges.Add(-0.3f);
         _pressureValue = 3f;
+        while (!_playing)
+        {
+            yield return null;
+        }
+        for(int i = 0; i< 4f; i++)
+        {
+            if(i == 3)
+            {
+                _cd.text = "Go!";
+
+            }
+            else
+            {
+                _cd.text = (3 - i).ToString();
+                yield return new WaitForSeconds(1);
+            }
+        }
+
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(false); 
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(false);
+        }
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(0.25f);
+        for (int i = 0; i < _markers.Length; i++)
+        {
+            _markers[i].gameObject.SetActive(false);
+        }
+        _realPlaying = true;
+        Destroy(_cd.transform.parent.gameObject);
+  
     }
 
     public void StartPressure()
     {
         _usingBomb = true;
-        _markers[_step].gameObject.SetActive(false);
+        //_markers[_step].gameObject.SetActive(false);
     }
 
     public void StopPressure()
     {
         if (_usingBomb)
         {
-            _markers[_step].gameObject.SetActive(true);
+            //_markers[_step].gameObject.SetActive(true);
             _usingBomb = false;
             Check();
         }
@@ -60,16 +133,15 @@ public class BombaVacioController : MonoBehaviour
             _mainPuzzleController.CorrectFeedback();
             StartCoroutine(UpdatePressure(_pressureChanges[_step]));
             _step++;
-            if (_step == 3)
+            if (_step == 4)
             {
-                _playing = false;
+                _realPlaying = false;
                 StartCoroutine(Win());
             }
         }
         else
         {
             _circles[_step].anchoredPosition = new Vector2(0, -200f);
-            _gameTime -= 5f;
             _mainPuzzleController.FailFeedback();
         }
     }
@@ -108,13 +180,13 @@ public class BombaVacioController : MonoBehaviour
         int presureCents = (int)(_pressureValue*100)%100;
 
         _pressure.text = "<mspace=100>" + pressureUnits.ToString("00")+"." + presureCents.ToString("00") + "</mspace><size=50%>mbar</size>";
-        if (_playing)
+        if (_realPlaying)
         {
             _gameTime -= Time.deltaTime;
             _timeBar.fillAmount = _gameTime / _totalTime;
             if (_gameTime <= 0)
             {
-                _playing = false;
+                _realPlaying = false;
                 FindObjectOfType<PuzzleStatesController>().GameOver();
             }
         }

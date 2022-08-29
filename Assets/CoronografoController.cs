@@ -15,6 +15,7 @@ public class CoronografoController : MonoBehaviour
     [SerializeField] GameObject _stopButton;
     [SerializeField] GameObject _takePhotoButton;
     PhotoFrame _photoFrameBehaviour;
+    [SerializeField] Image[] _photos;
     void Start()
     {
         _photoFrameBehaviour = FindObjectOfType<PhotoFrame>();
@@ -53,6 +54,7 @@ public class CoronografoController : MonoBehaviour
             else
             {
                 _ticks[_currentStep - 4].gameObject.SetActive(true);
+                _photos[_currentStep - 4].gameObject.SetActive(true);
                 if (_currentStep == 6)
                 {
                     FindObjectOfType<PuzzleStatesController>().Win();

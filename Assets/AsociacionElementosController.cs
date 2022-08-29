@@ -26,6 +26,10 @@ public class AsociacionElementosController : MonoBehaviour
 
     public void CheckPhenomenom()
     {
+        if (!_playing)
+        {
+            return;
+        }
         Vector3 worldPoint = _camera.ScreenToWorldPoint(Input.mousePosition);
         worldPoint.z = 0;
         Vector3 origin = worldPoint;
@@ -38,14 +42,17 @@ public class AsociacionElementosController : MonoBehaviour
             if (_currentPhenomenom == _selectedGroup)
             {
                 FindObjectOfType<PuzzleStatesController>().CorrectFeedback();
-                UpdatePhenomenom();
-                _gameTime += 5f;
+                
                 successAnswers++;
                 _progress.text = successAnswers + "/" + neededAnswers;
                 if (successAnswers >= neededAnswers)
                 {
                     _playing = false;
                     _puzzleMainController.Win();
+                }
+                else
+                {
+                    UpdatePhenomenom();
                 }
             }
             else
@@ -58,10 +65,11 @@ public class AsociacionElementosController : MonoBehaviour
 
     public void UpdatePhenomenom()
     {
+        int[] possiblePhenomenoms = new int[] {1, 3,4,5};
         int previous = _currentPhenomenom;
         do
         {
-            _currentPhenomenom = Random.Range(0, _phenomenoms.Count);
+            _currentPhenomenom = possiblePhenomenoms[Random.Range(0, possiblePhenomenoms.Length)];
         } while (_currentPhenomenom == previous);
         _targetPhenomenom.sprite = _phenomenoms[_currentPhenomenom][Random.Range(0, _phenomenoms[_currentPhenomenom].Length)];
     }

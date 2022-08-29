@@ -21,6 +21,7 @@ public class OvenInstance : MonoBehaviour
     {
         if (_alerted)
         {
+            transform.rotation = Quaternion.LookRotation(_player.position - transform.position, Vector3.up);
             return;
         }
         if(Vector3.Distance(_player.position, transform.position) < _detectionDist)
@@ -44,18 +45,18 @@ public class OvenInstance : MonoBehaviour
     IEnumerator CrAttack()
     {
         Vector3 startPos = transform.position;
-        Vector3 targetPos = _player.position - (_player.position - transform.position).normalized * 3f;
+        Vector3 targetPos = _player.position + (transform.position -_player.position).normalized * 3f;
         float dist = Vector3.Distance(startPos, targetPos);
         float dur = 1.5f * (dist / 10f);
 
         float rotDur = 1f;
         Quaternion startRot = transform.rotation;
         Quaternion targetRot = Quaternion.LookRotation(_player.position - transform.position, Vector3.up);
-        for (float i = 0; i < rotDur; i += Time.deltaTime)
-        {
-            transform.rotation = Quaternion.Lerp(startRot, targetRot, i / rotDur);
-            yield return null;
-        }
+        //for (float i = 0; i < rotDur; i += Time.deltaTime)
+        //{
+        //    //transform.rotation = Quaternion.Lerp(startRot, targetRot, i / rotDur);
+        //    yield return null;
+        //}
         transform.rotation = targetRot;
 
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.OvenRun);
@@ -64,11 +65,7 @@ public class OvenInstance : MonoBehaviour
         _particles.SetActive(true);
         for (float i = 0; i < dur; i += Time.deltaTime)
         {
-            transform.position = Vector3.Lerp(startPos, targetPos, i / dur);
-            if(i/dur < 0.5f)
-            {
-                transform.rotation = Quaternion.LookRotation(_player.position - transform.position, Vector3.up);
-            }
+            transform.position = Vector3.Lerp(startPos, targetPos, i / dur);            
             yield return null;
         }
         transform.position = targetPos;

@@ -26,6 +26,11 @@ public class PCCoronografoCode : Interactable
             FindObjectOfType<InteractablesController>().RemoveInteractable(this);
             Destroy(gameObject);
         }
+        if (GameProgressController.PicDuMidiPuzzleAssociation)
+        {
+            FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+            Destroy(gameObject);
+        }
         
     }
     public void Hide()
@@ -39,6 +44,7 @@ public class PCCoronografoCode : Interactable
         {
             FindObjectOfType<EscalerasCoronografo>().DownStairs();
             StartCoroutine(CrHideTablon());
+            RemoveInteractable();
         }
         else
         {

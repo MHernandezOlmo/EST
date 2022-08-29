@@ -23,7 +23,7 @@ public class TestHRController : MonoBehaviour
     PuzzleStatesController _mainPuzzleController;
     [SerializeField] private GameObject _outBeam;
     float _temp;
-
+    bool _win;
     void Start()
     {
         _gameTime = 20;
@@ -116,17 +116,35 @@ public class TestHRController : MonoBehaviour
     }
     public void Next()
     {
+        StartCoroutine(CrNext());
+        
+    }
+    IEnumerator CrNext()
+    {
         _step++;
-        _outBeam.transform.localScale -=new Vector3(0,0.45f,0);
+        Vector3 startingScale = _outBeam.transform.localScale;
+        Vector3 endScale = _outBeam.transform.localScale- new Vector3(0, 0.45f, 0);
         if (_step == 6)
         {
-            _outBeam.transform.position = new Vector3(5.2337f, 2.432f, -2.2356f);
-            _outBeam.transform.localScale= new Vector3(10.8130f,0.3607f,1f);
+            endScale = new Vector3(10.8130f, 0.3607f, 1f);
+        }
+        for (float i = 0; i< 0.25f; i += Time.deltaTime)
+        {
+            _outBeam.transform.localScale = Vector3.Lerp(startingScale, endScale, i/0.25f);
+            yield return null;
+        }
+        _outBeam.transform.localScale = endScale;
+        if (_step == 6)
+        {
+            //_outBeam.transform.position = new Vector3(5.2337f, 2.432f, -2.2356f);
+            //_outBeam.transform.localScale = new Vector3(10.8130f, 0.3607f, 1f);
             StartCoroutine(End());
         }
     }
     public IEnumerator End()
     {
+        _playing = false;
+
         yield return new WaitForSeconds(2f);
         FindObjectOfType<PuzzleStatesController>().Win();
     }
@@ -145,11 +163,28 @@ public class TestHRController : MonoBehaviour
             _gameTime -= Time.deltaTime;
             float amount = _gameTime / _totalTime;
             _timeBar.fillAmount = 1-amount;
+            if(amount < 0.75f)
+            {
+                _iceCube.sprite = _iceCubes[1];
+            }
+            if(amount < 0.5f)
+            {
+                _iceCube.sprite = _iceCubes[2];
+            }
+            if(amount < 0.25f)
+            {
+                _iceCube.sprite = _iceCubes[3];
+            }
+            if (amount <= 0)
+            {
+                //_iceCube.sprite = _iceCubes[4];
+            }
             if (_gameTime <= 0)
             {
                 _playing = false;
                 FindObjectOfType<PuzzleStatesController>().GameOver();
             }
+            print(amount);
         }
     }
 }

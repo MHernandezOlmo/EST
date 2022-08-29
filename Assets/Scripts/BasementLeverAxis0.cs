@@ -6,7 +6,7 @@ public class BasementLeverAxis0 : Interactable
 {
     public void Awake()
     {
-        if (GameProgressController.GetOpenEinsteinBasementDoor())
+        if (GameProgressController.GetOpenEinsteinBasementDoor() || !GameProgressController.EinsteinPlacedMirror)
         {
             RemoveInteractable();
         }

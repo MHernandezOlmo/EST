@@ -7,8 +7,17 @@ public class Plant0SceneController : MonoBehaviour
     [SerializeField] GameObject _ray;
     [SerializeField] GameObject _dialogTrigger;
     [SerializeField] GameObject _portalOutside;
+    [SerializeField] GameObject _realTV;
+    [SerializeField] GameObject[] _fakeTVs;
+
     void Start()
     {
+        if (GameProgressController.EinsteinUsedPrism)
+        {
+            _realTV.SetActive(false);
+            _fakeTVs[0].SetActive(true);
+            _fakeTVs[1].SetActive(true);
+        }
         if (!GameProgressController.EinsteinTowerFirstAdvice)
         {
             StartCoroutine(CrPlayDialog());

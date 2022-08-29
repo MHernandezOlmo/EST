@@ -289,6 +289,17 @@ public class SceneShortcuts : MonoBehaviour
     {
         LoadScene("Worlds/Gregor/Gregor_0_exterior");
     }
+    [MenuItem("Scenes/Worlds/Gregor/0-->Exterior Bis")]
+    public static void OpenGregorExteriorBis()
+    {
+        LoadScene("Worlds/Gregor/Gregor_0_exteriorBis");
+    }
+
+    [MenuItem("Scenes/Worlds/Gregor/0-->Dome")]
+    public static void OpenGregorExteriorDome()
+    {
+        LoadScene("Worlds/Gregor/Gregor_0_dome");
+    }
 
     [MenuItem("Scenes/Worlds/Gregor/1-->Base")]
     public static void OpenGregorSotano()
@@ -296,17 +307,35 @@ public class SceneShortcuts : MonoBehaviour
         LoadScene("Worlds/Gregor/Gregor_1_sotano");
     }
 
+    [MenuItem("Scenes/Worlds/Gregor/4-->Torreta")]
+    public static void OpenGregorTorreta()
+    {
+        LoadScene("Worlds/Gregor/Gregor_4_torreta");
+    }
+    [MenuItem("Scenes/Worlds/Gregor/6-->Observacion")]
+    public static void OpenGregorObservacion()
+    {
+        LoadScene("Worlds/Gregor/Gregor_6_observacion");
+    }
+
+
     [MenuItem("Scenes/Worlds/Gregor/2-->Laseres")]
     public static void OpenGregorBase()
     {
         LoadScene("Worlds/Gregor/Gregor_2_laseres");
     }
 
-    [MenuItem("Scenes/Worlds/Gregor/3-->Acuaticas 1")]
+    [MenuItem("Scenes/Worlds/Gregor/3-->Acuaticas")]
     public static void OpenGregorAcuaticas1()
     {
-        LoadScene("Worlds/Einstein/Gregor_3_acuaticas");
+        LoadScene("Worlds/Gregor/Gregor_3_acuaticas");
     }
+    [MenuItem("Scenes/Worlds/Gregor/11-->Almacen")]
+    public static void OpenGregorAlmacen1()
+    {
+        LoadScene("Worlds/Gregor/Gregor_11_almacen");
+    }
+    
 
     //EST
     [MenuItem("Scenes/Worlds/EST/0-->Exteriores")]

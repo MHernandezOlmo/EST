@@ -167,7 +167,11 @@ public class EnemyController : MonoBehaviour
         {
             FindObjectOfType<CombatActivator>().KillEnemy();
         }
-        if(_currentHPBar!=null)_currentHPBar.Stop();
+        if(_enemyType == EnemyType.Toast || _enemyType == EnemyType.Oven)
+        {
+            Instantiate(_deathParticles, transform.position, Quaternion.identity);
+        }
+        if (_currentHPBar!=null)_currentHPBar.Stop();
         if (_animator != null)_animator.SetTrigger("Dead");
         if (_enemyType == EnemyType.Oven && SceneManager.GetActiveScene().name == "Gregor_0_exteriorBis")
         {
@@ -189,7 +193,6 @@ public class EnemyController : MonoBehaviour
             {
                 _combatTrigger.AddKill();
             }
-
             Destroy(gameObject);
         }
         

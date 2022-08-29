@@ -13,10 +13,14 @@ public class DomeSceneController : MonoBehaviour
         if (GameProgressController.LomnickyPuzzleLayers)
         {
             _dialogueTrigger.triggerDialogueEvent(true);
-            GameEvents.ShowScreenText.Invoke("Go back to the cableway");
+            
         }
     }
 
+    public void ShowAdvice()
+    {
+        GameEvents.ShowScreenText.Invoke("Go back to the cableway");
+    }
     void Update()
     {
        
