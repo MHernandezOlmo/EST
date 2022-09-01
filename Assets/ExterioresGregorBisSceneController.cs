@@ -20,12 +20,12 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
         if (GameProgressController.GregorPuzzlePaintTower)
         {
             
+            _scenePortalVTT.gameObject.SetActive(true);
             _tower.material = _white;
             if (GameProgressController.GregorHasHeatRejecter)
             {
                 Instantiate(_stairsInteractable2);
                 _stairsInteractable.RemoveInteractable();
-                _scenePortalVTT.gameObject.SetActive(true);
             }
             else
             {

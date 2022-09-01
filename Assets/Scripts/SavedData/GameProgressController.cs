@@ -1368,21 +1368,6 @@ public class GameProgressController : MonoBehaviour
         SaveGameProgressData();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static void Reset()
     {
         CheckInitialized();

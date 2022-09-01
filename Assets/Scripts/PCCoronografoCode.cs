@@ -42,10 +42,8 @@ public class PCCoronografoCode : Interactable
     {
         if(_answerText.text == "#1457962")
         {
-            FindObjectOfType<EscalerasCoronografo>().DownStairs();
-            StartCoroutine(CrHideTablon());
-            RemoveInteractable();
-        }
+            StartCoroutine(CrHideTablonAndDestroy());
+            FindObjectOfType<EscalerasCoronografo>().DownStairs();        }
         else
         {
             Clear();
@@ -74,6 +72,19 @@ public class PCCoronografoCode : Interactable
         }
         _pc.rectTransform.localScale = Vector3.zero;
         GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
+    }
+    IEnumerator CrHideTablonAndDestroy()
+    {
+        Color transparentWhite = new Color(1, 1, 1, 0);
+        for (float i = 0; i < 0.25f; i += Time.deltaTime)
+        {
+            _pc.color = Color.Lerp(Color.white, transparentWhite, i / 0.25f);
+            _pc.rectTransform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, i / 0.25f);
+            yield return null;
+        }
+        _pc.rectTransform.localScale = Vector3.zero;
+        GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
+        RemoveInteractable();
     }
     IEnumerator CrShowTablon()
     {
