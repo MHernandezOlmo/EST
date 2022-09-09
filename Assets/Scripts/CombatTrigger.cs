@@ -83,7 +83,14 @@ public class CombatTrigger : MonoBehaviour
     public void RemoveBoundaries()
     {
         Destroy(_boundaries);
-        AudioEvents.playMusicTransitionWithMusicCode.Invoke((MusicManager.MusicCode)_previousMode);
+        if(_previousMode == -1)
+        {
+            AudioEvents.playMusicTransitionWithMusicCode.Invoke((MusicManager.MusicCode)FindObjectOfType<MusicManager>().GetRandomMusicIndex());
+        }
+        else
+        {
+            AudioEvents.playMusicTransitionWithMusicCode.Invoke((MusicManager.MusicCode)_previousMode);
+        }
         //Destroy(gameObject);
     }
 

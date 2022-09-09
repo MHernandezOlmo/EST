@@ -13,6 +13,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private List<string> _musicClipsNames, _insideClipsNames;
     [SerializeField] private AudioMixer _aMixer;
     [SerializeField] private AnimationCurve _aCurveIn, _aCurveOut;
+    [SerializeField] private AudioClip _combatMusic;
     private int _lastRandomIndex;
     private bool _alternatedCh;
     private Coroutine _transitionCr, _muteCr, _musicCheckCr;
@@ -122,7 +123,15 @@ public class MusicManager : MonoBehaviour
         {
             StopCoroutine(_transitionCr);
         }
-        AudioClip targetClip = Resources.Load<AudioClip>("Music/MusicClips/" + _musicClipsNames[(int)code - 1]);
+        AudioClip targetClip;
+        if (code == MusicCode.Combat)
+        {
+            targetClip = _combatMusic;
+        }
+        else
+        {
+            targetClip = Resources.Load<AudioClip>("Music/MusicClips/" + _musicClipsNames[(int)code - 1]);
+        }
         _transitionCr = StartCoroutine(MusicTransition(targetClip));
     }
 

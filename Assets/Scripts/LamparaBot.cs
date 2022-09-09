@@ -113,6 +113,7 @@ public class LamparaBot : MonoBehaviour
     IEnumerator CrDie()
     {
         Vector3 localScale = transform.localScale;
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.SpecialDie);
         Instantiate(_deathParticles, transform.position, Quaternion.identity);
         for (float i = 0; i< 0.25f; i += Time.deltaTime)
         {
