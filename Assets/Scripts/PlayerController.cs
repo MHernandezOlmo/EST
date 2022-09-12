@@ -420,6 +420,7 @@ public class PlayerController : MonoBehaviour
         Vector3 targetPosition = transform.position + transform.forward * 5f;
         //_spin.SetActive(true);
         electricBall1.Play();
+        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Dash);
         yield return new WaitForSeconds(0.2f);
         for (float i = 0; i < 0.1f; i += Time.deltaTime)
         {
