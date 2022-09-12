@@ -25,6 +25,7 @@ public class SSTExteriors : MonoBehaviour
         
         if (!GameProgressController.SSTHasAO && GameProgressController.SSTShieldSkill)
         {
+            AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_5);
             AOPiecesCanvas.SetActive(true);
             _piecesAO = GameProgressController.SSTAOPieces;
         }

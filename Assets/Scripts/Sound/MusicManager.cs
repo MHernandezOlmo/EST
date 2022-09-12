@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager musicManager;
-    public enum MusicCode {None, Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein};
+    public enum MusicCode {None, Menu, Combat, FinalCinematic, Puzzle_0, Puzzle_1, Puzzle_2, Puzzle_3, Puzzle_4, EST, Gregor, Lomnicky, PicDuMidi, SST, TorreEinstein, Epic_1, Epic_2, Epic_3, Epic_4, Epic_5};
     [SerializeField] MusicCode musicCode;
     [SerializeField] private AudioSource _music, _music2;
     [SerializeField] private List<string> _musicClipsNames, _insideClipsNames;
@@ -43,7 +43,15 @@ public class MusicManager : MonoBehaviour
         {
             if (FindObjectOfType<CurrentSceneManager>().IsExterior)
             {
-                if (musicCode != MusicCode.None)
+                if (GameProgressController.GetCurrentScene() == "EST_exterior EST")
+                {
+                    PlayMusicTransition(MusicCode.Epic_1);
+                }
+                else if (GameProgressController.GetCurrentScene() == "EST_Cupula")
+                {
+                    PlayMusicTransition(MusicCode.Epic_4);
+                }
+                else if (musicCode != MusicCode.None)
                 {
                     PlayMusicTransition(musicCode);
                 }
@@ -118,7 +126,7 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMusicTransition(MusicCode code)
     {
-        currentClipIndex = (int)code -1;
+        currentClipIndex = (int)code;
         if (_transitionCr != null)
         {
             StopCoroutine(_transitionCr);
@@ -195,10 +203,48 @@ public class MusicManager : MonoBehaviour
         {
             if(asource.time > asource.clip.length - 4f && !detected)
             {
-                PlayMusicTransition(Random.Range(0, _insideClipsNames.Count));
+                char firstChar = 'a';
+                char secondChar = 'a';
+                if (GameProgressController.GetCurrentScene().Length > 2)
+                {
+                    firstChar = GameProgressController.GetCurrentScene()[0];
+                    secondChar = GameProgressController.GetCurrentScene()[1];
+                }
+                if (firstChar == 'E' && secondChar == 'S')
+                {
+                    PlayRandomEpic();
+                }
+                if (firstChar == 'S')
+                {
+                    if(!GameProgressController.SSTHasAO && GameProgressController.SSTShieldSkill)
+                    {
+                        PlayRandomEpic();
+                    }
+                }
+                else
+                {
+                    PlayMusicTransition(Random.Range(0, _insideClipsNames.Count));
+                }
                 detected = true;
             }
             yield return null;
+        }
+    }
+
+    public void PlayRandomEpic()
+    {
+        int rIndex = Random.Range(0, 3);
+        switch (rIndex)
+        {
+            case 0:
+                PlayMusicTransition(MusicCode.Epic_2);
+                break;
+            case 1:
+                PlayMusicTransition(MusicCode.Epic_3);
+                break;
+            case 2:
+                PlayMusicTransition(MusicCode.Epic_5);
+                break;
         }
     }
 

@@ -34,7 +34,7 @@ public class BadassAttack : MonoBehaviour
     {
         if (!stopped)
         {
-            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.MegaShot);
+            AudioEvents.playSoundWithNameAndPitch.Invoke(SFXManager.AudioCode.MegaShot, 1.1f);
             _aura.SetActive(true);
             _aura.GetComponent<ParticleSystem>().Play();
             transform.position = _playerController.transform.position;
@@ -47,7 +47,7 @@ public class BadassAttack : MonoBehaviour
     }
     public IEnumerator CrExplodeAgain()
     {
-        AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.MegaShot);
+        AudioEvents.playSoundWithNameAndPitch.Invoke(SFXManager.AudioCode.MegaShot,1.1f);
         _aura.SetActive(true);
         _aura.GetComponent<ParticleSystem>().Play();
         transform.position = _playerController.transform.position;

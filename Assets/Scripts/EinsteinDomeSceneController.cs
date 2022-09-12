@@ -304,4 +304,9 @@ public class EinsteinDomeSceneController : MonoBehaviour
         _dome.transform.rotation = Quaternion.identity;
         _domeMirrorDialogue.triggerDialogueEvent(true);
     }
+
+    public void ShowMission()
+    {
+        GameEvents.ShowScreenText.Invoke("Find the primary mirror of the coelostat");
+    }
 }

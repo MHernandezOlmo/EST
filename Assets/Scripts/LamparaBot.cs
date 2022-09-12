@@ -49,15 +49,15 @@ public class LamparaBot : MonoBehaviour
         {
             targetPosition = _originPosition;
         }
-
-        for(float i = 0; i< 2; i+=Time.deltaTime)
+        float dur = 1.5f;
+        for(float i = 0; i< dur; i+=Time.deltaTime)
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, i / 2f);
+            transform.position = Vector3.Lerp(startPosition, targetPosition, i / dur);
             yield return null;
         }
         transform.position = targetPosition;
         _animator.SetTrigger("Idle");
-        yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
+        yield return new WaitForSeconds(Random.Range(0.25f,1f));
         _animator.SetTrigger("Alert");
         float distance = (_playerController.transform.position - transform.position).magnitude;
         
@@ -79,8 +79,14 @@ public class LamparaBot : MonoBehaviour
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
             Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
         }
+        yield return new WaitForSeconds(0.3f);
+        if (distance < 10)
+        {
+            AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
+            Instantiate(_shootPrefab, _shootPosition.transform.position, Quaternion.identity);
+        }
         _animator.SetTrigger("Idle");
-        yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
+        yield return new WaitForSeconds(Random.Range(0.25f,1f));
         _goingBack = !_goingBack;
         StartCoroutine(CrMove());
     }

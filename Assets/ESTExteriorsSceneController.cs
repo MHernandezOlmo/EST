@@ -31,20 +31,19 @@ public class ESTExteriorsSceneController : MonoBehaviour
     public void LaunchDialog()
     {
         _trappedCanvas.SetActive(true);
-        StartCoroutine(CrShowCanvas());
-        
+        StartCoroutine(CrShowCanvas()); 
     }
 
     IEnumerator CrShowCanvas()
     {
+        _dialogTrigger.triggerDialogueEvent(true);
+        yield return new WaitForSeconds(0.5f);
         for (float i = 0; i < 0.25f; i += Time.deltaTime)
         {
             _trappedCanvasRT.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, i/0.25f);
             yield return null;
         }
         _trappedCanvasRT.localScale = Vector3.one;
-        yield return new WaitForSeconds(1f);
-        _dialogTrigger.triggerDialogueEvent(true);
     }
 
     public void HideCanvas()
