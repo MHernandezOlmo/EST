@@ -105,6 +105,7 @@ public class GameProgressData
     public bool _solvedPuzzleAO;
     public bool _adviceHR;
 
+    public bool _estEnemyCollection;
     public bool _estGenerador;
     public bool _estFirstAdvice;
     public bool _estDomeOpen;

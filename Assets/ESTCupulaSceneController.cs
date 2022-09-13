@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ESTCupulaSceneController : MonoBehaviour
 {
+    [SerializeField] private GameObject _comeBack;
     [SerializeField] public GameObject _b1;
     [SerializeField] public GameObject _b2;
     [SerializeField] public GameObject _b3;
@@ -14,6 +15,13 @@ public class ESTCupulaSceneController : MonoBehaviour
     [SerializeField] public Material _green;
     [SerializeField] public Material _red;
 
+    private void Awake()
+    {
+        if (GameProgressController.Mirror)
+        {
+            Destroy(_comeBack);
+        }
+    }
     IEnumerator Start()
     {
         _b1.GetComponent<MeshRenderer>().material = _red;   

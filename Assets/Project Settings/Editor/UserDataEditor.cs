@@ -396,6 +396,10 @@ public class UserDataEditor : EditorWindow
             _gameProgressData._gregorTestedHR = EditorGUILayout.Toggle(_gameProgressData._gregorTestedHR, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Enemy Collection", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._estEnemyCollection = EditorGUILayout.Toggle(_gameProgressData._estEnemyCollection, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("EST Generador", GUILayout.Height(height), GUILayout.Width(200));

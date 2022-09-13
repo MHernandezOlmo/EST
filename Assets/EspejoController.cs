@@ -57,7 +57,6 @@ public class EspejoController : MonoBehaviour
             {
                 if (!won)
                 {
-
                     won = true;
                     FindObjectOfType<PuzzleStatesController>().Win();
                 }
@@ -85,7 +84,6 @@ public class EspejoController : MonoBehaviour
                     _polishing = true;
                     _polishText.gameObject.SetActive(true);
                 }
-
             }
         }
     }
@@ -106,6 +104,4 @@ public class EspejoController : MonoBehaviour
             }
         }
     }
-
-
 }

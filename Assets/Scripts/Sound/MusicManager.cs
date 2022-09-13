@@ -71,7 +71,7 @@ public class MusicManager : MonoBehaviour
                 }
                 if(firstChar == 'E' && secondChar == 'S')
                 {
-                    PlayMusicTransition(GetRandomESTIndex());
+                    PlayRandomEpic();
                 }
                 else
                 {
@@ -88,7 +88,8 @@ public class MusicManager : MonoBehaviour
     public int GetRandomESTIndex()
     {
         int randomIndex;
-        int[] validIndexes = new int[] {8,10,12};
+        int[] validIndexes = new int[] {8,10,11};
+        print(_lastRandomIndex);
         if (_lastRandomIndex == -1)
         {
             randomIndex = Random.Range(0, validIndexes.Length);

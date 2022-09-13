@@ -1037,6 +1037,20 @@ public class GameProgressController : MonoBehaviour
     #endregion
 
     #region EST
+    public static bool ESTEnemyCollection
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._estEnemyCollection;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._estEnemyCollection = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool ESTGenerador
     {
         get
@@ -1255,13 +1269,6 @@ public class GameProgressController : MonoBehaviour
     }
     #endregion
 
-
-   
-
-
-
-    
-    
     public static bool PicDuMidiNeedContactUV
     {
         get

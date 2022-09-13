@@ -7,25 +7,38 @@ public class ESTExteriorsSceneController : MonoBehaviour
 {
     [SerializeField] private DialogueTrigger _dialogTrigger;
     [SerializeField] private DialogueTrigger _dialogTriggerPreCombat;
-    [SerializeField] private GameObject _trappedCanvas;
+    [SerializeField] private GameObject _trappedCanvas, _enemyCollection, _combatButton, _dialogLauncher;
     [SerializeField] private RectTransform _trappedCanvasRT;
 
     private BadassEnemy _badassEnemy;
+    private BadassAttack _badassAttack;
     private PlayerController _playerController;
     [SerializeField] private CinemachineVirtualCamera _bossCamera;
     bool _cameraShown;
     [SerializeField] private Animator _enemyGrowAnimator;
+
+    void Start()
+    {
+        _badassEnemy = FindObjectOfType<BadassEnemy>();
+        _badassAttack = FindObjectOfType<BadassAttack>();
+        _playerController = FindObjectOfType<PlayerController>();
+        if (GameProgressController.ESTEnemyCollection)
+        {
+            _enemyCollection.SetActive(false);
+            _dialogLauncher.SetActive(false);
+            //_bigEnemy.SetActive(true);
+            _badassEnemy.ActivateBadassBoss();
+            //_badassAttack.ContinuosAttack();
+            _enemyGrowAnimator.SetTrigger("Start");
+        }
+    }
+
     public void RestoreCamera()
     {
         _bossCamera.Priority = 0;
         _enemyGrowAnimator.SetTrigger("Start");
+        _combatButton.SetActive(true);
         //FindObjectOfType<BadassAttack>().StartAttack();
-
-    }
-    void Start()
-    {
-        _badassEnemy = FindObjectOfType<BadassEnemy>();
-        _playerController = FindObjectOfType<PlayerController>();
     }
 
     public void LaunchDialog()
@@ -64,6 +77,7 @@ public class ESTExteriorsSceneController : MonoBehaviour
 
     IEnumerator CrCameraShown()
     {
+        _combatButton.SetActive(false);
         _cameraShown = true;
         _bossCamera.Priority = 50;
         _badassEnemy.StartAnimation();
@@ -76,9 +90,13 @@ public class ESTExteriorsSceneController : MonoBehaviour
         //yield return new WaitForSeconds(1);
         //_bossCamera.Priority = 0;
     }
-    
+
     void Update()
     {
+        if (GameProgressController.ESTEnemyCollection)
+        {
+            return;
+        }
         if (!_cameraShown)
         {
             float distanceToBoss = Vector3.Distance(_badassEnemy.transform.position, _playerController.transform.position);
