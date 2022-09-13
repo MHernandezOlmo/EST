@@ -21,7 +21,7 @@ public class PlasmaBall : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(20);
+                collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(30);
             }
             Destroy(gameObject);
         }
