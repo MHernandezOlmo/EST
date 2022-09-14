@@ -121,7 +121,6 @@ public class LamparaBot : MonoBehaviour
                 StartCoroutine(CrDie());
             }
         }
-
     }
 
     IEnumerator CrDie()
@@ -137,6 +136,13 @@ public class LamparaBot : MonoBehaviour
         if(FindObjectOfType<CombatActivator>() != null)
         {
             FindObjectOfType<CombatActivator>().KillEnemy();
+        }
+        if (GameProgressController.LomnickyPuzzleLayers)
+        {
+            if (FindObjectOfType<EstacionTelefericoSceneController>()!= null)
+            {
+                FindObjectOfType<EstacionTelefericoSceneController>().KillEnemy();
+            }
         }
         Destroy(gameObject);
     }

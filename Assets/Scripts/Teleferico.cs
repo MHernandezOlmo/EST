@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class Teleferico : Interactable
 {
+    private void Awake()
+    {
+        if (GameProgressController.LomnickyPuzzleLayers)
+        {
+            RemoveInteractable();
+        }
+    }
     public override void Interact()
     {
         if (GameProgressController.LomnickyMotor)
@@ -16,9 +23,7 @@ public class Teleferico : Interactable
         else
         {
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LRedLight);
-            GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/RepairEngine"));
-
-            
+            GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/RepairEngine")); 
         }
     }
 }

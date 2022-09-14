@@ -16,6 +16,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
     [SerializeField] private DialogueTrigger _lampDialog;
     [SerializeField] private DialogueTrigger _lampDialogFinal;
     LamparaBot[] _enemies;
+    private int _enemyCount;
     void Start()
     {
         _enemies = FindObjectsOfType<LamparaBot>();
@@ -38,7 +39,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
             if (GameProgressController.LomnickyPuzzleLayers)
             {
                 _dialog.SetActive(false);
-                _end.SetActive(true);
+                //_end.SetActive(true);
                 StartCoroutine(CrFinalDialog());
             }
         }
@@ -55,7 +56,6 @@ public class EstacionTelefericoSceneController : MonoBehaviour
         yield return new WaitForSeconds(1);
         _lampDialogFinal.triggerDialogueEvent(true);
     }
-
 
     public void ChangeCameraPriority()
     {
@@ -88,6 +88,18 @@ public class EstacionTelefericoSceneController : MonoBehaviour
             en.enabled = true;
             en.GetComponent<Animator>().enabled = true;
             en.StartMoving();
+        }
+        GameEvents.MissionText.Invoke("Destroy the lamps (0/4)");
+    }
+
+    public void KillEnemy()
+    {
+        _enemyCount++;
+        GameEvents.MissionText.Invoke($"Destroy the lamps ({_enemyCount}/4)");
+        if (_enemyCount >= 4)
+        {
+            GameEvents.ClearMissionText.Invoke();
+            _end.SetActive(true);
         }
     }
 }

@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour
             {
                 return;
             }
-            if (_enemyType == EnemyType.Microwave && !GameProgressController.PicDuMidiPuzzleAssociation)
+            if (_enemyType == EnemyType.Microwave && !GameProgressController.SSTPuzzleTetrisAO)
             {
                 return;
             }

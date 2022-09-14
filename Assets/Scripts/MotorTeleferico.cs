@@ -51,6 +51,7 @@ public class MotorTeleferico : Interactable
         GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/FindFuse"));
 
     }
+
     private void Start()
     {
         base.Start();
@@ -58,6 +59,11 @@ public class MotorTeleferico : Interactable
         {
             GetComponent<AudioSource>().Play();
             _shake.enabled = true;
+        }
+        if (GameProgressController.LomnickyPuzzleLayers)
+        {
+            //GameObject.Find("InteractButton").SetActive(false);
+            RemoveInteractable();
         }
     }
 

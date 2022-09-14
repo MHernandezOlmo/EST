@@ -69,8 +69,11 @@ public class CurrentSceneManager : MonoBehaviour
         switch (newState)
         {
             case GameStates.Exploration:
-                FindObjectOfType<MovementController>().autopilot = null;
-                FindObjectOfType<MovementController>().EnableMovement();
+                if (FindObjectOfType<MovementController>()!= null)
+                {
+                    FindObjectOfType<MovementController>().autopilot = null;
+                    FindObjectOfType<MovementController>().EnableMovement();
+                }
                 break;
             case GameStates.Pause:
                 Time.timeScale = 0;

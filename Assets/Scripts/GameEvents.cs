@@ -56,9 +56,11 @@ public static class GameEvents
      * 
      */
 
+    public static UnityEvent ClearMissionText = new UnityEvent();
     public static BoolEvent CombatEvent = new BoolEvent();
     public static StringEvent LoadScene =  new StringEvent();
     public static StringEvent LoadSceneAsync = new StringEvent();
+    public static StringEvent MissionText = new StringEvent();
     public static StringEvent OnLoadSceneMoment = new StringEvent();
     public static BoolEvent eDialogue = new BoolEvent();
     public static IntEvent ShowDialog = new IntEvent();

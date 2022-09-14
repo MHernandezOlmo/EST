@@ -8,6 +8,7 @@ public class RegresoTeleferico : Interactable
     {
         if (GameProgressController.LomnickyPuzzleLayers)
         {
+            GameEvents.ClearMissionText.Invoke();
             GameProgressController.SetCurrentStartPoint(1);
             GameEvents.LoadScene.Invoke("Lomnicky_1_Estacion teleferico");
         }
@@ -22,7 +23,6 @@ public class RegresoTeleferico : Interactable
         else
         {
             FindObjectOfType<InteractablesController>().AddInteractable(this);
-
         }
     }
 }

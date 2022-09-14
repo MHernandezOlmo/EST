@@ -168,6 +168,15 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+    public static bool LomnickyCamera
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._lomnickyPuzzleLayers;
+        }
+    }
+
     public static bool LomnickySolved
     {
         get
