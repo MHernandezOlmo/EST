@@ -19,7 +19,6 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
         neededKills = 4;
         if (GameProgressController.GregorPuzzlePaintTower)
         {
-            
             _scenePortalVTT.gameObject.SetActive(true);
             _tower.material = _white;
             if (GameProgressController.GregorHasHeatRejecter)
@@ -34,7 +33,6 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
 
             }
             _finalCamera.Priority = 30;
-
         }
         else
         {
@@ -43,12 +41,10 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             _dialogueTriggerCleanGarden.triggerDialogueEvent(true);
         }
-
         if (GameProgressController.GregorJetpackSkill)
         {
             _skillEnable.SetActive(true);
         }
-        
     }
 
     public void StartPaintMission()
@@ -60,7 +56,6 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
     {
         _finalCamera.Priority = 30;
     }
-
     public void LoadTorre()
     {
         GameEvents.LoadScene.Invoke("GregorPuzzlePaintTower");

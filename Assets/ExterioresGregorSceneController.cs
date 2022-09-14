@@ -77,12 +77,21 @@ public class ExterioresGregorSceneController : MonoBehaviour
         if (_bushes == 6)
         {
             StopCoroutine(_crTimeCount);
+            PlayerPrefs.SetInt("TimeCounter", 0);
             _timePanel.SetActive(false);
             if (!_sceneChange)
             {
                 _sceneChange = true;
                 GameEvents.LoadScene.Invoke("Gregor_0_exteriorBis");
             }
+        }
+    }
+
+    public void StopTimeCount()
+    {
+        if (_crTimeCount != null)
+        {
+            StopCoroutine(_crTimeCount);
         }
     }
 
@@ -141,6 +150,7 @@ public class ExterioresGregorSceneController : MonoBehaviour
         }
         _timePanel.SetActive(true);
         _crTimeCount = StartCoroutine(CrTimeCount());
+        PlayerPrefs.SetInt("TimeCounter", 1);
         IEnumerator CrTimeCount()
         {
             while (_currentTimeCount > 0)
@@ -151,6 +161,7 @@ public class ExterioresGregorSceneController : MonoBehaviour
                 _timeText.text = "<mspace=0.75em>" + minutes.ToString("00") + ":" + seconds.ToString("00");
                 yield return null;
             }
+            PlayerPrefs.SetInt("TimeCounter", 0);
             GameEvents.LoadScene.Invoke("Gregor_0_exterior");
         }
     }

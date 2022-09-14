@@ -60,6 +60,10 @@ public class PauseCanvasController : MonoBehaviour
     }
     public void LoadMainMenu()
     {
+        if (PlayerPrefs.GetInt("TimeCounter", 0) == 1)
+        {
+            FindObjectOfType<ExterioresGregorSceneController>().StopTimeCount();
+        }
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.Back);
         Time.timeScale = 1;
         GameEvents.LoadScene.Invoke("MainMenu");

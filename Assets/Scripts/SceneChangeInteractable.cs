@@ -13,16 +13,21 @@ public class SceneChangeInteractable : Interactable
         {
             _interacted = true;
             GameProgressController.SetCurrentStartPoint(_startingPoint);
-            if(_sceneName == "Gregor_0_dome")
+            if (_sceneName == "Gregor_0_dome")
             {
                 if (FindObjectOfType<CountdownCanvas>() != null)
                 {
                     GameEvents.LoadScene.Invoke("Gregor_0_openDome");
                 }
-                else
+                else 
                 {
                     GameEvents.LoadScene.Invoke(_sceneName);
                 }
+            }
+            else if(_sceneName == "Gregor_0_exteriorBis" && !GameProgressController.GregorDome && PlayerPrefs.GetInt("BlockDoor", 0) == 0)
+            {
+                GameEvents.ShowScreenText.Invoke("First look at the trapdoor!");
+                StartCoroutine(WaitAndInteract());
             }
             else
             {
@@ -32,11 +37,9 @@ public class SceneChangeInteractable : Interactable
 
     }
     IEnumerator WaitAndInteract()
-    {
-        
-        yield return null;
+    {       
         yield return new WaitForSeconds(2f);
-
+        _interacted = false;
     }
     private void Start()
     {

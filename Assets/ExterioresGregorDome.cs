@@ -36,9 +36,4 @@ public class ExterioresGregorDome : MonoBehaviour
         GameProgressController.GregorPlacedHeatRejecter = true;
         _trigger2.triggerDialogueEvent(true);
     }
-
-    void Update()
-    {
-        
-    }
 }
