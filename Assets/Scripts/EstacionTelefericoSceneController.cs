@@ -61,12 +61,24 @@ public class EstacionTelefericoSceneController : MonoBehaviour
     {
         _firstCamera.Priority = 0;
         StartCoroutine(CrLampDialog());
+        foreach (LamparaBot en in _enemies)
+        {
+            en.enabled = true;
+            en.GetComponent<Animator>().enabled = true;
+            en.StartMoving();
+        }
     }
 
     IEnumerator CrLampDialog()
     {
         yield return new WaitForSeconds(3);
         _lampDialog.triggerDialogueEvent();
+        foreach (LamparaBot en in _enemies)
+        {
+            en.enabled = false;
+            en.GetComponent<Animator>().enabled = false;
+            en.StopMoving();
+        }
     }
 
     public void RestoreEnemies()
@@ -75,7 +87,7 @@ public class EstacionTelefericoSceneController : MonoBehaviour
         {
             en.enabled = true;
             en.GetComponent<Animator>().enabled = true;
+            en.StartMoving();
         }
     }
-
 }

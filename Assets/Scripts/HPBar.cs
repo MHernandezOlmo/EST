@@ -52,14 +52,14 @@ public class HPBar : MonoBehaviour
             {
                 StopCoroutine(cr);
             }
-             cr =StartCoroutine(CrHideHP());    
+            cr = StartCoroutine(CrHideHP());    
         }
     }
 
     IEnumerator CrHideHP()
     {
         transform.GetChild(0).gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         transform.GetChild(0).gameObject.SetActive(false);
         _showingHP = false;
     }

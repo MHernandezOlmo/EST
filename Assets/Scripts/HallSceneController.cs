@@ -33,9 +33,4 @@ public class HallSceneController : MonoBehaviour
         _firstSSTEntryDialog.triggerDialogueEvent();
         GameProgressController.SSTHallAdvice = true;
     }
-
-    void Update()
-    {
-        
-    }
 }

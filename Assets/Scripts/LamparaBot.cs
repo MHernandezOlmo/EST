@@ -11,12 +11,13 @@ public class LamparaBot : MonoBehaviour
     [SerializeField] Material _invisibleMaterial;
     [SerializeField] Material _realMaterial;
     [SerializeField] SkinnedMeshRenderer _skmr;
+    [SerializeField] private bool _moveOnStart;
     PlayerController _playerController;
     private bool _goingBack;
-    bool _moving;
     bool _havePieces;
     bool _canDie;
     bool _dead;
+    private Coroutine _moveCr;
     private Vector3 _originPosition;
     private int _lastPoint;
     [SerializeField] private GameObject _deathParticles;
@@ -24,7 +25,10 @@ public class LamparaBot : MonoBehaviour
     {
         _playerController = FindObjectOfType<PlayerController>();
         _animator = GetComponent<Animator>();
-
+        if (_moveOnStart)
+        {
+            StartMoving();
+        }
         _originPosition = transform.position;
         if (GameProgressController.LomnickyPuzzleLayers)
         {
@@ -35,8 +39,7 @@ public class LamparaBot : MonoBehaviour
         {
             _skmr.material = _invisibleMaterial;
             _canDie = false;
-        }
-        
+        }      
     }
 
     public IEnumerator CrMove()
@@ -91,15 +94,20 @@ public class LamparaBot : MonoBehaviour
         StartCoroutine(CrMove());
     }
 
-    void Update()
+    public void StartMoving()
     {
-        if (CurrentSceneManager._state == GameStates.Exploration && CurrentSceneManager._elapsedSceneTime >3f)
+        if (_moveCr != null)
         {
-            if (!_moving)
-            {
-                _moving = true;
-                StartCoroutine(CrMove());
-            }
+            StopCoroutine(_moveCr);
+        }
+        _moveCr = StartCoroutine(CrMove());
+    }
+
+    public void StopMoving()
+    {
+        if(_moveCr != null)
+        {
+            StopCoroutine(_moveCr);
         }
     }
 
