@@ -24,8 +24,6 @@ public class SotanoEinsteinController : MonoBehaviour
     }
     void Start()
     {
-
-
         if (GameProgressController.GetIsFullRayWorking())
         {
             _firstRay.GetComponent<LineRenderer>().SetPosition(1,mirrorPoint.transform.position);
@@ -194,5 +192,10 @@ public class SotanoEinsteinController : MonoBehaviour
         {
             StartCoroutine(CrAxis1());    
         }
+    }
+
+    public void EndDialog()
+    {
+        PlayerPrefs.SetInt("BasementDialog",1);
     }
 }
