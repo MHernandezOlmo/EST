@@ -33,7 +33,7 @@ public class TelevisionInstance : MonoBehaviour
             if (GameProgressController.EinsteinUsedPrism)
             {
                 _sMRenderer = GetComponent<SkinnedMeshRenderer>();
-                //_sMRenderer.materials = _unlockedMats;
+                _sMRenderer.materials = _unlockedMats;
             }
         }
         else if (GameProgressController.EinsteinUsedPrism)
