@@ -25,6 +25,6 @@ public class Patio2SceneController : MonoBehaviour
     {
         GameEvents.ShowScreenText.Invoke("Find a way to contact UV");
         GameProgressController.PicDuMidiNeedContactUV = true;
-
+        GameEvents.ClearMissionText.Invoke();
     }
 }
