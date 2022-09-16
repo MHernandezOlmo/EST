@@ -9,7 +9,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _finalCamera, _startCamera;
     [SerializeField] private MeshRenderer _tower;
     [SerializeField] private Material _white;
-    [SerializeField] SceneChangeInteractable _stairsInteractable;
+    [SerializeField] SceneChangeInteractable _stairsPuzzleInteractable;
     [SerializeField] GameObject _stairsInteractable2;
     [SerializeField] GameObject _skillEnable, _cleanParticles;
     [SerializeField] GameObject _scenePortalVTT;
@@ -21,16 +21,12 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
         {
             _scenePortalVTT.gameObject.SetActive(true);
             _tower.material = _white;
-            if (GameProgressController.GregorHasHeatRejecter)
-            {
-                Instantiate(_stairsInteractable2);
-                _stairsInteractable.RemoveInteractable();
-            }
-            else
+            Instantiate(_stairsInteractable2);
+            _stairsPuzzleInteractable.RemoveInteractable();
+            if (!GameProgressController.GregorHasHeatRejecter)
             {
                 _cleanParticles.SetActive(true);
                 yield return new WaitForSeconds(2f);
-
             }
             _finalCamera.Priority = 30;
         }

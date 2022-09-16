@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8269086964804641917}
   - component: {fileID: 4969519178893052912}
   - component: {fileID: 5862246156976105391}
+  - component: {fileID: 4387279655714870561}
   m_Layer: 0
   m_Name: Plataforma_flotante
   m_TagString: Untagged
@@ -54,10 +55,22 @@ BoxCollider:
   m_GameObject: {fileID: 73296988253262210}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.755498, y: 2.5689664, z: 3.9065871}
   m_Center: {x: -0.04872534, y: 1.38, z: 0.051043395}
+--- !u!114 &4387279655714870561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73296988253262210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147c08a71237ea74787a3675e00ad532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1869967042120988134
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,11 +161,11 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869967042120988134}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1e3804745b615474f8f66bab6f237b2b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7860918, y: 0.6635237, z: 2.7358298}
+  m_Size: {x: 2.8488326, y: 0.6635237, z: 2.7902696}
   m_Center: {x: 0, y: -0.3315981, z: 0}
 --- !u!65 &7716785940325874718
 BoxCollider:
@@ -161,7 +174,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869967042120988134}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1e3804745b615474f8f66bab6f237b2b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
