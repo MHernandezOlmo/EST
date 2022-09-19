@@ -184,7 +184,6 @@ public class TestHRController : MonoBehaviour
                 _playing = false;
                 FindObjectOfType<PuzzleStatesController>().GameOver();
             }
-            print(amount);
         }
     }
 }

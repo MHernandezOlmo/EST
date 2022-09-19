@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028429, g: 0.22571582, b: 0.3069238, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028408, g: 0.22571495, b: 0.30692276, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -281,7 +281,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85138536}
-  m_LocalRotation: {x: 0.008580022, y: -0.991418, z: 0.09120635, w: 0.09326405}
+  m_LocalRotation: {x: 0.008580021, y: -0.991418, z: 0.09120635, w: 0.09326404}
   m_LocalPosition: {x: 8.14, y: 9.02, z: 23.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -961,7 +961,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705307512}
-  m_LocalRotation: {x: 0.18520154, y: -0.8080588, z: 0.33321488, w: 0.44912046}
+  m_LocalRotation: {x: 0.1852015, y: -0.80805886, z: 0.33321488, w: 0.44912046}
   m_LocalPosition: {x: 6.94, y: 9.02, z: -14.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1540,6 +1540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionButton: {fileID: 884610387}
+  _isBridge: 0
+  _isLaser: 0
 --- !u!65 &1143461855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2100,8 +2102,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232218999}
+  - component: {fileID: 1232219000}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AcuaticasController
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2115,12 +2118,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232218998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 0.04, z: -1.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232219000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232218998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30605a44abdc6c418724a0f6e1b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doorTrigger: {fileID: 1314649417}
 --- !u!1 &1256370122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2191,50 @@ MonoBehaviour:
     roll: 0
   - position: {x: 0.000000087022784, y: -0.00000008940697, z: 10.188022}
     roll: 1
+--- !u!1 &1293143280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293143282}
+  - component: {fileID: 1293143281}
+  m_Layer: 0
+  m_Name: Block
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1293143281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293143280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1293143282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293143280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04, y: 1.8, z: 30.28}
+  m_LocalScale: {x: 18.136, y: 2.459, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314649417
 GameObject:
   m_ObjectHideFlags: 0
@@ -9730,7 +9790,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999505346}
-  m_LocalRotation: {x: 0.18520154, y: -0.8080588, z: 0.33321488, w: 0.44912046}
+  m_LocalRotation: {x: 0.1852015, y: -0.80805886, z: 0.33321488, w: 0.44912046}
   m_LocalPosition: {x: 6.94, y: 9.02, z: -14.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

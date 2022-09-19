@@ -121,7 +121,6 @@ public class InputCanvasController : MonoBehaviour
         }
         
     }
-
     IEnumerator CrShowCombatButton(bool state)
     {
         RectTransform rt = _combatButton.GetComponent<RectTransform>();
@@ -174,9 +173,6 @@ public class InputCanvasController : MonoBehaviour
                 _hidingInteractButton= StartCoroutine(CrShowInteractable(false));
             }
         }
-    }
-    private void Start()
-    {
     }
     public void Show()
     {

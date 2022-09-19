@@ -54,8 +54,4 @@ public class AlmacenGregorSceneController : MonoBehaviour
     {
         Instantiate(_heatRejecterCanvas);
     }
-    void Update()
-    {
-        
-    }
 }
