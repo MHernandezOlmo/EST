@@ -11,6 +11,13 @@ public class NewCardBehaviour : MonoBehaviour
     [SerializeField] private SpriteRenderer _frame;
     [SerializeField] private SpriteRenderer _content;
     public int _rotationID;
+    public int ID
+    {
+        get { return _ID; }
+
+        set { _ID = value;}
+    }
+
     public void SetContent(Sprite sp)
     {
         _content.sprite = sp;

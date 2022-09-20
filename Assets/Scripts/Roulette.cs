@@ -38,6 +38,7 @@ public class Roulette : MonoBehaviour
     [SerializeField] private Sprite[] _sunspotsCoronaImages;
     [SerializeField] private Sprite[] _sunspotsChromosphereImages;
     private List<Sprite[]> _imageLibrary;
+    
     public void RandomicePositions()
     {
         for (int i = 0; i < 100; i++)
@@ -85,8 +86,22 @@ public class Roulette : MonoBehaviour
             _cards[i] = selectable;
             selectable.transform.SetParent(transform);
         }
-
         RandomicePositions();
+        foreach(NewCardBehaviour n in FindObjectsOfType<NewCardBehaviour>())
+        {
+            if (n._rotationID == 8)
+            {
+                _selectedSprite = n.ID;
+                _cards[_selectedSprite].ColorFrame(_selectableColor);
+                for (int i = 0; i < _socketBorders.Length; i++)
+                {
+                    if (!_sockets[i])
+                    {
+                        _socketBorders[i].color = _selectableColor;
+                    }
+                }
+            }
+        }
     }
 
     public bool  GetCardValue(int cardIndex)
@@ -172,11 +187,11 @@ public class Roulette : MonoBehaviour
 
     public void SelectSocket(int socket)
     {
-        if (!_picking)
+        if (_selectedSprite >= 0)
         {
-            _picking = true;
-            if (_selectedSprite >= 0)
+            if (!_picking)
             {
+                _picking = true;
                 if (socket == _selectedSprite)
                 {
                     _socketImages[socket].sprite = _sprites[_selectedSprite];
@@ -232,11 +247,11 @@ public class Roulette : MonoBehaviour
         {
             if (!_sockets[i])
             {
-                _socketBorders[i].color = Color.white;
+                _socketBorders[i].color = _selectableColor;
             }
         }
-        _cards[_selectedSprite].ColorFrame(Color.white);
-        _selectedSprite = -1;
+        _cards[_selectedSprite].ColorFrame(_selectableColor);
+        //_selectedSprite = -1;
         _picking = false;
     }
 }

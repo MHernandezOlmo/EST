@@ -26,19 +26,41 @@ public class SolarPediaController : MonoBehaviour
     List<List<string>> entries;
     List<List<string>> _credits;
     List<List<string>> _contents;
-
+    [SerializeField] private Sprite _greenButton;
+    [SerializeField] private Sprite _blueButton;
     public void ShowFinalContent(int entry, int subentry)
     {
         StartCoroutine(EntryRefresh(entry, subentry));   
+        foreach(SolarpediaEntryTitle set in FindObjectsOfType<SolarpediaEntryTitle>())
+        {
+            if(set.SubEntryIndex == subentry)
+            {
+                set.GetComponent<Image>().sprite = _greenButton;
+            }
+            else
+            {
+                set.GetComponent<Image>().sprite = _blueButton;
+            }
+        }
     }
     public void ShowFastFinalContent(int entry, int subentry)
     {
         StartCoroutine(FastEntryRefresh(entry, subentry));
+        foreach (SolarpediaEntryTitle set in FindObjectsOfType<SolarpediaEntryTitle>())
+        {
+            if (set.SubEntryIndex == subentry)
+            {
+                set.GetComponent<Image>().sprite = _greenButton;
+            }
+            else
+            {
+                set.GetComponent<Image>().sprite = _blueButton;
+            }
+        }
     }
     IEnumerator FastEntryRefresh(int entry, int subentry)
     {
         Color transparentWhite = new Color(1, 1, 1, 0);
-
         _entryTitle.color = transparentWhite;
         _content.color = transparentWhite;
         _entryTitle.text = entries[entry][subentry];
@@ -46,7 +68,10 @@ public class SolarPediaController : MonoBehaviour
         _content.text = _contents[entry][subentry];
         Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img");
         _image.sprite = sprite;
-
+        if (entry == 3)
+        {
+            _image.color = transparentWhite;
+        }
 
         yield return null;
         _vlayout.enabled = false;
@@ -57,9 +82,16 @@ public class SolarPediaController : MonoBehaviour
         {
             _entryTitle.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
             _content.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
+            if (entry != 3)
+            {
+                _image.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
+            }
             yield return null;
         }
-        _entryTitle.color = Color.white;
+        if (entry != 3)
+        {
+            _image.color = Color.white;
+        }
         _content.color = Color.white;
         _entryTitle.color = Color.white;
         _content.color = Color.white;
@@ -72,28 +104,43 @@ public class SolarPediaController : MonoBehaviour
         {
             _entryTitle.color = Color.Lerp(Color.white, transparentWhite, i/0.25f);
             _content.color = Color.Lerp(Color.white, transparentWhite, i/0.25f);
+            if (entry != 3)
+            {
+                _image.color = Color.Lerp(Color.white, transparentWhite, i / 0.25f);
+            }
             yield return null;
         }
+        _image.color = transparentWhite;
         _entryTitle.color = transparentWhite;
         _content.color = transparentWhite;
         _entryTitle.text = entries[entry][subentry];
         _entryTitle.color = new Color(0, 0, 0, 0);
         _content.text = _contents[entry][subentry];
-        Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img");
+
+        Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img") as Sprite;
         _image.sprite = sprite;
 
-        
         yield return null;
         _vlayout.enabled = false;
         _vlayout.enabled = true;
         yield return null;
         _scroll.normalizedPosition = new Vector2(0, 1);
+        
         for (float i = 0; i < 0.25f; i += Time.unscaledDeltaTime)
         {
             _entryTitle.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
             _content.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
+            if (entry != 3)
+            {
+                _image.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
+            }
             yield return null;
         }
+        if (entry != 3)
+        {
+            _image.color = Color.white;
+        }
+
         _entryTitle.color = Color.white;
         _content.color = Color.white;
         _entryTitle.color = Color.white;
@@ -270,7 +317,10 @@ public class SolarPediaController : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            FindObjectOfType<PauseCanvasController>().Continue();
+            if (FindObjectOfType<PauseCanvasController>() != null)
+            {
+                FindObjectOfType<PauseCanvasController>().Continue();
+            }
         }
     }
     public void ShowContent(int contentIndex)
