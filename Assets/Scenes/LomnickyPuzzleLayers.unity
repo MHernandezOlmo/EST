@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3119,7 +3119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -23}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1524.7417, y: 380.0617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267624522
@@ -3141,16 +3141,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The same solar phenomenon can be seen in different layers of the solar
-    atmosphere just by changing the wavelength. Or it can even be invisible at some
-    wavelengths!
+  m_text: 'The same feature can be seen in different layers of the solar atmosphere
+    just by changing the wavelength (the color)
 
 
-    We can do that with our camera and appropriate filters!
+    We can select the wavelength
+    (color) with the filters
 
 
-    DRAG
-    EACH PHENOMENON TO THE APPROPRIATE LAYER OF THE SOLAR ATMOSPHERE.
+    Drag each of the three features on the right layer
+    of the solar atmosphere
+
 
     Good luck!'
   m_isRightToLeft: 0
@@ -22413,7 +22414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Layers and Phenomena
+  m_text: Layers and Solar Features
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47315bd6f9b4a434bb6773dcc105fd0d, type: 2}
   m_sharedMaterial: {fileID: -7097640782908820028, guid: 47315bd6f9b4a434bb6773dcc105fd0d,
