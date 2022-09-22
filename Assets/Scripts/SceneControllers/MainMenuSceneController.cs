@@ -34,6 +34,11 @@ public class MainMenuSceneController : MonoBehaviour
             StartCoroutine(CrShowOptions());
         }
     }
+
+    public void About()
+    {
+        GameEvents.LoadScene.Invoke("About");
+    }
     IEnumerator CrShowOptions()
     {
         yield return StartCoroutine(Hide(_mainMenuHolder, 0.5f));

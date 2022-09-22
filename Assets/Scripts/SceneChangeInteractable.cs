@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneChangeInteractable : Interactable
 {
@@ -26,8 +27,15 @@ public class SceneChangeInteractable : Interactable
             }
             else if(_sceneName == "Gregor_0_exteriorBis" && !GameProgressController.GregorDome && PlayerPrefs.GetInt("BlockDoor", 0) == 0)
             {
-                GameEvents.ShowScreenText.Invoke("First look at the trapdoor!");
-                StartCoroutine(WaitAndInteract());
+                if(SceneManager.GetActiveScene().name == "Gregor_1_sotano")
+                {
+
+                }
+                else
+                {
+                    GameEvents.ShowScreenText.Invoke("First look at the trapdoor!");
+                    StartCoroutine(WaitAndInteract());
+                }
             }
             else
             {

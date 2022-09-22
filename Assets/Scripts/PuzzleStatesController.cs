@@ -51,7 +51,7 @@ public class PuzzleStatesController : MonoBehaviour
                 case "Espejo":
                     FindObjectOfType<EspejoController>().StartGame();
                     break;
-                case "Asociacion":
+                case "PicDuMidiPuzzleAssociation":
                     FindObjectOfType<AsociacionElementosController>().StartPlaying();
                     break;
             }

@@ -33,7 +33,7 @@ public class TelevisionInstance : MonoBehaviour
             if (GameProgressController.EinsteinUsedPrism)
             {
                 _sMRenderer = GetComponent<SkinnedMeshRenderer>();
-                _sMRenderer.materials = _unlockedMats;
+                //_sMRenderer.materials = _unlockedMats;
             }
         }
         else if (GameProgressController.EinsteinUsedPrism)
@@ -124,6 +124,7 @@ public class TelevisionInstance : MonoBehaviour
             for (int i = 0; i < _shootAmount; i++)
             {
                 GameObject pb = Instantiate(_shootPrefab, _shootoints[i].position, Quaternion.identity);
+                pb.GetComponent<ForwardPlasmaBall>()._damage = 150;
                 Vector3 dir = (_shootoints[i].position - transform.position);
                 dir.y = 0;
                 pb.transform.LookAt(pb.transform.position + dir);

@@ -15,7 +15,7 @@ public class CoronografoController : MonoBehaviour
     [SerializeField] GameObject _stopButton;
     [SerializeField] GameObject _takePhotoButton;
     PhotoFrame _photoFrameBehaviour;
-    [SerializeField] Image[] _photos;
+    [SerializeField] private GameObject _resultImage;
     void Start()
     {
         _photoFrameBehaviour = FindObjectOfType<PhotoFrame>();
@@ -54,7 +54,8 @@ public class CoronografoController : MonoBehaviour
             else
             {
                 _ticks[_currentStep - 4].gameObject.SetActive(true);
-                _photos[_currentStep - 4].gameObject.SetActive(true);
+                _resultImage.SetActive(true);
+                StartCoroutine(CrStopShowingResult());
                 if (_currentStep == 6)
                 {
                     FindObjectOfType<PuzzleStatesController>().Win();
@@ -66,6 +67,12 @@ public class CoronografoController : MonoBehaviour
             _eclipse.rectTransform.localScale = (Vector3.one*0.33f)*_currentStep;
             _levelers[_currentLeveler].Activate();
         }
+    }
+
+    IEnumerator CrStopShowingResult()
+    {
+        yield return new WaitForSeconds(2f);
+        _resultImage.SetActive(false);
     }
     public void StartGame()
     {

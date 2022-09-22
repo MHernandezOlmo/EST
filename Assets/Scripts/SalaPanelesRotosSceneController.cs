@@ -64,6 +64,7 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
     public void LoadCoronagraph()
     {
         GameProgressController.PicDuMidiNeedContactUV = false;
-        GameEvents.LoadScene.Invoke("PicDuMidiPuzzleCoronagraph");
+        GameEvents.LoadScene.Invoke("Lomnicky_5_Sala archivoFromPicDuMidi");
+
     }
 }

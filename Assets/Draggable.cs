@@ -13,11 +13,11 @@ public class Draggable : MonoBehaviour
     private void OnMouseDown()
     {
         _moving = true;
-        transform.localScale = Vector3.one* 0.8f;
+        transform.localScale = Vector3.one* 1.5f;
     }
     private void OnMouseUp()
     {
-        transform.localScale = Vector3.one;
+        transform.localScale = Vector3.one*1.8f;
         _moving = false;
         transform.position = Vector3.zero;
         FindObjectOfType<AsociacionElementosController>().CheckPhenomenom();

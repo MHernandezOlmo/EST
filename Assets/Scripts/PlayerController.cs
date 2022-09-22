@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     float _restoreHP = 0f;
     [SerializeField] GameObject _interactButton;
     [SerializeField] GameObject _combatButton;
-
+    
     public int GetMaxHP()
     {
         return _maxHP;
@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
         _vignettingController = FindObjectOfType<VignettingController>();
         Physics.gravity = Vector3.zero; 
         GameProgressController.SetCurrentScene(SceneManager.GetActiveScene().name);
+        
         StartCoroutine(CrPosition());
     }
 

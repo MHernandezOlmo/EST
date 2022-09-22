@@ -9,6 +9,7 @@ public class ForwardPlasmaBall : MonoBehaviour
     Vector3 _dir;
     PlayerController _player;
     bool _ally;
+    public int _damage = 30;
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class ForwardPlasmaBall : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player") && !_ally)
             {
-                collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(30);
+                collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(_damage);
             }
             Destroy(gameObject);
         }
@@ -49,7 +50,7 @@ public class ForwardPlasmaBall : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                collision.GetComponent<PlayerController>().ReceiveDamage(30);
+                collision.GetComponent<PlayerController>().ReceiveDamage(_damage);
                 Destroy(gameObject);
             }
         }
