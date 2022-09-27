@@ -89,7 +89,10 @@ public class EstacionTelefericoSceneController : MonoBehaviour
             en.GetComponent<Animator>().enabled = true;
             en.StartMoving();
         }
-        GameEvents.MissionText.Invoke("Destroy the lamps (0/4)");
+        if (GameProgressController.LomnickyPuzzleFlareHunters)
+        {
+            GameEvents.MissionText.Invoke("Destroy the lamps (0/4)");
+        }
     }
 
     public void KillEnemy()

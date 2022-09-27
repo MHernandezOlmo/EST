@@ -5,23 +5,19 @@ using UnityEngine;
 public class CreditsSceneController : MonoBehaviour
 {
     [SerializeField] private RectTransform _rt;
+    [SerializeField] private GameObject _arrow;
     bool _load;
-    void Start()
-    {
-    }
 
     public void Skip()
     {
         GameEvents.LoadScene.Invoke("MainMenu");
     }
-    void Update()
+
+    public void OnScroll(Vector2 value)
     {
-        
-        _rt.anchoredPosition +=(Vector2)Vector3.up * 120 * Time.deltaTime;
-        if(!_load && Time.timeSinceLevelLoad > 60)
+        if (value.y < 0.9f)
         {
-            _load = true;
-            Skip();
+            _arrow.SetActive(false);
         }
     }
 }

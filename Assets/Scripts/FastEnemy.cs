@@ -7,7 +7,7 @@ public class FastEnemy : MonoBehaviour
 
     [SerializeField] private Animator _animator;
     bool battling;
-    public float _shootTime= 5;
+    public float _shootTime= 0.5f;
     private float _shootElapsedTime;
     [SerializeField] private GameObject _shootPrefab;
     [SerializeField] private Transform _shootPosition;
@@ -22,7 +22,6 @@ public class FastEnemy : MonoBehaviour
     void Start()
     {
         _startPosition = transform.position;
-        _shootTime = 3f;
         _player = FindObjectOfType<PlayerController>().transform;
     }
 
@@ -58,9 +57,9 @@ public class FastEnemy : MonoBehaviour
             Instantiate(_shootPrefab, _shootPosition.position, Quaternion.identity);
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.RobotShot);
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(CrMove());
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(CrMove());
     }
 
