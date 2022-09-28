@@ -11,6 +11,7 @@ public class PCArchivoInteractable : Interactable
     {
         if (!_interacted)
         {
+            GameEvents.ClearMissionText.Invoke();
             _interacted = true;
             StartCoroutine(WaitAndInteract());
         }

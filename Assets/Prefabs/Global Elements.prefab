@@ -684,8 +684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 150}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3692894578330795935
 CanvasRenderer:
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mission
+  m_text: mission
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47315bd6f9b4a434bb6773dcc105fd0d, type: 2}
   m_sharedMaterial: {fileID: -7097640782908820028, guid: 47315bd6f9b4a434bb6773dcc105fd0d,
@@ -742,15 +742,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 38.82
   m_fontSizeMax: 40
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -820,6 +820,8 @@ MonoBehaviour:
   _scroll: {fileID: 0}
   _images: []
   _canvas: {fileID: 0}
+  _greenButton: {fileID: 0}
+  _blueButton: {fileID: 0}
 --- !u!1001 &343982963316728575
 PrefabInstance:
   m_ObjectHideFlags: 0

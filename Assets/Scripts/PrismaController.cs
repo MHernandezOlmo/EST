@@ -47,7 +47,8 @@ public class PrismaController : MonoBehaviour
 
     IEnumerator CrOpenBarrier()
     {
-        for(float i = 0; i< 1f; i += Time.deltaTime)
+        GameEvents.ClearMissionText.Invoke();
+        for (float i = 0; i< 1f; i += Time.deltaTime)
         {
             Quaternion startRotation = Quaternion.Euler(0, 0, 0);
             Quaternion targetRotation = Quaternion.Euler(0, 75, 0);
@@ -55,6 +56,6 @@ public class PrismaController : MonoBehaviour
             yield return null;
         }
         _barrier.transform.localRotation = Quaternion.Euler(0, 75, 0);
-
+        GameEvents.MissionText.Invoke("Enter the Einstein Tower");
     }
 }

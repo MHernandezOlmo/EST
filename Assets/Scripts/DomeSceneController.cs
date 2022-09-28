@@ -10,10 +10,10 @@ public class DomeSceneController : MonoBehaviour
     {
         _havePieces = false;
         yield return new WaitForSeconds(1f);
-        if (GameProgressController.LomnickyPuzzleLayers)
+        if (GameProgressController.LomnickyPuzzleLayers && PlayerPrefs.GetInt("DomeDialogShown",0) == 0)
         {
+            PlayerPrefs.SetInt("DomeDialogShown", 1);
             _dialogueTrigger.triggerDialogueEvent(true);
-            
         }
     }
 

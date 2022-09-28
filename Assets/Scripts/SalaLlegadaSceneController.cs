@@ -31,6 +31,7 @@ public class SalaLlegadaSceneController : MonoBehaviour
     {
         if (!GameProgressController.LomnickyClosedCeiling)
         {
+            GameEvents.MissionText.Invoke("Close the dome");
             GameProgressController.LomnickyCountdownTime += Time.deltaTime;
             int remainingSeconds = (int)(150 - GameProgressController.LomnickyCountdownTime);
             if (remainingSeconds < 0)
@@ -41,7 +42,6 @@ public class SalaLlegadaSceneController : MonoBehaviour
                     GameProgressController.LomnickyCountdown =false;
                     GameProgressController.SetArrivingRoomDoor(false);
                     GameEvents.LoadScene.Invoke("Lomnicky_2_Sala llegada");
-
                 }
 
                 _countDownText.text = "0";

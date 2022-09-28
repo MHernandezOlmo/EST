@@ -33,9 +33,4 @@ public class SolarPanel : MonoBehaviour
         _active = false;
         _ledIndicator.material = _red;
     }
-
-    void Update()
-    {
-        
-    }
 }

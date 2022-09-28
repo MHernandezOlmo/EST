@@ -8,12 +8,11 @@ public class PcCupula : Interactable
     private bool _solved;
     public override void Interact()
     {
-        
         if (_havePieces)
         {
+            GameEvents.ClearMissionText.Invoke();
             GameEvents.LoadScene.Invoke("LomnickyPuzzleLayers");    
-        }
-        
+        } 
     }
 
     private void Start()

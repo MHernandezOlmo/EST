@@ -29,6 +29,7 @@ public class PCContiguaInteractable : Interactable
             AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.LGreenLight);
             StartCoroutine(CrHideTablon());
             PlayerPrefs.SetInt("CinematicCloseCupula", 1);
+            GameEvents.ClearMissionText.Invoke();
             GameEvents.LoadScene.Invoke("Lomnicky_10_Azotea");
         }
         else

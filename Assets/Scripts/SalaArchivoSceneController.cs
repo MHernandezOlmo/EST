@@ -29,5 +29,6 @@ public class SalaArchivoSceneController : MonoBehaviour
     public void FindCameraAdvice()
     {
         GameEvents.ShowScreenText.Invoke("Find the 6 camera parts");
+        GameEvents.MissionText.Invoke("Find all the camera pieces");
     }
 }

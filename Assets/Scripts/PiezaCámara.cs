@@ -13,6 +13,18 @@ public class PiezaCámara : Interactable
         GameProgressController.SetPiezaCamara(_pieza, true);
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         GameEvents.ShowScreenText.Invoke("Obtained: Camera part");
+        int pieces = 0;
+        for (int i = 0; i < 6; i++)
+        {
+            if (GameProgressController.GetPiezaCamara(i))
+            {
+                pieces++;
+            }
+        }
+        if (pieces == 6)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         Destroy(transform.root.gameObject);
     }
     private void Start()
