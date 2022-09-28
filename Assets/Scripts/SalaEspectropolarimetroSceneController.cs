@@ -98,6 +98,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
         GameProgressController.EinsteinNoPrismDialog = true;
         GameProgressController.EinsteinNeedPrism = true;
         GameEvents.ShowScreenText.Invoke("Contact UV to get a beam-splitter");
+        GameEvents.MissionText.Invoke("Make a videocall to UV ");
     }
     public void AnimateSpectropolarimetro()
     {

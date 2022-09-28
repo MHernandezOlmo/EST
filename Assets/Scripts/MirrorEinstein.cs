@@ -29,6 +29,7 @@ public class MirrorEinstein : Interactable
     }
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         GameProgressController.EinsteinHasMirror = true;
         _animator.SetTrigger("Get");
         _dialog.triggerDialogueEvent();

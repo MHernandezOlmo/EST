@@ -20,7 +20,10 @@ public class PiezaFiltro : Interactable
                 filterAmount++;
             }
         }
-
+        if(filterAmount == 5)
+        {
+            GameEvents.MissionText.Invoke("Test the filters at the telescope control room");
+        }
         GameEvents.ShowScreenText.Invoke("Obtained: "+_filterNames[_pieza]+" filter\n"+filterAmount+"/5");
 
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);

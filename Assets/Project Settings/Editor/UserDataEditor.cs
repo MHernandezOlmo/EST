@@ -104,6 +104,11 @@ public class UserDataEditor : EditorWindow
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Basement Dialog", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._einsteinBasementDialog = EditorGUILayout.Toggle(_gameProgressData._einsteinBasementDialog, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Dome Open", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._einsteinDomeOpen = EditorGUILayout.Toggle(_gameProgressData._einsteinDomeOpen, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();

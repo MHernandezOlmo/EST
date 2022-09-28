@@ -7,6 +7,7 @@ public class EspectropolarimetroInteractable : Interactable
     [SerializeField] DialogueTrigger _dialogTrigger;
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         FindObjectOfType<SalaEspectropolarimetroSceneController>().UseBeamSplitter();
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         _dialogTrigger.triggerDialogueEvent();

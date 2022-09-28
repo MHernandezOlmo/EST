@@ -515,7 +515,20 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
-
+    public static bool EinsteinBasementDialog
+    {
+        get
+        {
+            CheckInitialized();
+            return _gameProgressData._einsteinBasementDialog;
+        }
+        set
+        {
+            CheckInitialized();
+            _gameProgressData._einsteinBasementDialog = value;
+            SaveGameProgressData();
+        }
+    }
     public static bool EinsteinDomeOpen
     {
         get

@@ -19,6 +19,6 @@ public class ZonaTorretaSceneController : MonoBehaviour
     {
         GameProgressController.PicDuMidiToastersAdvice = true;
         _dialog.gameObject.SetActive(false);
-        GameEvents.MissionText.Invoke("Go to CLIMSO coronograph");
+        GameEvents.MissionText.Invoke("Enter CLIMSO coronograph");
     }
 }

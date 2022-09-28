@@ -6,7 +6,7 @@ public class BasementDoorInteractableAttempt : Interactable
 {
     public void Awake()
     {
-        if (GameProgressController.GetOpenEinsteinBasementDoor())
+        if (GameProgressController.GetOpenEinsteinBasementDoor() || GameProgressController.EinsteinBasementDialog)
         {
             RemoveInteractable();
         }
@@ -14,9 +14,10 @@ public class BasementDoorInteractableAttempt : Interactable
 
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         FindObjectOfType<SotanoEinsteinController>().Advice();
+        GameProgressController.EinsteinBasementDialog = true;
         RemoveInteractable();
-
     }
 }
 

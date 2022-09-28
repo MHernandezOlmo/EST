@@ -20,6 +20,7 @@ public class Plant0SceneController : MonoBehaviour
         }
         if (!GameProgressController.EinsteinTowerFirstAdvice)
         {
+            GameEvents.ClearMissionText.Invoke();
             StartCoroutine(CrPlayDialog());
         }
         bool isRay = GameProgressController.GetIsFullRayWorking();

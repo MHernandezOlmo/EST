@@ -15,6 +15,7 @@ public class ContactUVInteractable : Interactable
     }
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         _dialogTrigger.triggerDialogueEvent();
     }

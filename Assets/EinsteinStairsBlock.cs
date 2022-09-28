@@ -7,7 +7,7 @@ public class EinsteinStairsBlock : MonoBehaviour
     private bool _shown;
     void Start()
     {
-        if (PlayerPrefs.GetInt("BasementDialog", 0) == 1)
+        if (GameProgressController.EinsteinBasementDialog)
         {
             Destroy(gameObject);
         }

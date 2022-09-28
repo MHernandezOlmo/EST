@@ -42,8 +42,10 @@ public class PCCoronografoCode : Interactable
     {
         if(_answerText.text == "#1457962")
         {
+            GameEvents.ClearMissionText.Invoke();
             StartCoroutine(CrHideTablonAndDestroy());
-            FindObjectOfType<EscalerasCoronografo>().DownStairs();        }
+            FindObjectOfType<EscalerasCoronografo>().DownStairs();        
+        }
         else
         {
             Clear();

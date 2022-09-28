@@ -32,7 +32,6 @@ public class Einstein0Alrededores : MonoBehaviour
 
     void Start()
     {
-
         if (!GameProgressController.EinsteinUsedPrism)
         {
             _player = FindObjectOfType<MovementController>();

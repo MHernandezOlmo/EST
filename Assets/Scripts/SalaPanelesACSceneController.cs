@@ -27,16 +27,20 @@ public class SalaPanelesACSceneController : MonoBehaviour
     }
     IEnumerator CrEnd()
     {
+        if (GameProgressController.PicDuMidiPuzzleAssociation)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         yield return new WaitForSeconds(1f);
         if (GameProgressController.PicDuMidiPuzzleAssociation)
         {
             _endTrigger.triggerDialogueEvent(true);
         }
-    
     }
 
     public void LoadMenu()
     {
+        GameProgressController.PicDuMidiSolved = true;
         PlayerPrefs.SetInt("PieceToSecure", 2);
         GameEvents.LoadScene.Invoke("SecurePiece");
     }

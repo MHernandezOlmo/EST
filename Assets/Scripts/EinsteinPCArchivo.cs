@@ -7,6 +7,7 @@ public class EinsteinPCArchivo : Interactable
     [SerializeField] DialogueTrigger _dialogTrigger;
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         _dialogTrigger.triggerDialogueEvent();
     }
 }

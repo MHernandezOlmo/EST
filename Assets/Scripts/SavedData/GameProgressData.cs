@@ -23,6 +23,7 @@ public class GameProgressData
     public bool _einsteinSolarCanonSkill;
     public bool _einsteinOpenBarrier;
     public bool _einsteinTowerFirstAdvice;
+    public bool _einsteinBasementDialog;
     public bool _einsteinDomeOpen;
     public bool _einsteinNeedMirror;
     public bool _einsteinHasMirror;

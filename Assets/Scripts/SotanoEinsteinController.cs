@@ -24,6 +24,10 @@ public class SotanoEinsteinController : MonoBehaviour
     }
     void Start()
     {
+        if (GameProgressController.EinsteinPlacedMirror && !GameProgressController.EinsteinBasementAxis0)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         if (GameProgressController.GetIsFullRayWorking())
         {
             _firstRay.GetComponent<LineRenderer>().SetPosition(1,mirrorPoint.transform.position);
