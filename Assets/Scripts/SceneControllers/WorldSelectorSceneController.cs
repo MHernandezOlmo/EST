@@ -7,8 +7,8 @@ using TMPro;
 
 public class WorldSelectorSceneController : MonoBehaviour
 {
-    
     static string[] _worldNames= { "Lomnicky_0_Llegada de UV", "Einstein_0_alrededores_torre", "PicDuMidi_0_sala_paneles_a_c", "Gregor_0_exterior", "SST_0_residencia_roque", "EST_exterior EST" };
+    [SerializeField] private bool _allUnlockedForTest;
     [SerializeField] private Image[] _worldImages;
     [SerializeField] private Image[] _worldLockImages;
     [SerializeField] private Button[] _worldButtons;
@@ -35,16 +35,18 @@ public class WorldSelectorSceneController : MonoBehaviour
 
     public void Start()
     {
-
         _worldImages[0].color = Color.white;
         _worldLockImages[0].gameObject.SetActive(false);
         _worldButtons[0].interactable = true;
         _worldNamesText[0].text = "Lomnický štít";
-        GameProgressController.LomnickySolved = true;
-        GameProgressController.EinsteinSolved= true;
-        GameProgressController.PicDuMidiSolved = true;
-        GameProgressController.GregorFinished= true;
-        GameProgressController.SSTSolved= true;
+        if (_allUnlockedForTest)
+        {
+            GameProgressController.LomnickySolved = true;
+            GameProgressController.EinsteinSolved = true;
+            GameProgressController.PicDuMidiSolved = true;
+            GameProgressController.GregorFinished = true;
+            GameProgressController.SSTSolved = true;
+        }
 
         if (GameProgressController.LomnickySolved)
         {
