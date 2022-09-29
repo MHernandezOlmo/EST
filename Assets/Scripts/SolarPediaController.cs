@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class SolarPediaController : MonoBehaviour
 {
     //[SerializeField] GameObject indexPrefabs;
     [SerializeField] TextMeshProUGUI _entryTitle;
+    [SerializeField] TextMeshProUGUI _entryCredits;
     [SerializeField] TextMeshProUGUI _content;
     [SerializeField] Image _image;
     [SerializeField] GameObject _contentGO;
@@ -67,7 +69,31 @@ public class SolarPediaController : MonoBehaviour
         _entryTitle.color = new Color(0, 0, 0, 0);
         _content.text = _contents[entry][subentry];
         Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img");
-        _image.sprite = sprite;
+        TextAsset mytxtData = (TextAsset)Resources.Load($"SolarpediaSprites/{entry}/{subentry}/credit");
+        string credits = "";
+        if (mytxtData != null)
+        {
+            credits = mytxtData.text;
+        }
+        if(sprite != null)
+        {
+            _image.enabled = true;
+            _image.sprite = sprite;
+            if (!string.IsNullOrEmpty(credits))
+            {
+                _entryCredits.text = credits;
+                _entryCredits.enabled = true;
+            }
+            else
+            {
+                _entryCredits.enabled = false;
+            }
+        }
+        else
+        {
+            _image.enabled = false;
+        }
+
         if (entry == 3)
         {
             _image.color = transparentWhite;
@@ -81,19 +107,16 @@ public class SolarPediaController : MonoBehaviour
         for (float i = 0; i < 0.25f; i += Time.unscaledDeltaTime)
         {
             _entryTitle.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
+            _entryCredits.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
             _content.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
-            if (entry != 3)
-            {
-                _image.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
-            }
+            _image.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
             yield return null;
         }
-        if (entry != 3)
-        {
-            _image.color = Color.white;
-        }
+
+        _image.color = Color.white;
         _content.color = Color.white;
         _entryTitle.color = Color.white;
+        _entryCredits.color = Color.white;
         _content.color = Color.white;
     }
     IEnumerator EntryRefresh(int entry, int subentry)
@@ -103,11 +126,9 @@ public class SolarPediaController : MonoBehaviour
         for (float i = 0; i<0.25f; i += Time.unscaledDeltaTime)
         {
             _entryTitle.color = Color.Lerp(Color.white, transparentWhite, i/0.25f);
+            _entryCredits.color = Color.Lerp(Color.white, transparentWhite, i / 0.25f);
             _content.color = Color.Lerp(Color.white, transparentWhite, i/0.25f);
-            if (entry != 3)
-            {
-                _image.color = Color.Lerp(Color.white, transparentWhite, i / 0.25f);
-            }
+            _image.color = Color.Lerp(Color.white, transparentWhite, i / 0.25f);
             yield return null;
         }
         _image.color = transparentWhite;
@@ -116,10 +137,22 @@ public class SolarPediaController : MonoBehaviour
         _entryTitle.text = entries[entry][subentry];
         _entryTitle.color = new Color(0, 0, 0, 0);
         _content.text = _contents[entry][subentry];
-
+        _entryCredits.color = transparentWhite;
         Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img") as Sprite;
         _image.sprite = sprite;
-
+        string credits = "";
+        TextAsset mytxtData = (TextAsset)Resources.Load($"SolarpediaSprites/{entry}/{subentry}/credit");
+        
+        if (mytxtData != null)
+        {
+            credits = mytxtData.text;
+            _entryCredits.text = credits;
+            _entryCredits.enabled = true;
+        }
+        else
+        {
+            _entryCredits.enabled = false;
+        }
         yield return null;
         _vlayout.enabled = false;
         _vlayout.enabled = true;
@@ -129,19 +162,17 @@ public class SolarPediaController : MonoBehaviour
         for (float i = 0; i < 0.25f; i += Time.unscaledDeltaTime)
         {
             _entryTitle.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
+            _entryCredits.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
             _content.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
-            if (entry != 3)
-            {
-                _image.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
-            }
+
+            _image.color = Color.Lerp(transparentWhite, Color.white, i / 0.25f);
             yield return null;
         }
-        if (entry != 3)
-        {
-            _image.color = Color.white;
-        }
+
+        _image.color = Color.white;
 
         _entryTitle.color = Color.white;
+        _entryCredits.color = Color.white;
         _content.color = Color.white;
         _entryTitle.color = Color.white;
         _content.color = Color.white;
@@ -150,7 +181,7 @@ public class SolarPediaController : MonoBehaviour
     {
         SolarPedia slrpd = new SolarPedia();
         entries = new List<List<string>>();
-        entries.Add(new List<string>() { "Core", "Radiative zone", "Convection zone" });
+        entries.Add(new List<string>() { "Core", "Radiative zone", "Tachocline", "Convection zone" });
         entries.Add(new List<string>() { "Photosphere", "Chromosphere", "Transition Region", "Corona" });
         entries.Add(new List<string>() { "General description", "Solar Dynamo" });
         entries.Add(new List<string>() { "Basis statistics", "Composition" });
@@ -188,6 +219,7 @@ public class SolarPediaController : MonoBehaviour
         _contents.Add(new List<string>(){
             "The core is the deepest region of the Sun. It covers from the center up to 0.25 radius of the Sun (The radius of the Sun is about 696340 km). In the core you can find a very dense hot plasma, it is the hottest zone of the Sun with a temperature of around 15º million C. It is not possible to observe directly the solar interior.\nIn the core, nuclear fusion takes place and transforms the Hydrogen into Helium. This reaction is called the proton-proton chain reaction. The nuclear fuel produced during nuclear fusion can last up to 10<sup>10</sup> years.",
             "The radiative zone is a region of the solar interior. The temperature of the bottom part is close to 7º million C and the upper part is around 2º million C. In this zone of the Sun, the energy is transported outwards to the solar surface by radiation. The energy travels in form of electromagnetic radiation. In the radiative zone, the density of the plasma is very high. Due to the high density, the particles only can travel short distances before they interact with other particles or they are absorbed. A fun fact is that the average time for a particle to travel from the core, through the radiative zone up to the solar surface is about 171000 years.",
+            "The outermost layer of the solar interior is the convection zone, which extends from the tachocline up to the visible surface of the Sun (from approximately 70% to 100% of the solar radius). The bottom region of this layer has a temperature close to 2 million degrees.  Energy is transported by convection, which is a way of distributing heat or energy via circular motions from the lower layers of the Sun (where the plasma is hotter) to the surface (where it is cooler). A similar process occurs in a pot of boiling water.",
             "The outset-most layer of the solar interior is the convection zone, just above the radiative zone, and it extends to the visible surface of the Sun. The bottom region of the convection zone has a temperature close to 2º million C. The lowest temperature allows the atoms to be partially ionized. Therefore, heavy ions such as calcium, iron, nitrogen, carbon, or oxygen can have some of their electrons. In this region, the opacity increases and leads out to convective motions. Convection is a way to transport heat or energy via circular current from the lower layers of the Sun, where the plasma is hotter, to the surface, which is cooler. The hottest plasma ascends while the coolest plasma descends. A similar process develops in a pot of boiling water.",
         });
         _contents.Add(new List<string>()
@@ -204,7 +236,7 @@ public class SolarPediaController : MonoBehaviour
         });
         _contents.Add(new List<string>()
         {
-            "The Sun is a spectral type G2V star placed at the center of the Solar System. The Sun radius is about 696340 km. This means that the diameter of the Sun is around 1,39 million km, 109 times the diameter of the Earth. The mass of the Sun is around 1988500 x 1024 kg, 333000 times more than the Earth. The Sun contains 99.86% of the total mass of the Solar System. The volume and the mean density are 1412000 x 1012 km3 and 1408 kg/m3 respectively. The solar-Earth medium distance is around 149.6 x 106 km. The age of the Sun is about 4.6 billion years. Because of the mass of the Sun, the surface gravity is about 274 m/s2. The temperature of the core of the Sun is 15 million K, decreasing down to 5700 k in the photosphere and increasing up to 2 million K or more at the corona.",
+            "The Sun is a spectral type G2V star placed at the center of the Solar System. The Sun radius is about 696340 km. This means that the diameter of the Sun is around 1,39 million km, 109 times the diameter of the Earth. The mass of the Sun is around 1988500 x 1024 kg, 333000 times more than the Earth. The Sun contains 99.86% of the total mass of the Solar System. The volume and the mean density are 1412000 x 1012 km3 and 1408 kg/m3 respectively. The solar-Earth medium distance is around 149.6 x 106 km. The age of the Sun is about 4.6 billion years. Because of the mass of the Sun, the surface gravity is about 274 m/s<sup>2</sup>. The temperature of the core of the Sun is 15 million K, decreasing down to 5700 k in the photosphere and increasing up to 2 million K or more at the corona.",
             "The chemical composition of the Sun is mainly Hydrogen (H) and Helium (He). Approximately there is about 71-75% is made of H and around 24-27% is He. A very small percentage of the Sun is made of heavy elements (called metals) such as iron, silicon, carbon, oxygen, nitrogen, magnesium, sulfur, etc.\nSince the Sun formed, the Sun started to fuse H into He. The Sun’s core composition amount of He change from 24% to 60% due to the fusion processes during the life of the Sun (4.6 billion years). The core of the Sun fuses 600 million tons of Hydrogen into Helium every second. During the process, 4 million tons of matter are converted into energy every second. The mean energy production is 0.1925 x 10<sup>-3</sup> J/kg s."
         });
         _contents.Add(new List<string>()

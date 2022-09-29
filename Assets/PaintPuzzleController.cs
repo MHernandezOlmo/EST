@@ -24,6 +24,15 @@ public class PaintPuzzleController : MonoBehaviour
 
     private void Start()
     {
+#if UNITY_STANDALONE_WIN
+
+        _times[0] = 13;
+        _times[1] = 9;
+        _times[2] = 8;
+        _times[3] = 7;
+        _times[4] = 6;
+
+#endif
         levelPercent = 1f / _buttonsAmount.Length;
         for (int i = 0; i < _buttons.Length; i++)
         {

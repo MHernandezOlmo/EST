@@ -15,6 +15,11 @@ public class SinMovement : MonoBehaviour
 
     void Update()
     {
+#if !UNITY_STANDALONE_WIN
+
         _rectTransform.position = _startPosition+ (Vector3.right* Mathf.Sin(Time.timeSinceLevelLoad*2) * 75);
+
+#endif
+
     }
 }
