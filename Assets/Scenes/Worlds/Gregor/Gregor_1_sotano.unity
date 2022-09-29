@@ -373,7 +373,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161290790}
-  m_LocalRotation: {x: -0.0034065729, y: 0.9965835, z: -0.061901867, w: -0.054569382}
+  m_LocalRotation: {x: -0.0034065729, y: 0.9965835, z: -0.061901864, w: -0.054569386}
   m_LocalPosition: {x: 4.912, y: 5.58, z: -3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1512,6 +1512,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7dabf3b0c111474298823142a569f69, type: 3}
+--- !u!1 &810507466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 810507468}
+  - component: {fileID: 810507467}
+  m_Layer: 0
+  m_Name: MissionLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &810507467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810507466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362a6a5b9f18a14428d15869720d4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &810507468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810507466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814399001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4035257833916408276, guid: 7a6902dc72d5f3b48b77755de8cb248c,
@@ -2437,8 +2480,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: PiezasCanvasHR
       objectReference: {fileID: 0}
+    - target: {fileID: 5832504024207609919, guid: fe801fb8a98e29940884fe483f35247a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe801fb8a98e29940884fe483f35247a, type: 3}
+--- !u!1 &1064194749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5832504024207609919, guid: fe801fb8a98e29940884fe483f35247a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1064194748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1078223839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2725,7 +2779,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210762193}
-  m_LocalRotation: {x: -0.0034065729, y: 0.9965835, z: -0.061901867, w: -0.054569382}
+  m_LocalRotation: {x: -0.0034065729, y: 0.9965835, z: -0.061901864, w: -0.054569386}
   m_LocalPosition: {x: 4.912, y: 5.58, z: -3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2794,6 +2848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trigger: {fileID: 1672687419}
   _doorTrigger: {fileID: 261419185}
+  _heatCanvas: {fileID: 1064194749}
 --- !u!4 &1240778414
 Transform:
   m_ObjectHideFlags: 0
@@ -10165,6 +10220,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1064194749}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 810507467}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NewMission
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Collect the pieces to assemble the heat rejecter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}

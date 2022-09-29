@@ -16,6 +16,7 @@ public class SSTPhone : Interactable
     }
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         _callDialogue.triggerDialogueEvent();
     }
 

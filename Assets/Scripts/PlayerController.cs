@@ -53,6 +53,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnExit()
+    {
+        if(_currentCharacter == Character.Spot)
+        {
+            CurrentSceneManager._isJetpacking = false;
+        }
+    }
 
     public void ReceiveDamage(int newValue)
     {

@@ -22,6 +22,7 @@ public class PiezaHR : Interactable
         }
         if(hramount == 6)
         {
+            GameEvents.ClearMissionText.Invoke();
             GameProgressController.GregorHasHeatRejecter = true;
             _allPartsTrigger.triggerDialogueEvent(true);
             if (FindObjectOfType<AlmacenGregorSceneController>() != null)

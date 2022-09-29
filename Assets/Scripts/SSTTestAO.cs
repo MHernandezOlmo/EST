@@ -16,7 +16,7 @@ public class SSTTestAO : Interactable
     }
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         GameEvents.LoadScene.Invoke("SSTPuzzleTetrisAO");
     }
-
 }

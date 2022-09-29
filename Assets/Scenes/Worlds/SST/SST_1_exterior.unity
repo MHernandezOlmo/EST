@@ -592,18 +592,18 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1744442313}
+      objectReference: {fileID: 1546296429}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -612,12 +612,17 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: NewMission
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Test the adaptive optics at the control room
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -11989,6 +11994,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 163.92601, z: 0}
+--- !u!114 &1546296429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1313811109234721042, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+    type: 3}
+  m_PrefabInstance: {fileID: 59416655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362a6a5b9f18a14428d15869720d4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1546366919
 GameObject:
   m_ObjectHideFlags: 0

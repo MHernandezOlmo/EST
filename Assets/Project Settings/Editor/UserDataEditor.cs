@@ -12,7 +12,7 @@ public class UserDataEditor : EditorWindow
     const string _gameProgressDataFileName = "GameProgressData.json";
     Vector2 scrollPosition = Vector2.zero;
 
-    [MenuItem("Window/GameProgress")]
+    [MenuItem("GameProgress/Open")]
     public static void ShowWindow()
     {
         GetWindow(typeof(UserDataEditor));

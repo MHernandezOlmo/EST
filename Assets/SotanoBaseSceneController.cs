@@ -5,9 +5,14 @@ using UnityEngine;
 public class SotanoBaseSceneController : MonoBehaviour
 {
     [SerializeField] DialogueTrigger _trigger;
-    [SerializeField] private GameObject _doorTrigger;
+    [SerializeField] private GameObject _doorTrigger, _heatCanvas;
     IEnumerator Start()
     {
+        if (!GameProgressController.AdviceHR)
+        {
+            _heatCanvas.SetActive(false);
+            GameEvents.ClearMissionText.Invoke();
+        }
         if (FindObjectOfType<CountdownCanvas>() != null)
         {
             _doorTrigger.SetActive(false);

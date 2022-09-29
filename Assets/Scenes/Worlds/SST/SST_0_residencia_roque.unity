@@ -893,26 +893,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: _clips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: _fxASources.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: _fxASources.Array.data[0]
-      value: 
-      objectReference: {fileID: 2120260625}
-    - target: {fileID: 0}
-      propertyPath: _fxASources.Array.data[1]
-      value: 
-      objectReference: {fileID: 498034913}
-    - target: {fileID: 0}
-      propertyPath: _fxASources.Array.data[2]
-      value: 
-      objectReference: {fileID: 498034912}
     - target: {fileID: 3023887095948471633, guid: b0d40478816105c41974cbf0ca5ba28a,
         type: 3}
       propertyPath: m_Name
@@ -975,18 +955,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d40478816105c41974cbf0ca5ba28a, type: 3}
---- !u!82 &498034912 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4612186210100137612, guid: b0d40478816105c41974cbf0ca5ba28a,
-    type: 3}
-  m_PrefabInstance: {fileID: 498034911}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &498034913 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4085246063837211759, guid: b0d40478816105c41974cbf0ca5ba28a,
-    type: 3}
-  m_PrefabInstance: {fileID: 498034911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &512247710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1047,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &718321939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1313811109234721042, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915849144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362a6a5b9f18a14428d15869720d4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789423191
 GameObject:
   m_ObjectHideFlags: 3
@@ -8228,7 +8208,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -8237,12 +8217,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1901464294}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 718321939}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
@@ -8252,7 +8247,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NewMission
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Reach the Swedish Solar Telescope
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,
@@ -8496,9 +8506,3 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!82 &2120260625 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2120260625, guid: b0d40478816105c41974cbf0ca5ba28a,
-    type: 3}
-  m_PrefabInstance: {fileID: 498034911}
-  m_PrefabAsset: {fileID: 0}

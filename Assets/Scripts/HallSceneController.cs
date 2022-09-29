@@ -29,6 +29,7 @@ public class HallSceneController : MonoBehaviour
 
     IEnumerator PlayFirstSSTEntryDialog()
     {
+        GameEvents.ClearMissionText.Invoke();
         yield return new WaitForSeconds(1);
         _firstSSTEntryDialog.triggerDialogueEvent();
         GameProgressController.SSTHallAdvice = true;

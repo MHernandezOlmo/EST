@@ -46,6 +46,7 @@ public class SSTExteriors : MonoBehaviour
         GameProgressController.SSTAOPieces++;
         if(_piecesAO == 10)
         {
+            GameEvents.ClearMissionText.Invoke();
             GetAOTriggerDialog.triggerDialogueEvent();
         }
     }
@@ -63,6 +64,7 @@ public class SSTExteriors : MonoBehaviour
         {
             if (!_ended)
             {
+                GameEvents.ClearMissionText.Invoke();
                 _ended = true;
                 PlayerPrefs.SetInt("PieceToSecure", 4);
                 GameEvents.LoadScene.Invoke("SecurePiece");

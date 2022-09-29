@@ -7,11 +7,16 @@ public class SceneChangeInteractable : Interactable
 {
     [SerializeField] private string _sceneName;
     [SerializeField] private int _startingPoint;
+    [SerializeField] private bool _stairs;
     bool _interacted;
     public override void Interact()
     {
         if (!_interacted)
         {
+            if(_stairs && !GameProgressController.GregorPuzzlePaintTower)
+            {
+                GameEvents.ClearMissionText.Invoke();
+            }
             _interacted = true;
             GameProgressController.SetCurrentStartPoint(_startingPoint);
             if (_sceneName == "Gregor_0_dome")

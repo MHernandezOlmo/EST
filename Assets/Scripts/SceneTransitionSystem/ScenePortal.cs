@@ -33,6 +33,11 @@ public class ScenePortal : MonoBehaviour
 			!LevelRecentlyLoaded() &&
 			!other.GetComponent<MovementController>().autopilot.HasValue)
 		{
+            if (FindObjectOfType<PlayerController>() != null)
+            {
+				FindObjectOfType<PlayerController>().OnExit();
+
+			}
 			//other.GetComponent<MovementController>().autopilot = LeavingAutopilotPoint;
             GameEvents.LoadScene.Invoke(targetScene.SceneName);
 			//LevelLoader.LoadLevel(targetScene); // TO DO: make this not automatic

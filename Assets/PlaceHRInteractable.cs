@@ -10,6 +10,7 @@ public class PlaceHRInteractable : Interactable
     {
         if (!_interacted)
         {
+            GameEvents.ClearMissionText.Invoke();
             _interacted = true;
             FindObjectOfType<ExterioresGregorDome>().PlaceHR();
             if (FindObjectOfType<CountdownCanvas>() != null)

@@ -10,6 +10,7 @@ public class PCGregorInteractable : Interactable
     {
         if (!_interacted)
         {
+            GameEvents.ClearMissionText.Invoke();
             _interacted = true;
             _dialogToTrigger.triggerDialogueEvent(true);
         }
@@ -18,10 +19,5 @@ public class PCGregorInteractable : Interactable
     public void SetDialog(DialogueTrigger _trigger)
     {
         _dialogToTrigger = _trigger;
-    }
-
-    public void LoadOtherScene()
-    {
-        
     }
 }

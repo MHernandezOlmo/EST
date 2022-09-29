@@ -30,7 +30,6 @@ public class AlmacenGregorSceneController : MonoBehaviour
                 else
                 {
                     yield return new WaitForSeconds(1f);
-
                     _needPlace.triggerDialogueEvent(true);
                 }
             }

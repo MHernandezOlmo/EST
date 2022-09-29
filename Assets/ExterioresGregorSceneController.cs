@@ -76,6 +76,7 @@ public class ExterioresGregorSceneController : MonoBehaviour
         GameEvents.ShowScreenText.Invoke(targetTx);
         if (_bushes == 6)
         {
+            GameEvents.ClearMissionText.Invoke();
             StopCoroutine(_crTimeCount);
             PlayerPrefs.SetInt("TimeCounter", 0);
             _timePanel.SetActive(false);

@@ -32,9 +32,4 @@ public class ObservacionSSTSceneController : MonoBehaviour
         yield return new WaitForSeconds(1);
         _youHaveEverything.triggerDialogueEvent(true);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

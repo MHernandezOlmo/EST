@@ -19,10 +19,4 @@ public class GregorDomeCinematic : MonoBehaviour
         GameProgressController.GregorDome = true;
         GameEvents.LoadScene.Invoke("Gregor_11_almacen");
     }
-
-    
-    void Update()
-    {
-        
-    }
 }

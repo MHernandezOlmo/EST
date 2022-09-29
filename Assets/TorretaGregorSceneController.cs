@@ -22,9 +22,4 @@ public class TorretaGregorSceneController : MonoBehaviour
 
         }
     }
-
-    void Update()
-    {
-        
-    }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5162093702787244517}
   - component: {fileID: 5162093702787244514}
   - component: {fileID: 5162093702787244516}
+  - component: {fileID: 1313811109234721042}
   m_Layer: 0
   m_Name: DialogTrigger
   m_TagString: Untagged
@@ -80,6 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _finishEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _playOnce: 0
+  _cPrio: {fileID: 0}
 --- !u!114 &5162093702787244516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,3 +105,15 @@ MonoBehaviour:
   - Einstein/Bienvenida_01
   - Einstein/Bienvenida_01
   - UI/GameTitle
+--- !u!114 &1313811109234721042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5162093702787244513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362a6a5b9f18a14428d15869720d4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

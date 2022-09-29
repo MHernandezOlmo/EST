@@ -25,6 +25,7 @@ public class SSTSalaMaquinasSceneController : MonoBehaviour
 
     IEnumerator CrPlayDialog()
     {
+        GameEvents.ClearMissionText.Invoke();
         yield return new WaitForSeconds(1f);
         _dialogTrigger.triggerDialogueEvent();
     }
