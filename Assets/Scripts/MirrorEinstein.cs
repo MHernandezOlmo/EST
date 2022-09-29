@@ -25,7 +25,6 @@ public class MirrorEinstein : Interactable
             Destroy(_animator.gameObject);
             Destroy(gameObject.transform.parent.gameObject);
         }
-        
     }
     public override void Interact()
     {
@@ -33,8 +32,8 @@ public class MirrorEinstein : Interactable
         GameProgressController.EinsteinHasMirror = true;
         _animator.SetTrigger("Get");
         _dialog.triggerDialogueEvent();
+        GameEvents.ShowScreenText.Invoke("Obtained: Mirror");
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         Destroy(gameObject.transform.parent.gameObject);
-        GameEvents.ShowScreenText.Invoke("Obtained: Mirror");
     }
 }
