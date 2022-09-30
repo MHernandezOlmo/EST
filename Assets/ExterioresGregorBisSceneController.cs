@@ -41,6 +41,10 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
         {
             _skillEnable.SetActive(true);
         }
+        if (GameProgressController.GregorPlacedHeatRejecter)
+        {
+            GameEvents.ShowScreenText.Invoke("Remaining threads: " + neededKills);
+        }
     }
 
     public void StartPaintMission()
@@ -59,6 +63,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
     public void Kill()
     {
         neededKills--;
+        GameEvents.ShowScreenText.Invoke("Remaining threads: " + neededKills);
         if (neededKills == 0)
         {
             GameEvents.ClearMissionText.Invoke();

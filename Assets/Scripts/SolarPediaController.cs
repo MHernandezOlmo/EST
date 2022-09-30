@@ -77,21 +77,21 @@ public class SolarPediaController : MonoBehaviour
         }
         if(sprite != null)
         {
-            _image.enabled = true;
+            _image.gameObject.SetActive(true);
             _image.sprite = sprite;
             if (!string.IsNullOrEmpty(credits))
             {
                 _entryCredits.text = credits;
-                _entryCredits.enabled = true;
+                _entryCredits.gameObject.SetActive(true);
             }
             else
             {
-                _entryCredits.enabled = false;
+                _entryCredits.gameObject.SetActive(false);
             }
         }
         else
         {
-            _image.enabled = false;
+            _image.gameObject.SetActive(false);
         }
 
         if (entry == 3)
@@ -139,6 +139,15 @@ public class SolarPediaController : MonoBehaviour
         _content.text = _contents[entry][subentry];
         _entryCredits.color = transparentWhite;
         Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img") as Sprite;
+        if (sprite != null)
+        {
+            _image.gameObject.SetActive(true);
+            _image.sprite = sprite;
+        }
+        else
+        {
+            _image.gameObject.SetActive(false);
+        }
         _image.sprite = sprite;
         string credits = "";
         TextAsset mytxtData = (TextAsset)Resources.Load($"SolarpediaSprites/{entry}/{subentry}/credit");
@@ -147,11 +156,11 @@ public class SolarPediaController : MonoBehaviour
         {
             credits = mytxtData.text;
             _entryCredits.text = credits;
-            _entryCredits.enabled = true;
+            _entryCredits.gameObject.SetActive(true);
         }
         else
         {
-            _entryCredits.enabled = false;
+            _entryCredits.gameObject.SetActive(false);
         }
         yield return null;
         _vlayout.enabled = false;

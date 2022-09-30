@@ -40,7 +40,7 @@ public class PiezasHRObserver : MonoBehaviour
                     piezasObtenidas++;
                 }
             }
-            _text.text = "HeatRejecter Parts: " + piezasObtenidas + "/6";
+            _text.text = "Heat rejecter Parts: " + piezasObtenidas + "/6";
         }
 
     }

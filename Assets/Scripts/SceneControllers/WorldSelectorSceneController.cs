@@ -96,6 +96,7 @@ public class WorldSelectorSceneController : MonoBehaviour
         {
             case 0:
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Lomnicky);
+
                 break;
             case 1:
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.TorreEinstein);
@@ -108,6 +109,7 @@ public class WorldSelectorSceneController : MonoBehaviour
                 break;
             case 4:
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.SST);
+                PlayerPrefs.SetFloat("GlycolAmount", 0.5f);
                 break;
             case 5:
                 AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.EST);

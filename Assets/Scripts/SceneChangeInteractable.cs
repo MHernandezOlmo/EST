@@ -27,7 +27,15 @@ public class SceneChangeInteractable : Interactable
                 }
                 else 
                 {
-                    GameEvents.LoadScene.Invoke(_sceneName);
+                    if (!GameProgressController.GregorTestedHR)
+                    {
+                        RemoveInteractable();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        GameEvents.LoadScene.Invoke(_sceneName);
+                    }
                 }
             }
             else if(_sceneName == "Gregor_0_exteriorBis" && !GameProgressController.GregorDome && PlayerPrefs.GetInt("BlockDoor", 0) == 0)
@@ -58,5 +66,22 @@ public class SceneChangeInteractable : Interactable
     {
         base.Start();
         _interactableMarker = transform;
+        if (_sceneName == "Gregor_0_dome")
+        {
+            if (FindObjectOfType<CountdownCanvas>() != null)
+            {
+            }
+            else
+            {
+                if (!GameProgressController.GregorTestedHR)
+                {
+                    RemoveInteractable();
+                    Destroy(gameObject);
+                }
+                else
+                {
+                }
+            }
+        }
     }
 }
