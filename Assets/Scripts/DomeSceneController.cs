@@ -19,7 +19,7 @@ public class DomeSceneController : MonoBehaviour
 
     public void ShowAdvice()
     {
-        GameEvents.ShowScreenText.Invoke("Go back to the cableway");
+        //GameEvents.ShowScreenText.Invoke("Go back to the cableway");
         GameEvents.MissionText.Invoke("Go back to the cableway");
     }
 }
