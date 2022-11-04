@@ -12,12 +12,12 @@ public class MainMenuSceneController : MonoBehaviour
     RectTransform _mainMenuHolder;
     [SerializeField]
     RectTransform _optionsMenuHolder;
-
+    [SerializeField] private GameObject _pressAgain;
     [SerializeField]
     Button _continueGameButton;
     [SerializeField] Sprite _purpleButton;
     bool _changing;
-
+    private bool _confirm;
     public void HideOptions()
     {
         if (!_changing)
@@ -74,6 +74,7 @@ public class MainMenuSceneController : MonoBehaviour
         }
         else
         {
+            _confirm = true;
             _continueGameButton.interactable = false;
         }
     }
@@ -81,6 +82,19 @@ public class MainMenuSceneController : MonoBehaviour
 
     public void StartNewGame()
     {
+        if (!_confirm)
+        {
+            StartCoroutine(CrConfirm());
+            IEnumerator CrConfirm()
+            {
+                _confirm = true;
+                _pressAgain.SetActive(true);
+                yield return new WaitForSeconds(1f);
+                _pressAgain.SetActive(false);
+                _confirm = false;
+            }
+            return;
+        }
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UISelectMenu);
         PlayerPrefs.SetInt("CinematicToPlay", 0);
         PlayerPrefs.SetString("SceneAfterCinematic", "Lomnicky_0_Llegada de UV");
