@@ -39,6 +39,7 @@ public class SalaLlegadaSceneController : MonoBehaviour
                 if (!_lost)
                 {
                     _lost = true;
+                    GameProgressController.LomnickyCountdownTime = 0;
                     GameProgressController.LomnickyCountdown =false;
                     GameProgressController.SetArrivingRoomDoor(false);
                     GameEvents.LoadScene.Invoke("Lomnicky_2_Sala llegada");
