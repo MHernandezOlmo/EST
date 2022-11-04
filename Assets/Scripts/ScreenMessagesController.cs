@@ -49,7 +49,7 @@ public class ScreenMessagesController : MonoBehaviour
         }
         _rt.transform.localScale = 0.75f * Vector3.one;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         for (float i = 0; i < 0.1f; i += Time.deltaTime)
         {
             _rt.transform.localScale = 0.75f * Vector3.one *(1- (i / 0.1f));
