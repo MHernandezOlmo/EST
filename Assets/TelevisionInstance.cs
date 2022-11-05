@@ -121,6 +121,8 @@ public class TelevisionInstance : MonoBehaviour
     {
         if (isMain)
         {
+            AudioEvents.playSoundWithNameAndPitch.Invoke(SFXManager.AudioCode.OvenShot, Random.Range(0.9f,1.1f));
+            AudioEvents.playSoundWithNameAndPitch.Invoke(SFXManager.AudioCode.ToasterShot, Random.Range(0.9f, 1.1f));
             for (int i = 0; i < _shootAmount; i++)
             {
                 GameObject pb = Instantiate(_shootPrefab, _shootoints[i].position, Quaternion.identity);

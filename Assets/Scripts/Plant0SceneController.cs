@@ -9,7 +9,6 @@ public class Plant0SceneController : MonoBehaviour
     [SerializeField] GameObject _portalOutside;
     [SerializeField] GameObject _realTV;
     [SerializeField] GameObject[] _fakeTVs;
-
     void Start()
     {
         if (GameProgressController.EinsteinUsedPrism)
@@ -35,9 +34,5 @@ public class Plant0SceneController : MonoBehaviour
         yield return new WaitForSeconds(1);
         _dialogTrigger.GetComponent<DialogueTrigger>().triggerDialogueEvent();
         GameProgressController.EinsteinTowerFirstAdvice =true;
-    }
-    void Update()
-    {
-
     }
 }

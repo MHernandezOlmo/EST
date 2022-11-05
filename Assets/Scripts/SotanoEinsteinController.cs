@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SotanoEinsteinController : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class SotanoEinsteinController : MonoBehaviour
     }
     void Start()
     {
+        if (GameProgressController.EinsteinDomeAxis2 && GameObject.Find("MissionText").GetComponent<TextMeshProUGUI>().text == "Get back to basement")
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         if (GameProgressController.EinsteinPlacedMirror && !GameProgressController.EinsteinBasementAxis0)
         {
             GameEvents.ClearMissionText.Invoke();
@@ -175,7 +180,10 @@ public class SotanoEinsteinController : MonoBehaviour
 
     IEnumerator CrOpenBasementDoor()
     {
-        FindObjectOfType<BasementDoorInteractableAttempt>().RemoveInteractable();
+        if (FindObjectOfType<BasementDoorInteractableAttempt>() != null)
+        {
+            FindObjectOfType<BasementDoorInteractableAttempt>().RemoveInteractable();
+        }
         _openBasementDoor = true;
         GameProgressController.SetOpenEinsteinBasementDoor(true);
         FindObjectOfType<BasementLeverAxis0>().RemoveInteractable();
