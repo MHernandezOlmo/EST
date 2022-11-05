@@ -10,7 +10,7 @@ public class CombatTrigger : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera _combatCamera;
     [SerializeField] private int _requiredKills, _kills, _previousMode, _startingPoint;
     [SerializeField] EnemyHPPool _enemyHPPool;
-    [SerializeField] private bool _startingDash;
+    [SerializeField] private bool _startingDash, _basement;
     CombatController _combatController;
     private bool _canSpawn, _done;
     List<EnemySpawner> _enemiesToinstantiate;
@@ -83,7 +83,13 @@ public class CombatTrigger : MonoBehaviour
     public void RemoveBoundaries()
     {
         Destroy(_boundaries);
-        if(_previousMode == -1)
+        RestoreMusic();
+        //Destroy(gameObject);
+    }
+
+    public void RestoreMusic()
+    {
+        if (_previousMode == -1)
         {
             AudioEvents.playMusicTransitionWithMusicCode.Invoke((MusicManager.MusicCode)FindObjectOfType<MusicManager>().GetRandomMusicIndex());
         }
@@ -91,7 +97,6 @@ public class CombatTrigger : MonoBehaviour
         {
             AudioEvents.playMusicTransitionWithMusicCode.Invoke((MusicManager.MusicCode)_previousMode);
         }
-        //Destroy(gameObject);
     }
 
     public void AddKill()
@@ -101,12 +106,14 @@ public class CombatTrigger : MonoBehaviour
         {
             PlayerPrefs.SetInt(_combatName, 1);
             _combatController.EndCombat();
-
+            if (_basement)
+            {
+                FindObjectOfType<MusicManager>().PlayMusicTransition(FindObjectOfType<MusicManager>().GetLastRandomMusicIndex());
+            }
             if(_combatActivator != null)
             {
                 StartCoroutine(CrWaitForReloadCombatMode());
             }
-
             if(_customCollider == null)
             {
                 RemoveBoundaries();

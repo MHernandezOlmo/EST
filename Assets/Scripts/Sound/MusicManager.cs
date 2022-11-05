@@ -85,11 +85,19 @@ public class MusicManager : MonoBehaviour
         }     
     }
 
+    public int GetLastRandomMusicIndex()
+    {
+        if (_lastRandomIndex == -1)
+        {
+            _lastRandomIndex = 0;
+        }
+        return _lastRandomIndex;
+    }
+
     public int GetRandomESTIndex()
     {
         int randomIndex;
         int[] validIndexes = new int[] {8,10,11};
-        print(_lastRandomIndex);
         if (_lastRandomIndex == -1)
         {
             randomIndex = Random.Range(0, validIndexes.Length);

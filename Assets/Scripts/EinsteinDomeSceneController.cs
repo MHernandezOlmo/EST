@@ -305,8 +305,8 @@ public class EinsteinDomeSceneController : MonoBehaviour
         _domeMirrorDialogue.triggerDialogueEvent(true);
     }
 
-    public void ShowMission()
-    {
-        GameEvents.ShowScreenText.Invoke("Find the primary mirror of the coelostat");
-    }
+    //public void ShowMission()
+    //{
+    //    GameEvents.ShowScreenText.Invoke("Find the primary mirror of the coelostat");
+    //}
 }
