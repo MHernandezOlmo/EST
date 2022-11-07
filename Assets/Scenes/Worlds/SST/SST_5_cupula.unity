@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028471, g: 0.22571507, b: 0.30692372, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028498, g: 0.22571614, b: 0.30692384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1644304053}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 48
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -583,8 +583,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123595080}
-  m_LocalRotation: {x: -0.07473175, y: -0.91370094, z: -0.19625875, w: 0.34791988}
-  m_LocalPosition: {x: 10.997037, y: -7.4463406, z: 3.2263813}
+  m_LocalRotation: {x: -0.14015439, y: -0.8406444, z: -0.25931942, w: 0.45434263}
+  m_LocalPosition: {x: 13.3, y: -10.84, z: -0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1170043938}
@@ -644,7 +644,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 48
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -669,8 +669,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161290790}
-  m_LocalRotation: {x: -0.07473175, y: -0.91370094, z: -0.19625875, w: 0.34791988}
-  m_LocalPosition: {x: 10.997037, y: -7.4463406, z: 3.2263813}
+  m_LocalRotation: {x: -0.14015439, y: -0.8406444, z: -0.25931942, w: 0.45434263}
+  m_LocalPosition: {x: 13.3, y: -10.84, z: -0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 94.7372, z: -10}
+  m_FollowOffset: {x: 2.3029633, y: 91.46355, z: -13.546385}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1913,10 +1913,10 @@ MonoBehaviour:
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_DeadZoneWidth: 0.41
+  m_DeadZoneHeight: 0.5
+  m_SoftZoneWidth: 0.88
+  m_SoftZoneHeight: 0.94
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
