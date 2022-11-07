@@ -13,7 +13,7 @@ public class CountdownCanvas : MonoBehaviour
     void Start()
     {
         _text = GetComponent<TextMeshProUGUI>();
-        _totalTime = 90;
+        _totalTime = 120;
         DontDestroyOnLoad(transform.parent.gameObject);
         if (c== null)
         {

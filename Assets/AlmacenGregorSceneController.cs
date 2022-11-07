@@ -30,11 +30,24 @@ public class AlmacenGregorSceneController : MonoBehaviour
                 else
                 {
                     yield return new WaitForSeconds(1f);
-                    _needPlace.triggerDialogueEvent(true);
+                    if (PlayerPrefs.GetInt("PlacingHR", 0) == 1)
+                    {
+                        _needPlace.FinishEvent();
+                    }
+                    else
+                    {
+                        _needPlace.triggerDialogueEvent(true);
+                    }
                 }
             }
         }
     }
+
+    public void FinishHRDialog()
+    {
+        PlayerPrefs.SetInt("PlacingHR", 1);
+    }
+
     public void LoadCinematic()
     {
         GameEvents.LoadScene.Invoke("Gregor_0_domeCinematic");

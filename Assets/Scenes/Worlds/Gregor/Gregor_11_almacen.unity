@@ -552,7 +552,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161290790}
-  m_LocalRotation: {x: 0.0028502091, y: -0.99629915, z: 0.07634375, w: 0.039390527}
+  m_LocalRotation: {x: 0.0028502126, y: -0.99629915, z: 0.076343775, w: 0.03939056}
   m_LocalPosition: {x: 3.83, y: 4.86, z: -4.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2797,7 +2797,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210762193}
-  m_LocalRotation: {x: 0.0028502091, y: -0.99629915, z: 0.07634375, w: 0.039390527}
+  m_LocalRotation: {x: 0.0028502126, y: -0.99629915, z: 0.076343775, w: 0.03939056}
   m_LocalPosition: {x: 3.83, y: 4.86, z: -4.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10644,7 +10644,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -10658,6 +10658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2076555119}
@@ -10668,12 +10673,22 @@ PrefabInstance:
       objectReference: {fileID: 1891508099}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2076555119}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
@@ -10688,6 +10703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: FinishHRDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Install the heat rejecter in GREGOR telescope
       objectReference: {fileID: 0}
@@ -10699,6 +10719,11 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
+        type: 3}
+      propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244515, guid: 360b28f7d2a395b46b6bcb2089d2af85,

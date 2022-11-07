@@ -134,7 +134,7 @@ public class ExterioresGregorSceneController : MonoBehaviour
 
     public void ShowMissionPanel()
     {
-        GameEvents.ShowScreenText.Invoke("Pick up the bushes");
+        GameEvents.ShowScreenText.Invoke("Collect the bushes");
         StartBushMission();
         GameProgressController.GregorHeatAdvices = true;
     }

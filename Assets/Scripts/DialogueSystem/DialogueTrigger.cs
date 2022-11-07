@@ -57,6 +57,11 @@ public class DialogueTrigger : MonoBehaviour
 		_finishEvent.Invoke();
 	}
 
+	public void FinishEvent()
+    {
+		_finishEvent.Invoke();
+	}
+
 	void OnDrawGizmos()
 	{
 		Gizmos.color = new Vector4(0f, 0.2f, 0.8f, 0.5f);
