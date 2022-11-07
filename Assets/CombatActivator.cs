@@ -30,10 +30,10 @@ public class CombatActivator : MonoBehaviour
         {
             _toasties = FindObjectsOfType<ToastieInstance>();
             _aliveEnemies = _toasties.Length;
-            if (!GameProgressController.HasAllPicDuMidiFilters())
-            {
-                _canFight = false;
-            }
+            //if (!GameProgressController.HasAllPicDuMidiFilters())
+            //{
+            //    _canFight = false;
+            //}
         }
         else if(!_isMicrowave)
         {
@@ -141,8 +141,7 @@ public class CombatActivator : MonoBehaviour
                     {
                         t.SetAttackZone(false);
                     }
-                }
-                    
+                }            
             }
         }
         CurrentSceneManager.SetGameState(GameStates.Exploration);

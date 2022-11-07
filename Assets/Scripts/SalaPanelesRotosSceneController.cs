@@ -45,7 +45,6 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
     [SerializeField] private DialogueTrigger _filtersDialog;
     private IEnumerator Start()
     {
-
         if (GameProgressController.PicDuMidiPuzzleCoronagraph)
         {
             if (!GameProgressController.PicDuMidiFindFiltersAdvice)
@@ -58,13 +57,12 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
     }
     public void FindFilters()
     {
-        GameEvents.ShowScreenText.Invoke("Find the filters");
+        GameEvents.MissionText.Invoke("Find all the filters");
     }
 
     public void LoadCoronagraph()
     {
         GameProgressController.PicDuMidiNeedContactUV = false;
         GameEvents.LoadScene.Invoke("Lomnicky_11_Sala Cupula FromPicDuMidi");
-
     }
 }

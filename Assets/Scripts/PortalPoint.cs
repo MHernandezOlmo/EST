@@ -7,11 +7,6 @@ public class PortalPoint : MonoBehaviour
     [SerializeField]
     int _point;
 
-    void Start()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (Time.timeSinceLevelLoad > 0.2f)
@@ -19,11 +14,5 @@ public class PortalPoint : MonoBehaviour
             GameProgressController.SetCurrentStartPoint(_point);
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

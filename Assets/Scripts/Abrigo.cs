@@ -16,7 +16,11 @@ public class Abrigo : Interactable
     {
         GameProgressController.PicDuMidiCoat = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("<b>Obtained Coat:</b>\nProtects from IR radiation");
+        GameEvents.ShowScreenText.Invoke("<b>Obtained Coat:</b>\n Blocks IR radiation");
+        if (GameProgressController.PicDuMidiGlasses)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         Destroy(gameObject);
     }
 }

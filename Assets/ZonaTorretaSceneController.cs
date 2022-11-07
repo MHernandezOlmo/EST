@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZonaTorretaSceneController : MonoBehaviour
 {
     [SerializeField] private DialogueTrigger _dialog;
-    
+    [SerializeField] private GameObject _adviceDetector;
 
     void Start()
     {
@@ -19,6 +19,6 @@ public class ZonaTorretaSceneController : MonoBehaviour
     {
         GameProgressController.PicDuMidiToastersAdvice = true;
         _dialog.gameObject.SetActive(false);
-        GameEvents.MissionText.Invoke("Enter CLIMSO coronograph");
+        _adviceDetector.SetActive(true);
     }
 }

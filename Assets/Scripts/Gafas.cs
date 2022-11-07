@@ -16,7 +16,11 @@ public class Gafas : Interactable
     {
         GameProgressController.PicDuMidiGlasses = true;
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        GameEvents.ShowScreenText.Invoke("<b>Obtained Sunglasses:</b>\nFilters from UV radiation");
+        GameEvents.ShowScreenText.Invoke("<b>Obtained Sunglasses:</b>\n Block UV radiation");
+        if (GameProgressController.PicDuMidiCoat)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         Destroy(gameObject);
     }
 }

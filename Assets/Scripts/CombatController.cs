@@ -7,7 +7,7 @@ public class CombatController : MonoBehaviour
     CombatTrigger _currentCombatTrigger;
     TransitionsController _transitionsController;
     CinemachineVirtualCamera _mainSceneCamera;
-    [SerializeField] private bool _isFreeZone;
+    [SerializeField] private bool _isFreeZone, _terraza;
     private bool _started;
     
     private void Awake()
@@ -40,7 +40,10 @@ public class CombatController : MonoBehaviour
 
     public void EndCombat()
     {
-        GameEvents.CombatEvent.Invoke(false);
+        if (!_terraza)
+        {
+            GameEvents.CombatEvent.Invoke(false);
+        }
         if(FindObjectOfType<CombatActivator>() == null)
         {
             GameEvents.ChangeGameState.Invoke(GameStates.Exploration);

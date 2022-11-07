@@ -18,8 +18,7 @@ public class SalaPanelesACSceneController : MonoBehaviour
         {
             GameProgressController.SetCurrentStartPoint(0);
         }
-        StartCoroutine(CrEnd());
-        
+        StartCoroutine(CrEnd());   
     }
     public void OpenCloset()
     {
@@ -62,11 +61,8 @@ public class SalaPanelesACSceneController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         _startingCamera.m_Priority = 0;
-        yield return new WaitForSeconds(2.5f);
-        
-        
-        _welcomeDialog.triggerDialogueEvent(true);
-        
+        yield return new WaitForSeconds(2.5f);          
+        _welcomeDialog.triggerDialogueEvent(true);   
     }
     public void EndWelcome()
     {

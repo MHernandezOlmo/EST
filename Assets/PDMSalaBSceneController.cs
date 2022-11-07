@@ -17,12 +17,8 @@ public class PDMSalaBSceneController : MonoBehaviour
             }
         }
     }
-    public void BackToCafe()
-    {
-        GameEvents.ShowScreenText.Invoke("Go back to the cafeteria");
-    }
-    void Update()
-    {
-        
-    }
+    //public void BackToCafe()
+    //{
+    //    GameEvents.ShowScreenText.Invoke("Go back to the cafeteria");
+    //}
 }

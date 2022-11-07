@@ -79,6 +79,4 @@ public class CoronografoController : MonoBehaviour
         _levelers[0].Activate();
 
     }
-
-
 }

@@ -8,6 +8,7 @@ public class PortalCafeteria : MonoBehaviour
     [SerializeField] DialogueTrigger trigger;
     [SerializeField] BoxCollider _boxCollider;
     [SerializeField] private int portal;
+    private bool _shown;
     private void OnTriggerEnter(Collider other)
     {
         if (Time.timeSinceLevelLoad < 0.2f)
@@ -25,13 +26,16 @@ public class PortalCafeteria : MonoBehaviour
             {
                 GameProgressController.SetCurrentStartPoint(0);
                 GameEvents.LoadScene.Invoke("PicDuMidi_2_terraza_antena");
-            }
-            
+            }    
         }
         else
         {
             FindObjectOfType<SalaPanelesACSceneController>().OpenCloset();
-            trigger.triggerDialogueEvent(true);
+            if (!_shown)
+            {
+                trigger.triggerDialogueEvent(true);
+                _shown = true;
+            }
         }
     }
     void Start()

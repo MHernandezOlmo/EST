@@ -22,10 +22,14 @@ public class PiezaFiltro : Interactable
         }
         if(filterAmount == 5)
         {
-            GameEvents.MissionText.Invoke("Test the filters at the telescope control room");
+            StartCoroutine(CrMission());
+            IEnumerator CrMission()
+            {
+                yield return new WaitForSeconds(4f);
+                GameEvents.MissionText.Invoke("Test the filters at the telescope control room");
+            }
         }
-        GameEvents.ShowScreenText.Invoke("Obtained: "+_filterNames[_pieza]+" filter\n"+filterAmount+"/5");
-
+        GameEvents.ShowScreenText.Invoke("Obtained:\n" + _filterNames[_pieza]+" filter "+filterAmount+"/5");
         FindObjectOfType<InteractablesController>().RemoveInteractable(this);
         Destroy(transform.root.gameObject);
     }
