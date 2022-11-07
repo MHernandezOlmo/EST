@@ -152,6 +152,10 @@ public class BombaVacioController : MonoBehaviour
         _pressure.color = Color.green;
         yield return new WaitForSeconds(1f);
         GameProgressController.SSTVacuumSystemFixed =true;
+        if (GameProgressController.SSTColdSystemFixed)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         _mainPuzzleController.Win();
     }
     IEnumerator UpdatePressure(float _amount)

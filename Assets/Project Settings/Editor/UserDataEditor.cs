@@ -295,7 +295,7 @@ public class UserDataEditor : EditorWindow
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Puzzle Pairs", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._SSTColaborativeAlert = EditorGUILayout.Toggle(_gameProgressData._SSTColaborativeAlert, GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._SSTPuzzlePairs = EditorGUILayout.Toggle(_gameProgressData._SSTPuzzlePairs, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();

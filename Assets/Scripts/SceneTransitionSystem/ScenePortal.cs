@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public struct SpawnInfo
 {
@@ -38,6 +39,13 @@ public class ScenePortal : MonoBehaviour
 				FindObjectOfType<PlayerController>().OnExit();
 
 			}
+            if (targetScene.SceneName == "SST_4_sala_observacion" && SceneManager.GetActiveScene().name == "SST_4_sala_escudo")
+            {
+				if (GameProgressController.SSTShieldSkill)
+                {
+					FindObjectOfType<SalaEscudoSceneController>().Mission();
+                }
+            }
 			//other.GetComponent<MovementController>().autopilot = LeavingAutopilotPoint;
             GameEvents.LoadScene.Invoke(targetScene.SceneName);
 			//LevelLoader.LoadLevel(targetScene); // TO DO: make this not automatic
