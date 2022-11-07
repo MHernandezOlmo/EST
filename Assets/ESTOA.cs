@@ -25,6 +25,7 @@ public class ESTOA : Interactable
         if (!_interacted)
         {
             _interacted = true;
+            GameEvents.ShowScreenText.Invoke("Adaptive Optics calibrated");
             _dialogToTrigger.triggerDialogueEvent(true);
             GameProgressController.ESTOA = true;
             FindObjectOfType<MissionCanvasController>().HideMission();

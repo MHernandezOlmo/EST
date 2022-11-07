@@ -42,7 +42,7 @@ public class MissionCanvasController : MonoBehaviour
         }
         if (!GameProgressController.ESTHR)
         {
-            _missionsText.text = "Activate the Heat Rejecter";
+            _missionsText.text = "Activate the heat rejecter";
             return;
         }
         gameObject.SetActive(false);

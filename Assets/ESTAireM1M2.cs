@@ -29,10 +29,9 @@ public class ESTAireM1M2 : Interactable
             StartCoroutine(TriggerDialoGue());
             GameProgressController.ESTAireM1M2 = true;
             FindObjectOfType<MissionCanvasController>().HideMission();
-            GameEvents.ShowScreenText.Invoke("“Primary and secondary mirrors, cooled");
+            GameEvents.ShowScreenText.Invoke("Primary and secondary mirrors cooled");
 
         }
-
     }
     IEnumerator TriggerDialoGue()
     {
@@ -45,10 +44,5 @@ public class ESTAireM1M2 : Interactable
     public void SetDialog(DialogueTrigger _trigger)
     {
         _dialogToTrigger = _trigger;
-    }
-
-    public void LoadOtherScene()
-    {
-
     }
 }
