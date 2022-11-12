@@ -160,7 +160,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1783650646}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 55
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -181,8 +181,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32397300}
-  m_LocalRotation: {x: -0.06924887, y: 0.92875755, z: -0.28677657, w: -0.22443996}
-  m_LocalPosition: {x: -3.13, y: 6.16, z: 6.06}
+  m_LocalRotation: {x: -0.05099936, y: 0.9477442, z: -0.19676328, w: -0.24589474}
+  m_LocalPosition: {x: -2.786, y: 4.612, z: 6.214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 938146055}
@@ -1334,7 +1334,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 55
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1359,8 +1359,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761857499}
-  m_LocalRotation: {x: -0.06924887, y: 0.92875755, z: -0.28677657, w: -0.22443996}
-  m_LocalPosition: {x: -3.13, y: 6.16, z: 6.06}
+  m_LocalRotation: {x: -0.05099936, y: 0.9477442, z: -0.19676328, w: -0.24589474}
+  m_LocalPosition: {x: -2.786, y: 4.612, z: 6.214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1792,7 +1792,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ba7fbdd5d9976e74699d5ed177afc76f, type: 2}
+  - {fileID: 2100000, guid: 85a62416d80e6204c9ef571f7010d86f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -15.836924, y: 0.0013370514, z: -17.635538}
+  m_FollowOffset: {x: -15.501924, y: -1.6276631, z: -17.471539}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2528,7 +2528,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ba7fbdd5d9976e74699d5ed177afc76f, type: 2}
+  - {fileID: 2100000, guid: 2c693c2ba721a27459b1e685b16c7e81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4757,6 +4757,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.15400001
       objectReference: {fileID: 0}
+    - target: {fileID: 1648577841855469092, guid: 76b1d7ccc2b37864a94c2b3acac029aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85a62416d80e6204c9ef571f7010d86f, type: 2}
     - target: {fileID: 1722916447432886131, guid: 76b1d7ccc2b37864a94c2b3acac029aa,
         type: 3}
       propertyPath: m_StaticEditorFlags
