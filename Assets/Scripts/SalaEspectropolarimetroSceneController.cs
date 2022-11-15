@@ -102,12 +102,18 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     }
     public void AnimateSpectropolarimetro()
     {
-        _ray2.SetActive(false);
-        _rayoBifurcadoL.SetActive(false);
-        _rayoBifurcadoR.SetActive(false);
-        _ray1.GetComponent<LineRenderer>().SetPosition(1, new Vector3(-0.2892f, 1.41478f, -14.16f));
-        _animator.SetTrigger("Save");
-        StartCoroutine(Advice());
+        StartCoroutine(WaitForSave());
+        IEnumerator WaitForSave()
+        {
+            yield return new WaitForSeconds(2f);
+            _animator.SetTrigger("Save");
+            _ray2.SetActive(false);
+            _rayoBifurcadoL.SetActive(false);
+            _rayoBifurcadoR.SetActive(false);
+            _ray1.GetComponent<LineRenderer>().SetPosition(1, new Vector3(-0.2892f, 1.41478f, -14.16f));
+
+            StartCoroutine(Advice());
+        }
     }
     public void SaveEspectropolarimetro()
     {

@@ -65,4 +65,8 @@ public class ScreenMessagesController : MonoBehaviour
         _counter++;
         StartCoroutine(CrShowText());
     }
+    private void Update()
+    {
+
+    }
 }

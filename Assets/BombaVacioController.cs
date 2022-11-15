@@ -32,11 +32,11 @@ public class BombaVacioController : MonoBehaviour
         _values.Add(0.9f);
         _values.Add(0.65f);
         _pressureChanges= new List<float>();
-        _pressureChanges.Add(-1.2f);
-        _pressureChanges.Add(-0.8f);
-        _pressureChanges.Add(-0.5f);
-        _pressureChanges.Add(-0.3f);
-        _pressureValue = 3f;
+        _pressureChanges.Add(-60f);
+        _pressureChanges.Add(-20f);
+        _pressureChanges.Add(-10f);
+        _pressureChanges.Add(-6f);
+        _pressureValue = 100f;
         while (!_playing)
         {
             yield return null;

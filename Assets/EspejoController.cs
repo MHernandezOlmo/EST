@@ -34,7 +34,7 @@ public class EspejoController : MonoBehaviour
         set
         {
             _robotKills = value;
-            _robotsCount.SetText("Robots: "+_robotKills + "/30");
+            _robotsCount.SetText("Machines: "+_robotKills + "/30");
         }
     }
     public void StartGame()
@@ -66,6 +66,10 @@ public class EspejoController : MonoBehaviour
         {
             _elapsedTime += Time.deltaTime;
             _image.fillAmount = 1 - (_elapsedTime / _totalTime);
+            if(_elapsedTime > _totalTime)
+            {
+                FindObjectOfType<PuzzleStatesController>().GameOver();
+            }
         }
         if (_robotKills == 30)
         {

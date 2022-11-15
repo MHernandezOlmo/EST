@@ -9,6 +9,7 @@ public class ProjectorInteractable : Interactable
     [SerializeField] SpriteRenderer _filtroSR;
     [SerializeField] GameObject _projectorCanvas;
     [SerializeField] DialogueTrigger _dialog;
+    [SerializeField] GameObject _info;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class ProjectorInteractable : Interactable
         {
             _projectorCamera.SetActive(true);
             _projectorCanvas.SetActive(true);
+            _info.SetActive(false);
             CurrentSceneManager._canMove = false;
         }
         else
@@ -32,6 +34,7 @@ public class ProjectorInteractable : Interactable
     {
         _projectorCamera.SetActive(false);
         _projectorCanvas.SetActive(false);
+        _info.SetActive(true);
         _filtroSR.sprite = _filtros[5];
         CurrentSceneManager._canMove = true;
     }

@@ -275,6 +275,7 @@ public class PlayerController : MonoBehaviour
                 }
                 if (_currentCharacter == Character.Goran)
                 {
+                    print("-->"+_combatButton.activeSelf);
                     if (CurrentSceneManager._canSpin)
                     {
                         CurrentSceneManager._canSpin = false;

@@ -278,6 +278,15 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+    public static void ResetFilters()
+    {
+        CheckInitialized();
+        for (int i = 0; i < _gameProgressData._picDuMidiFilters.Length; i++)
+        {
+            _gameProgressData._picDuMidiFilters[i] = false;
+        }
+        SaveGameProgressData();
+    }
 
     public static bool PicDuMidiSolved
     {
@@ -1013,6 +1022,16 @@ public class GameProgressController : MonoBehaviour
             SaveGameProgressData();
         }
     }
+    public static void ResetGregorHRPieces()
+    {
+        CheckInitialized();
+        for (int i = 0; i < _gameProgressData._gregorHRPieces.Length; i++)
+        {
+            _gameProgressData._gregorHRPieces[i] = false;
+        }
+        SaveGameProgressData();
+    }
+
     public static bool GregorTestedHR
     {
         get

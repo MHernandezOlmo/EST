@@ -48,6 +48,7 @@ public class PlayerInput : MonoBehaviour
 	void Update()
 	{
 		_Joystick = Vector2.right * touchJoystick.Horizontal + Vector2.up * touchJoystick.Vertical;
+
 		HandleGamepadInput();
 	}
 
@@ -61,7 +62,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		touchJoystick.SetGamepadInput(Vector2.ClampMagnitude(Vector2.right * Input.GetAxis("Horizontal") + Vector2.up * Input.GetAxis("Vertical"), 1f));
 
-		if (Input.GetButtonDown("Action") || Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetButtonDown("Action") )
 		{
 			AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIInstant);
 			var pointer = new PointerEventData(EventSystem.current);
@@ -69,7 +70,7 @@ public class PlayerInput : MonoBehaviour
 			ExecuteEvents.Execute(contextButton.gameObject, pointer, ExecuteEvents.pointerDownHandler);
 		}
 
-		if (Input.GetButtonUp("Action") || Input.GetKeyUp(KeyCode.Space))
+		if (Input.GetButtonUp("Action") )
 		{
 			var pointer = new PointerEventData(EventSystem.current);
 			ExecuteEvents.Execute(contextButton.gameObject, pointer, ExecuteEvents.pointerUpHandler);

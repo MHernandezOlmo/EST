@@ -8,7 +8,8 @@ public class AsociacionElementosController : MonoBehaviour
     [SerializeField] Sprite[] _brightPoints, _filaments, _flares, _loops,  _spicules, _sunSpots;
     [SerializeField] SpriteRenderer _targetPhenomenom;
     [SerializeField] TextMeshProUGUI _progress;
-    List<Sprite[]> _phenomenoms;
+    List<List<Sprite>> _phenomenoms;
+    List<int> _alreadySeenFilaments, _alreadySeenLoops, _alreadySeenSpicules, _alreadySeenSunSpots;
     float _totalTime;
     float _gameTime;
     bool _playing;
@@ -17,7 +18,7 @@ public class AsociacionElementosController : MonoBehaviour
     int _selectedGroup;
     Camera _camera;
     int successAnswers;
-    int neededAnswers = 10;
+    int neededAnswers = 15;
     PuzzleStatesController _puzzleMainController;
     public void SelectGroup(int currentGroup)
     {
@@ -65,13 +66,15 @@ public class AsociacionElementosController : MonoBehaviour
 
     public void UpdatePhenomenom()
     {
-        int[] possiblePhenomenoms = new int[] {1, 3,4,5};
+        int[] possiblePhenomenoms = new int[] {1,3,4,5};
         int previous = _currentPhenomenom;
         do
         {
             _currentPhenomenom = possiblePhenomenoms[Random.Range(0, possiblePhenomenoms.Length)];
         } while (_currentPhenomenom == previous);
-        _targetPhenomenom.sprite = _phenomenoms[_currentPhenomenom][Random.Range(0, _phenomenoms[_currentPhenomenom].Length)];
+        int random = Random.Range(0, _phenomenoms[_currentPhenomenom].Count);
+        _targetPhenomenom.sprite = _phenomenoms[_currentPhenomenom][random];
+        _phenomenoms[_currentPhenomenom].RemoveAt(random);
     }
     
     void Start()
@@ -80,13 +83,14 @@ public class AsociacionElementosController : MonoBehaviour
         _puzzleMainController = FindObjectOfType<PuzzleStatesController>();
         _gameTime = 60;
         _totalTime= 60;
-        _phenomenoms = new List<Sprite[]>();
-        _phenomenoms.Add(_brightPoints);
-        _phenomenoms.Add(_filaments);
-        _phenomenoms.Add(_flares);
-        _phenomenoms.Add(_loops);
-        _phenomenoms.Add(_spicules);
-        _phenomenoms.Add(_sunSpots);
+        _phenomenoms = new List<List<Sprite>>();
+        _phenomenoms.Add(new List<Sprite>(_brightPoints));
+        _phenomenoms.Add(new List<Sprite>(_filaments));
+        _phenomenoms.Add(new List<Sprite>(_flares));
+        _phenomenoms.Add(new List<Sprite>(_loops));
+        _phenomenoms.Add(new List<Sprite>(_spicules));
+        _phenomenoms.Add(new List<Sprite>(_sunSpots));
+
         UpdatePhenomenom();
     }
 

@@ -10,7 +10,6 @@ public class AutoAttack : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         _elapsedTime += Time.deltaTime;

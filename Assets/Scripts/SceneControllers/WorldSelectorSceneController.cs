@@ -4,6 +4,7 @@ using UnityEngine;
 using Lean.Localization;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class WorldSelectorSceneController : MonoBehaviour
 {
@@ -13,20 +14,25 @@ public class WorldSelectorSceneController : MonoBehaviour
     [SerializeField] private Image[] _worldLockImages;
     [SerializeField] private Button[] _worldButtons;
     [SerializeField] private TextMeshProUGUI[] _worldNamesText;
-    public void ResetLomnicky()
+    const string _gameProgressFileName = "GameProgressData.json";
+
+    public void Reset()
     {
+        bool lomnickySolved = GameProgressController.LomnickySolved;
+        bool einsteinSolved = GameProgressController.EinsteinSolved;
+        bool picdumidisolved = GameProgressController.PicDuMidiSolved;
+        bool gregorSolved = GameProgressController.GregorFinished;
+        bool sstSolved = GameProgressController.SSTSolved;
+        bool estSolved = GameProgressController.ESTFinished;
         PlayerPrefs.DeleteAll();
-        GameProgressController.LomnickyClosedCeiling = false;
-        GameProgressController.LomnickyTornadoSkill = false;
-        GameProgressController.LomnickyFuse = false;
-        GameProgressController.LomnickyMotor = false;
-        GameProgressController.LomnickyClosedCeiling = false;
-        GameProgressController.LomnickyCountdown = false;
-        GameProgressController.LomnickyCountdownTime = 0f;
-        GameProgressController.LomnickyPuzzleFlareHunters = false;
-        GameProgressController.LomnickyRecopiledDataAdvice = false;
-        GameProgressController.ResetPiezaCamara();
-        GameProgressController.LomnickyPuzzleLayers = false;
+        File.Delete(Application.persistentDataPath + "/" + _gameProgressFileName);
+        GameProgressController.LomnickySolved = lomnickySolved;
+        GameProgressController.EinsteinSolved= einsteinSolved;
+        GameProgressController.PicDuMidiSolved= picdumidisolved;
+        GameProgressController.GregorFinished= gregorSolved;
+        GameProgressController.SSTSolved= sstSolved;
+        GameProgressController.ESTFinished= estSolved;
+
     }
     public void BackHome()
     {
@@ -91,6 +97,7 @@ public class WorldSelectorSceneController : MonoBehaviour
 
     public void LoadWorld(int world)
     {
+        Reset();
         GameProgressController.SetCurrentStartPoint(0);
         switch (world)
         {

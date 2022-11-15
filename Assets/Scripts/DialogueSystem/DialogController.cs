@@ -52,7 +52,13 @@ public class DialogController : MonoBehaviour
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UIPanelDisappear);
         GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Next();
+        }
+    }
     public void Refresh()
     {
         string name = "Sprites/DNI Portraits/" + _currentDialogue.speakerFaces[_counter].ToString();

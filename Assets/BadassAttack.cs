@@ -43,7 +43,6 @@ public class BadassAttack : MonoBehaviour
             CheckPlayer();
             _aura.SetActive(false);
         }
-
     }
     public IEnumerator CrExplodeAgain()
     {
