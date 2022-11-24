@@ -48,6 +48,7 @@ public class CoronografoController : MonoBehaviour
             if (_currentStep == 3)
             {
                 _eclipse.rectTransform.localScale = (Vector3.one * 0.33f) * _currentStep;
+                _photoFrameBehaviour.StopSun();
                 _stopButton.SetActive(false);
                 _takePhotoButton.SetActive(true);
             }

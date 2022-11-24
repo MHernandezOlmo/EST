@@ -23,7 +23,7 @@ public class SunShake : MonoBehaviour
     {
         if (!_estabilized)
         {
-            rt.anchoredPosition =new Vector2(Random.Range(-2, 2), Random.Range(-2, 2));
+            rt.anchoredPosition =new Vector2(Random.Range(-4, 4), Random.Range(-4, 4));
         }
         
     }

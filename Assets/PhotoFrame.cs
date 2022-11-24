@@ -18,6 +18,11 @@ public class PhotoFrame : MonoBehaviour
     bool _canTakePhoto;
     [SerializeField] Image _photoProgress;
     SunShake _sunShake;
+    bool _takingPhoto;
+    public void StopSun()
+    {
+        _takingPhoto = true;
+    }
     void Start()
     {
         _sunShake = GetComponentInChildren<SunShake>();
@@ -71,6 +76,10 @@ public class PhotoFrame : MonoBehaviour
         _canTakePhoto = false;
         _moveCounter++;
         Vector2 _targetPosition = new Vector2(Random.Range(120, 200), Random.Range(120, 200));
+        if (_takingPhoto)
+        {
+            _targetPosition = Vector2.zero;
+        }
         bool stop = false; ;
         if (_moveCounter % 5 == 0)
         {
@@ -102,7 +111,10 @@ public class PhotoFrame : MonoBehaviour
     }
     void Update()
     {
+
         _myRectTransform.anchoredPosition = Vector2.Lerp(_myRectTransform.anchoredPosition, _rectTransform.anchoredPosition, Time.deltaTime);
+        
+
         //if (_active)
         //{
         //    _elapsedTime += Time.deltaTime;
