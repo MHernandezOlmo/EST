@@ -102,10 +102,12 @@ public class SolarPediaController : MonoBehaviour
         _content.text = _contents[entry][subentry];
 
         string mainDirectory = GetDirectoryName(entry, subentry);
-        
 
-        Sprite sprite = Resources.Load<Sprite>($"{mainDirectory}/img");
-        TextAsset mytxtData = (TextAsset)Resources.Load($"{mainDirectory}/credit");
+
+        //Sprite sprite = Resources.Load<Sprite>($"{mainDirectory}/img");
+        //TextAsset mytxtData = (TextAsset)Resources.Load($"{mainDirectory}/credit");
+        Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img");
+        TextAsset mytxtData = (TextAsset)Resources.Load($"SolarpediaSprites/{entry}/{subentry}/credit");
         string credits = "";
         if (mytxtData != null)
         {
@@ -184,9 +186,9 @@ public class SolarPediaController : MonoBehaviour
 
         string mainDirectory = GetDirectoryName(entry, subentry);
 
-        Sprite sprite = Resources.Load<Sprite>($"{mainDirectory}/img") as Sprite;
+        Sprite sprite = Resources.Load<Sprite>($"SolarpediaSprites/{entry}/{subentry}/img");
+        TextAsset mytxtData = (TextAsset)Resources.Load($"SolarpediaSprites/{entry}/{subentry}/credit");
         string credits = "";
-        TextAsset mytxtData = (TextAsset)Resources.Load($"{mainDirectory}/credit");
 
         if (mytxtData != null)
         {
