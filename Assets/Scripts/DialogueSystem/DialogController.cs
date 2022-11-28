@@ -16,6 +16,7 @@ public class DialogController : MonoBehaviour
     [SerializeField]
     GameObject _nextButton;
     [SerializeField] private Color[] _characterColors;
+    bool _canClose;
     public void SetCurrentDialogue(TestDialogue newDialogue)
     {
         _currentDialogue = newDialogue;
@@ -24,9 +25,14 @@ public class DialogController : MonoBehaviour
     {
         GameEvents.eDialogue.AddListener(ShowDialogue);
     }
+    private void OnEnable()
+    {
+        _canClose = false;
+    }
 
     public void Next()
     {
+        _canClose = false;
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UINext);
         _counter++;
         if (_counter<_currentDialogue.speakerFaces.Length)
@@ -54,9 +60,12 @@ public class DialogController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_canClose)
         {
-            Next();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Next();
+            }
         }
     }
     public void Refresh()
@@ -79,9 +88,13 @@ public class DialogController : MonoBehaviour
         _mainText.text = translatedText.Replace('%', '\n').Replace('$', '"');
         yield return new WaitForSeconds(0.5f);
         _nextButton.SetActive(true);
+        yield return null;
+        yield return null;
+        _canClose = true;
     }
     void ShowDialogue(bool state)
     {
+        _canClose = false;
         _counter = 0;
         if (state)
         {
@@ -91,7 +104,6 @@ public class DialogController : MonoBehaviour
         {
             GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
         }
-
         _mainText.gameObject.SetActive(true);
         Refresh();
     }
