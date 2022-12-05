@@ -296,10 +296,10 @@ public class MusicManager : MonoBehaviour
 
     public MusicCode GetDefMusicCode()
     {
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            return MusicCode.Menu;
-        }
+        //if (SceneManager.GetActiveScene().name == "MainMenu")
+        //{
+        //    return MusicCode.Menu;
+        //}
         MusicCode defCode = MusicCode.EST;
         char firstChar = GameProgressController.GetCurrentScene()[0];
         switch (firstChar)

@@ -106,8 +106,8 @@ public class MainMenuSceneController : MonoBehaviour
     public void ContinueGame()
     {
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UISelectMenu);
-        AudioEvents.playDefMusic.Invoke();
         GameEvents.LoadScene.Invoke(GameProgressController.GetCurrentScene());
+        AudioEvents.playDefMusic.Invoke();
     }
 
     public void ExitGame()
