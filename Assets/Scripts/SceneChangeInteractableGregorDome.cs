@@ -33,6 +33,6 @@ public class SceneChangeInteractableGregorDome : Interactable
     public void LaunchPanel()
     {
         PlayerPrefs.SetInt("BlockDoor",1);
-        GameEvents.ShowScreenText.Invoke("<size=80%>Find the tunnels to GREGOR from the VTT telescope");
+        //GameEvents.ShowScreenText.Invoke("<size=80%>Find the tunnels to GREGOR from the VTT telescope");
     }
 }

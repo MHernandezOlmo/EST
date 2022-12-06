@@ -49,7 +49,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
 
     public void StartPaintMission()
     {
-        GameEvents.ShowScreenText.Invoke("Climb the ladder and paint the tower");
+        //GameEvents.ShowScreenText.Invoke("Climb the ladder and paint the tower");
     }
 
     public void RestoreCam()
