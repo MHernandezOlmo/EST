@@ -120,6 +120,7 @@ public class CombatTrigger : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<MusicManager>().PlayMusicTransition(FindObjectOfType<MusicManager>().GetLastRandomMusicIndex());
                 _customCollider.SetActive(false);
             }
         }
