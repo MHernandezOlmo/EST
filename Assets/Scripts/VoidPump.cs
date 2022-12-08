@@ -15,6 +15,7 @@ public class VoidPump : Interactable
     }
     public override void Interact()
     {
+        GameProgressController.SetCurrentStartPoint(1);
         GameEvents.LoadScene.Invoke("SSTPuzzleVacuumPump");
     }
 }
