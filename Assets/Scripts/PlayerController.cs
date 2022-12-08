@@ -143,7 +143,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-
                 GameEvents.LoadScene.Invoke(SceneManager.GetActiveScene().name);
             }
         }

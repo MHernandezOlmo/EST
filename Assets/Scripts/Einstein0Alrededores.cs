@@ -35,9 +35,17 @@ public class Einstein0Alrededores : MonoBehaviour
         if (!GameProgressController.EinsteinUsedPrism)
         {
             _player = FindObjectOfType<MovementController>();
-            //_player.autopilot = new Vector3(2.7f, 0.7f, -1.67f);
-            GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
-            StartCoroutine(CrStart());
+            if (!GameProgressController.EinsteinOpenBarrier)
+            {
+                //_player.autopilot = new Vector3(2.7f, 0.7f, -1.67f);
+                GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
+                StartCoroutine(CrStart());
+            }
+            else
+            {
+                _startingCamera.m_Priority = 0;
+                CurrentSceneManager._canMove = true;
+            }
         }
         else
         {
@@ -68,6 +76,5 @@ public class Einstein0Alrededores : MonoBehaviour
             yield return null;
         }
         GameEvents.ShowScreenText.Invoke("Get the spectropolarimeter");
-
     }
 }

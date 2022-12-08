@@ -10,13 +10,16 @@ public class PrismaController : MonoBehaviour
     [SerializeField] Transform _startLeft;
     [SerializeField] Transform _StartRight;
     [SerializeField] SolarPanel _leftSolarPanel, _rightSolarPanel;
-    [SerializeField] GameObject _targetPivot;
+    [SerializeField] GameObject _targetPivot, _dialog;
     [SerializeField] Transform _barrier;
     bool _openBarrier;
 
     private void Start()
     {
-
+        if (GameProgressController.EinsteinOpenBarrier)
+        {
+            _dialog.SetActive(false);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -57,5 +60,6 @@ public class PrismaController : MonoBehaviour
         }
         _barrier.transform.localRotation = Quaternion.Euler(0, 75, 0);
         GameEvents.MissionText.Invoke("Enter the Einstein Tower");
+        GameProgressController.SetCurrentStartPoint(2);
     }
 }

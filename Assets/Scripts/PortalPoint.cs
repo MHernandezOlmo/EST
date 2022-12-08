@@ -13,6 +13,5 @@ public class PortalPoint : MonoBehaviour
         {
             GameProgressController.SetCurrentStartPoint(_point);
         }
-
     }
 }

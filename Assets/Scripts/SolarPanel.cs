@@ -11,6 +11,14 @@ public class SolarPanel : MonoBehaviour
     void Start()
     {
         _ledIndicator.material = _red;
+        if (GameProgressController.EinsteinOpenBarrier)
+        {
+            _active = true;
+        }
+        else
+        {
+            _active = false;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
