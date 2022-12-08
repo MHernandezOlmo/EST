@@ -10,6 +10,7 @@ public class PiezaFiltro : Interactable
     string[] _filterNames = new string[] { "H-Alpha", "G band", "Ca II H", "CN band", "TiO"}; 
     public override void Interact()
     {
+        GameEvents.ClearMissionText.Invoke();
         GameProgressController.SetPicDuMidiFilter(_pieza, true);
         int filterAmount=0;
 
@@ -20,18 +21,25 @@ public class PiezaFiltro : Interactable
                 filterAmount++;
             }
         }
-        if(filterAmount == 5)
+        GameEvents.ShowScreenText.Invoke("Obtained:\n" + _filterNames[_pieza] + " filter " + filterAmount + "/5");
+        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
+        if (filterAmount == 5)
         {
-            StartCoroutine(CrMission());
-            IEnumerator CrMission()
+            DontDestroyOnLoad(transform.root.gameObject);
+            StartCoroutine(CrDestroy());
+            IEnumerator CrDestroy()
             {
-                yield return new WaitForSeconds(4f);
+                Destroy(transform.parent.GetChild(0).gameObject);
+                transform.parent.GetComponent<MeshRenderer>().enabled = false;
+                yield return new WaitForSeconds(5f);
                 GameEvents.MissionText.Invoke("Test the filters at the telescope control room");
+                Destroy(transform.root.gameObject);
             }
         }
-        GameEvents.ShowScreenText.Invoke("Obtained:\n" + _filterNames[_pieza]+" filter "+filterAmount+"/5");
-        FindObjectOfType<InteractablesController>().RemoveInteractable(this);
-        Destroy(transform.root.gameObject);
+        else
+        {
+            Destroy(transform.root.gameObject);
+        }
     }
     private void Start()
     {
