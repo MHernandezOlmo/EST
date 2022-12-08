@@ -17,6 +17,17 @@ public class Einstein0Alrededores : MonoBehaviour
     [SerializeField] GameObject _outsideCollider;
     [SerializeField] private Cinemachine.CinemachineVirtualCamera vCam;
     [SerializeField] private GameObject _skillLockCollider;
+    private int _remainingKills;
+
+    public void KillTV() 
+    {
+        _remainingKills--;
+        if (_remainingKills <= 0)
+        {
+            PlayerPrefs.SetInt("PieceToSecure", 2);
+            GameEvents.LoadScene.Invoke("SecurePiece");
+        }
+    }
     public void DisableCombatCollider()
     {
         _outsideCollider.gameObject.SetActive(false);
@@ -32,6 +43,7 @@ public class Einstein0Alrededores : MonoBehaviour
 
     void Start()
     {
+        _remainingKills = 6;
         if (!GameProgressController.EinsteinUsedPrism)
         {
             _player = FindObjectOfType<MovementController>();
