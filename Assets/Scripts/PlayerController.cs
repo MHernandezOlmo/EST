@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour
             _elapsedShootTime += Time.deltaTime;
             
         }
-        if (PlayerInput._ContextButtonDown)
+        if (PlayerInput._ContextButtonDown || Input.GetKeyDown(KeyCode.Space))
         {
 
             if(!_combatButton.activeSelf && _interactButton.activeSelf)
