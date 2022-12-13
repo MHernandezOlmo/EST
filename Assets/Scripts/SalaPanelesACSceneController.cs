@@ -33,7 +33,8 @@ public class SalaPanelesACSceneController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (GameProgressController.PicDuMidiPuzzleAssociation)
         {
-            _endTrigger.triggerDialogueEvent(true);
+            LoadMenu();
+            //_endTrigger.triggerDialogueEvent(true);
         }
     }
 

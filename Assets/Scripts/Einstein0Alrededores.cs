@@ -24,7 +24,7 @@ public class Einstein0Alrededores : MonoBehaviour
         _remainingKills--;
         if (_remainingKills <= 0)
         {
-            PlayerPrefs.SetInt("PieceToSecure", 2);
+            PlayerPrefs.SetInt("PieceToSecure", 1);
             GameEvents.LoadScene.Invoke("SecurePiece");
         }
     }

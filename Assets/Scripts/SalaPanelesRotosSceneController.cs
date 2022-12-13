@@ -52,9 +52,11 @@ public class SalaPanelesRotosSceneController : MonoBehaviour
                 GameProgressController.PicDuMidiFindFiltersAdvice = true;
                 yield return new WaitForSeconds(1f);
                 _filtersDialog.triggerDialogueEvent(true);
+                print("?");
             }
         }
     }
+
     public void FindFilters()
     {
         GameEvents.MissionText.Invoke("Find all the filters");

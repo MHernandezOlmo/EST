@@ -10,6 +10,7 @@ public class CameraSecuredSceneController : MonoBehaviour
     IEnumerator Start()
     {
         _pieze = (PiezesToSecure)PlayerPrefs.GetInt("PieceToSecure");
+        print(_pieze.ToString());
         yield return new WaitForSeconds(1f);
         _piezesTrigger[(int)_pieze].triggerDialogueEvent(true);
         GameProgressController.SetCurrentScene("WorldSelector");
@@ -22,7 +23,7 @@ public class CameraSecuredSceneController : MonoBehaviour
                 GameProgressController.LomnickySolved = true;
                 break;
             case PiezesToSecure.Spectropolarimeter:
-                GameProgressController.LomnickySolved = true;
+                GameProgressController.EinsteinSolved = true;
                 break;
             case PiezesToSecure.Filters:
                 GameProgressController.PicDuMidiSolved = true;

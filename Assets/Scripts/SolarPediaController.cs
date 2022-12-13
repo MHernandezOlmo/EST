@@ -276,11 +276,11 @@ public class SolarPediaController : MonoBehaviour
         entries.Add(new List<string>() { "Coronal loops", "Coronal rain" });
         entries.Add(new List<string>() { "Flares", "Coronal mass ejections", "Solar wind", "Solar energetic particles", "Aurora", "Geomagnetic storm" });
         entries.Add(new List<string>() { "Lomnický štít", "Pic du Midi", "Teide Observatory", "Roque de los Muchachos" });
-        entries.Add(new List<string>() { "Lunette Jean Rösch", "CLIMSO coronograph", "Einstein Tower", "GREGOR", "SST", "EST"});
+        entries.Add(new List<string>() { "Lunette Jean Rösch", "CLIMSO coronagraph", "Einstein Tower", "GREGOR", "SST", "EST"});
         entries.Add(new List<string>() { "Solar Orbiter", "Parker Solar Probe", "HINODE",   "SUNRISE", "SOHO" });
         entries.Add(new List<string>() { "Types of solar telescopes", "Primary mirror", "Secondary mirror", "Heat rejecter", "Optical transfer system", "Building", "Dome", "Coelostat" });
         entries.Add(new List<string>() { "Wavelength", "Beam splitter", "Intereference filters", "Polarization of light", "Spectral lines" });
-        entries.Add(new List<string>() { "CCD camera", "Spectrograph", "Polarimeter", "Coronograph" });
+        entries.Add(new List<string>() { "CCD camera", "Spectrograph", "Polarimeter", "Coronagraph" });
         entries.Add(new List<string>() { "Getting rid of heat", "Seeing", "Minimising seeing", "Adaptive optics", "Spectroscopy", "Spectropolarimetry", "Field Measurements", "Magnetogram", "Chromospheric lines", "Photospheric lines", "H-alpha line" });
 
         _credits = new List<List<string>>();

@@ -8,7 +8,7 @@ public class AdviceTerraza : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            GameEvents.MissionText.Invoke("Enter CLIMSO coronograph");
+            GameEvents.MissionText.Invoke("Enter CLIMSO coronagraph");
             Destroy(gameObject);
         }
     }

@@ -42,7 +42,7 @@ public class ScenePortalAlmacen : MonoBehaviour
             }
             else
 			{
-				GameEvents.ShowScreenText.Invoke("Reach the CLIMSO coronograph first!");
+				GameEvents.ShowScreenText.Invoke("Reach the CLIMSO coronagraph first!");
 
 			}
 			//LevelLoader.LoadLevel(targetScene); // TO DO: make this not automatic
