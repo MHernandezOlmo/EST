@@ -107,7 +107,40 @@ public class MainMenuSceneController : MonoBehaviour
     {
         AudioEvents.playSoundWithName.Invoke(SFXManager.AudioCode.UISelectMenu);
         GameEvents.LoadScene.Invoke(GameProgressController.GetCurrentScene());
-        AudioEvents.playDefMusic.Invoke();
+        char firstChar = 'a';
+        char secondChar = 'a';
+        if (GameProgressController.GetCurrentScene().Length > 2)
+        {
+            firstChar = GameProgressController.GetCurrentScene()[0];
+            secondChar = GameProgressController.GetCurrentScene()[1];
+        }
+        if (firstChar == 'E' && secondChar == 'S')
+        {
+            if (GameProgressController.GetCurrentScene() == "EST_Cupula" && GameProgressController.MirrorAdvice)
+            {
+                AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_4);
+            }
+            else
+            {
+                int randomIndex = Random.Range(0, 3);
+                switch (randomIndex)
+                {
+                    case 0:
+                        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_2);
+                        break;
+                    case 1:
+                        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_3);
+                        break;
+                    case 2:
+                        AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_5);
+                        break;
+                }
+            }
+        }
+        else
+        {
+            AudioEvents.playDefMusic.Invoke();
+        }
     }
 
     public void ExitGame()

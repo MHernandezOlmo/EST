@@ -39,6 +39,11 @@ public class MusicManager : MonoBehaviour
         AudioEvents.unmuteMusic.AddListener(UnmuteMusic);
         AudioEvents.playDefMusic.AddListener(PlayDefMusic);
 
+        if(GameProgressController.GetCurrentScene() == "EST_Cupula" && GameProgressController.MirrorAdvice)
+        {
+            PlayMusicTransition(MusicCode.Epic_4);
+            return;
+        }
         if(FindObjectOfType<CurrentSceneManager>() != null)
         {
             if (FindObjectOfType<CurrentSceneManager>().IsExterior)
