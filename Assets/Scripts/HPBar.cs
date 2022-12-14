@@ -33,6 +33,7 @@ public class HPBar : MonoBehaviour
     public void SetPlayer(PlayerController pc)
     {
         _pc = pc;
+        
         _rectTransform = GetComponent<RectTransform>();
         _isPlayer = true;
         _mainCamera = Camera.main;

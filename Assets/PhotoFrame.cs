@@ -47,7 +47,7 @@ public class PhotoFrame : MonoBehaviour
         }
         _photoProgress.fillAmount = 0;
         _canCheck = false;
-        if (_myRectTransform.anchoredPosition.magnitude < 20f)
+        if (_canTakePhoto)
         {
             _image.color = Color.green;
             FindObjectOfType<CoronografoController>().Next();
@@ -96,15 +96,19 @@ public class PhotoFrame : MonoBehaviour
         }
         if (stop)
         {
+            _canTakePhoto = false;
             if (Random.value > 0.5f)
             {
-                yield return new WaitForSeconds(1f);
+                
+                yield return new WaitForSeconds(0.5f);
             }
             else
             {
                 _sunShake.SetEstabilized(true);
                 _canTakePhoto = true;
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(4f);
+                _canTakePhoto = false;
+
             }
         }
         StartCoroutine(CrMove());

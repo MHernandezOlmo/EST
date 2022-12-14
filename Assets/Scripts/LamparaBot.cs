@@ -44,6 +44,7 @@ public class LamparaBot : MonoBehaviour
 
     public IEnumerator CrMove()
     {
+        if(_animator == null) { _animator = GetComponent<Animator>(); }
         _animator.SetTrigger("Move");
         int targetPoint = Random.Range(0, _movePositions.Length);
         Vector3 startPosition = transform.position;
