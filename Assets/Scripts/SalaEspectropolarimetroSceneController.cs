@@ -17,7 +17,7 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     private bool _rayBlocked;
     public IEnumerator Advice()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         GameEvents.ShowScreenText.Invoke("Obtained spectropolarimeter");
     }
 

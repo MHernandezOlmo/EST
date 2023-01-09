@@ -165,7 +165,7 @@ public class EnemyController : MonoBehaviour
         }
         else if(_enemyType == EnemyType.TV)
         {
-            FindObjectOfType<CombatActivator>().KillEnemy();
+            //FindObjectOfType<CombatActivator>().KillEnemy();
             if (SceneManager.GetActiveScene().name == "Einstein_0_alrededores_torre")
             {
                 FindObjectOfType<Einstein0Alrededores>().KillTV();

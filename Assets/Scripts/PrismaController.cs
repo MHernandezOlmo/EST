@@ -50,7 +50,10 @@ public class PrismaController : MonoBehaviour
 
     IEnumerator CrOpenBarrier()
     {
-        GameEvents.ClearMissionText.Invoke();
+        if (!GameProgressController.EinsteinUsedPrism)
+        {
+            GameEvents.ClearMissionText.Invoke();
+        }
         for (float i = 0; i< 1f; i += Time.deltaTime)
         {
             Quaternion startRotation = Quaternion.Euler(0, 0, 0);
@@ -59,7 +62,10 @@ public class PrismaController : MonoBehaviour
             yield return null;
         }
         _barrier.transform.localRotation = Quaternion.Euler(0, 75, 0);
-        GameEvents.MissionText.Invoke("Enter the Einstein Tower");
-        GameProgressController.SetCurrentStartPoint(2);
+        if (!GameProgressController.EinsteinUsedPrism)
+        {
+            GameProgressController.SetCurrentStartPoint(2);
+            GameEvents.MissionText.Invoke("Enter the Einstein Tower");
+        }
     }
 }
