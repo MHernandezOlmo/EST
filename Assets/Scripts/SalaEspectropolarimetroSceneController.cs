@@ -19,8 +19,6 @@ public class SalaEspectropolarimetroSceneController : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         GameEvents.ShowScreenText.Invoke("Obtained spectropolarimeter");
-        yield return new WaitForSeconds(2.5f);
-        GameEvents.ShowScreenText.Invoke("Finish off the polarised TVs and leave");
     }
 
     public bool RayBlocked
