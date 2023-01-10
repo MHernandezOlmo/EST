@@ -26,7 +26,6 @@ public class SSTExteriors : MonoBehaviour
         if (!GameProgressController.SSTHasAO && GameProgressController.SSTShieldSkill)
         {
             yield return null;
-            AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_5);
             AOPiecesCanvas.SetActive(true);
             _piecesAO = GameProgressController.SSTAOPieces;
         }
@@ -46,6 +45,7 @@ public class SSTExteriors : MonoBehaviour
         GameProgressController.SSTAOPieces++;
         if(_piecesAO == 10)
         {
+            AudioEvents.playMusicTransitionWithMusicCode.Invoke(MusicManager.MusicCode.Epic_4);
             GameEvents.ClearMissionText.Invoke();
             GetAOTriggerDialog.triggerDialogueEvent();
         }

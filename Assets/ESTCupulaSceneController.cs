@@ -30,7 +30,6 @@ public class ESTCupulaSceneController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _test.triggerDialogueEvent();
     }
-
     public void PressButton(int index)
     {
         switch (index)
@@ -56,7 +55,6 @@ public class ESTCupulaSceneController : MonoBehaviour
         }
         StartCoroutine(CrRestoreButton(index));
     }
-
     IEnumerator CrRestoreButton(int index)
     {
         switch (index)
@@ -80,5 +78,4 @@ public class ESTCupulaSceneController : MonoBehaviour
                 break;
         }
     }
-
 }
