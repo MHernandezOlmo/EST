@@ -21,7 +21,6 @@ public class MusicManager : MonoBehaviour
     
     private void Start()
     {
-        print("CB");
         _lastRandomIndex = -1;
         transform.SetParent(null);
         DontDestroyOnLoad(this);
@@ -213,7 +212,6 @@ public class MusicManager : MonoBehaviour
     IEnumerator CrCheckMusicFinish(AudioSource asource)
     {
         bool detected = false;
-        print("jeje");
         while (asource.isPlaying)
         {
             if(asource.time > asource.clip.length - 4f && !detected)
@@ -225,7 +223,6 @@ public class MusicManager : MonoBehaviour
                     firstChar = GameProgressController.GetCurrentScene()[0];
                     secondChar = GameProgressController.GetCurrentScene()[1];
                 }
-                print(GameProgressController.GetCurrentScene());
                 if (GameProgressController.GetCurrentScene() == "EST_Cupula" && GameProgressController.MirrorAdvice)
                 {
                     PlayMusicTransition(MusicCode.Epic_5);
@@ -253,7 +250,6 @@ public class MusicManager : MonoBehaviour
 
     public void PlayRandomEpic()
     {
-        print("EE");
         int rIndex = Random.Range(0, 3);
         switch (rIndex)
         {
