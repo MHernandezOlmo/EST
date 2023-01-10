@@ -1086,8 +1086,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Remove the air from the telescope with this vacuum pump. You have to SET
-    THE RIGHT VACUUM LEVEL to avoid an excess of heating.
+  m_text: 'The liquid circulating in the cooling system protects the telescope from
+    heating.
+
+    Restore the system with the right proportion of water and glycol.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47315bd6f9b4a434bb6773dcc105fd0d, type: 2}
   m_sharedMaterial: {fileID: -7097640782908820028, guid: 47315bd6f9b4a434bb6773dcc105fd0d,
@@ -1115,7 +1117,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64.3
   m_fontSizeBase: 106.8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2079,7 +2081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &695155582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5216,7 +5218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vacuum Pump
+  m_text: Cooling System
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47315bd6f9b4a434bb6773dcc105fd0d, type: 2}
   m_sharedMaterial: {fileID: -7097640782908820028, guid: 47315bd6f9b4a434bb6773dcc105fd0d,
