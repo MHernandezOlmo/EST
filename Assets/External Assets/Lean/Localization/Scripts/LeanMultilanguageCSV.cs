@@ -20,7 +20,12 @@ namespace Lean.Localization
 			public string[] Translations;
 		}
 
-		public enum CacheType
+        public void LoadNow()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public enum CacheType
 		{
 			LoadImmediately,
 			LazyLoad,
@@ -239,6 +244,12 @@ namespace Lean.Localization
 				}
 			}
 		}
+
+		public void LoadNow()
+        {
+			Each(t => t.LoadFromSource());
+		}
 	}
+	
 }
 #endif
