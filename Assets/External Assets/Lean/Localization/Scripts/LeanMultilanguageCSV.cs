@@ -20,10 +20,6 @@ namespace Lean.Localization
 			public string[] Translations;
 		}
 
-        public void LoadNow()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public enum CacheType
 		{
@@ -153,6 +149,7 @@ namespace Lean.Localization
 		[ContextMenu("Load From Source")]
 		public void LoadFromSource()
 		{
+
 			if (Source != null && Languages.Length > 0)
 			{
 				for (var i = MultilanguageEntries.Count - 1; i >= 0; i--) // NOTE: Property
@@ -243,11 +240,6 @@ namespace Lean.Localization
 					EditorGUI.EndDisabledGroup();
 				}
 			}
-		}
-
-		public void LoadNow()
-        {
-			Each(t => t.LoadFromSource());
 		}
 	}
 	

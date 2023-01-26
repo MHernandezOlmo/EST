@@ -170,7 +170,7 @@ namespace Lean.Localization
 			PlayerPrefs.DeleteKey("LeanLocalization.CurrentLanguage");
 		}
 
-		private static void SaveNow()
+		public static void SaveNow()
 		{
 			PlayerPrefs.SetString("LeanLocalization.CurrentLanguage", currentLanguage);
 		}
