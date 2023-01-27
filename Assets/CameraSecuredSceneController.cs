@@ -10,7 +10,6 @@ public class CameraSecuredSceneController : MonoBehaviour
     IEnumerator Start()
     {
         _pieze = (PiezesToSecure)PlayerPrefs.GetInt("PieceToSecure");
-        print(_pieze.ToString());
         yield return new WaitForSeconds(1f);
         _piezesTrigger[(int)_pieze].triggerDialogueEvent(true);
         GameProgressController.SetCurrentScene("WorldSelector");
@@ -29,17 +28,13 @@ public class CameraSecuredSceneController : MonoBehaviour
                 GameProgressController.PicDuMidiSolved = true;
                 break;
             case PiezesToSecure.AO:
-                GameProgressController.SSTSolved= true;
+                GameProgressController.GregorFinished = true;
                 break;
             case PiezesToSecure.HR:
-                GameProgressController.GregorFinished= true;
+                GameProgressController.SSTSolved = true;
                 break;
         }
 
         GameEvents.LoadScene.Invoke("WorldSelector");
-    }
-    void Update()
-    {
-        
     }
 }

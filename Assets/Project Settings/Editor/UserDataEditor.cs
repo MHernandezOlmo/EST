@@ -359,19 +359,6 @@ public class UserDataEditor : EditorWindow
             _gameProgressData._gregorPlacedHeatRejecter = EditorGUILayout.Toggle(_gameProgressData._gregorPlacedHeatRejecter, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Gregor", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._gregorFinished = EditorGUILayout.Toggle(_gameProgressData._gregorFinished, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
-
-            EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("EST", GUILayout.Height(height), GUILayout.Width(200));
-            _gameProgressData._ESTFinished = EditorGUILayout.Toggle(_gameProgressData._ESTFinished, GUILayout.Height(height), GUILayout.Width(200));
-            EditorGUILayout.EndHorizontal();
-
-
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Jetpack Skill", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._gregorJetpackSkill = EditorGUILayout.Toggle(_gameProgressData._gregorJetpackSkill, GUILayout.Height(height), GUILayout.Width(200));
@@ -400,6 +387,14 @@ public class UserDataEditor : EditorWindow
             GUILayout.Label("GregorTestedHR", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._gregorTestedHR = EditorGUILayout.Toggle(_gameProgressData._gregorTestedHR, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Gregor Solved", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._gregorFinished = EditorGUILayout.Toggle(_gameProgressData._gregorFinished, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            GuiLine();
+            GUILayout.Label("EST", GUILayout.Height(height), GUILayout.Width(200));
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("EST Enemy Collection", GUILayout.Height(height), GUILayout.Width(200));
@@ -474,6 +469,11 @@ public class UserDataEditor : EditorWindow
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("EST mirror advice", GUILayout.Height(height), GUILayout.Width(200));
             _gameProgressData._mirrorAdvice = EditorGUILayout.Toggle(_gameProgressData._mirrorAdvice, GUILayout.Height(height), GUILayout.Width(200));
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("EST Solved", GUILayout.Height(height), GUILayout.Width(200));
+            _gameProgressData._ESTFinished = EditorGUILayout.Toggle(_gameProgressData._ESTFinished, GUILayout.Height(height), GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
             if (GUILayout.Button("Save Data"))

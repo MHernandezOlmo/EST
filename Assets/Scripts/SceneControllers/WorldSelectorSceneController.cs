@@ -130,9 +130,4 @@ public class WorldSelectorSceneController : MonoBehaviour
     {
         GameEvents.LoadScene.Invoke("MainMenu");
     }
-    
-    void Update()
-    {
-        
-    }
 }
