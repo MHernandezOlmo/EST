@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -370,6 +370,11 @@ PrefabInstance:
       propertyPath: _currentCharacter
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1371636963634223916, guid: b0d40478816105c41974cbf0ca5ba28a,
+        type: 3}
+      propertyPath: MAX_MOVEMENT_SPEED
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3023887095948471633, guid: b0d40478816105c41974cbf0ca5ba28a,
         type: 3}
       propertyPath: m_Name
@@ -429,6 +434,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527402946464948988, guid: b0d40478816105c41974cbf0ca5ba28a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527402946464948988, guid: b0d40478816105c41974cbf0ca5ba28a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527402946464948988, guid: b0d40478816105c41974cbf0ca5ba28a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d40478816105c41974cbf0ca5ba28a, type: 3}
@@ -779,18 +799,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1744442312}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &887001615 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-    type: 3}
-  m_PrefabInstance: {fileID: 261196292}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1078223839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3075,9 +3083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728f51ce6c3460941ab77d7359af8d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogToTrigger: {fileID: 2046157527}
-  _dialogToTriggerPicDuMidi: {fileID: 887001615}
-  _pc: {fileID: 1627291625}
 --- !u!4 &1733008220
 Transform:
   m_ObjectHideFlags: 0
@@ -9050,15 +9055,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c33f8b1b996960b4e88cbad2d28256c9, type: 3}
---- !u!114 &2046157527 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
-    type: 3}
-  m_PrefabInstance: {fileID: 1915849144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f79e7a9218ca024d9c32eba054d1f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

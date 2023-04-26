@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -281,7 +281,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85138536}
-  m_LocalRotation: {x: 0.008580022, y: -0.991418, z: 0.09120635, w: 0.09326405}
+  m_LocalRotation: {x: 0.008580021, y: -0.991418, z: 0.09120635, w: 0.09326404}
   m_LocalPosition: {x: 8.14, y: 9.02, z: 23.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -514,6 +514,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpotPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 874299965224617868, guid: 02ccbc89481aa2e4d8324b38581e0f58,
+        type: 3}
+      propertyPath: customTurnSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 874299965224617868, guid: 02ccbc89481aa2e4d8324b38581e0f58,
+        type: 3}
+      propertyPath: MAX_MOVEMENT_SPEED
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 874299965224617871, guid: 02ccbc89481aa2e4d8324b38581e0f58,
         type: 3}

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -777,8 +777,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1371636963634223916, guid: b0d40478816105c41974cbf0ca5ba28a,
         type: 3}
+      propertyPath: customTurnSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371636963634223916, guid: b0d40478816105c41974cbf0ca5ba28a,
+        type: 3}
       propertyPath: MAX_MOVEMENT_SPEED
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3023887095948471633, guid: b0d40478816105c41974cbf0ca5ba28a,
         type: 3}
