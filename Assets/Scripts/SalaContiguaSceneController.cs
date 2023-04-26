@@ -61,7 +61,7 @@ public class SalaContiguaSceneController : MonoBehaviour
 
     public void ShowAlert()
     {
-        GameEvents.ShowScreenText.Invoke(LeanLocalization.GetTranslationText("Alert/HelpArchive"));
+        GameEvents.ShowScreenText.Invoke("Go to the communications room and call Eclipse!");
     }
 
     IEnumerator WaitDialog()
