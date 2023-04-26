@@ -21,7 +21,14 @@ public class PlasmaBall : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(30);
+                if(GameProgressController.GetCurrentScene() == "Lomnicky_4_Sala Combate")
+                {
+                    collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(17);
+                }
+                else
+                {
+                    collision.gameObject.GetComponent<PlayerController>().ReceiveDamage(30);
+                }
             }
             Destroy(gameObject);
         }
