@@ -14,6 +14,7 @@ public class WorldSelectorSceneController : MonoBehaviour
     [SerializeField] private Image[] _worldLockImages;
     [SerializeField] private Button[] _worldButtons;
     [SerializeField] private TextMeshProUGUI[] _worldNamesText;
+    [SerializeField] private Color _lockedColor;
     const string _gameProgressFileName = "GameProgressData.json";
 
     public void Reset()
@@ -41,10 +42,19 @@ public class WorldSelectorSceneController : MonoBehaviour
 
     public void Start()
     {
+        foreach(Image i in _worldImages)
+        {
+            i.color = _lockedColor;
+        }
         _worldImages[0].color = Color.white;
         _worldLockImages[0].gameObject.SetActive(false);
         _worldButtons[0].interactable = true;
         _worldNamesText[0].text = "Lomnický štít";
+        _worldNamesText[1].text = "Einstein Tower";
+        _worldNamesText[2].text = "Pic du Midi";
+        _worldNamesText[3].text = "GREGOR";
+        _worldNamesText[4].text = "SST";
+        _worldNamesText[5].text = "EST";
         if (_allUnlockedForTest)
         {
             GameProgressController.LomnickySolved = true;
@@ -59,40 +69,31 @@ public class WorldSelectorSceneController : MonoBehaviour
             _worldImages[1].color = Color.white;
             _worldLockImages[1].gameObject.SetActive(false);
             _worldButtons[1].interactable = true;
-            _worldNamesText[1].text = "Einstein Tower";
         }
         if (GameProgressController.EinsteinSolved)
         {
             _worldImages[2].color = Color.white;
             _worldLockImages[2].gameObject.SetActive(false);
             _worldButtons[2].interactable = true;
-            _worldNamesText[2].text = "Pic du Midi";
-
         }
         if (GameProgressController.PicDuMidiSolved)
         {
             _worldImages[3].color = Color.white;
             _worldLockImages[3].gameObject.SetActive(false);
             _worldButtons[3].interactable = true;
-            _worldNamesText[3].text = "GREGOR";
-
         }
         if (GameProgressController.GregorFinished)
         {
             _worldImages[4].color = Color.white;
             _worldLockImages[4].gameObject.SetActive(false);
             _worldButtons[4].interactable = true;
-            _worldNamesText[4].text = "SST";
-
         }
         if (GameProgressController.SSTSolved)
         {
             _worldImages[5].color = Color.white;
             _worldLockImages[5].gameObject.SetActive(false);
             _worldButtons[5].interactable = true;
-            _worldNamesText[5].text = "EST";
         }
-
     }
 
     public void LoadWorld(int world)
