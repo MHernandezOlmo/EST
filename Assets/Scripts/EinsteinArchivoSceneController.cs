@@ -18,7 +18,7 @@ public class EinsteinArchivoSceneController : MonoBehaviour
     }
     IEnumerator CrReceiveSplitter()
     {
-        if(PlayerPrefs.GetInt("ReceiveSplitter") == 1)
+        if (PlayerPrefs.GetInt("ReceiveSplitter") == 1)
         {
             PlayerPrefs.SetInt("ReceiveSplitter", 0);
             yield return new WaitForSeconds(1f);
@@ -27,7 +27,7 @@ public class EinsteinArchivoSceneController : MonoBehaviour
     }
     public void Advice()
     {
-        GameEvents.ShowScreenText.Invoke("Obtained beam-splitter");
+        GameEvents.ShowScreenText.Invoke("Obtained: \nbeam-splitter");
     }
     public void LoadLomnicky()
     {

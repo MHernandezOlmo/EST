@@ -32,7 +32,7 @@ public class PiezaFiltro : Interactable
                 Destroy(transform.parent.GetChild(0).gameObject);
                 transform.parent.GetComponent<MeshRenderer>().enabled = false;
                 yield return new WaitForSeconds(5f);
-                GameEvents.MissionText.Invoke("Test the filters at the telescope control room");
+                GameEvents.MissionText.Invoke("Test the filters in the telescope control room");
                 Destroy(transform.root.gameObject);
             }
         }

@@ -6,6 +6,6 @@ public class DashRoomSceneController : MonoBehaviour
 {
     public void ShowSkillText()
     {
-        GameEvents.ShowScreenText.Invoke("Obtained: Flare Skill");
+        GameEvents.ShowScreenText.Invoke("Obtained: flare skill");
     }
 }

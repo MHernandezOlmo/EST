@@ -47,7 +47,17 @@ public class EnemyController : MonoBehaviour
 
     public void SetHPBar(HPBar _hp)
     {
-        _currentHPBar = _hp;
+        if (_enemyType == EnemyType.Toast)
+        {
+            if (GameProgressController.HasAllPicDuMidiFilters())
+            {
+                _currentHPBar = _hp;
+            }
+        }
+        else
+        {
+            _currentHPBar = _hp;
+        }
     }
 
     public void ReceiveDamage(int value)
