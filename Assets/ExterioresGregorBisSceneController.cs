@@ -43,7 +43,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
         }
         if (GameProgressController.GregorPlacedHeatRejecter)
         {
-            GameEvents.ShowScreenText.Invoke("Remaining threads: " + neededKills);
+            GameEvents.ShowScreenText.Invoke("Remaining ovens: " + neededKills);
         }
     }
 
@@ -63,7 +63,7 @@ public class ExterioresGregorBisSceneController : MonoBehaviour
     public void Kill()
     {
         neededKills--;
-        GameEvents.ShowScreenText.Invoke("Remaining threads: " + neededKills);
+        GameEvents.ShowScreenText.Invoke("Remaining ovens: " + neededKills);
         if (neededKills == 0)
         {
             GameEvents.ClearMissionText.Invoke();

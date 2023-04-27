@@ -27,7 +27,7 @@ public class MissionCanvasController : MonoBehaviour
         }
         if (!GameProgressController.ESTAireM1M2)
         {
-            _missionsText.text = "Switch on M1 and M2 air streams";
+            _missionsText.text = "Switch on the M1 and M2 air streams";
             return;
         }
         if (!GameProgressController.ESTMirrorsM3M6)

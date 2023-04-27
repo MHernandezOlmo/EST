@@ -6,11 +6,16 @@ public class ObservacionSSTSceneController : MonoBehaviour
 {
     [SerializeField] DialogueTrigger _adaptativeOpticPiezesAlertDialog;
     [SerializeField] DialogueTrigger _youHaveEverything;
+    [SerializeField] private GameObject _entrandceTrigger;
     void Start()
     {
         if (GameProgressController.SSTPuzzlePairs && ! GameProgressController.SSTAOPiezesAlertShown)
         {
             StartCoroutine(CrPlayDialog());
+        }
+        if(GameProgressController.SSTPuzzlePairs && !GameProgressController.SSTShieldSkill)
+        {
+            _entrandceTrigger.gameObject.SetActive(false);
         }
         if (GameProgressController.SSTPuzzleTetrisAO)
         {

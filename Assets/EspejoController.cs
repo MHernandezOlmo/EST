@@ -68,7 +68,10 @@ public class EspejoController : MonoBehaviour
             _image.fillAmount = 1 - (_elapsedTime / _totalTime);
             if(_elapsedTime > _totalTime)
             {
-                FindObjectOfType<PuzzleStatesController>().GameOver();
+                if (!won)
+                {
+                    FindObjectOfType<PuzzleStatesController>().GameOver();
+                }
             }
         }
         if (_robotKills == 30)

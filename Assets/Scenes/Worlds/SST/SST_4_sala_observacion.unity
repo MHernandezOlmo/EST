@@ -2312,7 +2312,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84906831}
-  m_LocalRotation: {x: -0.05128529, y: -0.10635316, z: 0.0054939184, w: -0.9929898}
+  m_LocalRotation: {x: -0.05128527, y: -0.10635313, z: 0.0054939147, w: -0.9929898}
   m_LocalPosition: {x: -2.147, y: 4.18, z: -9.908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2428,7 +2428,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161290790}
-  m_LocalRotation: {x: -0.05128529, y: -0.10635316, z: 0.0054939184, w: -0.9929898}
+  m_LocalRotation: {x: -0.05128527, y: -0.10635313, z: 0.0054939147, w: -0.9929898}
   m_LocalPosition: {x: -2.147, y: 4.18, z: -9.908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3777,6 +3777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _adaptativeOpticPiezesAlertDialog: {fileID: 1144480869}
   _youHaveEverything: {fileID: 1737422053}
+  _entrandceTrigger: {fileID: 1837945737}
 --- !u!4 &816364902
 Transform:
   m_ObjectHideFlags: 0
@@ -4269,6 +4270,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129790173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129790175}
+  - component: {fileID: 1129790174}
+  m_Layer: 0
+  m_Name: ToEscaleras (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1129790174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129790173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9277565, y: 2.32, z: 1}
+  m_Center: {x: 0, y: 0, z: -0}
+--- !u!4 &1129790175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129790173}
+  m_LocalRotation: {x: -0, y: 0.99998325, z: -0, w: -0.0057894327}
+  m_LocalPosition: {x: 0.38, y: 1.38, z: -14.21}
+  m_LocalScale: {x: 1.349, y: 1.349, z: 3.3057194}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 180.663, z: 0}
 --- !u!1001 &1144480868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4314,7 +4359,7 @@ PrefabInstance:
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
       propertyPath: _finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Go to the control room
+      value: Go to the observing room
       objectReference: {fileID: 0}
     - target: {fileID: 5162093702787244514, guid: 360b28f7d2a395b46b6bcb2089d2af85,
         type: 3}
@@ -7566,23 +7611,23 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[20].Translations.Array.data[0]
-      value: '@Auroras|! What??!!%They occur when particles launched from the Sun
-        collide with the @Earth''s magnetic field|. It''s rare to see them at these
-        low latitudes... and in daylight!'
+      value: '@Auroras|! What??!!%They occur when particles from the Sun collide
+        with the @Earth''s magnetic field|. It''s rare to see them at low latitudes...
+        and in daylight!'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[20].Translations.Array.data[1]
-      value: Auroras! What??!!%They occur when particles launched from the Sun collide
-        with the Earth's magnetic field. It's rare to see them at these low latitudes...
-        and in daylight!
+      value: '@Auroras|! What??!!%They occur when particles from the Sun collide
+        with the @Earth''s magnetic field|. It''s rare to see them at low latitudes...
+        and in daylight!'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[20].Translations.Array.data[2]
-      value: '@Auroras|! What??!!%They occur when particles launched from the Sun
-        collide with the @Earth''s magnetic field|. It''s rare to see them at these
-        low latitudes... and in daylight!'
+      value: '@Auroras|! What??!!%They occur when particles from the Sun collide
+        with the @Earth''s magnetic field|. It''s rare to see them at low latitudes...
+        and in daylight!'
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -7659,19 +7704,19 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[25].Translations.Array.data[0]
-      value: The best conditions for astronomical observations occur high in mountains.%But...
+      value: The best conditions for observations occur high in mountains.%But...
         it's snowing! And the telescope dome is open!%How is this possible?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[25].Translations.Array.data[1]
-      value: The best conditions for astronomical observations occur high in mountains.%But...
+      value: The best conditions for observations occur high in mountains.%But...
         it's snowing! And the telescope dome is open!%How is this possible?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[25].Translations.Array.data[2]
-      value: The best conditions for astronomical observations occur high in mountains.%But...
+      value: The best conditions for observations occur high in mountains.%But...
         it's snowing! And the telescope dome is open!%How is this possible?
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
@@ -7986,20 +8031,20 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[44].Translations.Array.data[0]
-      value: Congratulations UV!%Go to the calble car with the camera to install
-        it on @EST|.%There is no time to waste!
+      value: Congratulations UV!%Go to the cable car with the camera to install it
+        on @EST|.%There is no time to waste!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[44].Translations.Array.data[1]
-      value: Congratulations UV!%Now go quickly to the cable car and take the camera
-        with you to set it up on EST.%There is no time to waste!
+      value: Congratulations UV!%Go to the cable car with the camera to install it
+        on @EST|.%There is no time to waste!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[44].Translations.Array.data[2]
-      value: Congratulations UV!%Go to the calble car with the camera to install
-        it on @EST|.%There is no time to waste!
+      value: Congratulations UV!%Go to the cable car with the camera to install it
+        on @EST|.%There is no time to waste!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -8390,38 +8435,38 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[67].Translations.Array.data[0]
-      value: "Oh no! I'm afraid that the toasters have burned the coronagraph controls...%Got
-        it! I\u2019ll call UV.%He can make great observations at @Lomnick\xFD Peak|."
+      value: "Oh no! The toasters have burned the coronagraph controls...%Got it!
+        I\u2019ll call UV.%He can make great observations at @Lomnick\xFD Peak|."
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[67].Translations.Array.data[1]
-      value: "Oh no! I'm afraid that the toasters have burned the coronagraph controls...%Got
-        it! I\u2019ll call UV.%He can make great observations at Lomnick\xFD Peak."
+      value: "Oh no! The toasters have burned the coronagraph controls...%Got it!
+        I\u2019ll call UV.%He can make great observations at @Lomnick\xFD Peak|."
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[67].Translations.Array.data[2]
-      value: "Oh no! I'm afraid that the toasters have burned the coronagraph controls...%Got
-        it! I\u2019ll call UV.%He can make great observations at @Lomnick\xFD Peak|."
+      value: "Oh no! The toasters have burned the coronagraph controls...%Got it!
+        I\u2019ll call UV.%He can make great observations at @Lomnick\xFD Peak|."
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[68].Translations.Array.data[0]
-      value: UV! My @coronagraph| is sabotaged& and Spectro needs images of the @solar
-        corona|.%Could you take them from @Lomnicky|?
+      value: "UV! My @coronagraph| is sabotaged& and Spectro needs images of the
+        @solar corona|.%Could you take them from @Lomnick\xFD|?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[68].Translations.Array.data[1]
-      value: UV!My coronagraph is sabotaged& and Spectro needs images of the solar
-        corona.%Could you take them from Lomnicky?
+      value: "UV! My @coronagraph| is sabotaged& and Spectro needs images of the
+        @solar corona|.%Could you take them from @Lomnick\xFD|?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[68].Translations.Array.data[2]
-      value: UV! My @coronagraph| is sabotaged& and Spectro needs images of the @solar
-        corona|.%Could you take them from @Lomnicky|?
+      value: "UV! My @coronagraph| is sabotaged& and Spectro needs images of the
+        @solar corona|.%Could you take them from @Lomnick\xFD|?"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -9054,23 +9099,23 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[105].Translations.Array.data[0]
-      value: "UV& our @spectropolarimeter| won't work if we don't get a @beam splitter|
-        in time.%At @Lomnick\xFD| you have developed some of great quality& so please
-        send one to me as soon as possible!"
+      value: "UV& our @spectropolarimeter| won't work if we don't get a @beam splitter|.%At
+        @Lomnick\xFD| you have developed some of great quality& so please send one
+        to me as soon as possible!"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[105].Translations.Array.data[1]
-      value: "UV& our spectropolarimeter won't work if we don't get a beam splitter
-        in time.%At Lomnick\xFD you have developed some of great quality& so please
-        send one to me as soon as possible!"
+      value: "UV& our @spectropolarimeter| won't work if we don't get a @beam splitter|.%At
+        @Lomnick\xFD| you have developed some of great quality& so please send one
+        to me as soon as possible!"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[105].Translations.Array.data[2]
-      value: "UV& our @spectropolarimeter| won't work if we don't get a @beam splitter|
-        in time.%At @Lomnick\xFD| you have developed some of great quality& so please
-        send one to me as soon as possible!"
+      value: "UV& our @spectropolarimeter| won't work if we don't get a @beam splitter|.%At
+        @Lomnick\xFD| you have developed some of great quality& so please send one
+        to me as soon as possible!"
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -9184,19 +9229,19 @@ PrefabInstance:
         type: 3}
       propertyPath: multilanguageEntries.Array.data[113].Translations.Array.data[0]
       value: Here it is!%Flare& I'm sending the beam splitter to you at the speed
-        of light! (wink& wink)
+        of light!%(wink& wink)
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[113].Translations.Array.data[1]
       value: Here it is!%Flare& I'm sending the beam splitter to you at the speed
-        of light! (wink& wink)
+        of light!%(wink& wink)
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[113].Translations.Array.data[2]
       value: Here it is!%Flare& I'm sending the beam splitter to you at the speed
-        of light! (wink& wink)
+        of light!%(wink& wink)
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -9988,37 +10033,37 @@ PrefabInstance:
         type: 3}
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[0]
       value: But yes& the @excess of heat| blurs the images and makes it impossible
-        to observe what is happening on the Sun.%We need you to go to the @GREGOR
-        telescope| and test the @heat rejecter| for @EST|.
+        to observe what is happening on the Sun.%I need you to go to @GREGOR| and
+        test the @heat rejecter| for @EST|.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[1]
-      value: But yes& the excess of heating blurs the images and makes it impossible
-        to observe what is happening on the Sun.%We need you to go to the GREGOR
-        telescope and test the heat rejecter for EST.
+      value: But yes& the @excess of heat| blurs the images and makes it impossible
+        to observe what is happening on the Sun.%I need you to go to @GREGOR| and
+        test the @heat rejecter| for @EST|.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[161].Translations.Array.data[2]
       value: But yes& the @excess of heat| blurs the images and makes it impossible
-        to observe what is happening on the Sun.%We need you to go to the @GREGOR
-        telescope| and test the @heat rejecter| for @EST|.
+        to observe what is happening on the Sun.%I need you to go to @GREGOR| and
+        test the @heat rejecter| for @EST|.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[0]
-      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      value: OK& Spectro! (But first& I'm drinking some water...)
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[1]
-      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      value: OK& Spectro! (But first& I'm drinking some water...)
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[162].Translations.Array.data[2]
-      value: OK& Spectro! (But first& I'm taking a glass of water...)
+      value: OK& Spectro! (But first& I'm drinking some water...)
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -10535,17 +10580,17 @@ PrefabInstance:
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Translations.Array.data[0]
-      value: Don't worry my friends&I'll free you in a minute!
+      value: Don't worry my friends& I'll free you in a minute!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Translations.Array.data[1]
-      value: Don't worry my friends&I'll free you in a minute!
+      value: Don't worry my friends& I'll free you in a minute!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[193].Translations.Array.data[2]
-      value: Don't worry my friends&I'll free you in a minute!
+      value: Don't worry my friends& I'll free you in a minute!
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
@@ -10722,19 +10767,19 @@ PrefabInstance:
         type: 3}
       propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[0]
       value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
-        of the @M3-M6 mirrors system|.
+        of the @M3-M6 mirror systems|.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[1]
       value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
-        of the M3-M6 mirrors system.
+        of the @M3-M6 mirror systems|.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
       propertyPath: multilanguageEntries.Array.data[204].Translations.Array.data[2]
       value: You are fit as a fiddle& Spectro!%Now& we need you to refill the coolant
-        of the @M3-M6 mirrors system|.
+        of the @M3-M6 mirror systems|.
       objectReference: {fileID: 0}
     - target: {fileID: 4535957681940445614, guid: 62faca9ef05f8164fa6493a0814bd806,
         type: 3}
