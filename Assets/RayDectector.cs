@@ -21,6 +21,7 @@ public class RayDectector : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
+        Debug.DrawLine(transform.position, transform.position + transform.forward * 1000, Color.green);
         if (Physics.Raycast(transform.position,transform.forward, out hit, Mathf.Infinity, _mask))
         {
             

@@ -47,6 +47,7 @@ public class SalaContiguaSceneController : MonoBehaviour
             if (GameProgressController.LomnickyPuzzleFlareHunters)
             {
                 _blockDomeColsed.SetActive(false);
+                _dialogueTrigger.gameObject.SetActive(false);
             }
             else
             {

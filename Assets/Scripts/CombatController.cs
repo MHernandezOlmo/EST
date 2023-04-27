@@ -44,10 +44,11 @@ public class CombatController : MonoBehaviour
         {
             GameEvents.CombatEvent.Invoke(false);
         }
-        if(FindObjectOfType<CombatActivator>() == null)
-        {
-            GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
-        }
+        //if(FindObjectOfType<CombatActivator>() == null)
+        //{
+        //}
+        GameEvents.ChangeGameState.Invoke(GameStates.Exploration);
+
         _currentCombatTrigger.GetCombatCamera().Priority = 5;
     }
 }

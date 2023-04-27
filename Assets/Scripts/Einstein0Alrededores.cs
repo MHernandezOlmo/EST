@@ -44,14 +44,24 @@ public class Einstein0Alrededores : MonoBehaviour
     void Start()
     {
         _remainingKills = 6;
+
         if (!GameProgressController.EinsteinUsedPrism)
         {
             _player = FindObjectOfType<MovementController>();
             if (!GameProgressController.EinsteinOpenBarrier)
             {
-                //_player.autopilot = new Vector3(2.7f, 0.7f, -1.67f);
-                GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
-                StartCoroutine(CrStart());
+                if (GameProgressController.EinsteinSolarCanonSkill)
+                {
+                    CurrentSceneManager._canMove = true;
+                    _startingCamera.m_Priority = 0;
+                    DisableCollider();
+                }
+                else
+                {
+                    GameEvents.ChangeGameState.Invoke(GameStates.Cinematic);
+                    StartCoroutine(CrStart());
+                }
+                
             }
             else
             {
